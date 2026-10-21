@@ -187,31 +187,79 @@ body {
 
 /* Formula Highlight Box */
 .formula-box {
-  background: #f1f5f9;
-  border: 2px dashed #94a3b8;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-left: 5px solid var(--primary-light);
   border-radius: var(--radius);
   padding: 1.25rem;
-  margin: 1rem 0;
-  font-family: "Courier New", Courier, monospace;
+  margin: 1.25rem 0;
+  box-shadow: var(--shadow-sm);
 }
 
 .formula-box .formula-name {
-  font-family: inherit;
   font-weight: 700;
   color: var(--primary);
   font-size: 1.05rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .formula-box .formula-code {
   font-size: 1.15rem;
   color: #0f172a;
   background: white;
-  padding: 0.5rem 0.75rem;
+  padding: 0.6rem 1rem;
   border-radius: 6px;
   display: inline-block;
   border: 1px solid #cbd5e1;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: "Cambria Math", "Segoe UI Symbol", "DejaVu Math TeX Gyre", Georgia, serif;
+}
+
+/* Inline and Block Math Styling */
+.math-expr {
+  font-family: "Cambria Math", "Segoe UI Symbol", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  color: #0f172a;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.math-block {
+  display: block;
+  font-family: "Cambria Math", "Segoe UI Symbol", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  margin: 0.75rem 0;
+  text-align: center;
+}
+
+/* Vertical Fraction Styling */
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0 4px;
+  font-size: 0.9em;
+  line-height: 1.1;
+}
+
+.fraction .top {
+  border-bottom: 1.5px solid #334155;
+  padding-bottom: 2px;
+}
+
+.fraction .bottom {
+  padding-top: 2px;
 }
 
 /* Data Tables */

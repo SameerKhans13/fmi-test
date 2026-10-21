@@ -96,14 +96,14 @@
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
           <div class="formula-box">
             <div class="formula-name">Current Ratio</div>
-            <div class="formula-code">CR = Current Assets / Current Liabilities</div>
+            <div class="formula-code">Current Ratio = Current Assets / Current Liabilities</div>
             <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #475569;">
               <strong>Benchmark:</strong> 1.5× to 2.0×. Measures general short-term cushion.
             </p>
           </div>
           <div class="formula-box">
             <div class="formula-name">Quick / Acid-Test Ratio</div>
-            <div class="formula-code">QR = (Current Assets − Inventory) / CL</div>
+            <div class="formula-code">Quick Ratio = (Current Assets − Inventory) / Current Liabilities</div>
             <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #475569;">
               Excludes inventory because inventory cannot be converted to cash instantly without discounts.
             </p>
@@ -117,10 +117,10 @@
 
         <div class="callout callout-info">
           <h4>💡 Understanding Operating Cycle Dynamics</h4>
-          <p>• <strong>Inventory Days ($\frac{365 \times \text{Inventory}}{\text{COGS}}$):</strong> How long raw materials and goods sit in the warehouse before being sold.</p>
-          <p>• <strong>Receivable Days ($\frac{365 \times \text{Debtors}}{\text{Sales}}$):</strong> How long customers take to pay cash after receiving the invoice.</p>
-          <p>• <strong>Payable Days ($\frac{365 \times \text{Creditors}}{\text{COGS}}$):</strong> How long our business takes to pay trade suppliers.</p>
-          <p>• <strong>Interpretation:</strong> If Inventory Days = 50, Receivable Days = 40, and Payable Days = 30, the company waits $50 + 40 - 30 = 60\text{ days}$ between paying suppliers and collecting cash. This 60-day gap must be funded by bank working capital loans!</p>
+          <p>• <strong>Inventory Days (<span class="math-expr">(365 × Inventory) / COGS</span>):</strong> How long raw materials and goods sit in the warehouse before being sold.</p>
+          <p>• <strong>Receivable Days (<span class="math-expr">(365 × Debtors) / Sales</span>):</strong> How long customers take to pay cash after receiving the invoice.</p>
+          <p>• <strong>Payable Days (<span class="math-expr">(365 × Creditors) / COGS</span>):</strong> How long our business takes to pay trade suppliers.</p>
+          <p>• <strong>Interpretation:</strong> If Inventory Days = 50, Receivable Days = 40, and Payable Days = 30, the company waits <span class="math-expr">50 + 40 − 30 = 60 days</span> between paying suppliers and collecting cash. This 60-day gap must be funded by bank working capital loans!</p>
         </div>
       </div>
 
@@ -141,7 +141,7 @@
         <div class="callout callout-danger">
           <h4>⚠️ Critical Instructor Rules on Solvency:</h4>
           <p>• <strong>Interest Coverage below 2.0×</strong> is an immediate danger signal indicating that any minor drop in operating earnings could cause loan default.</p>
-          <p>• A company with low debt (e.g., Asian Paints at $0.06\times$) is "lightly geared," meaning high safety and room to borrow if needed.</p>
+          <p>• A company with low debt (e.g., Asian Paints at 0.06×) is "lightly geared," meaning high safety and room to borrow if needed.</p>
         </div>
       </div>
 
@@ -149,14 +149,14 @@
       <div class="card">
         <h3 class="card-title">4. DuPont Analysis: Decomposing Return on Equity (ROE)</h3>
         <p>
-          Return on Equity ($\frac{\text{PAT}}{\text{Equity}}$) tells you how much profit shareholders get. However, two companies can have the same $15\%$ ROE for completely different reasons. DuPont breaks ROE into three multiplying components:
+          Return on Equity (<span class="math-expr">PAT / Equity</span>) tells you how much profit shareholders get. However, two companies can have the same 15% ROE for completely different reasons. DuPont breaks ROE into three multiplying components:
         </p>
 
         <div class="formula-box">
           <div class="formula-name">The 3-Step DuPont Identity:</div>
           <div class="formula-code">ROE = Net Profit Margin × Asset Turnover × Equity Multiplier</div>
-          <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #334155;">
-            $\frac{\text{PAT}}{\text{Equity}} = \left(\frac{\text{PAT}}{\text{Sales}}\right) \times \left(\frac{\text{Sales}}{\text{Assets}}\right) \times \left(\frac{\text{Assets}}{\text{Equity}}\right)$
+          <div style="margin-top: 0.5rem; font-size: 0.95rem; color: #334155;">
+            <span class="math-expr">PAT / Equity = (PAT / Sales) × (Sales / Assets) × (Assets / Equity)</span>
           </div>
         </div>
 
@@ -168,20 +168,20 @@
             <tbody>
               <tr>
                 <td><strong>1. Net Profit Margin</strong></td>
-                <td>$\text{PAT} / \text{Sales}$</td>
+                <td><span class="math-expr">PAT / Sales</span></td>
                 <td>Pricing power & cost efficiency</td>
                 <td>Luxury goods, high-end pharma (e.g., 20% margin, low turnover)</td>
               </tr>
               <tr>
                 <td><strong>2. Asset Turnover</strong></td>
-                <td>$\text{Sales} / \text{Total Assets}$</td>
+                <td><span class="math-expr">Sales / Total Assets</span></td>
                 <td>Volume velocity & asset productivity</td>
                 <td>Discount retail supermarkets, discount airlines (e.g., 3% margin, 4.0× turnover)</td>
               </tr>
               <tr>
                 <td><strong>3. Equity Multiplier</strong></td>
-                <td>$\text{Total Assets} / \text{Equity}$</td>
-                <td>Financial leverage ($1 + D/E$)</td>
+                <td><span class="math-expr">Total Assets / Equity</span></td>
+                <td>Financial leverage (<span class="math-expr">1 + D/E</span>)</td>
                 <td>Banks and utilities (using borrowed money to boost ROE, but adds bankruptcy risk)</td>
               </tr>
             </tbody>
@@ -202,37 +202,37 @@
             <tbody>
               <tr>
                 <td><strong>Current Ratio</strong></td>
-                <td>$\frac{11,175.61}{5,973.52}$</td>
+                <td><span class="math-expr">11,175.61 / 5,973.52</span></td>
                 <td><strong>1.87×</strong></td>
                 <td>Comfortable cover; each ₹1 of short-term debt backed by ₹1.87 of current assets.</td>
               </tr>
               <tr>
                 <td><strong>Quick Ratio</strong></td>
-                <td>$\frac{11,175.61 - 5,848.23}{5,973.52}$</td>
+                <td><span class="math-expr">(11,175.61 − 5,848.23) / 5,973.52</span></td>
                 <td><strong>0.89×</strong></td>
                 <td>Stripping out paint inventory leaves 89 paise of liquid cover per ₹1 of obligations.</td>
               </tr>
               <tr>
                 <td><strong>Operating Cycle</strong></td>
-                <td>$116\text{ days (Inv)} + 43\text{ days (Rec)} - 71\text{ days (Pay)}$</td>
+                <td><span class="math-expr">116 days (Inv) + 43 days (Rec) − 71 days (Pay)</span></td>
                 <td><strong>88 days</strong></td>
                 <td>Stock takes ~116 days to turn; suppliers fund 71 days of the pipeline.</td>
               </tr>
               <tr>
                 <td><strong>Debt-to-Equity</strong></td>
-                <td>$\frac{1,198.82}{18,987.75}$</td>
+                <td><span class="math-expr">1,198.82 / 18,987.75</span></td>
                 <td><strong>0.06×</strong></td>
                 <td>Extremely light gearing (only 6 paise debt per ₹1 equity). Insolvency risk is negligible.</td>
               </tr>
               <tr>
                 <td><strong>Interest Coverage</strong></td>
-                <td>$\frac{5,045.37}{143.77}$</td>
+                <td><span class="math-expr">5,045.37 / 143.77</span></td>
                 <td><strong>35.1×</strong></td>
                 <td>Operating profit covers annual interest 35 times over! High margin of safety.</td>
               </tr>
               <tr>
                 <td><strong>DuPont ROE</strong></td>
-                <td>$12.1\% \times 1.44× \times 1.08×$</td>
+                <td><span class="math-expr">12.1% × 1.44× × 1.08×</span></td>
                 <td><strong>18.9%</strong></td>
                 <td>ROE is driven by solid margin and rapid asset turnover, NOT by financial debt leverage.</td>
               </tr>
@@ -301,8 +301,8 @@
           </div>
           <div class="explanation-box" id="sq1-explanation">
             <strong>Correct Answer: A</strong><br>
-            $\text{Current Ratio} = \frac{₹80\text{L}}{₹50\text{L}} = 1.60\times$.<br>
-            $\text{Quick Ratio} = \frac{₹80\text{L} - ₹30\text{L}}{₹50\text{L}} = \frac{₹50\text{L}}{₹50\text{L}} = 1.00\times$.
+            Current Ratio = ₹80L / ₹50L = <span class="math-expr">1.60×</span>.<br>
+            Quick Ratio = (₹80L − ₹30L) / ₹50L = ₹50L / ₹50L = <span class="math-expr">1.00×</span>.
           </div>
         </div>
 
@@ -339,8 +339,8 @@
           </div>
           <div class="explanation-box" id="sq2-explanation">
             <strong>Correct Answer: B (75 days)</strong><br>
-            $\text{Operating Cycle} = \text{Inventory Days} + \text{Receivable Days} - \text{Payable Days}$<br>
-            $= 65 + 45 - 35 = 110 - 35 = <strong>75\text{ days}</strong>$.
+            Operating Cycle = Inventory Days + Receivable Days − Payable Days<br>
+            = 65 + 45 − 35 = 110 − 35 = <span class="math-expr"><strong>75 days</strong></span>.
           </div>
         </div>
 
@@ -369,7 +369,7 @@
           </div>
           <div class="explanation-box" id="sq3-explanation">
             <strong>Correct Answer: A</strong><br>
-            $\text{Interest Coverage} = \frac{\text{EBIT}}{\text{Interest}} = \frac{₹12\text{L}}{₹8\text{L}} = 1.5\times$. The instructor highlighted that an interest coverage below $2.0\times$ is an alarming warning sign that leaves minimal cushion if revenues decline.
+            Interest Coverage = EBIT / Interest = ₹12L / ₹8L = <span class="math-expr">1.5×</span>. The instructor highlighted that an interest coverage below 2.0× is an alarming warning sign that leaves minimal cushion if revenues decline.
           </div>
         </div>
 
@@ -398,7 +398,7 @@
           </div>
           <div class="explanation-box" id="sq4-explanation">
             <strong>Correct Answer: A</strong><br>
-            <em>Explanation:</em> The Equity Multiplier is $\frac{\text{Assets}}{\text{Equity}} = 1 + \frac{\text{Debt}}{\text{Equity}}$. Company B's multiplier of $3.0\times$ means two-thirds of its assets are funded by debt (high financial risk), whereas Company A's multiplier of $1.2\times$ reflects minimal debt and earns its ROE via rapid asset turnover ($3.0\times$).
+            <em>Explanation:</em> The Equity Multiplier is Assets / Equity = 1 + (Debt / Equity). Company B's multiplier of 3.0× means two-thirds of its assets are funded by debt (high financial risk), whereas Company A's multiplier of 1.2× reflects minimal debt and earns its ROE via rapid asset turnover (3.0×).
           </div>
         </div>
 
@@ -431,8 +431,8 @@
           </div>
           <div class="explanation-box" id="sq5-explanation">
             <strong>Correct Answer: C (40 days)</strong><br>
-            $\text{Receivables Turnover} = \frac{\text{Sales}}{\text{Debtors}} = \frac{₹36,50,000}{₹4,00,000} = 9.125\times$.<br>
-            $\text{Collection Days} = \frac{365 \times ₹4,00,000}{₹36,50,000} = \frac{365}{36,50,000} \times 4,00,000 = \frac{1}{10,000} \times 4,00,000 = <strong>40\text{ days}</strong>$.
+            Receivables Turnover = Sales / Debtors = ₹36,50,000 / ₹4,00,000 = 9.125×.<br>
+            Collection Days = (365 × ₹4,00,000) / ₹36,50,000 = (365 / 36,50,000) × 4,00,000 = (1 / 10,000) × 4,00,000 = <span class="math-expr"><strong>40 days</strong></span>.
           </div>
         </div>
 
@@ -465,9 +465,9 @@
           </div>
           <div class="explanation-box" id="sq6-explanation">
             <strong>Correct Answer: A (₹36 Crore)</strong><br>
-            1. $\text{Market Capitalisation} = 20\text{L shares} \times ₹150 = ₹30,00,00,000$ (₹30 Crore).<br>
-            2. $\text{Enterprise Value} = \text{Market Cap} + \text{Debt} - \text{Cash}$<br>
-            $= ₹30\text{ Cr} + ₹8\text{ Cr} - ₹2\text{ Cr} = <strong>₹36\text{ Crore}</strong>$.
+            1. Market Capitalisation = 20L shares × ₹150 = ₹30,00,00,000 (₹30 Crore).<br>
+            2. Enterprise Value = Market Cap + Debt − Cash<br>
+            = ₹30 Cr + ₹8 Cr − ₹2 Cr = <span class="math-expr"><strong>₹36 Crore</strong></span>.
           </div>
         </div>
 
@@ -496,7 +496,7 @@
           </div>
           <div class="explanation-box" id="sq7-explanation">
             <strong>Correct Answer: A</strong><br>
-            <em>Explanation:</em> When inventory sits longer before being sold, extra cash is tied up in the warehouse. This directly lengthens the Operating Cycle ($\text{Inventory Days} + \text{Receivable Days} - \text{Payable Days}$) and creates a cash drain.
+            <em>Explanation:</em> When inventory sits longer before being sold, extra cash is tied up in the warehouse. This directly lengthens the Operating Cycle (Inventory Days + Receivable Days − Payable Days) and creates a cash drain.
           </div>
         </div>
 
@@ -529,8 +529,8 @@
           </div>
           <div class="explanation-box" id="sq8-explanation">
             <strong>Correct Answer: A</strong><br>
-            $\text{Gross Profit} = ₹50\text{L} - ₹30\text{L} = ₹20\text{L} \rightarrow \text{Gross Margin} = \frac{₹20\text{L}}{₹50\text{L}} = 40\%$.<br>
-            $\text{Operating Profit (EBIT)} = \text{Gross Profit} - \text{Opex} = ₹20\text{L} - ₹10\text{L} = ₹10\text{L} \rightarrow \text{Operating Margin} = \frac{₹10\text{L}}{₹50\text{L}} = 20\%$.
+            Gross Profit = ₹50L − ₹30L = ₹20L → Gross Margin = ₹20L / ₹50L = <span class="math-expr">40%</span>.<br>
+            Operating Profit (EBIT) = Gross Profit − Opex = ₹20L − ₹10L = ₹10L → Operating Margin = ₹10L / ₹50L = <span class="math-expr">20%</span>.
           </div>
         </div>
 
@@ -563,9 +563,9 @@
           </div>
           <div class="explanation-box" id="sq9-explanation">
             <strong>Correct Answer: A (P/E = 25× | Payout = 50%)</strong><br>
-            1. $\text{EPS} = \frac{₹40,00,000}{10,00,000\text{ shares}} = ₹4.00$ per share.<br>
-            2. $\text{P/E Ratio} = \frac{\text{Market Price}}{\text{EPS}} = \frac{₹100}{₹4.00} = 25.0\times$.<br>
-            3. $\text{Dividend Payout} = \frac{\text{DPS}}{\text{EPS}} = \frac{₹2.00}{₹4.00} = 50\%$.
+            1. EPS = ₹40,00,000 / 10,00,000 shares = ₹4.00 per share.<br>
+            2. P/E Ratio = Market Price / EPS = ₹100 / ₹4.00 = <span class="math-expr">25.0×</span>.<br>
+            3. Dividend Payout = DPS / EPS = ₹2.00 / ₹4.00 = <span class="math-expr">50%</span>.
           </div>
         </div>
 
