@@ -60,7 +60,7 @@
           </div>
           <div class="callout callout-warning" style="margin:0;">
             <h4>2. Productive Investment</h4>
-            <p>₹1 today can be invested at interest rate $r$ to earn a return and multiply.</p>
+            <p>₹1 today can be invested at interest rate <em>r</em> to earn a return and multiply.</p>
           </div>
           <div class="callout callout-danger" style="margin:0;">
             <h4>3. Inflation Erosion</h4>
@@ -83,7 +83,7 @@
             <div class="formula-code">FV = PV × (1 + r)ⁿ</div>
             <p style="font-size: 0.85rem; color: #475569; margin-top: 0.4rem;">
               • <em>Example:</em> ₹10,000 at 10% for 3 years:<br>
-              Yr 1: ₹11,000 $\rightarrow$ Yr 2: ₹12,100 $\rightarrow$ Yr 3: ₹13,310.
+              Yr 1: ₹11,000 → Yr 2: ₹12,100 → Yr 3: ₹13,310.
             </p>
           </div>
           <div class="formula-box">
@@ -99,16 +99,16 @@
           <div class="formula-name" style="color: #b45309;">⚡ The Rule of 72 (Mental Math Shortcut)</div>
           <div class="formula-code">Years to Double ≈ 72 / Interest Rate (%)</div>
           <p style="font-size: 0.9rem; color: #78350f; margin-top: 0.5rem;">
-            • At <strong>8% interest</strong>: Money doubles in approximately $\frac{72}{8} = \mathbf{9\text{ years}}$.<br>
-            • At <strong>12% interest</strong>: Money doubles in approximately $\frac{72}{12} = \mathbf{6\text{ years}}$.<br>
-            • At <strong>6% interest</strong>: Money doubles in approximately $\frac{72}{6} = \mathbf{12\text{ years}}$.
+            • At <strong>8% interest</strong>: Money doubles in approximately <span class="math-expr">72 / 8 = <strong>9 years</strong></span>.<br>
+            • At <strong>12% interest</strong>: Money doubles in approximately <span class="math-expr">72 / 12 = <strong>6 years</strong></span>.<br>
+            • At <strong>6% interest</strong>: Money doubles in approximately <span class="math-expr">72 / 6 = <strong>12 years</strong></span>.
           </p>
         </div>
 
         <div class="callout callout-info">
           <h4>💡 Compounding Frequency Insight (APR vs Nominal):</h4>
           <p>
-            If a credit card charges <strong>2% per month</strong>, the annual cost is NOT $2\% \times 12 = 24\%$. Because interest compounds monthly, ₹100 becomes $(1.02)^{12} = ₹126.82$, representing an Annual Percentage Rate (APR) of <strong>26.82%</strong>!
+            If a credit card charges <strong>2% per month</strong>, the annual cost is NOT 2% × 12 = 24%. Because interest compounds monthly, ₹100 becomes (1.02)¹² = ₹126.82, representing an Annual Percentage Rate (APR) of <strong>26.82%</strong>!
           </p>
         </div>
       </div>
@@ -125,22 +125,22 @@
             <tbody>
               <tr>
                 <td><strong>Ordinary Annuity</strong><br>(Equal payments at <em>end</em> of each period)</td>
-                <td>$PV = PMT \times \left[\frac{1 - (1+r)^{-n}}{r}\right]$</td>
+                <td><span class="math-expr">PV = PMT × [(1 − (1 + r)⁻ⁿ) / r]</span></td>
                 <td>Bank loans, EMIs, bond semi-annual coupon payments.</td>
               </tr>
               <tr>
                 <td><strong>Annuity Due</strong><br>(Equal payments at <em>start</em> of each period)</td>
-                <td>$PV_{\text{due}} = PV_{\text{ordinary}} \times (1 + r)$</td>
+                <td><span class="math-expr">PV(Due) = PV(Ordinary) × (1 + r)</span></td>
                 <td>Apartment rent, commercial equipment leases, insurance premiums.</td>
               </tr>
               <tr>
                 <td><strong>Level Perpetuity</strong><br>(Constant payment forever)</td>
-                <td>$PV = \frac{PMT}{r}$</td>
+                <td><span class="math-expr">PV = PMT / r</span></td>
                 <td>Perpetual preference shares, permanent university endowments.</td>
               </tr>
               <tr>
-                <td><strong>Growing Perpetuity</strong><br>(Grows at constant rate $g$ forever, $r > g$)</td>
-                <td>$PV = \frac{CF_1}{r - g}$</td>
+                <td><strong>Growing Perpetuity</strong><br>(Grows at constant rate g forever, r > g)</td>
+                <td><span class="math-expr">PV = CF₁ / (r − g)</span></td>
                 <td>Gordon Growth equity share valuation model.</td>
               </tr>
             </tbody>
@@ -151,10 +151,10 @@
           <h4>⚠️ Ordinary Annuity vs Annuity Due Comparison:</h4>
           <p>
             Because every single cash flow in an <em>Annuity Due</em> is received one period earlier, each payment earns an extra period of interest. Therefore:
-            $$\mathbf{PV(\text{Annuity Due}) = PV(\text{Ordinary Annuity}) \times (1 + r)}$$
+            <div class="math-block">PV(Annuity Due) = PV(Ordinary Annuity) × (1 + r)</div>
             <em>Worked Example:</em> A 4-year lease of ₹2,00,000/year at 9%:
-            • Ordinary Annuity PV (paid at year-end) = $₹2,00,000 \times 3.2397 = ₹6,47,944$.
-            • Annuity Due PV (paid at start of each year) = $₹6,47,944 \times 1.09 = \mathbf{₹7,06,259}$.
+            <br>• Ordinary Annuity PV (paid at year-end) = ₹2,00,000 × 3.2397 = <span class="math-expr">₹6,47,944</span>.
+            <br>• Annuity Due PV (paid at start of each year) = ₹6,47,944 × 1.09 = <span class="math-expr"><strong>₹7,06,259</strong></span>.
           </p>
         </div>
       </div>
@@ -166,17 +166,17 @@
         <h4>Case A: GreenCart's Investor Choice</h4>
         <p>An angel investor offers GreenCart: <strong>₹8,00,000 today</strong> OR <strong>₹10,50,000 in 3 years</strong>. GreenCart can earn 12% annual return on funds. Which offer should GreenCart choose?</p>
         <div class="callout callout-success">
-          <p>• <strong>Method 1 (Discounting to today):</strong> $PV = \frac{₹10,50,000}{(1.12)^3} = \frac{₹10,50,000}{1.4049} = \mathbf{₹7,47,369}$.</p>
+          <p>• <strong>Method 1 (Discounting to today):</strong> <span class="math-expr">PV = ₹10,50,000 / (1.12)³ = ₹10,50,000 / 1.4049 = <strong>₹7,47,369</strong></span>.</p>
           <p>• Since ₹8,00,000 today is greater than the discounted value of ₹7,47,369, <strong>GreenCart should take ₹8,00,000 today!</strong></p>
-          <p>• <strong>Method 2 (Compounding forward):</strong> $₹8,00,000 \times (1.12)^3 = \mathbf{₹11,23,942}$ in 3 years, which easily beats ₹10,50,000.</p>
+          <p>• <strong>Method 2 (Compounding forward):</strong> <span class="math-expr">₹8,00,000 × (1.12)³ = <strong>₹11,23,942</strong></span> in 3 years, which easily beats ₹10,50,000.</p>
         </div>
 
         <h4>Case B: Perpetuity Comparison</h4>
         <p>A donor offers an educational trust ₹10,000 every year forever. If the discount rate is 8%:</p>
         <div class="callout callout-info">
-          <p>• $PV = \frac{₹10,000}{0.08} = \mathbf{₹1,25,000}$ today.</p>
+          <p>• <span class="math-expr">PV = ₹10,00,0 / 0.08 = <strong>₹1,25,000</strong></span> today.</p>
           <p>• If offered a choice between ₹1,00,000 now OR ₹1,20,000 in 3 years at 8%:
-            $PV = \frac{₹1,20,000}{(1.08)^3} = \frac{₹1,20,000}{1.2597} = \mathbf{₹95,260}$. Taking ₹1,00,000 now is superior!
+            <span class="math-expr">PV = ₹1,20,000 / (1.08)³ = ₹1,20,000 / 1.2597 = <strong>₹95,260</strong></span>. Taking ₹1,00,000 now is superior!
           </p>
         </div>
       </div>
@@ -241,7 +241,7 @@
           </div>
           <div class="explanation-box" id="tq1-explanation">
             <strong>Correct Answer: C (12 years)</strong><br>
-            $\text{Years to double} \approx \frac{72}{\text{Interest Rate \%}} = \frac{72}{6} = <strong>12\text{ years}</strong>$.
+            Years to double ≈ 72 / Interest Rate % = 72 / 6 = <span class="math-expr"><strong>12 years</strong></span>.
           </div>
         </div>
 
@@ -274,8 +274,8 @@
           </div>
           <div class="explanation-box" id="tq2-explanation">
             <strong>Correct Answer: B (₹13,310)</strong><br>
-            $FV = ₹10,000 \times (1 + 0.10)^3 = ₹10,000 \times 1.331 = <strong>₹13,310</strong>$.<br>
-            (Year 1: ₹11,000 $\rightarrow$ Year 2: ₹12,100 $\rightarrow$ Year 3: ₹13,310). Note that simple interest would give only ₹13,000.
+            FV = ₹10,000 × (1 + 0.10)³ = ₹10,000 × 1.331 = <span class="math-expr"><strong>₹13,310</strong></span>.<br>
+            (Year 1: ₹11,000 → Year 2: ₹12,100 → Year 3: ₹13,310). Note that simple interest would give only ₹13,000.
           </div>
         </div>
 
@@ -286,7 +286,7 @@
             <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
           </div>
           <div class="question-text">
-            You are offered an upfront payment of ₹1,00,000 today OR a payment of ₹1,20,000 in 3 years. If the applicable market discount rate is 8% per annum (where $1.08^3 \approx 1.2597$), which option should you choose?
+            You are offered an upfront payment of ₹1,00,000 today OR a payment of ₹1,20,000 in 3 years. If the applicable market discount rate is 8% per annum (where 1.08³ ≈ 1.2597), which option should you choose?
           </div>
           <div class="options-list">
             <label class="option-item" onclick="selectOption('tq3', 0)">
@@ -309,7 +309,7 @@
           <div class="explanation-box" id="tq3-explanation">
             <strong>Correct Answer: B</strong><br>
             Discounting the future sum to today:<br>
-            $PV = \frac{₹1,20,000}{(1.08)^3} = \frac{₹1,20,000}{1.2597} \approx <strong>₹95,260</strong>$.<br>
+            PV = ₹1,20,000 / (1.08)³ = ₹1,20,000 / 1.2597 ≈ <span class="math-expr"><strong>₹95,260</strong></span>.<br>
             Since ₹1,00,000 in hand today exceeds ₹95,260, taking ₹1,00,000 today is the financially superior choice!
           </div>
         </div>
@@ -343,7 +343,7 @@
           </div>
           <div class="explanation-box" id="tq4-explanation">
             <strong>Correct Answer: B (₹50,00,000)</strong><br>
-            $\text{PV of Level Perpetuity} = \frac{PMT}{r} = \frac{₹4,00,000}{0.08} = \frac{4,00,000}{8/100} = \frac{40,000,000}{8} = <strong>₹50,00,000</strong>$.
+            PV of Level Perpetuity = PMT / r = ₹4,00,000 / 0.08 = ₹4,00,000 / (8/100) = ₹40,000,000 / 8 = <span class="math-expr"><strong>₹50,00,000</strong></span>.
           </div>
         </div>
 
@@ -376,7 +376,7 @@
           </div>
           <div class="explanation-box" id="tq5-explanation">
             <strong>Correct Answer: B (₹1 Crore)</strong><br>
-            $\text{PV of Growing Perpetuity} = \frac{CF_1}{r - g} = \frac{₹6,00,000}{0.10 - 0.04} = \frac{₹6,00,000}{0.06} = <strong>₹1,00,00,000\text{ (₹1 Crore)}</strong>$.<br>
+            PV of Growing Perpetuity = CF₁ / (r − g) = ₹6,00,000 / (0.10 − 0.04) = ₹6,00,000 / 0.06 = <span class="math-expr"><strong>₹1,00,00,000 (₹1 Crore)</strong></span>.<br>
             (Notice that growth significantly increases value: without growth, ₹6L at 10% would be worth only ₹60 Lakh).
           </div>
         </div>
@@ -411,7 +411,7 @@
           <div class="explanation-box" id="tq6-explanation">
             <strong>Correct Answer: B (₹3,48,685)</strong><br>
             An Annuity Due has payments made at the start of each period, meaning every cash flow is discounted by one fewer year. Mathematically:<br>
-            $PV_{\text{Due}} = PV_{\text{Ordinary}} \times (1 + r) = ₹3,16,986 \times 1.10 = <strong>₹3,48,685</strong>$.
+            PV(Due) = PV(Ordinary) × (1 + r) = ₹3,16,986 × 1.10 = <span class="math-expr"><strong>₹3,48,685</strong></span>.
           </div>
         </div>
 
@@ -445,9 +445,9 @@
           <div class="explanation-box" id="tq7-explanation">
             <strong>Correct Answer: A (₹30,000)</strong><br>
             Discount each flow by its respective year:<br>
-            • Year 1 PV = $\frac{₹11,000}{1.10} = ₹10,000$.<br>
-            • Year 2 PV = $\frac{₹24,200}{(1.10)^2} = \frac{₹24,200}{1.21} = ₹20,000$.<br>
-            • Total PV = $₹10,000 + ₹20,000 = <strong>₹30,000</strong>$.
+            • Year 1 PV = ₹11,000 / 1.10 = ₹10,000.<br>
+            • Year 2 PV = ₹24,200 / (1.10)² = ₹24,200 / 1.21 = ₹20,000.<br>
+            • Total PV = ₹10,000 + ₹20,000 = <span class="math-expr"><strong>₹30,000</strong></span>.
           </div>
         </div>
 
@@ -476,7 +476,7 @@
           </div>
           <div class="explanation-box" id="tq8-explanation">
             <strong>Correct Answer: B (Inverse relationship)</strong><br>
-            <em>Explanation:</em> In the formula $PV = \frac{FV}{(1+r)^n}$, the discount rate $r$ sits in the denominator. A higher required rate of return or discount rate shrinks the present value of distant cash flows.
+            <em>Explanation:</em> In the formula PV = FV / (1 + r)ⁿ, the discount rate <em>r</em> sits in the denominator. A higher required rate of return or discount rate shrinks the present value of distant cash flows.
           </div>
         </div>
 

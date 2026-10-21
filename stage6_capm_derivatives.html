@@ -65,29 +65,29 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>Risk-Free Rate ($R_f$)</strong></td>
+                <td><strong>Risk-Free Rate (R_f)</strong></td>
                 <td>Return on an asset with zero default and reinvestment risk.</td>
                 <td>Yield on 10-year Government of India Security (G-Sec) ~7.0%.</td>
               </tr>
               <tr>
-                <td><strong>Market Risk Premium ($R_m - R_f$)</strong></td>
+                <td><strong>Market Risk Premium (R_m − R_f)</strong></td>
                 <td>Extra return investors demand for holding equities over safe debt.</td>
                 <td>Common historical range: 5.0% to 7.0%.</td>
               </tr>
               <tr>
-                <td><strong>Beta ($\beta$)</strong></td>
+                <td><strong>Beta (β)</strong></td>
                 <td>Sensitivity of the stock's returns relative to overall market swings.</td>
-                <td>$\beta = 1.0$ (Market average); $\beta > 1$ (Aggressive); $\beta < 1$ (Defensive).</td>
+                <td>β = 1.0 (Market average); β > 1 (Aggressive); β < 1 (Defensive).</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="callout callout-info">
-          <h4>💡 Jensen's Alpha ($\alpha$)</h4>
+          <h4>💡 Jensen's Alpha (α)</h4>
           <p>
-            $\mathbf{\alpha = \text{Actual Return} - \text{CAPM Expected Return}}$.<br>
-            • If a stock with $\beta = 1.2$ was expected to return $14\%$ based on CAPM but actually generated $17\%$, it generated a **positive alpha of $+3\%$** (true value created beyond pure market exposure).
+            <span class="math-expr">Alpha (α) = Actual Return − CAPM Expected Return</span><br>
+            • If a stock with β = 1.2 was expected to return 14% based on CAPM but actually generated 17%, it generated a <strong>positive alpha of +3%</strong> (true value created beyond pure market exposure).
           </p>
         </div>
       </div>
@@ -190,20 +190,20 @@
             <tbody>
               <tr>
                 <td><strong>In-the-Money (ITM)</strong></td>
-                <td>Spot Price ($S$) > Strike Price ($K$)</td>
-                <td>Spot Price ($S$) < Strike Price ($K$)</td>
+                <td>Spot Price (S) > Strike Price (K)</td>
+                <td>Spot Price (S) < Strike Price (K)</td>
                 <td>Positive intrinsic value if exercised immediately.</td>
               </tr>
               <tr>
                 <td><strong>At-the-Money (ATM)</strong></td>
-                <td>Spot Price ($S$) = Strike Price ($K$)</td>
-                <td>Spot Price ($S$) = Strike Price ($K$)</td>
+                <td>Spot Price (S) = Strike Price (K)</td>
+                <td>Spot Price (S) = Strike Price (K)</td>
                 <td>Zero intrinsic value; pure time value.</td>
               </tr>
               <tr>
                 <td><strong>Out-of-the-Money (OTM)</strong></td>
-                <td>Spot Price ($S$) < Strike Price ($K$)</td>
-                <td>Spot Price ($S$) > Strike Price ($K$)</td>
+                <td>Spot Price (S) < Strike Price (K)</td>
+                <td>Spot Price (S) > Strike Price (K)</td>
                 <td>Zero intrinsic value; exercising would produce a loss.</td>
               </tr>
             </tbody>
@@ -255,7 +255,7 @@
             <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
           </div>
           <div class="question-text">
-            According to the Capital Asset Pricing Model (CAPM), if the 10-year Government bond yield is 7%, the expected market return is 13%, and a company's stock has a Beta ($\beta$) of 1.2, what is the required cost of equity?
+            According to the Capital Asset Pricing Model (CAPM), if the 10-year Government bond yield is 7%, the expected market return is 13%, and a company's stock has a Beta (β) of 1.2, what is the required cost of equity?
           </div>
           <div class="options-list">
             <label class="option-item" onclick="selectOption('dq1', 0)">
@@ -277,8 +277,8 @@
           </div>
           <div class="explanation-box" id="dq1-explanation">
             <strong>Correct Answer: B (14.2%)</strong><br>
-            $\text{Market Risk Premium} = R_m - R_f = 13\% - 7\% = 6\%$.<br>
-            $E(R_e) = R_f + \beta \times (R_m - R_f) = 7\% + 1.2 \times 6\% = 7\% + 7.2\% = <strong>14.2\%</strong>$.
+            Market Risk Premium = R_m − R_f = 13% − 7% = 6%.<br>
+            Cost of Equity = R_f + β × (R_m − R_f) = 7% + 1.2 × 6% = 7% + 7.2% = <span class="math-expr"><strong>14.2%</strong></span>.
           </div>
         </div>
 
@@ -307,7 +307,7 @@
           </div>
           <div class="explanation-box" id="dq2-explanation">
             <strong>Correct Answer: A</strong><br>
-            <em>Explanation:</em> A beta below 1.0 indicates a defensive stock whose business revenues and earnings are relatively insulated from macroeconomic swings. If the broad market rises or falls by 10%, a stock with $\beta = 0.6$ is expected to move by only ~6%.
+            <em>Explanation:</em> A beta below 1.0 indicates a defensive stock whose business revenues and earnings are relatively insulated from macroeconomic swings. If the broad market rises or falls by 10%, a stock with β = 0.6 is expected to move by only ~6%.
           </div>
         </div>
 
@@ -398,7 +398,7 @@
           </div>
           <div class="explanation-box" id="dq5-explanation">
             <strong>Correct Answer: B (Loss of ₹50)</strong><br>
-            <em>Explanation:</em> An option gives the buyer the <strong>right, not the obligation</strong> to buy. Since the spot price is ₹700, buying at the strike of ₹1,000 makes no sense, so the buyer allows the option to expire worthless. The buyer's maximum possible loss is strictly capped at the upfront premium paid: ₹50!
+            <em>Explanation:</em> An option gives the buyer the <strong>right, not the obligation</strong> to buy. Since the spot price is ₹700, buying at the strike of ₹1,000 makes no sense, so the buyer allows the option to expire worthless. The buyer's maximum possible loss is strictly capped at the upfront premium paid: <span class="math-expr">₹50</span>!
           </div>
         </div>
 
@@ -427,7 +427,7 @@
           </div>
           <div class="explanation-box" id="dq6-explanation">
             <strong>Correct Answer: A (In-the-Money)</strong><br>
-            <em>Explanation:</em> A Put option is the right to SELL. If the market price is ₹420, having the contractual right to sell at ₹500 has immediate positive intrinsic value of $₹500 - ₹420 = ₹80$. Therefore, the put option is <strong>In-the-Money (ITM)</strong>.
+            <em>Explanation:</em> A Put option is the right to SELL. If the market price is ₹420, having the contractual right to sell at ₹500 has immediate positive intrinsic value of <span class="math-expr">₹500 − ₹420 = ₹80</span>. Therefore, the put option is <strong>In-the-Money (ITM)</strong>.
           </div>
         </div>
 
