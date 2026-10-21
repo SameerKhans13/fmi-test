@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 5: Capital Budgeting & Decisions | FMI 100/100</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="header-nav">
+    <div class="header-inner">
+      <a href="index.html" class="brand-title">
+        <span>📈</span> FMI 100/100
+        <span class="brand-subtitle">Stage 5: Capital Budgeting & Decisions</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">← Hub Overview</a>
+        <a href="stage1_accounting.html">Stage 1</a>
+        <a href="stage2_ratios.html">Stage 2</a>
+        <a href="stage3_cvp.html">Stage 3</a>
+        <a href="stage4_tvm.html">Stage 4</a>
+        <a href="stage5_capital_budgeting.html" class="active">Stage 5</a>
+        <a href="stage6_capm_derivatives.html">Stage 6</a>
+        <a href="stage7_final_exam.html" style="background:#e11d48; color:white;">Final Exam 🎯</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Stage Header & Tab Navigation -->
+    <div style="margin-bottom: 1.5rem;">
+      <span class="badge badge-primary">Session 8 · High Exam Priority</span>
+      <h1 style="font-size: 2rem; color: var(--secondary); margin-top: 0.35rem;">Stage 5: Capital Budgeting & Investment Decisions</h1>
+      <p style="color: var(--text-muted);">
+        Master project appraisal techniques: <strong>Net Present Value (NPV), Internal Rate of Return (IRR), Payback Period, and Profitability Index (PI)</strong>. Know exactly why NPV beats IRR when projects conflict.
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('notes-tab', this)">📖 Capital Budgeting Core Principles</button>
+      <button class="tab-btn" onclick="switchTab('test-tab', this)">✍️ Stage 5 Practice Test (10 Questions)</button>
+    </div>
+
+    <!-- TAB 1: DETAILED INFORMATION -->
+    <div id="notes-tab" class="tab-content active">
+
+      <!-- Section 1: The Four Capital Budgeting Tools -->
+      <div class="card">
+        <h3 class="card-title">1. The Four Capital Budgeting Appraisal Techniques</h3>
+        
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Technique</th><th>Formula / Definition</th><th>Accept / Reject Rule</th><th>Key Advantage & Limitation</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Net Present Value (NPV)</strong></td>
+                <td>$\sum_{t=1}^n \frac{CF_t}{(1+r)^t} - \text{Initial Outlay}$</td>
+                <td><strong>Accept if $\text{NPV} > 0$</strong><br>(Adds rupee value to shareholders)</td>
+                <td><strong>Gold Standard</strong>. Directly measures wealth created; additive across independent projects.</td>
+              </tr>
+              <tr>
+                <td><strong>2. Internal Rate of Return (IRR)</strong></td>
+                <td>Discount rate $r$ where $\text{NPV} = 0$</td>
+                <td><strong>Accept if $\text{IRR} > \text{Cost of Capital } (r)$</strong></td>
+                <td>Intuitive percentage return; but scale-blind and assumes reinvestment at IRR.</td>
+              </tr>
+              <tr>
+                <td><strong>3. Payback Period</strong></td>
+                <td>Years required to recover the initial cash outlay</td>
+                <td><strong>Accept if Payback $\le$ Target cutoff</strong></td>
+                <td>Measures liquidity and speed; <strong>fatal flaw:</strong> ignores TVM and all cash flows after payback!</td>
+              </tr>
+              <tr>
+                <td><strong>4. Profitability Index (PI)</strong></td>
+                <td>$\frac{\text{PV of Cash Inflows}}{\text{Initial Outlay}}$</td>
+                <td><strong>Accept if $\text{PI} > 1.0$</strong><br>(Equivalent to $\text{NPV} > 0$)</td>
+                <td>Indispensable for ranking projects under <strong>Capital Rationing</strong> (limited funds).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 2: NPV vs IRR Conflict in Mutually Exclusive Projects -->
+      <div class="card" style="border: 2px solid #3b82f6;">
+        <h3 class="card-title" style="color: var(--primary);">
+          <span>⚖️ The Big Conflict: NPV vs IRR in Mutually Exclusive Projects</span>
+          <span class="badge badge-primary">Guaranteed Exam Question</span>
+        </h3>
+        <p>
+          When choosing between two mutually exclusive projects (you can only pick one), NPV and IRR may rank them differently.
+        </p>
+
+        <div class="callout callout-danger">
+          <h4>🚨 The Golden Rule: ALWAYS OBEY NPV!</h4>
+          <p>If Project A has a higher NPV and Project B has a higher IRR, <strong>always choose Project A (highest NPV)</strong>.</p>
+        </div>
+
+        <h4>Why Does IRR Fail in Conflicts?</h4>
+        <ol style="margin-left: 1.5rem; line-height: 1.8;">
+          <li>
+            <strong>The Scale Problem (Scale-Blindness):</strong><br>
+            A project with an outlay of ₹10,000 that returns ₹20,000 has an IRR of $100\%$ but generates only ₹10,000 of wealth. A project with an outlay of ₹1 Crore that returns ₹1.25 Crore has an IRR of $25\%$ but generates ₹25,00,000 of wealth! Shareholders care about absolute rupee wealth, not percentage bragging rights.
+          </li>
+          <li>
+            <strong>The Reinvestment Rate Fallacy:</strong><br>
+            NPV assumes intermediate cash inflows are reinvested at the firm's realistic <strong>Cost of Capital (WACC)</strong>. IRR assumes cash flows can be reinvested at the IRR itself (e.g., assuming you can reinvest intermediate cash at 40%, which is virtually impossible).
+          </li>
+          <li>
+            <strong>Multiple IRRs:</strong><br>
+            If a project has unconventional cash flows (outflows followed by inflows followed by another outflow, such as environmental cleanup at mine closure), there can be multiple internal rates of return or none at all.
+          </li>
+        </ol>
+
+        <h4>Slide Worked Case: Solar Plant vs LED Retrofit</h4>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Project</th><th>Initial Outlay</th><th>Annual Cash Flow</th><th>PV of Inflows (@10%)</th><th>NPV (@10%)</th><th>IRR</th><th>Verdict</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Solar Plant</strong></td>
+                <td>₹1,00,00,000</td>
+                <td>₹28,00,000 (6 yrs)</td>
+                <td>₹1,21,94,730</td>
+                <td><strong>+₹21,94,730</strong></td>
+                <td>17.2%</td>
+                <td style="color: #15803d; font-weight: bold;">CHOSEN (Higher NPV)</td>
+              </tr>
+              <tr>
+                <td><strong>LED Retrofit</strong></td>
+                <td>₹10,00,000</td>
+                <td>₹4,50,000 (4 yrs)</td>
+                <td>₹14,26,439</td>
+                <td>+₹4,26,439</td>
+                <td><strong>28.5%</strong></td>
+                <td style="color: #b91c1c;">Rejected (Lower scale)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 3: Capital Rationing & Profitability Index (PI) -->
+      <div class="card">
+        <h3 class="card-title">3. Capital Rationing & Project Ranking via Profitability Index (PI)</h3>
+        <p>
+          When a firm does not have infinite capital and faces a strict budget ceiling, simply picking projects by highest NPV can lead to suboptimal capital usage. Instead, <strong>rank projects by Profitability Index (PI)</strong> to get the most rupee value per rupee of scarce budget.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula-name">Profitability Index Formula:</div>
+          <div class="formula-code">PI = PV of Cash Inflows / Initial Outlay</div>
+        </div>
+
+        <h4>Slide 85 Case (Capital Budget = ₹1 Crore / ₹100 Lakh):</h4>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Project</th><th>Outlay (₹L)</th><th>PV of Inflows (₹L)</th><th>NPV (₹L)</th><th>PI ($\text{PV} / \text{Outlay}$)</th><th>PI Rank</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Project A</strong></td><td>₹40L</td><td>₹52L</td><td>₹12L</td><td><strong>1.30</strong></td><td>Rank 1</td></tr>
+              <tr><td><strong>Project B</strong></td><td>₹50L</td><td>₹60L</td><td>₹10L</td><td><strong>1.20</strong></td><td>Rank 2</td></tr>
+              <tr><td><strong>Project D</strong></td><td>₹60L</td><td>₹69L</td><td>₹9L</td><td><strong>1.15</strong></td><td>Rank 3</td></tr>
+              <tr><td><strong>Project C</strong></td><td>₹30L</td><td>₹33L</td><td>₹3L</td><td><strong>1.10</strong></td><td>Rank 4</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="callout callout-success">
+          <p>
+            • <strong>Optimal Selection:</strong> Fund <strong>Project A + Project B</strong>.<br>
+            • Total Capital Used = $₹40\text{L} + ₹50\text{L} = \mathbf{₹90\text{L}}$ (within ₹100L budget).<br>
+            • Total Portfolio NPV Created = $₹12\text{L} + ₹10\text{L} = \mathbf{₹22\text{Lakh}}$!<br>
+            (Contrast with picking A + D: uses ₹100L but yields only ₹21L NPV).
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 4: Payback vs Discounted Payback -->
+      <div class="card">
+        <h3 class="card-title">4. Payback Period vs Discounted Payback Period</h3>
+        <p><strong>Bharat AutoParts Robotic Line:</strong> Outlay = ₹80 Lakh, Cash Inflow = ₹25 Lakh/year for 5 years. Cost of capital = 12%.</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="callout callout-info">
+            <h4>Simple Payback Period</h4>
+            <p>$\text{Payback} = \frac{\text{Outlay}}{\text{Annual Inflow}} = \frac{₹80\text{L}}{₹25\text{L}} = \mathbf{3.2\text{ years}}$.</p>
+            <p>• Completely ignores the time value of money.</p>
+          </div>
+          <div class="callout callout-warning">
+            <h4>Discounted Payback Period</h4>
+            <p>Accounts for the time value of money by discounting each ₹25L inflow at 12%.</p>
+            <p>Cumulative discounted recovery takes <strong>4.29 years</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: INTERACTIVE PRACTICE TEST -->
+    <div id="test-tab" class="tab-content">
+      
+      <!-- Test Header Panel -->
+      <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="color:var(--secondary); margin-bottom:0.25rem;">Stage 5 Diagnostic Test: 10 MCQs</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem;">
+            Test your capital budgeting decision rules and conflict resolution. Target: <strong>At least 8/10 (80%) to clear this stage</strong>.
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-outline" onclick="resetStage5Quiz()">🔄 Reset Test</button>
+        </div>
+      </div>
+
+      <!-- Live Score Banner -->
+      <div id="stage5-result-banner" class="score-banner" style="display:none; text-align:center;">
+        <div id="stage5-score-display" class="score-number">0 / 10</div>
+        <h3 id="stage5-verdict-title" style="margin-top:0.5rem;">Score Review</h3>
+        <p id="stage5-verdict-text" style="color:#cbd5e1;"></p>
+        <div style="margin-top:1.5rem;">
+          <a href="stage6_capm_derivatives.html" id="stage5-next-btn" class="btn btn-success" style="display:none; font-size:1.05rem;">Proceed to Stage 6: CAPM & Derivatives →</a>
+        </div>
+      </div>
+
+      <!-- Quiz Form Container -->
+      <form id="stage5-quiz-form" onsubmit="event.preventDefault(); evaluateStage5Quiz();">
+        
+        <!-- Question 1 -->
+        <div class="question-card" id="bq1-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 1 · NPV Decision Rule</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            An independent project requires an initial outlay of ₹50,00,000. The present value of all expected future cash inflows discounted at the company's cost of capital (10%) is ₹57,00,000. What is the project's Net Present Value (NPV), and what is the decision?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq1', 0)">
+              <input type="radio" name="bq1" value="0" class="option-radio"> A) NPV = +₹7,00,000; Accept the project because it creates shareholder value.
+            </label>
+            <label class="option-item" onclick="selectOption('bq1', 1)">
+              <input type="radio" name="bq1" value="1" class="option-radio"> B) NPV = −₹7,00,000; Reject the project.
+            </label>
+            <label class="option-item" onclick="selectOption('bq1', 2)">
+              <input type="radio" name="bq1" value="2" class="option-radio"> C) NPV = +₹7,00,000; Indifferent between accepting and rejecting.
+            </label>
+            <label class="option-item" onclick="selectOption('bq1', 3)">
+              <input type="radio" name="bq1" value="3" class="option-radio"> D) NPV = ₹57,00,000; Accept the project.
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="bq1-explanation">
+            <strong>Correct Answer: A</strong><br>
+            $\text{NPV} = \text{PV of Inflows} - \text{Initial Outlay} = ₹57,00,000 - ₹50,00,000 = <strong>+₹7,00,000</strong>$. Since $\text{NPV} > 0$, the project earns more than the required 10% hurdle rate and should be accepted.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card" id="bq2-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 2 · IRR Definition</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            What is the definition of the Internal Rate of Return (IRR)?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq2', 0)">
+              <input type="radio" name="bq2" value="0" class="option-radio"> A) The discount rate that equates the present value of cash inflows to zero.
+            </label>
+            <label class="option-item" onclick="selectOption('bq2', 1)">
+              <input type="radio" name="bq2" value="1" class="option-radio"> B) The discount rate that makes the Net Present Value (NPV) of a project exactly equal to zero.
+            </label>
+            <label class="option-item" onclick="selectOption('bq2', 2)">
+              <input type="radio" name="bq2" value="2" class="option-radio"> C) The firm's weighted average cost of capital.
+            </label>
+            <label class="option-item" onclick="selectOption('bq2', 3)">
+              <input type="radio" name="bq2" value="3" class="option-radio"> D) The annual accounting return on average book assets.
+            </label>
+          </div>
+          <div class="explanation-box" id="bq2-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> The Internal Rate of Return (IRR) is by definition the exact hurdle/discount rate at which the present value of future cash inflows equals the initial investment outlay, resulting in $\text{NPV} = 0$.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card" id="bq3-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 3 · The Big Conflict</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            When appraising two mutually exclusive capital investment projects, Project X has an NPV of ₹20,00,000 and an IRR of 16%. Project Y has an NPV of ₹6,00,000 and an IRR of 28%. The firm's cost of capital is 11%. Which project should management select?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq3', 0)">
+              <input type="radio" name="bq3" value="0" class="option-radio"> A) Select Project Y because its 28% IRR is significantly higher than 16%.
+            </label>
+            <label class="option-item" onclick="selectOption('bq3', 1)">
+              <input type="radio" name="bq3" value="1" class="option-radio"> B) Select Project X because for mutually exclusive projects, the project with the highest NPV creates the most absolute rupee wealth for shareholders.
+            </label>
+            <label class="option-item" onclick="selectOption('bq3', 2)">
+              <input type="radio" name="bq3" value="2" class="option-radio"> C) Average the two metrics together.
+            </label>
+            <label class="option-item" onclick="selectOption('bq3', 3)">
+              <input type="radio" name="bq3" value="3" class="option-radio"> D) Reject both projects due to conflict.
+            </label>
+          </div>
+          <div class="explanation-box" id="bq3-explanation">
+            <strong>Correct Answer: B (Select Project X)</strong><br>
+            <em>Core Exam Doctrine:</em> When mutually exclusive projects produce conflicting rankings, <strong>NPV always prevails</strong>. Project X adds ₹20 Lakh of direct wealth to shareholders, whereas Project Y adds only ₹6 Lakh. IRR fails because it is scale-blind and assumes unrealistic reinvestment at 28%.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card" id="bq4-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 4 · Payback Calculation</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A machinery automation project requires an upfront investment of ₹60,00,000 and generates constant cash inflows of ₹15,00,000 per year for 6 years. What is the simple payback period?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq4', 0)">
+              <input type="radio" name="bq4" value="0" class="option-radio"> A) 3.5 years
+            </label>
+            <label class="option-item" onclick="selectOption('bq4', 1)">
+              <input type="radio" name="bq4" value="1" class="option-radio"> B) 4.0 years
+            </label>
+            <label class="option-item" onclick="selectOption('bq4', 2)">
+              <input type="radio" name="bq4" value="2" class="option-radio"> C) 4.5 years
+            </label>
+            <label class="option-item" onclick="selectOption('bq4', 3)">
+              <input type="radio" name="bq4" value="3" class="option-radio"> D) 5.0 years
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="bq4-explanation">
+            <strong>Correct Answer: B (4.0 years)</strong><br>
+            $\text{Payback Period} = \frac{\text{Initial Outlay}}{\text{Annual Cash Inflow}} = \frac{₹60,00,000}{₹15,00,000} = <strong>4.0\text{ years}</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card" id="bq5-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 5 · Limitations of Payback</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Which of the following is considered a primary theoretical flaw of the conventional simple Payback Period method?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq5', 0)">
+              <input type="radio" name="bq5" value="0" class="option-radio"> A) It is excessively complicated to calculate without a financial calculator.
+            </label>
+            <label class="option-item" onclick="selectOption('bq5', 1)">
+              <input type="radio" name="bq5" value="1" class="option-radio"> B) It ignores the time value of money and ignores all cash flows received after the payback cutoff point.
+            </label>
+            <label class="option-item" onclick="selectOption('bq5', 2)">
+              <input type="radio" name="bq5" value="2" class="option-radio"> C) It cannot be used if cash flows are positive.
+            </label>
+            <label class="option-item" onclick="selectOption('bq5', 3)">
+              <input type="radio" name="bq5" value="3" class="option-radio"> D) It always produces a negative number.
+            </label>
+          </div>
+          <div class="explanation-box" id="bq5-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> The conventional payback period fails on two critical grounds: (1) It weights a rupee received in Year 3 identically to a rupee received in Year 1 (ignores TVM), and (2) it completely ignores massive cash inflows that may occur after the initial outlay is recovered.
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-card" id="bq6-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 6 · Profitability Index</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A project has an initial investment outlay of ₹80,00,000. The present value of its future cash inflows discounted at 12% is ₹90,40,000. What is the Profitability Index (PI)?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq6', 0)">
+              <input type="radio" name="bq6" value="0" class="option-radio"> A) 0.88
+            </label>
+            <label class="option-item" onclick="selectOption('bq6', 1)">
+              <input type="radio" name="bq6" value="1" class="option-radio"> B) 1.13
+            </label>
+            <label class="option-item" onclick="selectOption('bq6', 2)">
+              <input type="radio" name="bq6" value="2" class="option-radio"> C) 1.25
+            </label>
+            <label class="option-item" onclick="selectOption('bq6', 3)">
+              <input type="radio" name="bq6" value="3" class="option-radio"> D) 1.45
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="bq6-explanation">
+            <strong>Correct Answer: B (1.13)</strong><br>
+            $\text{PI} = \frac{\text{PV of Cash Inflows}}{\text{Initial Outlay}} = \frac{₹90,40,000}{₹80,00,000} = <strong>1.13</strong>$.<br>
+            Since $\text{PI} > 1.0$, the project is acceptable and generates positive NPV (+₹10.4 Lakh).
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-card" id="bq7-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 7 · Capital Rationing</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Under conditions of strict capital rationing (limited capital budget), which appraisal method is recommended to rank divisible independent investment proposals?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq7', 0)">
+              <input type="radio" name="bq7" value="0" class="option-radio"> A) Internal Rate of Return (IRR)
+            </label>
+            <label class="option-item" onclick="selectOption('bq7', 1)">
+              <input type="radio" name="bq7" value="1" class="option-radio"> B) Profitability Index (PI)
+            </label>
+            <label class="option-item" onclick="selectOption('bq7', 2)">
+              <input type="radio" name="bq7" value="2" class="option-radio"> C) Simple Payback Period
+            </label>
+            <label class="option-item" onclick="selectOption('bq7', 3)">
+              <input type="radio" name="bq7" value="3" class="option-radio"> D) Accounting Rate of Return (ARR)
+            </label>
+          </div>
+          <div class="explanation-box" id="bq7-explanation">
+            <strong>Correct Answer: B (Profitability Index)</strong><br>
+            <em>Explanation:</em> When the total capital budget is capped, ranking by Profitability Index ($\text{PI} = \frac{\text{PV of Inflows}}{\text{Outlay}}$) maximizes the bang-for-buck (NPV generated per rupee of constrained budget).
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-card" id="bq8-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 8 · Reinvestment Rate Assumption</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            What reinvestment rate does the Net Present Value (NPV) method assume for intermediate cash inflows?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq8', 0)">
+              <input type="radio" name="bq8" value="0" class="option-radio"> A) The project's Internal Rate of Return (IRR).
+            </label>
+            <label class="option-item" onclick="selectOption('bq8', 1)">
+              <input type="radio" name="bq8" value="1" class="option-radio"> B) The firm's Cost of Capital / hurdle rate.
+            </label>
+            <label class="option-item" onclick="selectOption('bq8', 2)">
+              <input type="radio" name="bq8" value="2" class="option-radio"> C) Zero percent (cash sits idle in a checking account).
+            </label>
+            <label class="option-item" onclick="selectOption('bq8', 3)">
+              <input type="radio" name="bq8" value="3" class="option-radio"> D) The statutory income tax rate.
+            </label>
+          </div>
+          <div class="explanation-box" id="bq8-explanation">
+            <strong>Correct Answer: B (The firm's Cost of Capital)</strong><br>
+            <em>Explanation:</em> NPV assumes that intermediate cash flows can be reinvested at the project's opportunity cost of capital (WACC), which is economically realistic. In contrast, IRR assumes reinvestment at the IRR rate itself, which is often overly optimistic.
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-card" id="bq9-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 9 · Additive Property</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            If a company undertakes two independent projects where Project 1 has an NPV of +₹15 Lakh and Project 2 has an NPV of +₹25 Lakh, what is the combined value added to the company?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq9', 0)">
+              <input type="radio" name="bq9" value="0" class="option-radio"> A) ₹20 Lakh (the average of both projects).
+            </label>
+            <label class="option-item" onclick="selectOption('bq9', 1)">
+              <input type="radio" name="bq9" value="1" class="option-radio"> B) ₹40 Lakh, because NPV is directly additive across independent projects.
+            </label>
+            <label class="option-item" onclick="selectOption('bq9', 2)">
+              <input type="radio" name="bq9" value="2" class="option-radio"> C) It cannot be determined without knowing each project's IRR.
+            </label>
+            <label class="option-item" onclick="selectOption('bq9', 3)">
+              <input type="radio" name="bq9" value="3" class="option-radio"> D) Dependent on the payback periods.
+            </label>
+          </div>
+          <div class="explanation-box" id="bq9-explanation">
+            <strong>Correct Answer: B (₹40 Lakh)</strong><br>
+            <em>Explanation:</em> One of the key advantages of NPV is its <strong>value-additivity property</strong>: $\text{NPV}(A + B) = \text{NPV}(A) + \text{NPV}(B)$. Rates of return (IRR) cannot be simply added together!
+          </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-card" id="bq10-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 10 · Cash Flow Forecasting Pitfall</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            When forecasting cash flows for capital budgeting analysis, which of the following items must be strictly **EXCLUDED**?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('bq10', 0)">
+              <input type="radio" name="bq10" value="0" class="option-radio"> A) Additional net working capital requirements.
+            </label>
+            <label class="option-item" onclick="selectOption('bq10', 1)">
+              <input type="radio" name="bq10" value="1" class="option-radio"> B) Corporate income taxes paid on project operating earnings.
+            </label>
+            <label class="option-item" onclick="selectOption('bq10', 2)">
+              <input type="radio" name="bq10" value="2" class="option-radio"> C) Sunk costs, such as feasibility research expenses already spent prior to the decision.
+            </label>
+            <label class="option-item" onclick="selectOption('bq10', 3)">
+              <input type="radio" name="bq10" value="3" class="option-radio"> D) Salvage value recovered from plant disposal at project end.
+            </label>
+          </div>
+          <div class="explanation-box" id="bq10-explanation">
+            <strong>Correct Answer: C (Sunk costs)</strong><br>
+            <em>Explanation:</em> Capital budgeting evaluates only <strong>incremental future cash flows</strong>. Money already spent on prior market research or consultants (sunk costs) cannot be altered by accepting or rejecting the project and must be excluded.
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin: 2rem 0;">
+          <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2.5rem; font-size: 1.15rem;">
+            Submit Stage 5 Test & Review Answers 🎯
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function selectOption(qName, optIdx) {
+      const card = document.getElementById(qName + '-card');
+      const items = card.querySelectorAll('.option-item');
+      items.forEach(it => it.classList.remove('selected'));
+      items[optIdx].classList.add('selected');
+      items[optIdx].querySelector('input').checked = true;
+    }
+
+    const correctAnswers = {
+      bq1: 0, // A
+      bq2: 1, // B
+      bq3: 1, // B
+      bq4: 1, // B
+      bq5: 1, // B
+      bq6: 1, // B
+      bq7: 1, // B
+      bq8: 1, // B
+      bq9: 1, // B
+      bq10: 2 // C
+    };
+
+    function evaluateStage5Quiz() {
+      let score = 0;
+      let total = 10;
+
+      for (let q in correctAnswers) {
+        const selected = document.querySelector('input[name="' + q + '"]:checked');
+        const card = document.getElementById(q + '-card');
+        const expBox = document.getElementById(q + '-explanation');
+        const options = card.querySelectorAll('.option-item');
+
+        expBox.style.display = 'block';
+
+        if (selected) {
+          const val = parseInt(selected.value);
+          if (val === correctAnswers[q]) {
+            score++;
+            options[val].classList.add('correct');
+          } else {
+            options[val].classList.add('incorrect');
+            options[correctAnswers[q]].classList.add('correct');
+          }
+        } else {
+          options[correctAnswers[q]].classList.add('correct');
+        }
+      }
+
+      const banner = document.getElementById('stage5-result-banner');
+      const scoreDisp = document.getElementById('stage5-score-display');
+      const title = document.getElementById('stage5-verdict-title');
+      const text = document.getElementById('stage5-verdict-text');
+      const nextBtn = document.getElementById('stage5-next-btn');
+
+      banner.style.display = 'block';
+      scoreDisp.innerText = score + ' / ' + total;
+
+      let pct = (score / total) * 100;
+      if (pct >= 80) {
+        title.innerHTML = '🎉 Stage 5 Cleared! Capital Budgeting Pro!';
+        text.innerText = 'You scored ' + score + '/10 (' + Math.round(pct) + '%). You clearly understand why NPV defeats IRR in mutually exclusive conflicts and how to optimize capital rationing!';
+        banner.style.background = 'linear-gradient(135deg, #15803d, #14532d)';
+        nextBtn.style.display = 'inline-flex';
+        localStorage.setItem('fmi_stage_5_cleared', 'true');
+      } else {
+        title.innerHTML = '⚠️ Review Recommended (Target: 8/10)';
+        text.innerText = 'You scored ' + score + '/10 (' + Math.round(pct) + '%). Review the scale problem and reinvestment rate assumptions above, then retry.';
+        banner.style.background = 'linear-gradient(135deg, #b45309, #78350f)';
+        nextBtn.style.display = 'none';
+      }
+
+      window.scrollTo({ top: banner.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    function resetStage5Quiz() {
+      document.getElementById('stage5-quiz-form').reset();
+      document.querySelectorAll('.option-item').forEach(el => {
+        el.classList.remove('selected', 'correct', 'incorrect');
+      });
+      document.querySelectorAll('.explanation-box').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.getElementById('stage5-result-banner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

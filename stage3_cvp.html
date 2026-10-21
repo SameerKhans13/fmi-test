@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 3: Management Accounting & CVP | FMI 100/100</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="header-nav">
+    <div class="header-inner">
+      <a href="index.html" class="brand-title">
+        <span>📈</span> FMI 100/100
+        <span class="brand-subtitle">Stage 3: Management Accounting & CVP</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">← Hub Overview</a>
+        <a href="stage1_accounting.html">Stage 1</a>
+        <a href="stage2_ratios.html">Stage 2</a>
+        <a href="stage3_cvp.html" class="active">Stage 3</a>
+        <a href="stage4_tvm.html">Stage 4</a>
+        <a href="stage5_capital_budgeting.html">Stage 5</a>
+        <a href="stage6_capm_derivatives.html">Stage 6</a>
+        <a href="stage7_final_exam.html" style="background:#e11d48; color:white;">Final Exam 🎯</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Stage Header & Tab Navigation -->
+    <div style="margin-bottom: 1.5rem;">
+      <span class="badge badge-warning">Sessions 6–7 · MUST MEMORIZE FORMULAS</span>
+      <h1 style="font-size: 2rem; color: var(--secondary); margin-top: 0.35rem;">Stage 3: Management Accounting & Cost-Volume-Profit (CVP)</h1>
+      <p style="color: var(--text-muted);">
+        The instructor explicitly warned: <strong>CVP and Break-Even formulas will NOT be on the formula sheet!</strong> You must know them by heart, along with cost behaviors, sunk costs, and sensitivity analysis.
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('notes-tab', this)">📖 Formulas to Memorize & Deep Dive</button>
+      <button class="tab-btn" onclick="switchTab('test-tab', this)">✍️ Stage 3 Practice Test (10 Questions)</button>
+    </div>
+
+    <!-- TAB 1: DETAILED INFORMATION -->
+    <div id="notes-tab" class="tab-content active">
+
+      <!-- Section 1: Must-Memorize Formulas -->
+      <div class="card" style="border: 2px solid #f59e0b; background: #fffdf5;">
+        <h3 class="card-title" style="color: #b45309;">
+          <span>⚡ MUST-MEMORIZE CVP FORMULAS (Exam Hall Essential)</span>
+          <span class="badge badge-danger">Not on Formula Sheet</span>
+        </h3>
+        <p style="color: #78350f; font-weight: 500;">
+          Commit these exact equations to memory before test day:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          
+          <div class="formula-box" style="background: white;">
+            <div class="formula-name">1. Unit Contribution</div>
+            <div class="formula-code">Contribution = SP − VC</div>
+            <small style="color: #64748b; display: block; margin-top: 0.35rem;">Selling Price minus Variable Cost per unit</small>
+          </div>
+
+          <div class="formula-box" style="background: white;">
+            <div class="formula-name">2. Profit-Volume (P/V) Ratio</div>
+            <div class="formula-code">P/V = (SP − VC) / SP = Contribution / Sales</div>
+            <small style="color: #64748b; display: block; margin-top: 0.35rem;">Also called Contribution Margin Ratio (%)</small>
+          </div>
+
+          <div class="formula-box" style="background: white;">
+            <div class="formula-name">3. Break-Even Point in Units</div>
+            <div class="formula-code">BEP (Units) = Fixed Cost / Unit Contribution</div>
+            <small style="color: #64748b; display: block; margin-top: 0.35rem;">Volume where Total Revenue = Total Cost (Profit = 0)</small>
+          </div>
+
+          <div class="formula-box" style="background: white;">
+            <div class="formula-name">4. Break-Even Point in Value (₹)</div>
+            <div class="formula-code">BEP (₹) = Fixed Cost / P/V Ratio</div>
+            <small style="color: #64748b; display: block; margin-top: 0.35rem;">Rupee sales needed to cover all fixed costs</small>
+          </div>
+
+          <div class="formula-box" style="background: white;">
+            <div class="formula-name">5. Target Profit Sales (Units)</div>
+            <div class="formula-code">Required Units = (Fixed Cost + Target Profit) / Unit Contribution</div>
+            <small style="color: #64748b; display: block; margin-top: 0.35rem;">Units required to achieve a specific target profit</small>
+          </div>
+
+          <div class="formula-box" style="background: white;">
+            <div class="formula-name">6. Margin of Safety (MoS)</div>
+            <div class="formula-code">MoS = Actual Sales − Break-Even Sales</div>
+            <div class="formula-code" style="margin-top: 0.25rem;">MoS (₹) = Profit / P/V Ratio</div>
+            <small style="color: #64748b; display: block; margin-top: 0.35rem;">Cushion before the business starts incurring losses</small>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section 2: Cost Classifications -->
+      <div class="card">
+        <h3 class="card-title">2. Cost Classifications for Decision Making</h3>
+        
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Dimension</th><th>Classification</th><th>Meaning & Real-Life Example</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2"><strong>Traceability</strong></td>
+                <td><strong>Direct Cost (Prime)</strong></td>
+                <td>Physically traced to the final cost object. (e.g., Fabric for a shirt, steel for an auto body).</td>
+              </tr>
+              <tr>
+                <td><strong>Indirect Cost (Overhead)</strong></td>
+                <td>Cannot be economically traced directly; shared among many units. (e.g., Factory rent, security guard salary).</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>Cost Behaviour</strong></td>
+                <td><strong>Fixed Cost</strong></td>
+                <td>Constant in total irrespective of output, but falls per unit as volume expands. (e.g., Factory lease ₹10L/month).</td>
+              </tr>
+              <tr>
+                <td><strong>Variable Cost</strong></td>
+                <td>Constant per unit, but total varies directly in proportion to production volume. (e.g., Raw material ₹20/bottle).</td>
+              </tr>
+              <tr>
+                <td><strong>Semi-Variable Cost</strong></td>
+                <td>Contains both a fixed baseline charge and a variable per-unit component. (e.g., Electricity bill: ₹50,000 fixed + ₹8/machine hour).</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>Decision Relevance</strong></td>
+                <td><strong>Relevant Cost</strong></td>
+                <td>Future costs that differ among decision alternatives. (e.g., Extra material needed only if special order is accepted).</td>
+              </tr>
+              <tr>
+                <td><strong>Sunk Cost (IGNORE!)</strong></td>
+                <td>Historical cost already incurred and irreversible. Irrelevant to any future choice! (e.g., ₹2 Crore already spent building software).</td>
+              </tr>
+              <tr>
+                <td><strong>Opportunity Cost</strong></td>
+                <td>The monetary benefit sacrificed from the next best alternative forgone. (e.g., Foregone ₹16L job salary to pursue an MBA).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 3: Absorption vs Marginal Costing -->
+      <div class="card">
+        <h3 class="card-title">3. Absorption Costing vs Marginal Costing: The Profit Gap</h3>
+        <p>A classic exam question asks why profit differs between Absorption and Marginal costing when production $\neq$ sales.</p>
+        
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Basis</th><th>Absorption Costing (GAAP)</th><th>Marginal Costing (Managerial)</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Product Unit Cost Includes:</strong></td>
+                <td>Direct Material + Direct Labour + Variable Overhead + <strong>Allocated Fixed Overhead</strong></td>
+                <td>Direct Material + Direct Labour + Variable Overhead (<strong>Variable costs ONLY</strong>)</td>
+              </tr>
+              <tr>
+                <td><strong>Treatment of Fixed Factory Overhead:</strong></td>
+                <td>Absorbed into units produced. Unsold units carry fixed overheads into closing stock.</td>
+                <td>Treated as a <strong>Period Cost</strong> and written off in full against the period's contribution.</td>
+              </tr>
+              <tr>
+                <td><strong>When Production > Sales (Inventory Rises):</strong></td>
+                <td><strong>Higher profit</strong> (part of fixed cost is stored inside unsold inventory on the balance sheet).</td>
+                <td><strong>Lower profit</strong> (all fixed overheads were expensed immediately).</td>
+              </tr>
+              <tr>
+                <td><strong>When Sales > Production (Inventory Depleted):</strong></td>
+                <td><strong>Lower profit</strong> (prior period fixed costs stored in inventory are now released as COGS).</td>
+                <td><strong>Higher profit</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-info">
+          <h4>💡 The Reconciliation Formula:</h4>
+          <p>
+            $\text{Absorption Profit} - \text{Marginal Profit} = (\text{Closing Inventory Units} - \text{Opening Inventory Units}) \times \text{Fixed Overhead Absorption Rate per Unit}$.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 4: ClassicShoes Case & Sensitivity -->
+      <div class="card">
+        <h3 class="card-title">4. Slide Walkthrough: ClassicShoes Pvt Ltd & Sensitivity Analysis</h3>
+        <p><strong>Base Parameters:</strong> Selling Price = ₹2,000, Variable Cost = ₹1,200 (Material 700 + Labour 300 + Overhead 200), Fixed Cost = ₹24,00,000/year.</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Measure</th><th>Working</th><th>Result</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Unit Contribution</td><td>$₹2,000 - ₹1,200$</td><td><strong>₹800 per pair</strong></td></tr>
+              <tr><td>P/V Ratio</td><td>$\frac{₹800}{₹2,000}$</td><td><strong>40%</strong></td></tr>
+              <tr><td>Break-Even Volume</td><td>$\frac{₹24,00,000}{₹800}$</td><td><strong>3,000 pairs</strong></td></tr>
+              <tr><td>Break-Even Value</td><td>$\frac{₹24,00,000}{0.40}$</td><td><strong>₹60,00,000</strong></td></tr>
+              <tr><td>Profit at 4,500 pairs</td><td>$(4,500 \times ₹800) - ₹24,00,000$</td><td><strong>₹12,00,000</strong></td></tr>
+              <tr><td>Margin of Safety (MoS)</td><td>$4,500 - 3,000 = 1,500\text{ pairs} \rightarrow \frac{1,500}{4,500}$</td><td><strong>33.3% of sales</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-danger">
+          <h4>⚠️ Instructor's "What If?" Sensitivity Insight:</h4>
+          <p>• <strong>What hurts Break-Even most? A price cut!</strong></p>
+          <p>
+            If ClassicShoes cuts price by just 10% from ₹2,000 to ₹1,800, unit contribution crashes from ₹800 to ₹600. The break-even volume leaps from 3,000 pairs to $\frac{₹24,00,000}{₹600} = \mathbf{4,000\text{ pairs}}$ (a 33.3% jump in required sales volume just to break even!).
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: INTERACTIVE PRACTICE TEST -->
+    <div id="test-tab" class="tab-content">
+      
+      <!-- Test Header Panel -->
+      <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="color:var(--secondary); margin-bottom:0.25rem;">Stage 3 Diagnostic Test: 10 MCQs</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem;">
+            Test your memorized formulas and manual arithmetic drills. Target: <strong>At least 8/10 (80%) to clear this stage</strong>.
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-outline" onclick="resetStage3Quiz()">🔄 Reset Test</button>
+        </div>
+      </div>
+
+      <!-- Live Score Banner -->
+      <div id="stage3-result-banner" class="score-banner" style="display:none; text-align:center;">
+        <div id="stage3-score-display" class="score-number">0 / 10</div>
+        <h3 id="stage3-verdict-title" style="margin-top:0.5rem;">Score Review</h3>
+        <p id="stage3-verdict-text" style="color:#cbd5e1;"></p>
+        <div style="margin-top:1.5rem;">
+          <a href="stage4_tvm.html" id="stage3-next-btn" class="btn btn-success" style="display:none; font-size:1.05rem;">Proceed to Stage 4: Time Value of Money →</a>
+        </div>
+      </div>
+
+      <!-- Quiz Form Container -->
+      <form id="stage3-quiz-form" onsubmit="event.preventDefault(); evaluateStage3Quiz();">
+        
+        <!-- Question 1 -->
+        <div class="question-card" id="cq1-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 1 · Break-Even Units</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A small manufacturing company sells customized water bottles for ₹500 each. The variable cost per bottle is ₹300, and annual fixed operating overheads total ₹10,00,000. How many bottles must the company sell each year to achieve break-even?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq1', 0)">
+              <input type="radio" name="cq1" value="0" class="option-radio"> A) 2,000 bottles
+            </label>
+            <label class="option-item" onclick="selectOption('cq1', 1)">
+              <input type="radio" name="cq1" value="1" class="option-radio"> B) 3,333 bottles
+            </label>
+            <label class="option-item" onclick="selectOption('cq1', 2)">
+              <input type="radio" name="cq1" value="2" class="option-radio"> C) 5,000 bottles
+            </label>
+            <label class="option-item" onclick="selectOption('cq1', 3)">
+              <input type="radio" name="cq1" value="3" class="option-radio"> D) 7,500 bottles
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="cq1-explanation">
+            <strong>Correct Answer: C (5,000 bottles)</strong><br>
+            $\text{Unit Contribution} = \text{Selling Price} - \text{Variable Cost} = ₹500 - ₹300 = ₹200$.<br>
+            $\text{Break-Even Units} = \frac{\text{Fixed Cost}}{\text{Unit Contribution}} = \frac{₹10,00,000}{₹200} = <strong>5,000\text{ units}</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card" id="cq2-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 2 · P/V Ratio & Break-Even Value</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A boutique consulting firm charges ₹2,500 per billable hour. Direct variable costs are ₹1,500 per hour, and monthly fixed office overheads are ₹6,00,000. What is the firm's Profit-Volume (P/V) Ratio and its Break-Even Sales Value per month?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq2', 0)">
+              <input type="radio" name="cq2" value="0" class="option-radio"> A) P/V = 40% | Break-Even Value = ₹15,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('cq2', 1)">
+              <input type="radio" name="cq2" value="1" class="option-radio"> B) P/V = 60% | Break-Even Value = ₹10,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('cq2', 2)">
+              <input type="radio" name="cq2" value="2" class="option-radio"> C) P/V = 40% | Break-Even Value = ₹24,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('cq2', 3)">
+              <input type="radio" name="cq2" value="3" class="option-radio"> D) P/V = 25% | Break-Even Value = ₹12,00,000
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="cq2-explanation">
+            <strong>Correct Answer: A</strong><br>
+            1. $\text{Unit Contribution} = ₹2,500 - ₹1,500 = ₹1,000$.<br>
+            2. $\text{P/V Ratio} = \frac{₹1,000}{₹2,500} = \frac{2}{5} = \mathbf{40\%}$.<br>
+            3. $\text{Break-Even Value} = \frac{\text{Fixed Cost}}{\text{P/V Ratio}} = \frac{₹6,00,000}{0.40} = <strong>₹15,00,000</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card" id="cq3-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 3 · Target Profit</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Using the data from Question 1 (SP = ₹500, VC = ₹300, FC = ₹10,00,000), how many units must the company sell if management targets an annual operating profit of ₹4,00,000?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq3', 0)">
+              <input type="radio" name="cq3" value="0" class="option-radio"> A) 6,000 units
+            </label>
+            <label class="option-item" onclick="selectOption('cq3', 1)">
+              <input type="radio" name="cq3" value="1" class="option-radio"> B) 7,000 units
+            </label>
+            <label class="option-item" onclick="selectOption('cq3', 2)">
+              <input type="radio" name="cq3" value="2" class="option-radio"> C) 8,500 units
+            </label>
+            <label class="option-item" onclick="selectOption('cq3', 3)">
+              <input type="radio" name="cq3" value="3" class="option-radio"> D) 9,000 units
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="cq3-explanation">
+            <strong>Correct Answer: B (7,000 units)</strong><br>
+            $\text{Required Units} = \frac{\text{Fixed Cost} + \text{Target Profit}}{\text{Unit Contribution}} = \frac{₹10,00,000 + ₹4,00,000}{₹200} = \frac{₹14,00,000}{₹200} = <strong>7,000\text{ units}</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card" id="cq4-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 4 · Margin of Safety</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A cloud kitchen sells meals for ₹250 each. Variable costs are ₹160 per meal, and monthly fixed costs are ₹6,00,000. If current monthly sales are 9,000 meals (revenue ₹22.5 Lakh), what is the Margin of Safety in percentage terms?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq4', 0)">
+              <input type="radio" name="cq4" value="0" class="option-radio"> A) 15.4%
+            </label>
+            <label class="option-item" onclick="selectOption('cq4', 1)">
+              <input type="radio" name="cq4" value="1" class="option-radio"> B) 25.9%
+            </label>
+            <label class="option-item" onclick="selectOption('cq4', 2)">
+              <input type="radio" name="cq4" value="2" class="option-radio"> C) 36.0%
+            </label>
+            <label class="option-item" onclick="selectOption('cq4', 3)">
+              <input type="radio" name="cq4" value="3" class="option-radio"> D) 45.0%
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="cq4-explanation">
+            <strong>Correct Answer: B (25.9%)</strong><br>
+            1. $\text{Unit Contribution} = ₹250 - ₹160 = ₹90$.<br>
+            2. $\text{Break-Even Units} = \frac{₹6,00,000}{₹90} \approx 6,667\text{ meals}$.<br>
+            3. $\text{Margin of Safety (Units)} = 9,000 - 6,667 = 2,333\text{ meals}$.<br>
+            4. $\text{MoS \%} = \frac{2,333}{9,000} \approx \mathbf{25.9\%}$.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card" id="cq5-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 5 · Relevance & Sunk Costs</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A software startup has already spent ₹50,00,000 developing a mobile app. To launch the app, an additional ₹10,00,000 marketing campaign is required, which will bring in ₹15,00,000 of immediate subscription revenue. Which statement reflects proper managerial decision analysis?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq5', 0)">
+              <input type="radio" name="cq5" value="0" class="option-radio"> A) Abandon the project because total costs (₹60L) exceed revenue (₹15L), creating an overall loss of ₹45L.
+            </label>
+            <label class="option-item" onclick="selectOption('cq5', 1)">
+              <input type="radio" name="cq5" value="1" class="option-radio"> B) Launch the app because the ₹50L is a sunk cost; the future incremental revenue (₹15L) exceeds future incremental cost (₹10L) by ₹5L.
+            </label>
+            <label class="option-item" onclick="selectOption('cq5', 2)">
+              <input type="radio" name="cq5" value="2" class="option-radio"> C) Capitalize the ₹50L as goodwill and delay the decision.
+            </label>
+            <label class="option-item" onclick="selectOption('cq5', 3)">
+              <input type="radio" name="cq5" value="3" class="option-radio"> D) The ₹50L represents an opportunity cost that must be recovered before launch.
+            </label>
+          </div>
+          <div class="explanation-box" id="cq5-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> Sunk costs have already been spent and cannot be recovered regardless of future decisions. In managerial economics, decision makers look strictly at <strong>future incremental cash flows</strong>: Extra Inflow (₹15L) − Extra Outflow (₹10L) = $+₹5\text{L}$ incremental cash profit! Launching is the correct choice.
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-card" id="cq6-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 6 · Capacity & Opportunity Cost</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A flight has 5 remaining empty seats. Normal passengers pay ₹8,000 per ticket (marginal cost of passenger service = ₹1,000). A corporate tour operator offers ₹3,000 per ticket for all 5 seats. If individual passengers are readily available to purchase these 5 seats at ₹7,000 each, what should the airline do?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq6', 0)">
+              <input type="radio" name="cq6" value="0" class="option-radio"> A) Accept the corporate offer because ₹3,000 covers the ₹1,000 marginal cost.
+            </label>
+            <label class="option-item" onclick="selectOption('cq6', 1)">
+              <input type="radio" name="cq6" value="1" class="option-radio"> B) Reject the corporate offer, because accepting it results in an opportunity loss of ₹20,000 of contribution.
+            </label>
+            <label class="option-item" onclick="selectOption('cq6', 2)">
+              <input type="radio" name="cq6" value="2" class="option-radio"> C) Indifferent between both options.
+            </label>
+            <label class="option-item" onclick="selectOption('cq6', 3)">
+              <input type="radio" name="cq6" value="3" class="option-radio"> D) Counter-offer at ₹2,500.
+            </label>
+          </div>
+          <div class="explanation-box" id="cq6-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Slide worked example:</em><br>
+            • Contribution from individual = $₹7,000 - ₹1,000 = ₹6,000$ per seat.<br>
+            • Contribution from corporate = $₹3,000 - ₹1,000 = ₹2,000$ per seat.<br>
+            • Because capacity is constrained (only 5 seats remain), the opportunity cost of selling to the tour firm is the ₹6,000 contribution foregone.<br>
+            • Selling to the corporate firm causes a net loss of $5 \times (₹6,000 - ₹2,000) = \mathbf{₹20,000}$ of contribution! Reject the offer.
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-card" id="cq7-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 7 · Price Sensitivity</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Why does a selling price reduction have an unusually severe impact on a business's break-even point?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq7', 0)">
+              <input type="radio" name="cq7" value="0" class="option-radio"> A) Because it increases total fixed costs.
+            </label>
+            <label class="option-item" onclick="selectOption('cq7', 1)">
+              <input type="radio" name="cq7" value="1" class="option-radio"> B) Because every rupee cut from price reduces unit contribution rupee-for-rupee, drastically shrinking the denominator in the break-even formula.
+            </label>
+            <label class="option-item" onclick="selectOption('cq7', 2)">
+              <input type="radio" name="cq7" value="2" class="option-radio"> C) Because variable costs automatically increase proportionately.
+            </label>
+            <label class="option-item" onclick="selectOption('cq7', 3)">
+              <input type="radio" name="cq7" value="3" class="option-radio"> D) Because the P/V ratio becomes negative.
+            </label>
+          </div>
+          <div class="explanation-box" id="cq7-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> In the break-even formula $\text{BEP} = \frac{\text{Fixed Cost}}{SP - VC}$, the denominator is unit contribution. A 10% price cut might wipe out 30–50% of the unit contribution, resulting in an enormous increase in the units required to break even.
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-card" id="cq8-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 8 · Absorption vs Marginal Profit</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            During Year 1, Omega Ltd manufactures 10,000 units of product and sells 8,000 units. Fixed manufacturing overhead is ₹100 per unit. Opening inventory was zero. Which costing method will report higher profit, and by how much?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq8', 0)">
+              <input type="radio" name="cq8" value="0" class="option-radio"> A) Marginal Costing profit will be ₹2,00,000 higher.
+            </label>
+            <label class="option-item" onclick="selectOption('cq8', 1)">
+              <input type="radio" name="cq8" value="1" class="option-radio"> B) Absorption Costing profit will be ₹2,00,000 higher.
+            </label>
+            <label class="option-item" onclick="selectOption('cq8', 2)">
+              <input type="radio" name="cq8" value="2" class="option-radio"> C) Both methods will report identical profit.
+            </label>
+            <label class="option-item" onclick="selectOption('cq8', 3)">
+              <input type="radio" name="cq8" value="3" class="option-radio"> D) Absorption Costing profit will be ₹8,00,000 higher.
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="cq8-explanation">
+            <strong>Correct Answer: B (Absorption higher by ₹2,00,000)</strong><br>
+            <em>Slide 54 exact case:</em><br>
+            Unsold units = $10,000\text{ produced} - 8,000\text{ sold} = 2,000\text{ units}$ in closing stock.<br>
+            Under Absorption Costing, $2,000 \times ₹100 = ₹2,00,000$ of fixed overhead is capitalized into closing inventory on the balance sheet instead of being expensed in the current year. Under Marginal Costing, all fixed overhead is expensed immediately. Thus, <strong>Absorption profit is ₹2,00,000 higher</strong>.
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-card" id="cq9-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 9 · Cost Behavior</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            As production volume increases within the relevant range, what happens to Fixed Cost per unit and Variable Cost per unit?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq9', 0)">
+              <input type="radio" name="cq9" value="0" class="option-radio"> A) Fixed cost per unit remains constant; variable cost per unit decreases.
+            </label>
+            <label class="option-item" onclick="selectOption('cq9', 1)">
+              <input type="radio" name="cq9" value="1" class="option-radio"> B) Fixed cost per unit decreases; variable cost per unit remains constant.
+            </label>
+            <label class="option-item" onclick="selectOption('cq9', 2)">
+              <input type="radio" name="cq9" value="2" class="option-radio"> C) Both fixed and variable cost per unit decrease.
+            </label>
+            <label class="option-item" onclick="selectOption('cq9', 3)">
+              <input type="radio" name="cq9" value="3" class="option-radio"> D) Fixed cost per unit increases; variable cost per unit decreases.
+            </label>
+          </div>
+          <div class="explanation-box" id="cq9-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> Total fixed cost is constant, so dividing it across more units causes <strong>fixed cost per unit to decline</strong>. Conversely, <strong>variable cost per unit remains constant</strong> (while total variable cost increases linearly with volume).
+          </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-card" id="cq10-card">
+          <div class="question-header">
+            <span class="badge badge-warning">Question 10 · Margin of Safety in Value</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A firm has actual annual sales revenue of ₹10,00,000, fixed overheads of ₹3,60,000, and a Profit-Volume (P/V) ratio of 40%. What is its Margin of Safety in rupees (value)?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('cq10', 0)">
+              <input type="radio" name="cq10" value="0" class="option-radio"> A) ₹1,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('cq10', 1)">
+              <input type="radio" name="cq10" value="1" class="option-radio"> B) ₹4,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('cq10', 2)">
+              <input type="radio" name="cq10" value="2" class="option-radio"> C) ₹2,50,000
+            </label>
+            <label class="option-item" onclick="selectOption('cq10', 3)">
+              <input type="radio" name="cq10" value="3" class="option-radio"> D) ₹9,00,000
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="cq10-explanation">
+            <strong>Correct Answer: A (₹1,00,000)</strong><br>
+            1. $\text{Break-Even Sales Value} = \frac{\text{Fixed Cost}}{\text{P/V Ratio}} = \frac{₹3,60,000}{0.40} = ₹9,00,000$.<br>
+            2. $\text{Margin of Safety (Value)} = \text{Actual Sales} - \text{Break-Even Sales} = ₹10,00,000 - ₹9,00,000 = <strong>₹1,00,000</strong>$.<br>
+            <em>(Shortcut verification: Total Contribution = $40\% \times ₹10\text{L} = ₹4\text{L}$. Profit = $₹4\text{L} - ₹3.6\text{L} = ₹40,000$. $\text{MoS} = \frac{\text{Profit}}{\text{P/V}} = \frac{₹40,000}{0.40} = ₹1,00,000$).</em>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin: 2rem 0;">
+          <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2.5rem; font-size: 1.15rem;">
+            Submit Stage 3 Test & Review Answers 🎯
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function selectOption(qName, optIdx) {
+      const card = document.getElementById(qName + '-card');
+      const items = card.querySelectorAll('.option-item');
+      items.forEach(it => it.classList.remove('selected'));
+      items[optIdx].classList.add('selected');
+      items[optIdx].querySelector('input').checked = true;
+    }
+
+    const correctAnswers = {
+      cq1: 2, // C
+      cq2: 0, // A
+      cq3: 1, // B
+      cq4: 1, // B
+      cq5: 1, // B
+      cq6: 1, // B
+      cq7: 1, // B
+      cq8: 1, // B
+      cq9: 1, // B
+      cq10: 0 // A
+    };
+
+    function evaluateStage3Quiz() {
+      let score = 0;
+      let total = 10;
+
+      for (let q in correctAnswers) {
+        const selected = document.querySelector('input[name="' + q + '"]:checked');
+        const card = document.getElementById(q + '-card');
+        const expBox = document.getElementById(q + '-explanation');
+        const options = card.querySelectorAll('.option-item');
+
+        expBox.style.display = 'block';
+
+        if (selected) {
+          const val = parseInt(selected.value);
+          if (val === correctAnswers[q]) {
+            score++;
+            options[val].classList.add('correct');
+          } else {
+            options[val].classList.add('incorrect');
+            options[correctAnswers[q]].classList.add('correct');
+          }
+        } else {
+          options[correctAnswers[q]].classList.add('correct');
+        }
+      }
+
+      const banner = document.getElementById('stage3-result-banner');
+      const scoreDisp = document.getElementById('stage3-score-display');
+      const title = document.getElementById('stage3-verdict-title');
+      const text = document.getElementById('stage3-verdict-text');
+      const nextBtn = document.getElementById('stage3-next-btn');
+
+      banner.style.display = 'block';
+      scoreDisp.innerText = score + ' / ' + total;
+
+      let pct = (score / total) * 100;
+      if (pct >= 80) {
+        title.innerHTML = '🎉 Stage 3 Cleared! CVP Mastery Achieved!';
+        text.innerText = 'You scored ' + score + '/10 (' + Math.round(pct) + '%). You have mastered the unprovided formulas, break-even arithmetic, and cost sensitivity analysis!';
+        banner.style.background = 'linear-gradient(135deg, #15803d, #14532d)';
+        nextBtn.style.display = 'inline-flex';
+        localStorage.setItem('fmi_stage_3_cleared', 'true');
+      } else {
+        title.innerHTML = '⚠️ Review Recommended (Target: 8/10)';
+        text.innerText = 'You scored ' + score + '/10 (' + Math.round(pct) + '%). Review the formulas and manual step-by-step calculations above, then retry.';
+        banner.style.background = 'linear-gradient(135deg, #b45309, #78350f)';
+        nextBtn.style.display = 'none';
+      }
+
+      window.scrollTo({ top: banner.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    function resetStage3Quiz() {
+      document.getElementById('stage3-quiz-form').reset();
+      document.querySelectorAll('.option-item').forEach(el => {
+        el.classList.remove('selected', 'correct', 'incorrect');
+      });
+      document.querySelectorAll('.explanation-box').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.getElementById('stage3-result-banner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

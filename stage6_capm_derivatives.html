@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 6: CAPM & Derivatives Theory | FMI 100/100</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="header-nav">
+    <div class="header-inner">
+      <a href="index.html" class="brand-title">
+        <span>📈</span> FMI 100/100
+        <span class="brand-subtitle">Stage 6: CAPM & Derivatives Theory</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">← Hub Overview</a>
+        <a href="stage1_accounting.html">Stage 1</a>
+        <a href="stage2_ratios.html">Stage 2</a>
+        <a href="stage3_cvp.html">Stage 3</a>
+        <a href="stage4_tvm.html">Stage 4</a>
+        <a href="stage5_capital_budgeting.html">Stage 5</a>
+        <a href="stage6_capm_derivatives.html" class="active">Stage 6</a>
+        <a href="stage7_final_exam.html" style="background:#e11d48; color:white;">Final Exam 🎯</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Stage Header & Tab Navigation -->
+    <div style="margin-bottom: 1.5rem;">
+      <span class="badge badge-dark">Sessions 9 & 13–14 · Theory & Core Concepts</span>
+      <h1 style="font-size: 2rem; color: var(--secondary); margin-top: 0.35rem;">Stage 6: CAPM, Beta & Financial Derivatives Theory</h1>
+      <p style="color: var(--text-muted);">
+        The instructor confirmed: <strong>No complex derivative pricing calculations, no bond pricing, and no WACC solving!</strong> Focus on CAPM cost of equity, Beta interpretation, and the structural differences between forwards, futures, and options.
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('notes-tab', this)">📖 CAPM & Derivatives Concept Notes</button>
+      <button class="tab-btn" onclick="switchTab('test-tab', this)">✍️ Stage 6 Practice Test (8 Questions)</button>
+    </div>
+
+    <!-- TAB 1: DETAILED INFORMATION -->
+    <div id="notes-tab" class="tab-content active">
+
+      <!-- Section 1: CAPM, Beta, and Alpha -->
+      <div class="card">
+        <h3 class="card-title">1. Capital Asset Pricing Model (CAPM) & Security Market Line</h3>
+        <p>The CAPM calculates the expected required return on an equity security given its systematic (non-diversifiable) risk:</p>
+        
+        <div class="formula-box">
+          <div class="formula-name">CAPM Cost of Equity Formula:</div>
+          <div class="formula-code">E(Rᵢ) = R_f + βᵢ × [E(Rₘ) − R_f]</div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Component</th><th>What it Represents</th><th>Standard Indian Market Input</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Risk-Free Rate ($R_f$)</strong></td>
+                <td>Return on an asset with zero default and reinvestment risk.</td>
+                <td>Yield on 10-year Government of India Security (G-Sec) ~7.0%.</td>
+              </tr>
+              <tr>
+                <td><strong>Market Risk Premium ($R_m - R_f$)</strong></td>
+                <td>Extra return investors demand for holding equities over safe debt.</td>
+                <td>Common historical range: 5.0% to 7.0%.</td>
+              </tr>
+              <tr>
+                <td><strong>Beta ($\beta$)</strong></td>
+                <td>Sensitivity of the stock's returns relative to overall market swings.</td>
+                <td>$\beta = 1.0$ (Market average); $\beta > 1$ (Aggressive); $\beta < 1$ (Defensive).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-info">
+          <h4>💡 Jensen's Alpha ($\alpha$)</h4>
+          <p>
+            $\mathbf{\alpha = \text{Actual Return} - \text{CAPM Expected Return}}$.<br>
+            • If a stock with $\beta = 1.2$ was expected to return $14\%$ based on CAPM but actually generated $17\%$, it generated a **positive alpha of $+3\%$** (true value created beyond pure market exposure).
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 2: Financial Derivatives Overview -->
+      <div class="card">
+        <h3 class="card-title">2. Financial Derivatives: Core Concepts & Participants</h3>
+        <p>
+          A financial derivative is a contract whose payoff is <strong>derived from the value of an underlying asset</strong> (equities, commodities, currencies, interest rates).
+        </p>
+        
+        <div class="callout callout-warning">
+          <h4>⚠️ Derivatives Golden Principle:</h4>
+          <p>Derivatives <strong>transfer risk</strong> from those who wish to avoid it to those willing to bear it; they do not create or destroy fundamental economic risk.</p>
+        </div>
+
+        <h4>The Three Market Participants:</h4>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <div class="callout callout-info" style="margin:0;">
+            <h4>1. Hedgers</h4>
+            <p>Participate in derivatives to <strong>eliminate or reduce price risk</strong> in their core business. (e.g., An airline locking in jet fuel price; an exporter selling USD forward).</p>
+          </div>
+          <div class="callout callout-danger" style="margin:0;">
+            <h4>2. Speculators</h4>
+            <p>Voluntarily <strong>take on price risk</strong> to earn profits from directional market price movements. They provide vital liquidity to the market.</p>
+          </div>
+          <div class="callout callout-success" style="margin:0;">
+            <h4>3. Arbitrageurs</h4>
+            <p>Exploit temporary price discrepancies between two markets to lock in <strong>riskless profit</strong> without putting up capital. Their actions keep market prices fair.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Forwards vs Futures Comparison -->
+      <div class="card">
+        <h3 class="card-title">3. Forwards vs Futures: The Crucial Distinctions</h3>
+        
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Feature</th><th>Forward Contract</th><th>Futures Contract</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Trading Venue</strong></td>
+                <td><strong>Over-the-Counter (OTC)</strong> (Direct bilateral agreement between two parties)</td>
+                <td><strong>Organized Exchange</strong> (e.g., NSE, CME)</td>
+              </tr>
+              <tr>
+                <td><strong>Contract Terms</strong></td>
+                <td><strong>Customized</strong> (exact quantity, delivery date, settlement terms)</td>
+                <td><strong>Standardized</strong> (fixed lot sizes and standard monthly expiry dates)</td>
+              </tr>
+              <tr>
+                <td><strong>Settlement</strong></td>
+                <td>Settled <strong>once at maturity</strong></td>
+                <td><strong>Daily Mark-to-Market (MTM)</strong> margin settlement</td>
+              </tr>
+              <tr>
+                <td><strong>Counterparty Credit Risk</strong></td>
+                <td><strong>High</strong> (if the counterparty goes bankrupt, you suffer default)</td>
+                <td><strong>Virtually Zero</strong> (Exchange clearinghouse acts as counterparty to every trade)</td>
+              </tr>
+              <tr>
+                <td><strong>Liquidity / Exit</strong></td>
+                <td>Difficult to exit early; requires mutual cancellation</td>
+                <td>Extremely liquid; easily closed out anytime before expiry</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 4: Options - Calls, Puts & Moneyness -->
+      <div class="card">
+        <h3 class="card-title">4. Options: Asymmetric Rights and Payoff Profiles</h3>
+        <p>Unlike futures or forwards which create an <em>obligation</em> on both parties, an option grants the buyer a <strong>right, but NOT an obligation</strong>.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="callout callout-success">
+            <h4>Call Option (Right to BUY)</h4>
+            <p>• Buyer is <strong>Bullish</strong> (expects stock price to rise).</p>
+            <p>• <strong>Maximum Loss:</strong> Limited strictly to the premium paid upfront.</p>
+            <p>• <strong>Profit Potential:</strong> Theoretically unlimited as stock rises.</p>
+          </div>
+          <div class="callout callout-danger">
+            <h4>Put Option (Right to SELL)</h4>
+            <p>• Buyer is <strong>Bearish</strong> (expects price to drop) or hedging an equity portfolio.</p>
+            <p>• <strong>Maximum Loss:</strong> Limited strictly to the premium paid.</p>
+            <p>• <strong>Profit Potential:</strong> Substantial (until stock price drops to ₹0).</p>
+          </div>
+        </div>
+
+        <h4>Option Moneyness Definitions:</h4>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Moneyness State</th><th>Call Option Condition</th><th>Put Option Condition</th><th>Intrinsic Value</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>In-the-Money (ITM)</strong></td>
+                <td>Spot Price ($S$) > Strike Price ($K$)</td>
+                <td>Spot Price ($S$) < Strike Price ($K$)</td>
+                <td>Positive intrinsic value if exercised immediately.</td>
+              </tr>
+              <tr>
+                <td><strong>At-the-Money (ATM)</strong></td>
+                <td>Spot Price ($S$) = Strike Price ($K$)</td>
+                <td>Spot Price ($S$) = Strike Price ($K$)</td>
+                <td>Zero intrinsic value; pure time value.</td>
+              </tr>
+              <tr>
+                <td><strong>Out-of-the-Money (OTM)</strong></td>
+                <td>Spot Price ($S$) < Strike Price ($K$)</td>
+                <td>Spot Price ($S$) > Strike Price ($K$)</td>
+                <td>Zero intrinsic value; exercising would produce a loss.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-info">
+          <h4>💡 Exercise Styles: American vs European</h4>
+          <p>• <strong>European Option:</strong> Can only be exercised on the final expiration date (e.g., Nifty index options).</p>
+          <p>• <strong>American Option:</strong> Can be exercised on ANY trading day up to and including expiration date. Because of this added flexibility, an American option is worth at least as much as an otherwise identical European option.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: INTERACTIVE PRACTICE TEST -->
+    <div id="test-tab" class="tab-content">
+      
+      <!-- Test Header Panel -->
+      <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="color:var(--secondary); margin-bottom:0.25rem;">Stage 6 Diagnostic Test: 8 MCQs</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem;">
+            Test your CAPM formulas and derivatives theoretical features. Target: <strong>At least 7/8 (88%) to clear this stage</strong>.
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-outline" onclick="resetStage6Quiz()">🔄 Reset Test</button>
+        </div>
+      </div>
+
+      <!-- Live Score Banner -->
+      <div id="stage6-result-banner" class="score-banner" style="display:none; text-align:center;">
+        <div id="stage6-score-display" class="score-number">0 / 8</div>
+        <h3 id="stage6-verdict-title" style="margin-top:0.5rem;">Score Review</h3>
+        <p id="stage6-verdict-text" style="color:#cbd5e1;"></p>
+        <div style="margin-top:1.5rem;">
+          <a href="stage7_final_exam.html" id="stage6-next-btn" class="btn btn-success" style="display:none; font-size:1.05rem;">Take Full 40-Question Final Exam Simulator 🎯</a>
+        </div>
+      </div>
+
+      <!-- Quiz Form Container -->
+      <form id="stage6-quiz-form" onsubmit="event.preventDefault(); evaluateStage6Quiz();">
+        
+        <!-- Question 1 -->
+        <div class="question-card" id="dq1-card">
+          <div class="question-header">
+            <span class="badge badge-dark">Question 1 · CAPM Calculation</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            According to the Capital Asset Pricing Model (CAPM), if the 10-year Government bond yield is 7%, the expected market return is 13%, and a company's stock has a Beta ($\beta$) of 1.2, what is the required cost of equity?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('dq1', 0)">
+              <input type="radio" name="dq1" value="0" class="option-radio"> A) 13.0%
+            </label>
+            <label class="option-item" onclick="selectOption('dq1', 1)">
+              <input type="radio" name="dq1" value="1" class="option-radio"> B) 14.2%
+            </label>
+            <label class="option-item" onclick="selectOption('dq1', 2)">
+              <input type="radio" name="dq1" value="2" class="option-radio"> C) 15.6%
+            </label>
+            <label class="option-item" onclick="selectOption('dq1', 3)">
+              <input type="radio" name="dq1" value="3" class="option-radio"> D) 12.6%
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="dq1-explanation">
+            <strong>Correct Answer: B (14.2%)</strong><br>
+            $\text{Market Risk Premium} = R_m - R_f = 13\% - 7\% = 6\%$.<br>
+            $E(R_e) = R_f + \beta \times (R_m - R_f) = 7\% + 1.2 \times 6\% = 7\% + 7.2\% = <strong>14.2\%</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card" id="dq2-card">
+          <div class="question-header">
+            <span class="badge badge-dark">Question 2 · Beta Interpretation</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            An FMCG company producing household essentials (soap, toothpaste) typically exhibits a Beta of around 0.6. What does this indicate to an investor?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('dq2', 0)">
+              <input type="radio" name="dq2" value="0" class="option-radio"> A) The stock is defensive and tends to experience smaller price swings than the overall market during market cycles.
+            </label>
+            <label class="option-item" onclick="selectOption('dq2', 1)">
+              <input type="radio" name="dq2" value="1" class="option-radio"> B) The stock is high-risk and will drop by 40% when the market drops by 10%.
+            </label>
+            <label class="option-item" onclick="selectOption('dq2', 2)">
+              <input type="radio" name="dq2" value="2" class="option-radio"> C) The stock carries zero systematic market risk.
+            </label>
+            <label class="option-item" onclick="selectOption('dq2', 3)">
+              <input type="radio" name="dq2" value="3" class="option-radio"> D) The company has zero debt.
+            </label>
+          </div>
+          <div class="explanation-box" id="dq2-explanation">
+            <strong>Correct Answer: A</strong><br>
+            <em>Explanation:</em> A beta below 1.0 indicates a defensive stock whose business revenues and earnings are relatively insulated from macroeconomic swings. If the broad market rises or falls by 10%, a stock with $\beta = 0.6$ is expected to move by only ~6%.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card" id="dq3-card">
+          <div class="question-header">
+            <span class="badge badge-dark">Question 3 · Derivatives Role</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Which statement best summarizes the fundamental macroeconomic function of financial derivatives?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('dq3', 0)">
+              <input type="radio" name="dq3" value="0" class="option-radio"> A) They create wealth out of nothing and permanently eliminate business risks.
+            </label>
+            <label class="option-item" onclick="selectOption('dq3', 1)">
+              <input type="radio" name="dq3" value="1" class="option-radio"> B) They reallocate and transfer existing price risks between hedgers and speculators without creating or destroying risk.
+            </label>
+            <label class="option-item" onclick="selectOption('dq3', 2)">
+              <input type="radio" name="dq3" value="2" class="option-radio"> C) They guarantee guaranteed profit returns for all corporate users.
+            </label>
+            <label class="option-item" onclick="selectOption('dq3', 3)">
+              <input type="radio" name="dq3" value="3" class="option-radio"> D) They eliminate the need for financial accounting statements.
+            </label>
+          </div>
+          <div class="explanation-box" id="dq3-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Slide 37 exact note:</em> "Derivatives transfer risk; they do not create or destroy it." They allow risk-averse firms (hedgers) to shed price volatility to risk-seeking investors (speculators).
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card" id="dq4-card">
+          <div class="question-header">
+            <span class="badge badge-dark">Question 4 · Forwards vs Futures</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Why do exchange-traded Futures contracts carry virtually zero counterparty default risk compared to over-the-counter (OTC) Forward contracts?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('dq4', 0)">
+              <input type="radio" name="dq4" value="0" class="option-radio"> A) Because futures prices never fluctuate.
+            </label>
+            <label class="option-item" onclick="selectOption('dq4', 1)">
+              <input type="radio" name="dq4" value="1" class="option-radio"> B) Because the exchange clearinghouse interposes itself as buyer to every seller and seller to every buyer, enforcing daily mark-to-market margin payments.
+            </label>
+            <label class="option-item" onclick="selectOption('dq4', 2)">
+              <input type="radio" name="dq4" value="2" class="option-radio"> C) Because futures contracts are backed by government guarantees.
+            </label>
+            <label class="option-item" onclick="selectOption('dq4', 3)">
+              <input type="radio" name="dq4" value="3" class="option-radio"> D) Because futures contracts can never be settled in cash.
+            </label>
+          </div>
+          <div class="explanation-box" id="dq4-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> The exchange clearinghouse acts as the central counterparty for all market participants. By demanding initial margin and settling gains and losses daily via mark-to-market (MTM), credit risk is mitigated and counterparty default is prevented.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card" id="dq5-card">
+          <div class="question-header">
+            <span class="badge badge-dark">Question 5 · Options Payoff Asymmetry</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            An investor buys a Call Option on a stock with a strike price of ₹1,000 for a premium of ₹50. If at expiration the stock price crashes to ₹700, what is the buyer's net profit or loss?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('dq5', 0)">
+              <input type="radio" name="dq5" value="0" class="option-radio"> A) Net Loss of ₹300 per share.
+            </label>
+            <label class="option-item" onclick="selectOption('dq5', 1)">
+              <input type="radio" name="dq5" value="1" class="option-radio"> B) Net Loss of ₹50 per share (limited to the premium paid).
+            </label>
+            <label class="option-item" onclick="selectOption('dq5', 2)">
+              <input type="radio" name="dq5" value="2" class="option-radio"> C) Net Loss of ₹350 per share.
+            </label>
+            <label class="option-item" onclick="selectOption('dq5', 3)">
+              <input type="radio" name="dq5" value="3" class="option-radio"> D) Zero profit, zero loss.
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="dq5-explanation">
+            <strong>Correct Answer: B (Loss of ₹50)</strong><br>
+            <em>Explanation:</em> An option gives the buyer the <strong>right, not the obligation</strong> to buy. Since the spot price is ₹700, buying at the strike of ₹1,000 makes no sense, so the buyer allows the option to expire worthless. The buyer's maximum possible loss is strictly capped at the upfront premium paid: ₹50!
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-card" id="dq6-card">
+          <div class="question-header">
+            <span class="badge badge-dark">Question 6 · Option Moneyness</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A trader holds a Put Option with a strike price of ₹500. The current underlying spot market price of the stock is ₹420. What is the moneyness status of this option?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('dq6', 0)">
+              <input type="radio" name="dq6" value="0" class="option-radio"> A) In-the-Money (ITM)
+            </label>
+            <label class="option-item" onclick="selectOption('dq6', 1)">
+              <input type="radio" name="dq6" value="1" class="option-radio"> B) Out-of-the-Money (OTM)
+            </label>
+            <label class="option-item" onclick="selectOption('dq6', 2)">
+              <input type="radio" name="dq6" value="2" class="option-radio"> C) At-the-Money (ATM)
+            </label>
+            <label class="option-item" onclick="selectOption('dq6', 3)">
+              <input type="radio" name="dq6" value="3" class="option-radio"> D) Breakeven
+            </label>
+          </div>
+          <div class="explanation-box" id="dq6-explanation">
+            <strong>Correct Answer: A (In-the-Money)</strong><br>
+            <em>Explanation:</em> A Put option is the right to SELL. If the market price is ₹420, having the contractual right to sell at ₹500 has immediate positive intrinsic value of $₹500 - ₹420 = ₹80$. Therefore, the put option is <strong>In-the-Money (ITM)</strong>.
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-card" id="dq7-card">
+          <div class="question-header">
+            <span class="badge badge-dark">Question 7 · Portfolio Insurance</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            An institutional mutual fund owns 1,00,000 shares of an IT company currently trading at ₹1,500. The fund manager wants to protect the portfolio against a potential market crash without selling the shares. What derivative position achieves this goal?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('dq7', 0)">
+              <input type="radio" name="dq7" value="0" class="option-radio"> A) Buy Call options on the stock.
+            </label>
+            <label class="option-item" onclick="selectOption('dq7', 1)">
+              <input type="radio" name="dq7" value="1" class="option-radio"> B) Buy Put options on the stock (Protective Put).
+            </label>
+            <label class="option-item" onclick="selectOption('dq7', 2)">
+              <input type="radio" name="dq7" value="2" class="option-radio"> C) Write (sell) uncovered Call options.
+            </label>
+            <label class="option-item" onclick="selectOption('dq7', 3)">
+              <input type="radio" name="dq7" value="3" class="option-radio"> D) Enter an interest rate swap.
+            </label>
+          </div>
+          <div class="explanation-box" id="dq7-explanation">
+            <strong>Correct Answer: B (Buy Put options)</strong><br>
+            <em>Slide 40 case:</em> Buying Put options establishes a price floor (portfolio insurance). If the stock price plummets, the gain on the put option offsets the loss on the stock, while retaining full upside if the stock continues to climb.
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-card" id="dq8-card">
+          <div class="question-header">
+            <span class="badge badge-dark">Question 8 · Option Styles</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            What is the distinguishing difference between an American-style option and a European-style option?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('dq8', 0)">
+              <input type="radio" name="dq8" value="0" class="option-radio"> A) American options can only be traded in the United States.
+            </label>
+            <label class="option-item" onclick="selectOption('dq8', 1)">
+              <input type="radio" name="dq8" value="1" class="option-radio"> B) An American option can be exercised on any business day up to and including the expiration date, whereas a European option can only be exercised on the final expiration date.
+            </label>
+            <label class="option-item" onclick="selectOption('dq8', 2)">
+              <input type="radio" name="dq8" value="2" class="option-radio"> C) European options do not require payment of an upfront premium.
+            </label>
+            <label class="option-item" onclick="selectOption('dq8', 3)">
+              <input type="radio" name="dq8" value="3" class="option-radio"> D) American options are always cheaper than European options.
+            </label>
+          </div>
+          <div class="explanation-box" id="dq8-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> The terms American and European describe the exercise timing rules: American options offer early exercise flexibility at any point prior to expiration, whereas European options can only be exercised on the expiry date itself.
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin: 2rem 0;">
+          <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2.5rem; font-size: 1.15rem;">
+            Submit Stage 6 Test & Review Answers 🎯
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function selectOption(qName, optIdx) {
+      const card = document.getElementById(qName + '-card');
+      const items = card.querySelectorAll('.option-item');
+      items.forEach(it => it.classList.remove('selected'));
+      items[optIdx].classList.add('selected');
+      items[optIdx].querySelector('input').checked = true;
+    }
+
+    const correctAnswers = {
+      dq1: 1, // B
+      dq2: 0, // A
+      dq3: 1, // B
+      dq4: 1, // B
+      dq5: 1, // B
+      dq6: 0, // A
+      dq7: 1, // B
+      dq8: 1  // B
+    };
+
+    function evaluateStage6Quiz() {
+      let score = 0;
+      let total = 8;
+
+      for (let q in correctAnswers) {
+        const selected = document.querySelector('input[name="' + q + '"]:checked');
+        const card = document.getElementById(q + '-card');
+        const expBox = document.getElementById(q + '-explanation');
+        const options = card.querySelectorAll('.option-item');
+
+        expBox.style.display = 'block';
+
+        if (selected) {
+          const val = parseInt(selected.value);
+          if (val === correctAnswers[q]) {
+            score++;
+            options[val].classList.add('correct');
+          } else {
+            options[val].classList.add('incorrect');
+            options[correctAnswers[q]].classList.add('correct');
+          }
+        } else {
+          options[correctAnswers[q]].classList.add('correct');
+        }
+      }
+
+      const banner = document.getElementById('stage6-result-banner');
+      const scoreDisp = document.getElementById('stage6-score-display');
+      const title = document.getElementById('stage6-verdict-title');
+      const text = document.getElementById('stage6-verdict-text');
+      const nextBtn = document.getElementById('stage6-next-btn');
+
+      banner.style.display = 'block';
+      scoreDisp.innerText = score + ' / ' + total;
+
+      let pct = (score / total) * 100;
+      if (pct >= 85) {
+        title.innerHTML = '🎉 Stage 6 Cleared! All Preparatory Stages Complete!';
+        text.innerText = 'You scored ' + score + '/8 (' + Math.round(pct) + '%). You have mastered the CAPM calculations and all derivative theory questions!';
+        banner.style.background = 'linear-gradient(135deg, #15803d, #14532d)';
+        nextBtn.style.display = 'inline-flex';
+        localStorage.setItem('fmi_stage_6_cleared', 'true');
+      } else {
+        title.innerHTML = '⚠️ Review Recommended (Target: 7/8)';
+        text.innerText = 'You scored ' + score + '/8 (' + Math.round(pct) + '%). Review the options moneyness and forward vs future features above, then retry.';
+        banner.style.background = 'linear-gradient(135deg, #b45309, #78350f)';
+        nextBtn.style.display = 'none';
+      }
+
+      window.scrollTo({ top: banner.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    function resetStage6Quiz() {
+      document.getElementById('stage6-quiz-form').reset();
+      document.querySelectorAll('.option-item').forEach(el => {
+        el.classList.remove('selected', 'correct', 'incorrect');
+      });
+      document.querySelectorAll('.explanation-box').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.getElementById('stage6-result-banner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

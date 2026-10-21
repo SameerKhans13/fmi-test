@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 1: Accounting Foundations & Three Statements | FMI 100/100</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="header-nav">
+    <div class="header-inner">
+      <a href="index.html" class="brand-title">
+        <span>📈</span> FMI 100/100
+        <span class="brand-subtitle">Stage 1: Accounting Foundations & Statements</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">← Hub Overview</a>
+        <a href="stage1_accounting.html" class="active">Stage 1</a>
+        <a href="stage2_ratios.html">Stage 2</a>
+        <a href="stage3_cvp.html">Stage 3</a>
+        <a href="stage4_tvm.html">Stage 4</a>
+        <a href="stage5_capital_budgeting.html">Stage 5</a>
+        <a href="stage6_capm_derivatives.html">Stage 6</a>
+        <a href="stage7_final_exam.html" style="background:#e11d48; color:white;">Final Exam 🎯</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Stage Header & Tab Navigation -->
+    <div style="margin-bottom: 1.5rem;">
+      <span class="badge badge-primary">Sessions 1–3</span>
+      <h1 style="font-size: 2rem; color: var(--secondary); margin-top: 0.35rem;">Stage 1: Accounting Foundations & Three Statements</h1>
+      <p style="color: var(--text-muted);">
+        Master the fundamental accounting equation, core conventions, revenue realisation, and reconciling net profit to operating cash flow.
+      </p>
+    </div>
+
+    <!-- Tabs: Detailed Information vs Interactive Test -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('notes-tab', this)">📖 Detailed Notes & Cases</button>
+      <button class="tab-btn" onclick="switchTab('test-tab', this)">✍️ Stage 1 Practice Test (8 Questions)</button>
+    </div>
+
+    <!-- TAB 1: DETAILED INFORMATION -->
+    <div id="notes-tab" class="tab-content active">
+
+      <!-- Section 1: The Accounting Equation -->
+      <div class="card">
+        <h3 class="card-title">1. The Accounting Equation: Who Owns What and Who Funded It</h3>
+        <p>Accounting records, classifies, and summarises business transactions in monetary terms. Every single transaction preserves the fundamental equality:</p>
+        
+        <div class="formula-box">
+          <div class="formula-name">Fundamental Balance Sheet Equation:</div>
+          <div class="formula-code">Assets = Liabilities + Equity</div>
+          <div class="formula-name" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">(For a company: Shareholders' Equity; for a sole proprietorship: Owner's Equity)</div>
+        </div>
+
+        <p><strong>The Seven Accounting Elements:</strong> Assets, Liabilities, Equity, Income, Expenses, Gains, Losses.</p>
+        <div class="callout callout-info">
+          <h4>💡 Equity Mechanics</h4>
+          <p>• <strong>Income and Gains</strong> increase Equity.</p>
+          <p>• <strong>Expenses and Losses</strong> reduce Equity.</p>
+          <p>• <strong>Drawings (Proprietorship) / Dividends (Company)</strong> reduce Equity directly. They are NOT expenses; they are a withdrawal of capital by the owners.</p>
+          <p>• <strong>Equation Movement:</strong> $\Delta \text{Equity} = \text{Income} - \text{Expenses} + \text{Gains} - \text{Losses} - \text{Dividends/Drawings}$.</p>
+        </div>
+
+        <h4>Step-by-Step Business Transaction Example (Kirana Store):</h4>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Transaction</th>
+                <th>Cash (A)</th>
+                <th>Inventory (A)</th>
+                <th>Loan (L)</th>
+                <th>Equity (E)</th>
+                <th>Balance Check ($A = L + E$)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Owner invests ₹5L, borrows ₹2L</td>
+                <td>+₹7.0L</td>
+                <td>—</td>
+                <td>₹2.0L</td>
+                <td>₹5.0L</td>
+                <td>₹7.0L = ₹2.0L + ₹5.0L ✓</td>
+              </tr>
+              <tr>
+                <td>Buys stock for ₹3L cash</td>
+                <td>₹4.0L</td>
+                <td>₹3.0L</td>
+                <td>₹2.0L</td>
+                <td>₹5.0L</td>
+                <td>₹7.0L = ₹2.0L + ₹5.0L ✓</td>
+              </tr>
+              <tr>
+                <td>Sells ₹1L stock for ₹1.5L cash</td>
+                <td>₹5.5L</td>
+                <td>₹2.0L</td>
+                <td>₹2.0L</td>
+                <td>₹5.5L (profit +0.5L)</td>
+                <td>₹7.5L = ₹2.0L + ₹5.5L ✓</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 2: Core Assumptions & Conventions -->
+      <div class="card">
+        <h3 class="card-title">2. Core Assumptions & Accounting Conventions (High Exam Weightage)</h3>
+        <p>The exam frequently tests your ability to identify the correct convention applied in a scenario:</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Assumption / Convention</th>
+                <th>What it Dictates</th>
+                <th>Real-Life Example from Slides</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Business Entity</strong></td>
+                <td>The business is legally and financially distinct from its owners.</td>
+                <td>Amazon’s corporate books do not include Jeff Bezos’s personal real estate or private jets.</td>
+              </tr>
+              <tr>
+                <td><strong>Going Concern</strong></td>
+                <td>The business is assumed to operate indefinitely. Assets are valued at historical cost less wear, not forced liquidation value.</td>
+                <td>A bakery values its ₹15L commercial oven at depreciated book value, not at scrap/distress sale price.</td>
+              </tr>
+              <tr>
+                <td><strong>Money Measurement</strong></td>
+                <td>Only events that can be expressed reliably in monetary terms are recorded.</td>
+                <td>Employee morale, top-tier engineering talent, or brand reputation cannot be an asset line on the balance sheet.</td>
+              </tr>
+              <tr>
+                <td><strong>Accounting Period</strong></td>
+                <td>The infinite life of a business is split into standard equal periods for reporting.</td>
+                <td>Indian financial year: 1st April to 31st March.</td>
+              </tr>
+              <tr>
+                <td><strong>Accrual Concept</strong></td>
+                <td>Revenues and expenses are recognised when the economic event occurs, regardless of when cash moves.</td>
+                <td>March electricity bill of ₹40,000 paid on 15th April is recorded as a March expense with a liability (expenses payable).</td>
+              </tr>
+              <tr>
+                <td><strong>Matching Principle</strong></td>
+                <td>Expenses incurred to generate a specific revenue must be paired in the same period as that revenue.</td>
+                <td>Buying 1,000 shirts for ₹10L and selling 600 shirts means COGS is only ₹6L. The remaining ₹4L is an asset (unsold closing stock), not an expense.</td>
+              </tr>
+              <tr>
+                <td><strong>Realisation Principle</strong></td>
+                <td>Revenue is recognised only when performance obligations are fulfilled, not upon cash receipt.</td>
+                <td>₹12,000 upfront annual Netflix subscription paid on 1st April is recognised at ₹1,000/month; the unearned portion is a liability.</td>
+              </tr>
+              <tr>
+                <td><strong>Prudence (Conservatism)</strong></td>
+                <td>Anticipate no profits, but provide for all possible losses. Do not overstate assets or understate liabilities.</td>
+                <td>Valuing inventory at <em>Lower of Cost or Net Realisable Value (NRV)</em>; creating a provision for doubtful debts.</td>
+              </tr>
+              <tr>
+                <td><strong>Materiality</strong></td>
+                <td>Financial reporting focuses on items significant enough to alter user decisions. Trivial items are expensed immediately.</td>
+                <td>A ₹500 office stapler with a 10-year physical life is expensed as stationery, not capitalized as a fixed asset.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 3: The Three Statements & Cash Flow Reconciliation -->
+      <div class="card">
+        <h3 class="card-title">3. The Three Statements & Net Income vs Operating Cash Flow</h3>
+        <p>
+          <strong>Why Net Income $\neq$ Operating Cash Flow:</strong> Profit under accrual accounting reflects economic performance, while cash flow reflects actual liquidity.
+        </p>
+
+        <div class="formula-box">
+          <div class="formula-name">Indirect Method: Reconciling PAT to Operating Cash Flow (CFO)</div>
+          <div class="formula-code">
+            CFO = PAT + Non-Cash Charges (Depreciation) − Δ Current Assets + Δ Current Liabilities
+          </div>
+        </div>
+
+        <div class="callout callout-warning">
+          <h4>⚠️ Golden Rules for Working Capital Adjustments:</h4>
+          <p>• <strong>Increase in Receivables (Debtors) $\rightarrow$ SUBTRACT</strong> (Cash tied up in credit sales; revenue recorded but cash not received).</p>
+          <p>• <strong>Increase in Inventory $\rightarrow$ SUBTRACT</strong> (Cash consumed to purchase extra stock).</p>
+          <p>• <strong>Increase in Payables (Creditors) $\rightarrow$ ADD</strong> (Suppliers financed our purchases; cash preserved).</p>
+          <p>• <strong>Decrease in Receivables/Inventory $\rightarrow$ ADD</strong> (Cash collected from customers / stock liquidated).</p>
+        </div>
+
+        <h4>Slide Worked Case (Reconciliation Example):</h4>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Item</th><th>Amount (₹ Lakh)</th><th>Impact on Cash</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Net Income (PAT)</strong></td><td>₹67.5L</td><td>Starting Point</td></tr>
+              <tr><td>Add: Depreciation (non-cash expense)</td><td>+₹20.0L</td><td>Cash was not paid out</td></tr>
+              <tr><td>Less: Increase in Trade Receivables</td><td>−₹30.0L</td><td>Cash trapped with customers</td></tr>
+              <tr><td>Less: Increase in Inventory</td><td>−₹15.0L</td><td>Cash trapped in unsold stock</td></tr>
+              <tr><td>Add: Increase in Trade Payables</td><td>+₹10.0L</td><td>Suppliers provided short-term financing</td></tr>
+              <tr style="background:#e0f2fe; font-weight:bold;"><td><strong>Cash from Operating Activities</strong></td><td>₹52.5L</td><td>Net Operating Cash Flow</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 4: Depreciation Methods -->
+      <div class="card">
+        <h3 class="card-title">4. Depreciation Methods: Straight-Line vs Reducing-Balance</h3>
+        <p>Depreciation is the systematic allocation of the depreciable amount of a non-current tangible asset over its estimated useful life.</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="callout callout-info">
+            <h4>Straight-Line Method (SLM)</h4>
+            <p><strong>Formula:</strong> $\text{Annual Depreciation} = \frac{\text{Cost} - \text{Residual Value}}{\text{Useful Life}}$</p>
+            <p>• Charge is identical each year.</p>
+            <p>• <em>Example:</em> Machine cost ₹11L, residual value ₹1L, life 5 years $\rightarrow \frac{11 - 1}{5} = ₹2\text{L}$ per year.</p>
+          </div>
+          <div class="callout callout-warning">
+            <h4>Reducing-Balance Method (WDV)</h4>
+            <p><strong>Formula:</strong> $\text{Depreciation} = \text{Opening Book Value} \times \text{Rate } r$</p>
+            <p>• Charge is highest in Year 1 and steadily decreases.</p>
+            <p>• Best suits assets that lose value rapidly (vehicles, technology).</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: INTERACTIVE PRACTICE TEST -->
+    <div id="test-tab" class="tab-content">
+      
+      <!-- Test Header Panel -->
+      <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="color:var(--secondary); margin-bottom:0.25rem;">Stage 1 Diagnostic Test: 8 MCQs</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem;">
+            Test your conceptual grasp and manual arithmetic. Target: <strong>At least 7/8 (88%) to clear this stage</strong>.
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-outline" onclick="resetStage1Quiz()">🔄 Reset Test</button>
+        </div>
+      </div>
+
+      <!-- Live Score Notification -->
+      <div id="stage1-result-banner" class="score-banner" style="display:none; text-align:center;">
+        <div id="stage1-score-display" class="score-number">0 / 8</div>
+        <h3 id="stage1-verdict-title" style="margin-top:0.5rem;">Score Review</h3>
+        <p id="stage1-verdict-text" style="color:#cbd5e1;"></p>
+        <div style="margin-top:1.5rem;">
+          <a href="stage2_ratios.html" id="stage1-next-btn" class="btn btn-success" style="display:none; font-size:1.05rem;">Proceed to Stage 2: Financial Ratios →</a>
+        </div>
+      </div>
+
+      <!-- Quiz Form Container -->
+      <form id="stage1-quiz-form" onsubmit="event.preventDefault(); evaluateStage1Quiz();">
+        
+        <!-- Question 1 -->
+        <div class="question-card" id="q1-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 1 · Theory</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A manufacturing company buys a plant for ₹40,00,000. Due to a sudden market crash, identical second-hand plants are selling for ₹10,00,000. The accountant continues to report the asset at cost less accumulated depreciation rather than marking it down to scrap value. Which accounting principle supports this?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('q1', 0)">
+              <input type="radio" name="q1" value="0" class="option-radio"> A) Money Measurement Principle
+            </label>
+            <label class="option-item" onclick="selectOption('q1', 1)">
+              <input type="radio" name="q1" value="1" class="option-radio"> B) Going Concern Assumption
+            </label>
+            <label class="option-item" onclick="selectOption('q1', 2)">
+              <input type="radio" name="q1" value="2" class="option-radio"> C) Realisation Principle
+            </label>
+            <label class="option-item" onclick="selectOption('q1', 3)">
+              <input type="radio" name="q1" value="3" class="option-radio"> D) Consistency Principle
+            </label>
+          </div>
+          <div class="explanation-box" id="q1-explanation">
+            <strong>Correct Answer: B (Going Concern Assumption)</strong><br>
+            <em>Explanation:</em> The Going Concern assumption presumes that the business will continue operations for the foreseeable future. Hence, assets are recorded at historical cost less depreciation (reflecting productive capacity) rather than immediate liquidation/scrap value.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card" id="q2-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 2 · Arithmetic</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Amit starts a trading business on 1st January with ₹8,00,000 equity cash. During the month:
+            <br>• He takes a bank loan of ₹4,00,000 cash.
+            <br>• He buys inventory for ₹5,00,000 cash.
+            <br>• He sells half the inventory (cost ₹2,50,000) for ₹4,20,000 cash.
+            <br>• He withdraws ₹50,000 cash for his personal household expenses.
+            <br>What are the Total Assets and Equity at the end of the month?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('q2', 0)">
+              <input type="radio" name="q2" value="0" class="option-radio"> A) Total Assets = ₹13,20,000 | Equity = ₹9,20,000
+            </label>
+            <label class="option-item" onclick="selectOption('q2', 1)">
+              <input type="radio" name="q2" value="1" class="option-radio"> B) Total Assets = ₹13,70,000 | Equity = ₹9,70,000
+            </label>
+            <label class="option-item" onclick="selectOption('q2', 2)">
+              <input type="radio" name="q2" value="2" class="option-radio"> C) Total Assets = ₹14,20,000 | Equity = ₹10,20,000
+            </label>
+            <label class="option-item" onclick="selectOption('q2', 3)">
+              <input type="radio" name="q2" value="3" class="option-radio"> D) Total Assets = ₹12,70,000 | Equity = ₹8,70,000
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="q2-explanation">
+            <strong>Correct Answer: A (Assets = ₹13,20,000 | Equity = ₹9,20,000)</strong><br>
+            <em>Step-by-step arithmetic:</em><br>
+            1. Cash inflows: Initial Equity ₹8.0L + Bank loan ₹4.0L + Sales ₹4.2L = ₹16.2L.<br>
+            2. Cash outflows: Inventory bought ₹5.0L + Drawings ₹0.5L = ₹5.5L.<br>
+            3. Final Cash balance = ₹16.2L − ₹5.5L = ₹10.7L.<br>
+            4. Remaining Inventory = ₹5.0L − ₹2.5L = ₹2.5L.<br>
+            5. Total Assets = Cash ₹10.7L + Inventory ₹2.5L = <strong>₹13.20 Lakh</strong>.<br>
+            6. Total Liabilities = Bank Loan = ₹4.0 Lakh.<br>
+            7. Equity = Initial ₹8.0L + Profit (₹4.2L − ₹2.5L = ₹1.7L) − Drawings ₹0.5L = <strong>₹9.20 Lakh</strong>.<br>
+            Balance check: Assets ₹13.20L = Liabilities ₹4.0L + Equity ₹9.20L.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card" id="q3-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 3 · Theory</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Under the matching concept, how should the cost of unsold merchandise inventory remaining at the end of the accounting period be treated?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('q3', 0)">
+              <input type="radio" name="q3" value="0" class="option-radio"> A) Expensed immediately as Cost of Goods Sold in the current period.
+            </label>
+            <label class="option-item" onclick="selectOption('q3', 1)">
+              <input type="radio" name="q3" value="1" class="option-radio"> B) Carried forward as an asset on the balance sheet until sold.
+            </label>
+            <label class="option-item" onclick="selectOption('q3', 2)">
+              <input type="radio" name="q3" value="2" class="option-radio"> C) Deducted directly from owner's equity as an administrative loss.
+            </label>
+            <label class="option-item" onclick="selectOption('q3', 3)">
+              <input type="radio" name="q3" value="3" class="option-radio"> D) Capitalized into property, plant, and equipment as a long-term investment.
+            </label>
+          </div>
+          <div class="explanation-box" id="q3-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> The matching principle dictates that costs must be paired with the revenues they produce. Because unsold goods produced zero revenue in the current period, they cannot be expensed; they must be carried forward as a Current Asset (Closing Inventory) to future periods.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card" id="q4-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 4 · Revenue Realisation</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            On 1st October 2025, an educational coaching institute collects ₹1,20,000 cash as full annual tuition fee for a 12-month program ending 30th September 2026. For the financial year ending <strong>31st March 2026</strong>, what revenue and balance sheet item should be reported?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('q4', 0)">
+              <input type="radio" name="q4" value="0" class="option-radio"> A) Revenue: ₹1,20,000 | Current Liability: ₹0
+            </label>
+            <label class="option-item" onclick="selectOption('q4', 1)">
+              <input type="radio" name="q4" value="1" class="option-radio"> B) Revenue: ₹60,000 | Current Asset: ₹60,000 (Accrued Income)
+            </label>
+            <label class="option-item" onclick="selectOption('q4', 2)">
+              <input type="radio" name="q4" value="2" class="option-radio"> C) Revenue: ₹60,000 | Current Liability: ₹60,000 (Unearned Revenue)
+            </label>
+            <label class="option-item" onclick="selectOption('q4', 3)">
+              <input type="radio" name="q4" value="3" class="option-radio"> D) Revenue: ₹0 | Current Liability: ₹1,20,000 (Deferred Revenue)
+            </label>
+          </div>
+          <div class="explanation-box" id="q4-explanation">
+            <strong>Correct Answer: C</strong><br>
+            <em>Explanation:</em> From 1st October 2025 to 31st March 2026, exactly 6 months of teaching service has been rendered: $\frac{6}{12} \times ₹1,20,000 = ₹60,000$ earned revenue. The remaining 6 months (₹60,000) represents an obligation to perform future services and must be shown as a Current Liability (Unearned / Deferred Revenue).
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card" id="q5-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 5 · Cash Flow Linkage</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A corporate entity reports Net Profit after Tax (PAT) of ₹45,00,000 for FY2026. The financial records show:
+            <br>• Depreciation on assets: ₹10,00,000
+            <br>• Accounts Receivable increased by ₹8,00,000
+            <br>• Inventory increased by ₹5,00,000
+            <br>• Accounts Payable increased by ₹4,00,000
+            <br>What is the <strong>Cash Flow from Operating Activities</strong>?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('q5', 0)">
+              <input type="radio" name="q5" value="0" class="option-radio"> A) ₹46,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('q5', 1)">
+              <input type="radio" name="q5" value="1" class="option-radio"> B) ₹54,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('q5', 2)">
+              <input type="radio" name="q5" value="2" class="option-radio"> C) ₹38,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('q5', 3)">
+              <input type="radio" name="q5" value="3" class="option-radio"> D) ₹50,00,000
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="q5-explanation">
+            <strong>Correct Answer: A (₹46,00,000)</strong><br>
+            <em>Manual calculation:</em><br>
+            $\text{CFO} = \text{PAT} + \text{Depreciation} - \Delta\text{Receivables} - \Delta\text{Inventory} + \Delta\text{Payables}$<br>
+            $= ₹45,00,000 + ₹10,00,000 - ₹8,00,000 - ₹5,00,000 + ₹4,00,000$<br>
+            $= ₹55,00,000 - ₹13,00,000 + ₹4,00,000 = <strong>₹46,00,000</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-card" id="q6-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 6 · Conventions</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Why does an accountant immediately write off an executive desk calculator costing ₹400 as an administrative expense in Year 1, even though it will be used for 8 years?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('q6', 0)">
+              <input type="radio" name="q6" value="0" class="option-radio"> A) Prudence Concept
+            </label>
+            <label class="option-item" onclick="selectOption('q6', 1)">
+              <input type="radio" name="q6" value="1" class="option-radio"> B) Materiality Convention
+            </label>
+            <label class="option-item" onclick="selectOption('q6', 2)">
+              <input type="radio" name="q6" value="2" class="option-radio"> C) Business Entity Assumption
+            </label>
+            <label class="option-item" onclick="selectOption('q6', 3)">
+              <input type="radio" name="q6" value="3" class="option-radio"> D) Realisation Principle
+            </label>
+          </div>
+          <div class="explanation-box" id="q6-explanation">
+            <strong>Correct Answer: B (Materiality Convention)</strong><br>
+            <em>Explanation:</em> The Materiality convention permits accountants to disregard strict theoretical accounting treatments for items whose value is too insignificant to influence the economic decisions of users. Depreciating ₹50 a year for 8 years would create administrative burden without adding value to decision-makers.
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-card" id="q7-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 7 · Depreciation</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A delivery vehicle is purchased for ₹12,00,000. It has an estimated life of 5 years and a salvage value of ₹2,00,000. Under the Straight-Line Method (SLM), what is the book value at the end of Year 3?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('q7', 0)">
+              <input type="radio" name="q7" value="0" class="option-radio"> A) ₹6,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('q7', 1)">
+              <input type="radio" name="q7" value="1" class="option-radio"> B) ₹4,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('q7', 2)">
+              <input type="radio" name="q7" value="2" class="option-radio"> C) ₹7,20,000
+            </label>
+            <label class="option-item" onclick="selectOption('q7', 3)">
+              <input type="radio" name="q7" value="3" class="option-radio"> D) ₹5,00,000
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="q7-explanation">
+            <strong>Correct Answer: A (₹6,00,000)</strong><br>
+            <em>Step-by-step arithmetic:</em><br>
+            1. Depreciable Amount = $\text{Cost} - \text{Salvage} = ₹12,00,000 - ₹2,00,000 = ₹10,00,000$.<br>
+            2. Annual Depreciation = $\frac{₹10,00,000}{5} = ₹2,00,000$ per year.<br>
+            3. Accumulated Depreciation after 3 years = $3 \times ₹2,00,000 = ₹6,00,000$.<br>
+            4. Book Value at end of Year 3 = $\text{Cost} - \text{Accumulated Depreciation} = ₹12,00,000 - ₹6,00,000 = <strong>₹6,00,000</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-card" id="q8-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 8 · Conceptual Linkage</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Which of the following cash transactions alters both the Balance Sheet and Owner's Equity, but has <strong>ZERO</strong> impact on the Income Statement?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('q8', 0)">
+              <input type="radio" name="q8" value="0" class="option-radio"> A) Payment of ₹30,000 factory monthly rent.
+            </label>
+            <label class="option-item" onclick="selectOption('q8', 1)">
+              <input type="radio" name="q8" value="1" class="option-radio"> B) Owner withdraws ₹50,000 cash for personal use (Drawings).
+            </label>
+            <label class="option-item" onclick="selectOption('q8', 2)">
+              <input type="radio" name="q8" value="2" class="option-radio"> C) Payment of ₹15,000 interest on a bank overdraft.
+            </label>
+            <label class="option-item" onclick="selectOption('q8', 3)">
+              <input type="radio" name="q8" value="3" class="option-radio"> D) Recognizing ₹25,000 depreciation on showroom computers.
+            </label>
+          </div>
+          <div class="explanation-box" id="q8-explanation">
+            <strong>Correct Answer: B (Owner drawings)</strong><br>
+            <em>Explanation:</em> Drawings / dividends are distributions of wealth to the owners. They reduce Cash (Assets) and directly reduce Equity on the Balance Sheet. They are NOT operating expenses and therefore do not appear on the Income Statement. (Options A, C, and D are all expenses that flow through the Income Statement).
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin: 2rem 0;">
+          <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2.5rem; font-size: 1.15rem;">
+            Submit Stage 1 Test & Review Answers 🎯
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <!-- Formula Floating Button -->
+  <button class="formula-drawer-btn" onclick="openFormulaModal()">📑 Quick Formulas</button>
+
+  <!-- Modal for Formula Sheet -->
+  <div class="formula-modal" id="formulaModal" onclick="closeFormulaModalOnOutside(event)">
+    <div class="formula-modal-content">
+      <button class="close-modal-btn" onclick="closeFormulaModal()">×</button>
+      <h3>📑 Quick Formula Reference</h3>
+      <p style="margin-top:1rem;">• <strong>Accounting Equation:</strong> $\text{Assets} = \text{Liabilities} + \text{Equity}$</p>
+      <p>• <strong>CFO (Indirect):</strong> $\text{PAT} + \text{Depr} - \Delta\text{CA} + \Delta\text{CL}$</p>
+      <p>• <strong>SLM Depreciation:</strong> $\frac{\text{Cost} - \text{Salvage}}{\text{Life}}$</p>
+    </div>
+  </div>
+
+  <script>
+    // Tab Switching
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    // Modal
+    function openFormulaModal() { document.getElementById('formulaModal').style.display = 'flex'; }
+    function closeFormulaModal() { document.getElementById('formulaModal').style.display = 'none'; }
+    function closeFormulaModalOnOutside(e) { if(e.target.id === 'formulaModal') closeFormulaModal(); }
+
+    // Option Selection Visuals
+    function selectOption(qName, optIdx) {
+      const card = document.getElementById(qName + '-card');
+      const items = card.querySelectorAll('.option-item');
+      items.forEach(it => it.classList.remove('selected'));
+      items[optIdx].classList.add('selected');
+      items[optIdx].querySelector('input').checked = true;
+    }
+
+    // Evaluation Logic
+    const correctAnswers = {
+      q1: 1, // B
+      q2: 0, // A
+      q3: 1, // B
+      q4: 2, // C
+      q5: 0, // A
+      q6: 1, // B
+      q7: 0, // A
+      q8: 1  // B
+    };
+
+    function evaluateStage1Quiz() {
+      let score = 0;
+      let total = 8;
+
+      for (let q in correctAnswers) {
+        const selected = document.querySelector('input[name="' + q + '"]:checked');
+        const card = document.getElementById(q + '-card');
+        const expBox = document.getElementById(q + '-explanation');
+        const options = card.querySelectorAll('.option-item');
+
+        expBox.style.display = 'block';
+
+        if (selected) {
+          const val = parseInt(selected.value);
+          if (val === correctAnswers[q]) {
+            score++;
+            options[val].classList.add('correct');
+          } else {
+            options[val].classList.add('incorrect');
+            options[correctAnswers[q]].classList.add('correct');
+          }
+        } else {
+          options[correctAnswers[q]].classList.add('correct');
+        }
+      }
+
+      // Display Banner
+      const banner = document.getElementById('stage1-result-banner');
+      const scoreDisp = document.getElementById('stage1-score-display');
+      const title = document.getElementById('stage1-verdict-title');
+      const text = document.getElementById('stage1-verdict-text');
+      const nextBtn = document.getElementById('stage1-next-btn');
+
+      banner.style.display = 'block';
+      scoreDisp.innerText = score + ' / ' + total;
+
+      let pct = (score / total) * 100;
+      if (pct >= 85) {
+        title.innerHTML = '🎉 Stage 1 Cleared! Outstanding Mastery!';
+        text.innerText = 'You demonstrated complete command over the core accounting conventions, the fundamental equation, and cash flow adjustments. You are fully ready for Stage 2.';
+        banner.style.background = 'linear-gradient(135deg, #15803d, #14532d)';
+        nextBtn.style.display = 'inline-flex';
+        localStorage.setItem('fmi_stage_1_cleared', 'true');
+      } else {
+        title.innerHTML = '⚠️ Review Recommended (Target: 7/8)';
+        text.innerText = 'You scored ' + score + '/8 (' + Math.round(pct) + '%). Review the detailed explanations below to cement your understanding, then retry the test.';
+        banner.style.background = 'linear-gradient(135deg, #b45309, #78350f)';
+        nextBtn.style.display = 'none';
+      }
+
+      window.scrollTo({ top: banner.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    function resetStage1Quiz() {
+      document.getElementById('stage1-quiz-form').reset();
+      document.querySelectorAll('.option-item').forEach(el => {
+        el.classList.remove('selected', 'correct', 'incorrect');
+      });
+      document.querySelectorAll('.explanation-box').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.getElementById('stage1-result-banner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

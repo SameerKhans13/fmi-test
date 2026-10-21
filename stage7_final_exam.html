@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Exam Simulator (40 MCQs · 120 Mins) | FMI 100/100</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .exam-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .timer-badge {
+      font-size: 1.35rem;
+      font-weight: 800;
+      font-family: monospace;
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid #334155;
+    }
+    .timer-warning {
+      color: #f87171 !important;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+    .palette-btn {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+    .palette-btn:hover { background: #e2e8f0; }
+    .palette-btn.answered { background: #dcfce7; color: #166534; border-color: #86efac; }
+    .palette-btn.flagged { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+    .palette-btn.current { outline: 2px solid var(--primary); outline-offset: 1px; font-weight: 800; }
+    
+    .flag-btn {
+      background: none;
+      border: 1px solid #cbd5e1;
+      color: #475569;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .flag-btn.active {
+      background: #fef3c7;
+      border-color: #f59e0b;
+      color: #b45309;
+      font-weight: bold;
+    }
+    @media (max-width: 900px) {
+      .exam-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="header-nav">
+    <div class="header-inner">
+      <a href="index.html" class="brand-title">
+        <span>🎯</span> FMI 100/100 Final Exam Simulator
+      </a>
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <div class="timer-badge" id="exam-timer-display">⏱️ 120:00</div>
+        <button class="btn btn-outline" style="padding:0.4rem 0.8rem; font-size:0.85rem;" onclick="toggleTimer()" id="pause-btn">⏸️ Pause</button>
+        <button class="btn btn-primary" style="padding:0.4rem 0.9rem; font-size:0.85rem;" onclick="openFormulaModal()">📑 Formulas</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Exam Introduction Card (Shown before starting or at top) -->
+    <div class="callout callout-info" id="exam-instructions-box" style="margin-top: 0;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem;">
+        <div>
+          <h4>📋 Official Exam Conditions Replicated:</h4>
+          <p>• <strong>40 Multiple-Choice Questions</strong> covering Sessions 1–9 with heavy weightage.</p>
+          <p>• <strong>120 Minutes</strong> (~3 minutes per question). Rough work requires pen and paper (manual $+$, $-$, $\times$, $\div$).</p>
+          <p>• Ratios and TVM formulas are in the formula drawer (CVP formulas are tested from memory).</p>
+        </div>
+        <div>
+          <button class="btn btn-primary" onclick="submitExam(true)" style="background:#e11d48;">Submit Exam Now 🏁</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Score Results Screen (Initially Hidden) -->
+    <div id="final-results-screen" style="display:none;">
+      <div class="score-banner" id="score-banner-element">
+        <div style="font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8;">Final Score Result</div>
+        <div class="score-number" id="final-score-num">0 / 100</div>
+        <h2 id="final-verdict-title" style="margin-top: 0.5rem;">Exam Completed</h2>
+        <p id="final-verdict-summary" style="color: #cbd5e1; max-width: 650px; margin: 0.5rem auto;"></p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="reviewExamAnswers()">Detailed Solution Review ↓</button>
+          <a href="index.html" class="btn btn-outline">Back to Course Hub</a>
+          <button class="btn btn-outline" onclick="location.reload()">Retake Full Exam 🔄</button>
+        </div>
+      </div>
+
+      <!-- Performance Category Breakdown -->
+      <div class="card">
+        <h3 class="card-title">Topic Performance Diagnostic Breakdown</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Syllabus Section</th><th>Questions</th><th>Your Score</th><th>Accuracy</th><th>Status</th></tr>
+            </thead>
+            <tbody id="topic-diagnostic-rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Exam Layout: Questions on Left, Palette on Right -->
+    <div class="exam-layout" id="exam-active-layout">
+      
+      <!-- Questions Container -->
+      <div id="questions-wrapper">
+        <!-- Rendered by JavaScript dynamically -->
+      </div>
+
+      <!-- Side Panel: Question Palette & Navigation -->
+      <aside>
+        <div class="card" style="position: sticky; top: 90px;">
+          <h4 style="color: var(--secondary); margin-bottom: 0.5rem; display:flex; justify-content:space-between; align-items:center;">
+            <span>Question Palette</span>
+            <span style="font-size:0.8rem; font-weight:normal; color:#64748b;" id="palette-count-text">0/40 Done</span>
+          </h4>
+          
+          <div style="display:flex; gap:0.5rem; font-size:0.75rem; color:#64748b; margin-bottom:0.75rem; flex-wrap:wrap;">
+            <span style="display:flex; align-items:center; gap:0.25rem;"><span style="width:10px; height:10px; background:#dcfce7; border:1px solid #86efac; border-radius:2px;"></span> Answered</span>
+            <span style="display:flex; align-items:center; gap:0.25rem;"><span style="width:10px; height:10px; background:#fef3c7; border:1px solid #fcd34d; border-radius:2px;"></span> Flagged</span>
+            <span style="display:flex; align-items:center; gap:0.25rem;"><span style="width:10px; height:10px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:2px;"></span> Unanswered</span>
+          </div>
+
+          <div class="palette-grid" id="palette-grid">
+            <!-- 40 buttons generated by JS -->
+          </div>
+
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+            <button class="btn btn-primary" style="width: 100%; background: #e11d48;" onclick="submitExam(true)">
+              Finish & Submit Exam 🏁
+            </button>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- Modal for Formula Sheet -->
+  <div class="formula-modal" id="formulaModal" onclick="closeFormulaModalOnOutside(event)">
+    <div class="formula-modal-content">
+      <button class="close-modal-btn" onclick="closeFormulaModal()">×</button>
+      <h2 style="color: var(--secondary); margin-bottom: 0.5rem;">📑 Provided Exam Formula Reference Sheet</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+        These formulas are permitted/provided during the exam. (Note: CVP formulas are excluded and must be recalled from memory).
+      </p>
+
+      <div class="callout callout-info">
+        <h4>1. Liquidity & Working Capital Ratios</h4>
+        <p>• <strong>Current Ratio:</strong> $\frac{\text{Current Assets}}{\text{Current Liabilities}}$ (Benchmark: 1.5–2.0)</p>
+        <p>• <strong>Quick / Acid-Test Ratio:</strong> $\frac{\text{Current Assets} - \text{Inventories}}{\text{Current Liabilities}}$</p>
+        <p>• <strong>Cash Ratio:</strong> $\frac{\text{Cash \& Cash Equivalents}}{\text{Current Liabilities}}$</p>
+        <p>• <strong>Operating Cycle:</strong> $\text{Inventory Days} + \text{Receivable Days} - \text{Payable Days}$</p>
+        <p>• <strong>Inventory Days:</strong> $\frac{365 \times \text{Average Inventory}}{\text{COGS}}$</p>
+        <p>• <strong>Receivable (Debtor) Days:</strong> $\frac{365 \times \text{Average Debtors}}{\text{Net Sales}}$</p>
+        <p>• <strong>Payable (Creditor) Days:</strong> $\frac{365 \times \text{Average Creditors}}{\text{COGS or Purchases}}$</p>
+      </div>
+
+      <div class="callout callout-warning">
+        <h4>2. Solvency & Coverage Ratios</h4>
+        <p>• <strong>Debt-to-Equity (D/E):</strong> $\frac{\text{Total Interest-bearing Debt}}{\text{Total Shareholders' Equity}}$</p>
+        <p>• <strong>Interest Coverage Ratio:</strong> $\frac{\text{EBIT}}{\text{Interest Expense}}$ (Warning sign if $< 2.0\times$)</p>
+      </div>
+
+      <div class="callout callout-success">
+        <h4>3. Profitability & DuPont Analysis</h4>
+        <p>• <strong>Gross Margin:</strong> $\frac{\text{Gross Profit}}{\text{Sales}} \times 100$</p>
+        <p>• <strong>Operating Margin:</strong> $\frac{\text{EBIT}}{\text{Sales}} \times 100$</p>
+        <p>• <strong>Net Profit Margin:</strong> $\frac{\text{PAT}}{\text{Sales}} \times 100$</p>
+        <p>• <strong>ROCE:</strong> $\frac{\text{EBIT}}{\text{Capital Employed (Equity + Debt)}}$</p>
+        <p>• <strong>ROE (DuPont 3-Way):</strong> $\text{Net Profit Margin} \times \text{Asset Turnover} \times \text{Equity Multiplier}$</p>
+      </div>
+
+      <div class="callout callout-info">
+        <h4>4. Time Value of Money & Capital Budgeting</h4>
+        <p>• <strong>Future Value (FV):</strong> $PV \times (1 + r)^n$</p>
+        <p>• <strong>Present Value (PV):</strong> $\frac{FV}{(1 + r)^n}$</p>
+        <p>• <strong>Ordinary Annuity PV:</strong> $PMT \times \left[\frac{1 - (1+r)^{-n}}{r}\right]$</p>
+        <p>• <strong>Level Perpetuity PV:</strong> $\frac{PMT}{r}$</p>
+        <p>• <strong>Growing Perpetuity PV:</strong> $\frac{CF_1}{r - g}$ (valid when $r > g$)</p>
+        <p>• <strong>Net Present Value (NPV):</strong> $\sum_{t=1}^n \frac{CF_t}{(1+r)^t} - \text{Initial Outlay}$</p>
+        <p>• <strong>Profitability Index (PI):</strong> $\frac{\text{PV of Future Cash Inflows}}{\text{Initial Outlay}}$</p>
+        <p>• <strong>Rule of 72:</strong> $\text{Years to Double} \approx \frac{72}{r\%}$</p>
+        <p>• <strong>CAPM Cost of Equity:</strong> $E(R_e) = R_f + \beta(R_m - R_f)$</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // All 40 Questions Data
+    const examQuestions = [
+      // 1-10: Accounting Foundations & Three Statements
+      {
+        id: 1,
+        topic: "Accounting Foundations",
+        text: "The fundamental accounting equation Assets = Liabilities + Equity must balance after every single transaction. If a business takes a bank loan of ₹5,00,000 cash and simultaneously buys ₹2,00,000 of inventory for cash, what is the net change in Total Assets?",
+        options: [
+          "A) Assets increase by ₹3,00,000",
+          "B) Assets increase by ₹5,00,000",
+          "C) Assets increase by ₹7,00,000",
+          "D) Assets remain unchanged"
+        ],
+        ans: 1, // B
+        sol: "Taking a ₹5,00,000 bank loan increases Cash (Asset) by +₹5L and Liabilities by +₹5L. Buying ₹2L inventory for cash decreases Cash by ₹2L and increases Inventory by ₹2L (net asset change = 0). Thus, Total Assets increase by exactly ₹5,00,000."
+      },
+      {
+        id: 2,
+        topic: "Accounting Foundations",
+        text: "A firm pays ₹36,000 on 1st March 2026 for a 3-year commercial property insurance policy covering 1st March 2026 to 28th February 2029. Under the accrual concept, how much insurance expense should be recognized in the Income Statement for the financial year ending 31st March 2026?",
+        options: [
+          "A) ₹36,000",
+          "B) ₹12,000",
+          "C) ₹1,000",
+          "D) ₹0"
+        ],
+        ans: 2, // C
+        sol: "The ₹36,000 policy covers 36 months (₹1,000 per month). Up to 31st March 2026, only 1 month (March) of insurance coverage has expired. Therefore, only ₹1,000 is an expense; the remaining ₹35,000 is a Current Asset (Prepaid Insurance)."
+      },
+      {
+        id: 3,
+        topic: "Accounting Foundations",
+        text: "Which of the following accounting concepts directly dictates that revenue should be recorded only when goods or services have been delivered to the customer, rather than when cash is received?",
+        options: [
+          "A) Realisation / Revenue Recognition Principle",
+          "B) Money Measurement Concept",
+          "C) Going Concern Assumption",
+          "D) Business Entity Concept"
+        ],
+        ans: 0, // A
+        sol: "The Realisation Principle states that revenue is recognized when the performance obligation is satisfied (goods delivered or services rendered), regardless of when cash is collected."
+      },
+      {
+        id: 4,
+        topic: "Accounting Foundations",
+        text: "A sole proprietor withdraws ₹60,000 cash from the business bank account for his daughter's college tuition. How is this transaction recorded in the financial statements?",
+        options: [
+          "A) Debited to Income Statement as employee training expense.",
+          "B) Deducted directly from Owner's Equity as Drawings on the Balance Sheet; has zero effect on the Income Statement.",
+          "C) Added to Trade Receivables as a short-term asset.",
+          "D) Added to current liabilities as an unearned advance."
+        ],
+        ans: 1, // B
+        sol: "Drawings represent a withdrawal of capital by the owner for personal domestic use. It reduces Cash and reduces Equity directly on the Balance Sheet; it is NOT an operating expense of the business."
+      },
+      {
+        id: 5,
+        topic: "Accounting Foundations",
+        text: "Why is human capital (such as having a team of world-class AI engineers) not included as an asset on a corporate balance sheet?",
+        options: [
+          "A) Due to the Consistency Principle",
+          "B) Due to the Money Measurement Concept, as employee knowledge cannot be reliably measured in objective monetary units",
+          "C) Because engineers are considered current liabilities",
+          "D) Due to the Accrual Principle"
+        ],
+        ans: 1, // B
+        sol: "The Money Measurement concept mandates that only transactions and events capable of reliable monetary measurement can be reported in financial statements."
+      },
+      {
+        id: 6,
+        topic: "Three Statements & Cash Flow",
+        text: "A business reports Net Profit after Tax (PAT) of ₹30,00,000. Depreciation is ₹6,00,000. During the year, Trade Receivables increased by ₹4,00,000, Inventories decreased by ₹2,00,000, and Trade Payables decreased by ₹3,00,000. What is the Cash Flow from Operating Activities (CFO)?",
+        options: [
+          "A) ₹31,00,000",
+          "B) ₹35,00,000",
+          "C) ₹27,00,000",
+          "D) ₹39,00,000"
+        ],
+        ans: 0, // A
+        sol: "CFO = PAT (₹30L) + Depreciation (₹6L) − ΔReceivables (+₹4L) − ΔInventory (−₹2L) + ΔPayables (−₹3L) = ₹30L + ₹6L − ₹4L + ₹2L − ₹3L = ₹31,00,000."
+      },
+      {
+        id: 7,
+        topic: "Three Statements & Cash Flow",
+        text: "Which of the following cash flows is classified under 'Financing Activities' on a standard Cash Flow Statement?",
+        options: [
+          "A) Payment of cash dividend to equity shareholders",
+          "B) Cash paid for purchasing factory machinery",
+          "C) Cash collected from sundry debtors",
+          "D) Cash paid for factory staff wages"
+        ],
+        ans: 0, // A
+        sol: "Dividends paid, issuing shares, borrowing bank loans, and repaying principal are all Financing Activities. (Machinery purchase is Investing; wages and collections are Operating)."
+      },
+      {
+        id: 8,
+        topic: "Accounting Foundations",
+        text: "An equipment item purchased for ₹8,00,000 with a salvage value of ₹80,000 has a useful life of 6 years. Under the Straight-Line Method (SLM), what is the annual depreciation expense?",
+        options: [
+          "A) ₹1,33,333",
+          "B) ₹1,20,000",
+          "C) ₹1,40,000",
+          "D) ₹1,10,000"
+        ],
+        ans: 1, // B
+        sol: "Annual SLM Depreciation = (Cost − Residual Value) / Useful Life = (₹8,00,000 − ₹80,00,0) / 6 = ₹7,20,000 / 6 = ₹1,20,000 per year."
+      },
+      {
+        id: 9,
+        topic: "Accounting Foundations",
+        text: "Under the Prudence (Conservatism) convention, how must closing inventory be valued at the end of an accounting period?",
+        options: [
+          "A) Always at historical acquisition cost",
+          "B) Always at estimated future selling price",
+          "C) At the lower of historical cost and net realisable value (NRV)",
+          "D) At replacement cost plus 10% markup"
+        ],
+        ans: 2, // C
+        sol: "Prudence dictates anticipating no unrealized gains while recognizing all anticipated losses. Hence, inventory is valued at Lower of Cost or Net Realisable Value (NRV)."
+      },
+      {
+        id: 10,
+        topic: "Accounting Foundations",
+        text: "When comparing the Straight-Line Method (SLM) with the Reducing-Balance (WDV) Method for a newly acquired delivery truck, which statement is true?",
+        options: [
+          "A) Reducing-balance method charges an identical depreciation expense in all years.",
+          "B) Reducing-balance method charges a significantly higher depreciation in Year 1 compared to SLM.",
+          "C) SLM charges zero depreciation in Year 1.",
+          "D) Total cumulative depreciation over the entire useful life is greater under SLM than under Reducing-balance."
+        ],
+        ans: 1, // B
+        sol: "Reducing-balance applies a fixed percentage to opening book value, making the charge heaviest in the earliest years when the asset is newest."
+      },
+
+      // 11-20: Ratio Analysis, Working Capital & DuPont
+      {
+        id: 11,
+        topic: "Financial Ratios",
+        text: "A company has Current Assets of ₹45,00,000, Inventory of ₹15,00,000, and Current Liabilities of ₹30,00,000. What is its Quick (Acid-Test) Ratio?",
+        options: [
+          "A) 1.50×",
+          "B) 1.00×",
+          "C) 0.67×",
+          "D) 2.00×"
+        ],
+        ans: 1, // B
+        sol: "Quick Ratio = (Current Assets − Inventory) / Current Liabilities = (₹45L − ₹15L) / ₹30L = ₹30L / ₹30L = 1.00×."
+      },
+      {
+        id: 12,
+        topic: "Financial Ratios",
+        text: "A retail store has Inventory Days of 50 days, Receivable Days of 30 days, and Payable Days of 40 days. What is its Operating (Cash Conversion) Cycle?",
+        options: [
+          "A) 120 days",
+          "B) 40 days",
+          "C) 60 days",
+          "D) 20 days"
+        ],
+        ans: 1, // B
+        sol: "Operating Cycle = Inventory Days + Receivable Days − Payable Days = 50 + 30 − 40 = 40 days."
+      },
+      {
+        id: 13,
+        topic: "Financial Ratios",
+        text: "A firm has an EBIT of ₹18,00,000 and an annual Interest Expense of ₹3,00,000. What is its Interest Coverage Ratio, and how should a lender interpret it?",
+        options: [
+          "A) 6.0×; represents a very comfortable safety cushion for debt servicing.",
+          "B) 0.17×; alarming signal of imminent default.",
+          "C) 3.0×; moderate risk.",
+          "D) 15.0×; zero debt."
+        ],
+        ans: 0, // A
+        sol: "Interest Coverage = EBIT / Interest = ₹18,00,000 / ₹3,00,000 = 6.0×. Well above the warning threshold of 2.0×."
+      },
+      {
+        id: 14,
+        topic: "Financial Ratios",
+        text: "Using the 3-part DuPont identity (ROE = Net Profit Margin × Asset Turnover × Equity Multiplier), what is the ROE for a firm with Net Margin = 10%, Asset Turnover = 1.5×, and Total Assets to Equity = 1.6×?",
+        options: [
+          "A) 15.0%",
+          "B) 24.0%",
+          "C) 18.0%",
+          "D) 31.0%"
+        ],
+        ans: 1, // B
+        sol: "ROE = 10% × 1.5 × 1.6 = 10% × 2.4 = 24.0%."
+      },
+      {
+        id: 15,
+        topic: "Financial Ratios",
+        text: "In the Asian Paints standalone case discussed in class, the company has an Equity Multiplier of 1.08× and a Debt-to-Equity ratio of 0.06×. What does this reveal about its ROE generation?",
+        options: [
+          "A) Its ROE is heavily artificially inflated by high financial debt leverage.",
+          "B) Its ROE is earned primarily through operating profit margin and asset turnover, not financial leverage.",
+          "C) The company has excessive financial distress risk.",
+          "D) Its return on assets must exceed 50%."
+        ],
+        ans: 1, // B
+        sol: "An equity multiplier near 1.0 (1.08×) and D/E of 0.06× means the firm uses virtually no debt. Returns flow purely from operating efficiency and turnover."
+      },
+      {
+        id: 16,
+        topic: "Financial Ratios",
+        text: "A firm has annual Sales of ₹73,00,000 and average Sundry Debtors of ₹6,00,000. Assuming a 365-day year, what is its average Debtors Collection Period?",
+        options: [
+          "A) 25 days",
+          "B) 30 days",
+          "C) 45 days",
+          "D) 60 days"
+        ],
+        ans: 1, // B
+        sol: "Collection Days = (365 × Debtors) / Sales = (365 × 6,00,000) / 73,00,000 = (365 / 73) × 6 = 5 × 6 = 30 days."
+      },
+      {
+        id: 17,
+        topic: "Financial Ratios",
+        text: "Company A has 10,00,000 shares trading at ₹200 each. Total debt is ₹5,00,00,000 and cash reserves are ₹1,00,00,000. What is its Enterprise Value (EV)?",
+        options: [
+          "A) ₹24,00,00,000 (₹24 Crore)",
+          "B) ₹26,00,00,000 (₹26 Crore)",
+          "C) ₹20,00,00,000 (₹20 Crore)",
+          "D) ₹16,00,00,000 (₹16 Crore)"
+        ],
+        ans: 0, // A
+        sol: "Market Cap = 10L × ₹200 = ₹20 Crore. EV = Market Cap + Debt − Cash = ₹20 Cr + ₹5 Cr − ₹1 Cr = ₹24 Crore."
+      },
+      {
+        id: 18,
+        topic: "Financial Ratios",
+        text: "A company's Current Ratio is 1.8× and its Quick Ratio is 0.7×. What is the most reasonable conclusion for a management analyst?",
+        options: [
+          "A) The firm holds no inventory whatsoever.",
+          "B) A large portion of the firm's current assets consists of inventory, which cannot be converted into immediate cash without delay.",
+          "C) The firm has negative net working capital.",
+          "D) Current liabilities exceed current assets."
+        ],
+        ans: 1, // B
+        sol: "The significant gap between Current Ratio (1.8×) and Quick Ratio (0.7×) shows that inventory forms the bulk of current assets, indicating reliance on stock sales to meet short-term obligations."
+      },
+      {
+        id: 19,
+        topic: "Financial Ratios",
+        text: "A company earns PAT of ₹50,00,000 with 10,00,000 outstanding shares. Its stock price is ₹125 and DPS is ₹2.50. What are its P/E Ratio and Dividend Yield?",
+        options: [
+          "A) P/E = 25.0× | Yield = 2.0%",
+          "B) P/E = 20.0× | Yield = 5.0%",
+          "C) P/E = 25.0× | Yield = 10.0%",
+          "D) P/E = 15.0× | Yield = 2.0%"
+        ],
+        ans: 0, // A
+        sol: "EPS = ₹50L / 10L shares = ₹5.00. P/E = Price / EPS = ₹125 / ₹5 = 25.0×. Dividend Yield = DPS / Price = ₹2.50 / ₹125 = 2.0%."
+      },
+      {
+        id: 20,
+        topic: "Financial Ratios",
+        text: "What will happen to the Operating Cycle if a company successfully negotiates longer credit terms with suppliers (Payables Days rise from 30 to 50 days) while maintaining the same inventory and receivable days?",
+        options: [
+          "A) The operating cycle will lengthen by 20 days, consuming more cash.",
+          "B) The operating cycle will shorten by 20 days, freeing up working capital cash.",
+          "C) No change in operating cycle.",
+          "D) Debt-to-equity ratio will decline."
+        ],
+        ans: 1, // B
+        sol: "Operating Cycle = Inventory Days + Receivable Days − Payable Days. Increasing the subtracted term (Payables Days) shortens the net cash cycle, meaning suppliers fund a larger portion of operations."
+      },
+
+      // 21-28: Management Accounting & CVP Analysis
+      {
+        id: 21,
+        topic: "Management Accounting & CVP",
+        text: "Product X sells for ₹800 per unit with variable costs of ₹480 per unit. Annual fixed operating costs are ₹16,00,000. What is the Break-Even Point in units?",
+        options: [
+          "A) 3,333 units",
+          "B) 5,000 units",
+          "C) 2,000 units",
+          "D) 4,000 units"
+        ],
+        ans: 1, // B
+        sol: "Unit Contribution = SP − VC = ₹800 − ₹480 = ₹320. Break-Even Units = Fixed Cost / Unit Contribution = ₹16,00,000 / ₹320 = 5,00,00 units."
+      },
+      {
+        id: 22,
+        topic: "Management Accounting & CVP",
+        text: "Using the data from Question 21 (SP = ₹800, VC = ₹480, FC = ₹16,00,000), what is the Profit-Volume (P/V) ratio and Break-Even Sales Value?",
+        options: [
+          "A) P/V = 40% | BEP Value = ₹40,00,000",
+          "B) P/V = 60% | BEP Value = ₹26,66,667",
+          "C) P/V = 40% | BEP Value = ₹32,00,000",
+          "D) P/V = 50% | BEP Value = ₹40,00,000"
+        ],
+        ans: 0, // A
+        sol: "P/V Ratio = (₹800 − ₹480) / ₹800 = ₹320 / ₹800 = 40%. Break-Even Value = Fixed Cost / P/V = ₹16,00,000 / 0.40 = ₹40,00,000."
+      },
+      {
+        id: 23,
+        topic: "Management Accounting & CVP",
+        text: "A business has fixed costs of ₹12,00,000, unit selling price of ₹200, and unit variable cost of ₹120. How many units must be sold to earn a target profit of ₹6,00,000?",
+        options: [
+          "A) 15,000 units",
+          "B) 22,500 units",
+          "C) 18,000 units",
+          "D) 25,000 units"
+        ],
+        ans: 1, // B
+        sol: "Unit Contribution = ₹200 − ₹120 = ₹80. Target Units = (Fixed Cost + Target Profit) / Contribution = (₹12,00,000 + ₹6,00,000) / ₹80 = ₹18,00,000 / ₹80 = 22,500 units."
+      },
+      {
+        id: 24,
+        topic: "Management Accounting & CVP",
+        text: "A factory has actual sales of ₹50,00,000. Its break-even sales revenue is ₹35,00,000. What is the Margin of Safety in percentage terms?",
+        options: [
+          "A) 70.0%",
+          "B) 30.0%",
+          "C) 42.8%",
+          "D) 15.0%"
+        ],
+        ans: 1, // B
+        sol: "Margin of Safety Value = Actual Sales − Break-Even Sales = ₹50L − ₹35L = ₹15 Lakh. MoS % = (₹15L / ₹50L) × 100 = 30.0%."
+      },
+      {
+        id: 25,
+        topic: "Management Accounting & CVP",
+        text: "In CVP sensitivity analysis, why does a 10% reduction in selling price cause a much more dramatic increase in the break-even point than a 10% increase in fixed costs?",
+        options: [
+          "A) Because price cuts directly reduce unit contribution rupee-for-rupee, drastically shrinking the denominator in the BEP equation.",
+          "B) Because price cuts automatically increase variable cost per unit.",
+          "C) Because fixed costs are irrelevant to break-even.",
+          "D) Because total revenue becomes fixed."
+        ],
+        ans: 0, // A
+        sol: "A price cut hits unit contribution directly. If SP is ₹100 and VC is ₹80, contribution is ₹20. A 10% cut in SP drops price to ₹90, slashing contribution to ₹10 (a 50% drop!), doubling the break-even volume."
+      },
+      {
+        id: 26,
+        topic: "Management Accounting & CVP",
+        text: "A pharma company spent ₹10 Crore over three years conducting preliminary clinical lab research. To commercialize the drug, it must now spend ₹2 Crore on packaging and regulatory filing, which will yield ₹5 Crore of guaranteed cash profit. How should management evaluate the initial ₹10 Crore?",
+        options: [
+          "A) As a relevant cost that must be deducted before approving the filing.",
+          "B) As an unrecoverable sunk cost that must be ignored in the decision to commercialize.",
+          "C) As an opportunity cost.",
+          "D) As an administrative overhead."
+        ],
+        ans: 1, // B
+        sol: "The ₹10 Crore has already been spent and cannot be changed by any future action (sunk cost). Management must only evaluate future incremental cash flows (+₹5 Cr inflow vs −₹2 Cr outflow = +₹3 Cr net profit)."
+      },
+      {
+        id: 27,
+        topic: "Management Accounting & CVP",
+        text: "In a period where production volume exceeds sales volume (closing inventory increases), how does operating profit under Absorption Costing compare with Marginal Costing?",
+        options: [
+          "A) Absorption Costing profit is higher because a portion of fixed manufacturing overhead is deferred in ending inventory.",
+          "B) Marginal Costing profit is higher because fixed overheads are capitalized.",
+          "C) Both methods report identical profit.",
+          "D) Absorption Costing reports a loss."
+        ],
+        ans: 0, // A
+        sol: "When inventory rises, Absorption Costing defers some fixed overheads into the balance sheet inventory, reducing COGS and boosting reported profit above Marginal Costing."
+      },
+      {
+        id: 28,
+        topic: "Management Accounting & CVP",
+        text: "Which of the following costs is correctly classified as a 'Semi-Variable' cost?",
+        options: [
+          "A) Warehouse monthly rent under a 5-year fixed lease.",
+          "B) Direct fabric used to manufacture shirts.",
+          "C) Factory electricity bill comprising a fixed meter charge plus a per-kilowatt-hour usage charge.",
+          "D) Annual statutory audit fee."
+        ],
+        ans: 2, // C
+        sol: "Semi-variable costs contain both a fixed minimum baseline and a variable component that fluctuates with volume."
+      },
+
+      // 29-34: Time Value of Money
+      {
+        id: 29,
+        topic: "Time Value of Money",
+        text: "According to the Rule of 72, if an investment fund delivers an annual compound return of 9%, in approximately how many years will your initial capital double?",
+        options: [
+          "A) 6 years",
+          "B) 8 years",
+          "C) 9 years",
+          "D) 12 years"
+        ],
+        ans: 1, // B
+        sol: "Years to double ≈ 72 / 9% = 8.0 years."
+      },
+      {
+        id: 30,
+        topic: "Time Value of Money",
+        text: "An investor deposits ₹1,00,000 today in a 5-year deposit yielding 8% per annum compounded annually (where 1.08⁵ ≈ 1.46933). What is the Future Value (FV) at maturity?",
+        options: [
+          "A) ₹1,40,000",
+          "B) ₹1,46,933",
+          "C) ₹1,58,687",
+          "D) ₹1,34,000"
+        ],
+        ans: 1, // B
+        sol: "FV = PV × (1 + r)ⁿ = ₹1,00,000 × 1.08⁵ = ₹1,00,000 × 1.46933 = ₹1,46,933."
+      },
+      {
+        id: 31,
+        topic: "Time Value of Money",
+        text: "What is the Present Value of an annual perpetual cash flow of ₹5,00,000 starting one year from today if the discount rate is 10%?",
+        options: [
+          "A) ₹50,00,000",
+          "B) ₹5,00,000",
+          "C) ₹25,00,000",
+          "D) ₹1,00,00,000"
+        ],
+        ans: 0, // A
+        sol: "PV of Level Perpetuity = PMT / r = ₹5,00,000 / 0.10 = ₹50,00,000."
+      },
+      {
+        id: 32,
+        topic: "Time Value of Money",
+        text: "A commercial equipment lease requires payments of ₹2,00,000 at the beginning of each year for 3 years (Annuity Due). If an ordinary annuity with year-end payments has a PV of ₹4,97,370 at an 8% discount rate, what is the PV of the Annuity Due?",
+        options: [
+          "A) ₹4,97,370",
+          "B) ₹5,37,160",
+          "C) ₹4,60,528",
+          "D) ₹6,00,000"
+        ],
+        ans: 1, // B
+        sol: "PV(Annuity Due) = PV(Ordinary Annuity) × (1 + r) = ₹4,97,370 × 1.08 = ₹5,37,159.60 ≈ ₹5,37,160."
+      },
+      {
+        id: 33,
+        topic: "Time Value of Money",
+        text: "A company expects its annual cash dividend of ₹10,00,000 to grow at 3% indefinitely. If equity investors require an 8% rate of return, what is the present value of this growing perpetuity?",
+        options: [
+          "A) ₹1,25,00,000",
+          "B) ₹2,00,00,000 (₹2 Crore)",
+          "C) ₹3,33,33,333",
+          "D) ₹1,00,00,000"
+        ],
+        ans: 1, // B
+        sol: "PV of Growing Perpetuity = CF₁ / (r − g) = ₹10,00,000 / (0.08 − 0.03) = ₹10,00,000 / 0.05 = ₹2,00,00,000 (₹2 Crore)."
+      },
+      {
+        id: 34,
+        topic: "Time Value of Money",
+        text: "If a credit card company quotes an interest rate of 2% per month, what is the true Effective Annual Rate (APR) after accounting for compound interest?",
+        options: [
+          "A) Exactly 24.00%",
+          "B) 26.82%",
+          "C) 22.50%",
+          "D) 30.00%"
+        ],
+        ans: 1, // B
+        sol: "Effective Annual Rate = (1 + 0.02)¹² − 1 = 1.26824 − 1 = 26.82%."
+      },
+
+      // 35-38: Capital Budgeting Decisions
+      {
+        id: 35,
+        topic: "Capital Budgeting",
+        text: "Project Alpha requires an outlay of ₹80 Lakh. At a 12% cost of capital, the PV of its 5-year cash inflows is ₹90.12 Lakh. What is the NPV and the decision?",
+        options: [
+          "A) NPV = +₹10.12 Lakh; Accept the project as it increases firm value.",
+          "B) NPV = −₹10.12 Lakh; Reject the project.",
+          "C) NPV = +₹90.12 Lakh; Accept.",
+          "D) Indifferent."
+        ],
+        ans: 0, // A
+        sol: "NPV = PV of Inflows − Initial Outlay = ₹90.12L − ₹80.00L = +₹10.12 Lakh. Positive NPV creates shareholder value; accept."
+      },
+      {
+        id: 36,
+        topic: "Capital Budgeting",
+        text: "Two mutually exclusive projects are being evaluated: Project Solar has an NPV of ₹22 Lakh and an IRR of 17%. Project LED has an NPV of ₹4.5 Lakh and an IRR of 28%. The firm's cost of capital is 10%. Which project should be selected, and why?",
+        options: [
+          "A) Select Project LED because its IRR of 28% indicates superior return per percentage.",
+          "B) Select Project Solar because NPV measures absolute wealth created, while IRR ignores scale.",
+          "C) Average the two metrics.",
+          "D) Reject both because they conflict."
+        ],
+        ans: 1, // B
+        sol: "For mutually exclusive projects, NPV is the undisputed primary criterion. Solar adds ₹22 Lakh of wealth vs ₹4.5 Lakh from LED. IRR is scale-blind."
+      },
+      {
+        id: 37,
+        topic: "Capital Budgeting",
+        text: "A capital investment project has an initial cash outlay of ₹40,00,000 and generates the following cash inflows: Year 1 = ₹10L, Year 2 = ₹15L, Year 3 = ₹15L, Year 4 = ₹20L. What is the simple payback period?",
+        options: [
+          "A) 2.5 years",
+          "B) 3.0 years",
+          "C) 3.5 years",
+          "D) 4.0 years"
+        ],
+        ans: 1, // B
+        sol: "Cumulative inflows: Year 1 = ₹10L, Year 2 = ₹25L, Year 3 = ₹40L. The full ₹40 Lakh outlay is recovered exactly at the end of Year 3. Payback = 3.0 years."
+      },
+      {
+        id: 38,
+        topic: "Capital Budgeting",
+        text: "Under strict capital rationing with a budget limit of ₹100 Lakh, four projects are available: Project A (Outlay ₹40L, PI 1.30), Project B (Outlay ₹50L, PI 1.20), Project C (Outlay ₹60L, PI 1.15), and Project D (Outlay ₹30L, PI 1.10). Which projects should be selected to maximize total NPV?",
+        options: [
+          "A) Project C only",
+          "B) Projects A and B",
+          "C) Projects A and C",
+          "D) Projects B and D"
+        ],
+        ans: 1, // B
+        sol: "Ranking by Profitability Index: Rank 1 is A (PI 1.30), Rank 2 is B (PI 1.20). Outlay for A + B = ₹40L + ₹50L = ₹90L (within ₹100L budget), producing maximum combined NPV."
+      },
+
+      // 39-40: CAPM & Derivatives Theory
+      {
+        id: 39,
+        topic: "CAPM & Theory",
+        text: "If the risk-free rate is 7% and the market return is 13%, what is the expected cost of equity for a cyclical auto company with a Beta (β) of 1.5 under CAPM?",
+        options: [
+          "A) 16.0%",
+          "B) 15.0%",
+          "C) 13.0%",
+          "D) 18.5%"
+        ],
+        ans: 0, // A
+        sol: "Market risk premium = 13% − 7% = 6%. Cost of Equity = Rf + β(Rm − Rf) = 7% + 1.5(6%) = 7% + 9% = 16.0%."
+      },
+      {
+        id: 40,
+        topic: "Derivatives Theory",
+        text: "Which of the following is an accurate theoretical distinction between an exchange-traded Futures contract and an over-the-counter (OTC) Forward contract?",
+        options: [
+          "A) Forwards are standardized contracts traded on an exchange; futures are customized.",
+          "B) Futures contracts require daily mark-to-market margin settlement and carry negligible counterparty default risk due to the clearinghouse, whereas forwards are bespoke and settled once at maturity.",
+          "C) Futures contracts cannot be used for hedging.",
+          "D) Forwards are guaranteed by the central bank."
+        ],
+        ans: 1, // B
+        sol: "Futures are standardized, exchange-traded, and settled daily via clearinghouse margins, virtually eliminating credit risk. Forwards are privately negotiated OTC contracts with full counterparty risk."
+      }
+    ];
+
+    // State Variables
+    let userAnswers = new Array(examQuestions.length).fill(null);
+    let flaggedQuestions = new Array(examQuestions.length).fill(false);
+    let timerSeconds = 120 * 60; // 120 minutes
+    let timerInterval = null;
+    let isPaused = false;
+
+    // Render questions and palette on load
+    function initExam() {
+      const wrapper = document.getElementById('questions-wrapper');
+      const palette = document.getElementById('palette-grid');
+
+      wrapper.innerHTML = '';
+      palette.innerHTML = '';
+
+      examQuestions.forEach((q, idx) => {
+        // Question Card
+        const qCard = document.createElement('div');
+        qCard.className = 'question-card';
+        qCard.id = 'exam-q-' + idx;
+        qCard.innerHTML = `
+          <div class="question-header">
+            <div>
+              <span class="badge badge-primary">Q${idx + 1} of 40</span>
+              <span class="badge badge-dark" style="margin-left:0.35rem;">${q.topic}</span>
+            </div>
+            <div>
+              <button class="flag-btn" id="flag-btn-${idx}" onclick="toggleFlag(${idx})">🚩 Flag</button>
+            </div>
+          </div>
+          <div class="question-text">${q.text}</div>
+          <div class="options-list">
+            ${q.options.map((opt, oIdx) => `
+              <label class="option-item" id="opt-item-${idx}-${oIdx}" onclick="selectExamOption(${idx}, ${oIdx})">
+                <input type="radio" name="eq_${idx}" value="${oIdx}" class="option-radio"> ${opt}
+              </label>
+            `).join('')}
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Rough Work / Notes for Q${idx + 1}:</small>
+            <textarea class="scratchpad-area" placeholder="Perform addition, subtraction, multiplication here..."></textarea>
+          </div>
+          <div class="explanation-box" id="sol-box-${idx}">
+            <strong>Correct Answer: ${q.options[q.ans].substring(0, 2)}</strong><br>
+            <em>Step-by-Step Solution:</em><br>
+            ${q.sol}
+          </div>
+        `;
+        wrapper.appendChild(qCard);
+
+        // Palette Button
+        const pBtn = document.createElement('button');
+        pBtn.className = 'palette-btn';
+        pBtn.id = 'palette-btn-' + idx;
+        pBtn.innerText = idx + 1;
+        pBtn.onclick = () => scrollToQuestion(idx);
+        palette.appendChild(pBtn);
+      });
+
+      startTimer();
+      updatePaletteUI();
+    }
+
+    function scrollToQuestion(idx) {
+      const el = document.getElementById('exam-q-' + idx);
+      if (el) {
+        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+        document.querySelectorAll('.palette-btn').forEach(b => b.classList.remove('current'));
+        document.getElementById('palette-btn-' + idx).classList.add('current');
+      }
+    }
+
+    function selectExamOption(qIdx, optIdx) {
+      userAnswers[qIdx] = optIdx;
+      const card = document.getElementById('exam-q-' + qIdx);
+      card.querySelectorAll('.option-item').forEach(it => it.classList.remove('selected'));
+      document.getElementById(`opt-item-${qIdx}-${optIdx}`).classList.add('selected');
+      document.querySelector(`input[name="eq_${qIdx}"][value="${optIdx}"]`).checked = true;
+      updatePaletteUI();
+    }
+
+    function toggleFlag(qIdx) {
+      flaggedQuestions[qIdx] = !flaggedQuestions[qIdx];
+      const btn = document.getElementById('flag-btn-' + qIdx);
+      if (flaggedQuestions[qIdx]) {
+        btn.classList.add('active');
+        btn.innerHTML = '🚩 Flagged';
+      } else {
+        btn.classList.remove('active');
+        btn.innerHTML = '🚩 Flag';
+      }
+      updatePaletteUI();
+    }
+
+    function updatePaletteUI() {
+      let answeredCount = 0;
+      examQuestions.forEach((_, idx) => {
+        const btn = document.getElementById('palette-btn-' + idx);
+        btn.className = 'palette-btn';
+
+        if (userAnswers[idx] !== null) {
+          btn.classList.add('answered');
+          answeredCount++;
+        } else if (flaggedQuestions[idx]) {
+          btn.classList.add('flagged');
+        }
+      });
+      document.getElementById('palette-count-text').innerText = `${answeredCount}/40 Done`;
+    }
+
+    // Timer Implementation
+    function startTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        if (!isPaused && timerSeconds > 0) {
+          timerSeconds--;
+          renderTimer();
+          if (timerSeconds === 0) {
+            clearInterval(timerInterval);
+            alert("Time has expired! Submitting your exam automatically.");
+            submitExam(false);
+          }
+        }
+      }, 1000);
+    }
+
+    function renderTimer() {
+      const mins = Math.floor(timerSeconds / 60);
+      const secs = timerSeconds % 60;
+      const display = document.getElementById('exam-timer-display');
+      display.innerText = `⏱️ ${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+      if (mins < 15) {
+        display.classList.add('timer-warning');
+      }
+    }
+
+    function toggleTimer() {
+      isPaused = !isPaused;
+      const btn = document.getElementById('pause-btn');
+      btn.innerText = isPaused ? '▶️ Resume' : '⏸️ Pause';
+    }
+
+    // Submit and Evaluate Exam
+    function submitExam(showConfirm) {
+      if (showConfirm) {
+        const unanswered = userAnswers.filter(a => a === null).length;
+        let msg = "Are you sure you want to finalize and submit your exam?";
+        if (unanswered > 0) {
+          msg += `\n⚠️ You have ${unanswered} unanswered question(s).`;
+        }
+        if (!confirm(msg)) return;
+      }
+
+      clearInterval(timerInterval);
+
+      let correctCount = 0;
+      let totalQuestions = 40;
+      let topicBreakdown = {};
+
+      examQuestions.forEach((q, idx) => {
+        if (!topicBreakdown[q.topic]) {
+          topicBreakdown[q.topic] = { total: 0, correct: 0 };
+        }
+        topicBreakdown[q.topic].total++;
+
+        const userVal = userAnswers[idx];
+        const card = document.getElementById('exam-q-' + idx);
+        const solBox = document.getElementById('sol-box-' + idx);
+        solBox.style.display = 'block';
+
+        if (userVal !== null) {
+          if (userVal === q.ans) {
+            correctCount++;
+            topicBreakdown[q.topic].correct++;
+            document.getElementById(`opt-item-${idx}-${userVal}`).classList.add('correct');
+          } else {
+            document.getElementById(`opt-item-${idx}-${userVal}`).classList.add('incorrect');
+            document.getElementById(`opt-item-${idx}-${q.ans}`).classList.add('correct');
+          }
+        } else {
+          document.getElementById(`opt-item-${idx}-${q.ans}`).classList.add('correct');
+        }
+      });
+
+      // Score out of 100
+      const finalScore = Math.round((correctCount / totalQuestions) * 100);
+
+      // Hide layout & show results screen
+      document.getElementById('exam-active-layout').style.display = 'none';
+      document.getElementById('exam-instructions-box').style.display = 'none';
+      const resultsScreen = document.getElementById('final-results-screen');
+      resultsScreen.style.display = 'block';
+
+      document.getElementById('final-score-num').innerText = `${finalScore} / 100`;
+
+      const title = document.getElementById('final-verdict-title');
+      const summary = document.getElementById('final-verdict-summary');
+      const banner = document.getElementById('score-banner-element');
+
+      if (finalScore >= 90) {
+        title.innerText = '🏆 Outstanding! 100/100 Master Grade!';
+        summary.innerText = `You answered ${correctCount} of 40 questions correctly (${finalScore}%). You demonstrated complete mastery across accounting foundations, CVP arithmetic, ratios, and capital budgeting decisions.`;
+        banner.style.background = 'linear-gradient(135deg, #15803d, #14532d)';
+      } else if (finalScore >= 75) {
+        title.innerText = '🎯 Solid Performance! High Honors!';
+        summary.innerText = `You scored ${correctCount}/40 (${finalScore}%). A few minor arithmetic or conceptual slips were detected. Review the full question-by-question explanations below.`;
+        banner.style.background = 'linear-gradient(135deg, #0284c7, #075985)';
+      } else {
+        title.innerText = '⚠️ Revision Advised';
+        summary.innerText = `You scored ${correctCount}/40 (${finalScore}%). Go through the detailed diagnostic rows and review the specific stages where points were lost.`;
+        banner.style.background = 'linear-gradient(135deg, #b45309, #78350f)';
+      }
+
+      // Populate diagnostic table
+      const rowsContainer = document.getElementById('topic-diagnostic-rows');
+      rowsContainer.innerHTML = '';
+      for (let t in topicBreakdown) {
+        const item = topicBreakdown[t];
+        const pct = Math.round((item.correct / item.total) * 100);
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${t}</strong></td>
+          <td>${item.total}</td>
+          <td>${item.correct}</td>
+          <td>${pct}%</td>
+          <td>${pct >= 80 ? '<span class="badge badge-success">Mastered</span>' : '<span class="badge badge-warning">Review</span>'}</td>
+        `;
+        rowsContainer.appendChild(tr);
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function reviewExamAnswers() {
+      document.getElementById('exam-active-layout').style.display = 'grid';
+      window.scrollTo({ top: document.getElementById('exam-active-layout').offsetTop - 60, behavior: 'smooth' });
+    }
+
+    // Modal helpers
+    function openFormulaModal() { document.getElementById('formulaModal').style.display = 'flex'; }
+    function closeFormulaModal() { document.getElementById('formulaModal').style.display = 'none'; }
+    function closeFormulaModalOnOutside(e) { if(e.target.id === 'formulaModal') closeFormulaModal(); }
+
+    window.onload = initExam;
+  </script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 4: Time Value of Money (TVM) | FMI 100/100</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="header-nav">
+    <div class="header-inner">
+      <a href="index.html" class="brand-title">
+        <span>📈</span> FMI 100/100
+        <span class="brand-subtitle">Stage 4: Time Value of Money (TVM)</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">← Hub Overview</a>
+        <a href="stage1_accounting.html">Stage 1</a>
+        <a href="stage2_ratios.html">Stage 2</a>
+        <a href="stage3_cvp.html">Stage 3</a>
+        <a href="stage4_tvm.html" class="active">Stage 4</a>
+        <a href="stage5_capital_budgeting.html">Stage 5</a>
+        <a href="stage6_capm_derivatives.html">Stage 6</a>
+        <a href="stage7_final_exam.html" style="background:#e11d48; color:white;">Final Exam 🎯</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Stage Header & Tab Navigation -->
+    <div style="margin-bottom: 1.5rem;">
+      <span class="badge badge-success">Session 7 · Guaranteed Exam Numericals</span>
+      <h1 style="font-size: 2rem; color: var(--secondary); margin-top: 0.35rem;">Stage 4: Time Value of Money (TVM)</h1>
+      <p style="color: var(--text-muted);">
+        The instructor confirmed: <strong>Questions on Present Value and investment choices will definitely appear!</strong> Master compounding, discounting, Rule of 72, annuities, and perpetuities using clean arithmetic.
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('notes-tab', this)">📖 TVM Formulas & Core Concepts</button>
+      <button class="tab-btn" onclick="switchTab('test-tab', this)">✍️ Stage 4 Practice Test (8 Questions)</button>
+    </div>
+
+    <!-- TAB 1: DETAILED INFORMATION -->
+    <div id="notes-tab" class="tab-content active">
+
+      <!-- Section 1: Why Money Has Time Value -->
+      <div class="card">
+        <h3 class="card-title">1. Why a Rupee Today is Worth More Than a Rupee Later</h3>
+        <p>A rational individual prefers receiving money today rather than in the future due to four fundamental economic reasons:</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <div class="callout callout-info" style="margin:0;">
+            <h4>1. Present Consumption</h4>
+            <p>People prefer consuming goods today rather than waiting for tomorrow.</p>
+          </div>
+          <div class="callout callout-warning" style="margin:0;">
+            <h4>2. Productive Investment</h4>
+            <p>₹1 today can be invested at interest rate $r$ to earn a return and multiply.</p>
+          </div>
+          <div class="callout callout-danger" style="margin:0;">
+            <h4>3. Inflation Erosion</h4>
+            <p>Rising prices erode the purchasing power of money over time.</p>
+          </div>
+          <div class="callout callout-success" style="margin:0;">
+            <h4>4. Default / Credit Risk</h4>
+            <p>A future promised payment always carries a risk of non-payment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Compounding vs Discounting & Rule of 72 -->
+      <div class="card">
+        <h3 class="card-title">2. Compounding, Discounting & The Rule of 72</h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="formula-box">
+            <div class="formula-name">Compounding (Moving Forward to FV)</div>
+            <div class="formula-code">FV = PV × (1 + r)ⁿ</div>
+            <p style="font-size: 0.85rem; color: #475569; margin-top: 0.4rem;">
+              • <em>Example:</em> ₹10,000 at 10% for 3 years:<br>
+              Yr 1: ₹11,000 $\rightarrow$ Yr 2: ₹12,100 $\rightarrow$ Yr 3: ₹13,310.
+            </p>
+          </div>
+          <div class="formula-box">
+            <div class="formula-name">Discounting (Pulling Back to PV)</div>
+            <div class="formula-code">PV = FV / (1 + r)ⁿ = FV × (1 + r)⁻ⁿ</div>
+            <p style="font-size: 0.85rem; color: #475569; margin-top: 0.4rem;">
+              • <em>Example:</em> ₹13,310 due in 3 years at 10% is worth exactly ₹10,000 today.
+            </p>
+          </div>
+        </div>
+
+        <div class="formula-box" style="border-color: #f59e0b; background: #fffdf5;">
+          <div class="formula-name" style="color: #b45309;">⚡ The Rule of 72 (Mental Math Shortcut)</div>
+          <div class="formula-code">Years to Double ≈ 72 / Interest Rate (%)</div>
+          <p style="font-size: 0.9rem; color: #78350f; margin-top: 0.5rem;">
+            • At <strong>8% interest</strong>: Money doubles in approximately $\frac{72}{8} = \mathbf{9\text{ years}}$.<br>
+            • At <strong>12% interest</strong>: Money doubles in approximately $\frac{72}{12} = \mathbf{6\text{ years}}$.<br>
+            • At <strong>6% interest</strong>: Money doubles in approximately $\frac{72}{6} = \mathbf{12\text{ years}}$.
+          </p>
+        </div>
+
+        <div class="callout callout-info">
+          <h4>💡 Compounding Frequency Insight (APR vs Nominal):</h4>
+          <p>
+            If a credit card charges <strong>2% per month</strong>, the annual cost is NOT $2\% \times 12 = 24\%$. Because interest compounds monthly, ₹100 becomes $(1.02)^{12} = ₹126.82$, representing an Annual Percentage Rate (APR) of <strong>26.82%</strong>!
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 3: Annuities & Perpetuities -->
+      <div class="card">
+        <h3 class="card-title">3. Annuities & Perpetuities</h3>
+        
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Cash Flow Structure</th><th>Formula for Present Value (PV)</th><th>Typical Real-World Application</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ordinary Annuity</strong><br>(Equal payments at <em>end</em> of each period)</td>
+                <td>$PV = PMT \times \left[\frac{1 - (1+r)^{-n}}{r}\right]$</td>
+                <td>Bank loans, EMIs, bond semi-annual coupon payments.</td>
+              </tr>
+              <tr>
+                <td><strong>Annuity Due</strong><br>(Equal payments at <em>start</em> of each period)</td>
+                <td>$PV_{\text{due}} = PV_{\text{ordinary}} \times (1 + r)$</td>
+                <td>Apartment rent, commercial equipment leases, insurance premiums.</td>
+              </tr>
+              <tr>
+                <td><strong>Level Perpetuity</strong><br>(Constant payment forever)</td>
+                <td>$PV = \frac{PMT}{r}$</td>
+                <td>Perpetual preference shares, permanent university endowments.</td>
+              </tr>
+              <tr>
+                <td><strong>Growing Perpetuity</strong><br>(Grows at constant rate $g$ forever, $r > g$)</td>
+                <td>$PV = \frac{CF_1}{r - g}$</td>
+                <td>Gordon Growth equity share valuation model.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-warning">
+          <h4>⚠️ Ordinary Annuity vs Annuity Due Comparison:</h4>
+          <p>
+            Because every single cash flow in an <em>Annuity Due</em> is received one period earlier, each payment earns an extra period of interest. Therefore:
+            $$\mathbf{PV(\text{Annuity Due}) = PV(\text{Ordinary Annuity}) \times (1 + r)}$$
+            <em>Worked Example:</em> A 4-year lease of ₹2,00,000/year at 9%:
+            • Ordinary Annuity PV (paid at year-end) = $₹2,00,000 \times 3.2397 = ₹6,47,944$.
+            • Annuity Due PV (paid at start of each year) = $₹6,47,944 \times 1.09 = \mathbf{₹7,06,259}$.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 4: Slide Worked Decisions -->
+      <div class="card">
+        <h3 class="card-title">4. Slide Case Walkthroughs: GreenCart & Patel Industries</h3>
+        
+        <h4>Case A: GreenCart's Investor Choice</h4>
+        <p>An angel investor offers GreenCart: <strong>₹8,00,000 today</strong> OR <strong>₹10,50,000 in 3 years</strong>. GreenCart can earn 12% annual return on funds. Which offer should GreenCart choose?</p>
+        <div class="callout callout-success">
+          <p>• <strong>Method 1 (Discounting to today):</strong> $PV = \frac{₹10,50,000}{(1.12)^3} = \frac{₹10,50,000}{1.4049} = \mathbf{₹7,47,369}$.</p>
+          <p>• Since ₹8,00,000 today is greater than the discounted value of ₹7,47,369, <strong>GreenCart should take ₹8,00,000 today!</strong></p>
+          <p>• <strong>Method 2 (Compounding forward):</strong> $₹8,00,000 \times (1.12)^3 = \mathbf{₹11,23,942}$ in 3 years, which easily beats ₹10,50,000.</p>
+        </div>
+
+        <h4>Case B: Perpetuity Comparison</h4>
+        <p>A donor offers an educational trust ₹10,000 every year forever. If the discount rate is 8%:</p>
+        <div class="callout callout-info">
+          <p>• $PV = \frac{₹10,000}{0.08} = \mathbf{₹1,25,000}$ today.</p>
+          <p>• If offered a choice between ₹1,00,000 now OR ₹1,20,000 in 3 years at 8%:
+            $PV = \frac{₹1,20,000}{(1.08)^3} = \frac{₹1,20,000}{1.2597} = \mathbf{₹95,260}$. Taking ₹1,00,000 now is superior!
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: INTERACTIVE PRACTICE TEST -->
+    <div id="test-tab" class="tab-content">
+      
+      <!-- Test Header Panel -->
+      <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="color:var(--secondary); margin-bottom:0.25rem;">Stage 4 Diagnostic Test: 8 MCQs</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem;">
+            Test your compounding, discounting, and annuity calculations. Target: <strong>At least 7/8 (88%) to clear this stage</strong>.
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-outline" onclick="resetStage4Quiz()">🔄 Reset Test</button>
+        </div>
+      </div>
+
+      <!-- Live Score Banner -->
+      <div id="stage4-result-banner" class="score-banner" style="display:none; text-align:center;">
+        <div id="stage4-score-display" class="score-number">0 / 8</div>
+        <h3 id="stage4-verdict-title" style="margin-top:0.5rem;">Score Review</h3>
+        <p id="stage4-verdict-text" style="color:#cbd5e1;"></p>
+        <div style="margin-top:1.5rem;">
+          <a href="stage5_capital_budgeting.html" id="stage4-next-btn" class="btn btn-success" style="display:none; font-size:1.05rem;">Proceed to Stage 5: Capital Budgeting →</a>
+        </div>
+      </div>
+
+      <!-- Quiz Form Container -->
+      <form id="stage4-quiz-form" onsubmit="event.preventDefault(); evaluateStage4Quiz();">
+        
+        <!-- Question 1 -->
+        <div class="question-card" id="tq1-card">
+          <div class="question-header">
+            <span class="badge badge-success">Question 1 · Rule of 72</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            According to the Rule of 72, if an investor deposits ₹50,000 in a fixed deposit earning an annual interest rate of 6% compounded annually, approximately how many years will it take for the money to grow to ₹1,00,000?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('tq1', 0)">
+              <input type="radio" name="tq1" value="0" class="option-radio"> A) 6 years
+            </label>
+            <label class="option-item" onclick="selectOption('tq1', 1)">
+              <input type="radio" name="tq1" value="1" class="option-radio"> B) 9 years
+            </label>
+            <label class="option-item" onclick="selectOption('tq1', 2)">
+              <input type="radio" name="tq1" value="2" class="option-radio"> C) 12 years
+            </label>
+            <label class="option-item" onclick="selectOption('tq1', 3)">
+              <input type="radio" name="tq1" value="3" class="option-radio"> D) 16 years
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="tq1-explanation">
+            <strong>Correct Answer: C (12 years)</strong><br>
+            $\text{Years to double} \approx \frac{72}{\text{Interest Rate \%}} = \frac{72}{6} = <strong>12\text{ years}</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card" id="tq2-card">
+          <div class="question-header">
+            <span class="badge badge-success">Question 2 · Compounding</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A sum of ₹10,000 is invested today at an annual interest rate of 10% compounded annually. What is its Future Value (FV) at the end of 3 years?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('tq2', 0)">
+              <input type="radio" name="tq2" value="0" class="option-radio"> A) ₹13,000
+            </label>
+            <label class="option-item" onclick="selectOption('tq2', 1)">
+              <input type="radio" name="tq2" value="1" class="option-radio"> B) ₹13,310
+            </label>
+            <label class="option-item" onclick="selectOption('tq2', 2)">
+              <input type="radio" name="tq2" value="2" class="option-radio"> C) ₹12,100
+            </label>
+            <label class="option-item" onclick="selectOption('tq2', 3)">
+              <input type="radio" name="tq2" value="3" class="option-radio"> D) ₹14,641
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="tq2-explanation">
+            <strong>Correct Answer: B (₹13,310)</strong><br>
+            $FV = ₹10,000 \times (1 + 0.10)^3 = ₹10,000 \times 1.331 = <strong>₹13,310</strong>$.<br>
+            (Year 1: ₹11,000 $\rightarrow$ Year 2: ₹12,100 $\rightarrow$ Year 3: ₹13,310). Note that simple interest would give only ₹13,000.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card" id="tq3-card">
+          <div class="question-header">
+            <span class="badge badge-success">Question 3 · Investment Choice</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            You are offered an upfront payment of ₹1,00,000 today OR a payment of ₹1,20,000 in 3 years. If the applicable market discount rate is 8% per annum (where $1.08^3 \approx 1.2597$), which option should you choose?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('tq3', 0)">
+              <input type="radio" name="tq3" value="0" class="option-radio"> A) Choose ₹1,20,000 in 3 years because it has higher face value.
+            </label>
+            <label class="option-item" onclick="selectOption('tq3', 1)">
+              <input type="radio" name="tq3" value="1" class="option-radio"> B) Choose ₹1,00,000 today because the present value of ₹1,20,000 in 3 years is only ~₹95,260.
+            </label>
+            <label class="option-item" onclick="selectOption('tq3', 2)">
+              <input type="radio" name="tq3" value="2" class="option-radio"> C) Indifferent between the two options.
+            </label>
+            <label class="option-item" onclick="selectOption('tq3', 3)">
+              <input type="radio" name="tq3" value="3" class="option-radio"> D) Choose ₹1,20,000 in 3 years because its present value is ₹1,10,500.
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="tq3-explanation">
+            <strong>Correct Answer: B</strong><br>
+            Discounting the future sum to today:<br>
+            $PV = \frac{₹1,20,000}{(1.08)^3} = \frac{₹1,20,000}{1.2597} \approx <strong>₹95,260</strong>$.<br>
+            Since ₹1,00,000 in hand today exceeds ₹95,260, taking ₹1,00,000 today is the financially superior choice!
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card" id="tq4-card">
+          <div class="question-header">
+            <span class="badge badge-success">Question 4 · Level Perpetuity</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            An alumnus wishes to establish a scholarship endowment that will pay ₹4,00,000 every year forever. If the fund can earn a guaranteed annual return of 8%, what lump sum must be deposited into the endowment today?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('tq4', 0)">
+              <input type="radio" name="tq4" value="0" class="option-radio"> A) ₹32,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('tq4', 1)">
+              <input type="radio" name="tq4" value="1" class="option-radio"> B) ₹50,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('tq4', 2)">
+              <input type="radio" name="tq4" value="2" class="option-radio"> C) ₹40,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('tq4', 3)">
+              <input type="radio" name="tq4" value="3" class="option-radio"> D) ₹62,50,000
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="tq4-explanation">
+            <strong>Correct Answer: B (₹50,00,000)</strong><br>
+            $\text{PV of Level Perpetuity} = \frac{PMT}{r} = \frac{₹4,00,000}{0.08} = \frac{4,00,000}{8/100} = \frac{40,000,000}{8} = <strong>₹50,00,000</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card" id="tq5-card">
+          <div class="question-header">
+            <span class="badge badge-success">Question 5 · Growing Perpetuity</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A real estate asset produces net rental cash flow of ₹6,00,000 next year. Rentals are expected to grow at a constant rate of 4% per year indefinitely. If the required rate of return is 10%, what is the present value of this asset?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('tq5', 0)">
+              <input type="radio" name="tq5" value="0" class="option-radio"> A) ₹60,00,000
+            </label>
+            <label class="option-item" onclick="selectOption('tq5', 1)">
+              <input type="radio" name="tq5" value="1" class="option-radio"> B) ₹1,00,00,000 (₹1 Crore)
+            </label>
+            <label class="option-item" onclick="selectOption('tq5', 2)">
+              <input type="radio" name="tq5" value="2" class="option-radio"> C) ₹1,50,00,000 (₹1.5 Crore)
+            </label>
+            <label class="option-item" onclick="selectOption('tq5', 3)">
+              <input type="radio" name="tq5" value="3" class="option-radio"> D) ₹75,00,000
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="tq5-explanation">
+            <strong>Correct Answer: B (₹1 Crore)</strong><br>
+            $\text{PV of Growing Perpetuity} = \frac{CF_1}{r - g} = \frac{₹6,00,000}{0.10 - 0.04} = \frac{₹6,00,000}{0.06} = <strong>₹1,00,00,000\text{ (₹1 Crore)}</strong>$.<br>
+            (Notice that growth significantly increases value: without growth, ₹6L at 10% would be worth only ₹60 Lakh).
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-card" id="tq6-card">
+          <div class="question-header">
+            <span class="badge badge-success">Question 6 · Annuity Due vs Ordinary</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            If an Ordinary Annuity of ₹1,00,000 per year for 4 years at a discount rate of 10% has a Present Value of ₹3,16,986, what is the Present Value of an otherwise identical **Annuity Due** where payments occur at the beginning of each year?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('tq6', 0)">
+              <input type="radio" name="tq6" value="0" class="option-radio"> A) ₹3,16,986
+            </label>
+            <label class="option-item" onclick="selectOption('tq6', 1)">
+              <input type="radio" name="tq6" value="1" class="option-radio"> B) ₹3,48,685
+            </label>
+            <label class="option-item" onclick="selectOption('tq6', 2)">
+              <input type="radio" name="tq6" value="2" class="option-radio"> C) ₹2,88,169
+            </label>
+            <label class="option-item" onclick="selectOption('tq6', 3)">
+              <input type="radio" name="tq6" value="3" class="option-radio"> D) ₹4,00,000
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="tq6-explanation">
+            <strong>Correct Answer: B (₹3,48,685)</strong><br>
+            An Annuity Due has payments made at the start of each period, meaning every cash flow is discounted by one fewer year. Mathematically:<br>
+            $PV_{\text{Due}} = PV_{\text{Ordinary}} \times (1 + r) = ₹3,16,986 \times 1.10 = <strong>₹3,48,685</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-card" id="tq7-card">
+          <div class="question-header">
+            <span class="badge badge-success">Question 7 · Uneven Cash Flows</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            An investment promises cash flows of ₹11,000 at the end of Year 1 and ₹24,200 at the end of Year 2. If the discount rate is 10%, what is the total Present Value?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('tq7', 0)">
+              <input type="radio" name="tq7" value="0" class="option-radio"> A) ₹30,000
+            </label>
+            <label class="option-item" onclick="selectOption('tq7', 1)">
+              <input type="radio" name="tq7" value="1" class="option-radio"> B) ₹32,000
+            </label>
+            <label class="option-item" onclick="selectOption('tq7', 2)">
+              <input type="radio" name="tq7" value="2" class="option-radio"> C) ₹28,500
+            </label>
+            <label class="option-item" onclick="selectOption('tq7', 3)">
+              <input type="radio" name="tq7" value="3" class="option-radio"> D) ₹35,200
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="tq7-explanation">
+            <strong>Correct Answer: A (₹30,000)</strong><br>
+            Discount each flow by its respective year:<br>
+            • Year 1 PV = $\frac{₹11,000}{1.10} = ₹10,000$.<br>
+            • Year 2 PV = $\frac{₹24,200}{(1.10)^2} = \frac{₹24,200}{1.21} = ₹20,000$.<br>
+            • Total PV = $₹10,000 + ₹20,000 = <strong>₹30,000</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-card" id="tq8-card">
+          <div class="question-header">
+            <span class="badge badge-success">Question 8 · Discount Rate Sensitivity</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            What is the relationship between the discount rate and the present value of a future cash flow?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('tq8', 0)">
+              <input type="radio" name="tq8" value="0" class="option-radio"> A) Direct (positive): As discount rate increases, present value increases.
+            </label>
+            <label class="option-item" onclick="selectOption('tq8', 1)">
+              <input type="radio" name="tq8" value="1" class="option-radio"> B) Inverse: As discount rate increases, present value decreases.
+            </label>
+            <label class="option-item" onclick="selectOption('tq8', 2)">
+              <input type="radio" name="tq8" value="2" class="option-radio"> C) Independent: Present value depends strictly on time periods, not discount rate.
+            </label>
+            <label class="option-item" onclick="selectOption('tq8', 3)">
+              <input type="radio" name="tq8" value="3" class="option-radio"> D) Linear constant relationship.
+            </label>
+          </div>
+          <div class="explanation-box" id="tq8-explanation">
+            <strong>Correct Answer: B (Inverse relationship)</strong><br>
+            <em>Explanation:</em> In the formula $PV = \frac{FV}{(1+r)^n}$, the discount rate $r$ sits in the denominator. A higher required rate of return or discount rate shrinks the present value of distant cash flows.
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin: 2rem 0;">
+          <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2.5rem; font-size: 1.15rem;">
+            Submit Stage 4 Test & Review Answers 🎯
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function selectOption(qName, optIdx) {
+      const card = document.getElementById(qName + '-card');
+      const items = card.querySelectorAll('.option-item');
+      items.forEach(it => it.classList.remove('selected'));
+      items[optIdx].classList.add('selected');
+      items[optIdx].querySelector('input').checked = true;
+    }
+
+    const correctAnswers = {
+      tq1: 2, // C
+      tq2: 1, // B
+      tq3: 1, // B
+      tq4: 1, // B
+      tq5: 1, // B
+      tq6: 1, // B
+      tq7: 0, // A
+      tq8: 1  // B
+    };
+
+    function evaluateStage4Quiz() {
+      let score = 0;
+      let total = 8;
+
+      for (let q in correctAnswers) {
+        const selected = document.querySelector('input[name="' + q + '"]:checked');
+        const card = document.getElementById(q + '-card');
+        const expBox = document.getElementById(q + '-explanation');
+        const options = card.querySelectorAll('.option-item');
+
+        expBox.style.display = 'block';
+
+        if (selected) {
+          const val = parseInt(selected.value);
+          if (val === correctAnswers[q]) {
+            score++;
+            options[val].classList.add('correct');
+          } else {
+            options[val].classList.add('incorrect');
+            options[correctAnswers[q]].classList.add('correct');
+          }
+        } else {
+          options[correctAnswers[q]].classList.add('correct');
+        }
+      }
+
+      const banner = document.getElementById('stage4-result-banner');
+      const scoreDisp = document.getElementById('stage4-score-display');
+      const title = document.getElementById('stage4-verdict-title');
+      const text = document.getElementById('stage4-verdict-text');
+      const nextBtn = document.getElementById('stage4-next-btn');
+
+      banner.style.display = 'block';
+      scoreDisp.innerText = score + ' / ' + total;
+
+      let pct = (score / total) * 100;
+      if (pct >= 85) {
+        title.innerHTML = '🎉 Stage 4 Cleared! TVM Master!';
+        text.innerText = 'You scored ' + score + '/8 (' + Math.round(pct) + '%). Your discounting precision, Rule of 72 speed, and annuity calculations are exam-ready!';
+        banner.style.background = 'linear-gradient(135deg, #15803d, #14532d)';
+        nextBtn.style.display = 'inline-flex';
+        localStorage.setItem('fmi_stage_4_cleared', 'true');
+      } else {
+        title.innerHTML = '⚠️ Review Recommended (Target: 7/8)';
+        text.innerText = 'You scored ' + score + '/8 (' + Math.round(pct) + '%). Review the perpetuity and annuity comparisons above, then retry.';
+        banner.style.background = 'linear-gradient(135deg, #b45309, #78350f)';
+        nextBtn.style.display = 'none';
+      }
+
+      window.scrollTo({ top: banner.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    function resetStage4Quiz() {
+      document.getElementById('stage4-quiz-form').reset();
+      document.querySelectorAll('.option-item').forEach(el => {
+        el.classList.remove('selected', 'correct', 'incorrect');
+      });
+      document.querySelectorAll('.explanation-box').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.getElementById('stage4-result-banner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

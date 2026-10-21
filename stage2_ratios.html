@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 2: Financial Ratio Analysis & DuPont | FMI 100/100</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="header-nav">
+    <div class="header-inner">
+      <a href="index.html" class="brand-title">
+        <span>📈</span> FMI 100/100
+        <span class="brand-subtitle">Stage 2: Financial Ratio Analysis & DuPont</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">← Hub Overview</a>
+        <a href="stage1_accounting.html">Stage 1</a>
+        <a href="stage2_ratios.html" class="active">Stage 2</a>
+        <a href="stage3_cvp.html">Stage 3</a>
+        <a href="stage4_tvm.html">Stage 4</a>
+        <a href="stage5_capital_budgeting.html">Stage 5</a>
+        <a href="stage6_capm_derivatives.html">Stage 6</a>
+        <a href="stage7_final_exam.html" style="background:#e11d48; color:white;">Final Exam 🎯</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- Stage Header & Tab Navigation -->
+    <div style="margin-bottom: 1.5rem;">
+      <span class="badge badge-primary">Sessions 4–5</span>
+      <h1 style="font-size: 2rem; color: var(--secondary); margin-top: 0.35rem;">Stage 2: Financial Ratio Analysis & DuPont Decomposition</h1>
+      <p style="color: var(--text-muted);">
+        Formulas will be provided in the exam hall, but <strong>interpretation is the key differentiator</strong>. Master liquidity, working capital cycles, leverage risk, and the 3-part DuPont breakdown.
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('notes-tab', this)">📖 Detailed Notes & Formulas</button>
+      <button class="tab-btn" onclick="switchTab('test-tab', this)">✍️ Stage 2 Practice Test (10 Questions)</button>
+    </div>
+
+    <!-- TAB 1: DETAILED INFORMATION -->
+    <div id="notes-tab" class="tab-content active">
+
+      <!-- Section 1: Overview of 5 Ratio Families -->
+      <div class="card">
+        <h3 class="card-title">1. The Five Ratio Families & Key Formulas</h3>
+        <p>Ratios provide comparative insight into a company's financial health. Always compare over time, against industry peers, and against management budgets.</p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Family</th><th>Core Question Answered</th><th>Primary Ratios</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Liquidity</strong></td>
+                <td>Can the firm pay its short-term debts within the year?</td>
+                <td>Current Ratio, Quick Ratio, Cash Ratio</td>
+              </tr>
+              <tr>
+                <td><strong>2. Efficiency / Working Capital</strong></td>
+                <td>How swiftly does the company turn inventory and sales into cash?</td>
+                <td>Inventory Days, Receivable Days, Payable Days, Operating Cycle</td>
+              </tr>
+              <tr>
+                <td><strong>3. Solvency / Leverage</strong></td>
+                <td>How risky is long-term debt, and can earnings cover interest?</td>
+                <td>Debt-to-Equity (D/E), Interest Coverage Ratio</td>
+              </tr>
+              <tr>
+                <td><strong>4. Profitability & Returns</strong></td>
+                <td>How effectively does the business convert sales and capital into profit?</td>
+                <td>Gross Margin, Operating Margin, Net Margin, ROCE, ROE, ROA</td>
+              </tr>
+              <tr>
+                <td><strong>5. Market / Valuation</strong></td>
+                <td>What price is the market paying for each rupee of earnings or assets?</td>
+                <td>P/E, Dividend Yield, Dividend Payout, Market Cap, Enterprise Value (EV)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 2: Liquidity & Operating Cycle -->
+      <div class="card">
+        <h3 class="card-title">2. Liquidity & The Working Capital Operating Cycle</h3>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="formula-box">
+            <div class="formula-name">Current Ratio</div>
+            <div class="formula-code">CR = Current Assets / Current Liabilities</div>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #475569;">
+              <strong>Benchmark:</strong> 1.5× to 2.0×. Measures general short-term cushion.
+            </p>
+          </div>
+          <div class="formula-box">
+            <div class="formula-name">Quick / Acid-Test Ratio</div>
+            <div class="formula-code">QR = (Current Assets − Inventory) / CL</div>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #475569;">
+              Excludes inventory because inventory cannot be converted to cash instantly without discounts.
+            </p>
+          </div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula-name">The Operating (Cash Conversion) Cycle Equation:</div>
+          <div class="formula-code">Operating Cycle = Inventory Days + Receivable Days − Payable Days</div>
+        </div>
+
+        <div class="callout callout-info">
+          <h4>💡 Understanding Operating Cycle Dynamics</h4>
+          <p>• <strong>Inventory Days ($\frac{365 \times \text{Inventory}}{\text{COGS}}$):</strong> How long raw materials and goods sit in the warehouse before being sold.</p>
+          <p>• <strong>Receivable Days ($\frac{365 \times \text{Debtors}}{\text{Sales}}$):</strong> How long customers take to pay cash after receiving the invoice.</p>
+          <p>• <strong>Payable Days ($\frac{365 \times \text{Creditors}}{\text{COGS}}$):</strong> How long our business takes to pay trade suppliers.</p>
+          <p>• <strong>Interpretation:</strong> If Inventory Days = 50, Receivable Days = 40, and Payable Days = 30, the company waits $50 + 40 - 30 = 60\text{ days}$ between paying suppliers and collecting cash. This 60-day gap must be funded by bank working capital loans!</p>
+        </div>
+      </div>
+
+      <!-- Section 3: Solvency Ratios -->
+      <div class="card">
+        <h3 class="card-title">3. Solvency & Debt Risk: D/E and Interest Coverage</h3>
+        
+        <div class="formula-box">
+          <div class="formula-name">Debt-to-Equity (D/E) Ratio</div>
+          <div class="formula-code">D/E = Total Interest-Bearing Debt / Shareholders' Equity</div>
+        </div>
+
+        <div class="formula-box">
+          <div class="formula-name">Interest Coverage Ratio (Times Interest Earned)</div>
+          <div class="formula-code">Interest Coverage = EBIT / Interest Expense</div>
+        </div>
+
+        <div class="callout callout-danger">
+          <h4>⚠️ Critical Instructor Rules on Solvency:</h4>
+          <p>• <strong>Interest Coverage below 2.0×</strong> is an immediate danger signal indicating that any minor drop in operating earnings could cause loan default.</p>
+          <p>• A company with low debt (e.g., Asian Paints at $0.06\times$) is "lightly geared," meaning high safety and room to borrow if needed.</p>
+        </div>
+      </div>
+
+      <!-- Section 4: DuPont Analysis -->
+      <div class="card">
+        <h3 class="card-title">4. DuPont Analysis: Decomposing Return on Equity (ROE)</h3>
+        <p>
+          Return on Equity ($\frac{\text{PAT}}{\text{Equity}}$) tells you how much profit shareholders get. However, two companies can have the same $15\%$ ROE for completely different reasons. DuPont breaks ROE into three multiplying components:
+        </p>
+
+        <div class="formula-box">
+          <div class="formula-name">The 3-Step DuPont Identity:</div>
+          <div class="formula-code">ROE = Net Profit Margin × Asset Turnover × Equity Multiplier</div>
+          <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #334155;">
+            $\frac{\text{PAT}}{\text{Equity}} = \left(\frac{\text{PAT}}{\text{Sales}}\right) \times \left(\frac{\text{Sales}}{\text{Assets}}\right) \times \left(\frac{\text{Assets}}{\text{Equity}}\right)$
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>DuPont Component</th><th>Formula</th><th>What it Measures</th><th>Strategic Archetype</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Net Profit Margin</strong></td>
+                <td>$\text{PAT} / \text{Sales}$</td>
+                <td>Pricing power & cost efficiency</td>
+                <td>Luxury goods, high-end pharma (e.g., 20% margin, low turnover)</td>
+              </tr>
+              <tr>
+                <td><strong>2. Asset Turnover</strong></td>
+                <td>$\text{Sales} / \text{Total Assets}$</td>
+                <td>Volume velocity & asset productivity</td>
+                <td>Discount retail supermarkets, discount airlines (e.g., 3% margin, 4.0× turnover)</td>
+              </tr>
+              <tr>
+                <td><strong>3. Equity Multiplier</strong></td>
+                <td>$\text{Total Assets} / \text{Equity}$</td>
+                <td>Financial leverage ($1 + D/E$)</td>
+                <td>Banks and utilities (using borrowed money to boost ROE, but adds bankruptcy risk)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 5: Real-World Case - Asian Paints FY25 Standalone -->
+      <div class="card">
+        <h3 class="card-title">5. Slide Walkthrough: Asian Paints Ltd (FY2025 Standalone Data)</h3>
+        <p>The instructor used Asian Paints Ltd to illustrate all ratio calculations on real corporate numbers:</p>
+        
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr><th>Metric</th><th>Financial Working (₹ Crore)</th><th>Result</th><th>Key Interpretation</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Current Ratio</strong></td>
+                <td>$\frac{11,175.61}{5,973.52}$</td>
+                <td><strong>1.87×</strong></td>
+                <td>Comfortable cover; each ₹1 of short-term debt backed by ₹1.87 of current assets.</td>
+              </tr>
+              <tr>
+                <td><strong>Quick Ratio</strong></td>
+                <td>$\frac{11,175.61 - 5,848.23}{5,973.52}$</td>
+                <td><strong>0.89×</strong></td>
+                <td>Stripping out paint inventory leaves 89 paise of liquid cover per ₹1 of obligations.</td>
+              </tr>
+              <tr>
+                <td><strong>Operating Cycle</strong></td>
+                <td>$116\text{ days (Inv)} + 43\text{ days (Rec)} - 71\text{ days (Pay)}$</td>
+                <td><strong>88 days</strong></td>
+                <td>Stock takes ~116 days to turn; suppliers fund 71 days of the pipeline.</td>
+              </tr>
+              <tr>
+                <td><strong>Debt-to-Equity</strong></td>
+                <td>$\frac{1,198.82}{18,987.75}$</td>
+                <td><strong>0.06×</strong></td>
+                <td>Extremely light gearing (only 6 paise debt per ₹1 equity). Insolvency risk is negligible.</td>
+              </tr>
+              <tr>
+                <td><strong>Interest Coverage</strong></td>
+                <td>$\frac{5,045.37}{143.77}$</td>
+                <td><strong>35.1×</strong></td>
+                <td>Operating profit covers annual interest 35 times over! High margin of safety.</td>
+              </tr>
+              <tr>
+                <td><strong>DuPont ROE</strong></td>
+                <td>$12.1\% \times 1.44× \times 1.08×$</td>
+                <td><strong>18.9%</strong></td>
+                <td>ROE is driven by solid margin and rapid asset turnover, NOT by financial debt leverage.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: INTERACTIVE PRACTICE TEST -->
+    <div id="test-tab" class="tab-content">
+      
+      <!-- Test Header Panel -->
+      <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="color:var(--secondary); margin-bottom:0.25rem;">Stage 2 Diagnostic Test: 10 MCQs</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem;">
+            Test your ratio calculations and managerial interpretation. Target: <strong>At least 8/10 (80%) to clear this stage</strong>.
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-outline" onclick="resetStage2Quiz()">🔄 Reset Test</button>
+        </div>
+      </div>
+
+      <!-- Live Score Notification -->
+      <div id="stage2-result-banner" class="score-banner" style="display:none; text-align:center;">
+        <div id="stage2-score-display" class="score-number">0 / 10</div>
+        <h3 id="stage2-verdict-title" style="margin-top:0.5rem;">Score Review</h3>
+        <p id="stage2-verdict-text" style="color:#cbd5e1;"></p>
+        <div style="margin-top:1.5rem;">
+          <a href="stage3_cvp.html" id="stage2-next-btn" class="btn btn-success" style="display:none; font-size:1.05rem;">Proceed to Stage 3: CVP & Break-Even →</a>
+        </div>
+      </div>
+
+      <!-- Quiz Form Container -->
+      <form id="stage2-quiz-form" onsubmit="event.preventDefault(); evaluateStage2Quiz();">
+        
+        <!-- Question 1 -->
+        <div class="question-card" id="sq1-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 1 · Liquidity</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A firm has Current Assets of ₹80,00,000, Closing Inventory of ₹30,00,000, and Current Liabilities of ₹50,00,000. What are its Current Ratio and Quick Ratio?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq1', 0)">
+              <input type="radio" name="sq1" value="0" class="option-radio"> A) Current Ratio = 1.60× | Quick Ratio = 1.00×
+            </label>
+            <label class="option-item" onclick="selectOption('sq1', 1)">
+              <input type="radio" name="sq1" value="1" class="option-radio"> B) Current Ratio = 1.60× | Quick Ratio = 0.60×
+            </label>
+            <label class="option-item" onclick="selectOption('sq1', 2)">
+              <input type="radio" name="sq1" value="2" class="option-radio"> C) Current Ratio = 2.67× | Quick Ratio = 1.67×
+            </label>
+            <label class="option-item" onclick="selectOption('sq1', 3)">
+              <input type="radio" name="sq1" value="3" class="option-radio"> D) Current Ratio = 1.20× | Quick Ratio = 0.80×
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="sq1-explanation">
+            <strong>Correct Answer: A</strong><br>
+            $\text{Current Ratio} = \frac{₹80\text{L}}{₹50\text{L}} = 1.60\times$.<br>
+            $\text{Quick Ratio} = \frac{₹80\text{L} - ₹30\text{L}}{₹50\text{L}} = \frac{₹50\text{L}}{₹50\text{L}} = 1.00\times$.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-card" id="sq2-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 2 · Working Capital Cycle</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A manufacturing unit reports the following working capital turnover days:
+            <br>• Inventory holding period: 65 days
+            <br>• Trade Receivables collection period: 45 days
+            <br>• Trade Payables settlement period: 35 days
+            <br>What is the duration of its Operating (Cash Conversion) Cycle?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq2', 0)">
+              <input type="radio" name="sq2" value="0" class="option-radio"> A) 145 days
+            </label>
+            <label class="option-item" onclick="selectOption('sq2', 1)">
+              <input type="radio" name="sq2" value="1" class="option-radio"> B) 75 days
+            </label>
+            <label class="option-item" onclick="selectOption('sq2', 2)">
+              <input type="radio" name="sq2" value="2" class="option-radio"> C) 55 days
+            </label>
+            <label class="option-item" onclick="selectOption('sq2', 3)">
+              <input type="radio" name="sq2" value="3" class="option-radio"> D) 110 days
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="sq2-explanation">
+            <strong>Correct Answer: B (75 days)</strong><br>
+            $\text{Operating Cycle} = \text{Inventory Days} + \text{Receivable Days} - \text{Payable Days}$<br>
+            $= 65 + 45 - 35 = 110 - 35 = <strong>75\text{ days}</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-card" id="sq3-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 3 · Solvency</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Company Z has an EBIT of ₹12,00,000 and an annual Interest Expense of ₹8,00,000. How would a financial credit analyst interpret this interest coverage ratio?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq3', 0)">
+              <input type="radio" name="sq3" value="0" class="option-radio"> A) Coverage is 1.5×, which is a warning sign of high insolvency risk as it is well below the safe benchmark of 2.0×.
+            </label>
+            <label class="option-item" onclick="selectOption('sq3', 1)">
+              <input type="radio" name="sq3" value="1" class="option-radio"> B) Coverage is 0.67×, indicating that operating profit cannot even pay current interest obligations.
+            </label>
+            <label class="option-item" onclick="selectOption('sq3', 2)">
+              <input type="radio" name="sq3" value="2" class="option-radio"> C) Coverage is 1.5×, which represents a safe, highly conservative financial structure.
+            </label>
+            <label class="option-item" onclick="selectOption('sq3', 3)">
+              <input type="radio" name="sq3" value="3" class="option-radio"> D) Coverage is 2.5×, demonstrating robust financial health.
+            </label>
+          </div>
+          <div class="explanation-box" id="sq3-explanation">
+            <strong>Correct Answer: A</strong><br>
+            $\text{Interest Coverage} = \frac{\text{EBIT}}{\text{Interest}} = \frac{₹12\text{L}}{₹8\text{L}} = 1.5\times$. The instructor highlighted that an interest coverage below $2.0\times$ is an alarming warning sign that leaves minimal cushion if revenues decline.
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-card" id="sq4-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 4 · DuPont Analysis</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            According to the DuPont 3-part identity, if two companies both report an identical Return on Equity (ROE) of 18%, but Company A has an Asset Turnover of 3.0× and an Equity Multiplier of 1.2×, while Company B has an Asset Turnover of 0.8× and an Equity Multiplier of 3.0×, what is true?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq4', 0)">
+              <input type="radio" name="sq4" value="0" class="option-radio"> A) Company B relies heavily on high debt leverage to achieve its ROE, posing higher solvency risk.
+            </label>
+            <label class="option-item" onclick="selectOption('sq4', 1)">
+              <input type="radio" name="sq4" value="1" class="option-radio"> B) Company A has much lower operational efficiency than Company B.
+            </label>
+            <label class="option-item" onclick="selectOption('sq4', 2)">
+              <input type="radio" name="sq4" value="2" class="option-radio"> C) Company A must have a significantly higher net profit margin than Company B.
+            </label>
+            <label class="option-item" onclick="selectOption('sq4', 3)">
+              <input type="radio" name="sq4" value="3" class="option-radio"> D) Both companies have identical debt-to-equity structures.
+            </label>
+          </div>
+          <div class="explanation-box" id="sq4-explanation">
+            <strong>Correct Answer: A</strong><br>
+            <em>Explanation:</em> The Equity Multiplier is $\frac{\text{Assets}}{\text{Equity}} = 1 + \frac{\text{Debt}}{\text{Equity}}$. Company B's multiplier of $3.0\times$ means two-thirds of its assets are funded by debt (high financial risk), whereas Company A's multiplier of $1.2\times$ reflects minimal debt and earns its ROE via rapid asset turnover ($3.0\times$).
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-card" id="sq5-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 5 · Efficiency Days</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A retailer reports Net Annual Sales of ₹36,50,000 and Year-End Sundry Debtors of ₹4,00,000. Assuming a 365-day year, what is the average collection period (Receivable Days)?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq5', 0)">
+              <input type="radio" name="sq5" value="0" class="option-radio"> A) 25 days
+            </label>
+            <label class="option-item" onclick="selectOption('sq5', 1)">
+              <input type="radio" name="sq5" value="1" class="option-radio"> B) 30 days
+            </label>
+            <label class="option-item" onclick="selectOption('sq5', 2)">
+              <input type="radio" name="sq5" value="2" class="option-radio"> C) 40 days
+            </label>
+            <label class="option-item" onclick="selectOption('sq5', 3)">
+              <input type="radio" name="sq5" value="3" class="option-radio"> D) 50 days
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="sq5-explanation">
+            <strong>Correct Answer: C (40 days)</strong><br>
+            $\text{Receivables Turnover} = \frac{\text{Sales}}{\text{Debtors}} = \frac{₹36,50,000}{₹4,00,000} = 9.125\times$.<br>
+            $\text{Collection Days} = \frac{365 \times ₹4,00,000}{₹36,50,000} = \frac{365}{36,50,000} \times 4,00,000 = \frac{1}{10,000} \times 4,00,000 = <strong>40\text{ days}</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-card" id="sq6-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 6 · Market Valuation</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A company has 20,00,000 equity shares trading at a market price of ₹150 per share. It has total interest-bearing debt of ₹8,00,00,000 and cash reserves of ₹2,00,00,000. What is its <strong>Enterprise Value (EV)</strong>?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq6', 0)">
+              <input type="radio" name="sq6" value="0" class="option-radio"> A) ₹36,00,00,000 (₹36 Crore)
+            </label>
+            <label class="option-item" onclick="selectOption('sq6', 1)">
+              <input type="radio" name="sq6" value="1" class="option-radio"> B) ₹40,00,00,000 (₹40 Crore)
+            </label>
+            <label class="option-item" onclick="selectOption('sq6', 2)">
+              <input type="radio" name="sq6" value="2" class="option-radio"> C) ₹24,00,00,000 (₹24 Crore)
+            </label>
+            <label class="option-item" onclick="selectOption('sq6', 3)">
+              <input type="radio" name="sq6" value="3" class="option-radio"> D) ₹30,00,00,000 (₹30 Crore)
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="sq6-explanation">
+            <strong>Correct Answer: A (₹36 Crore)</strong><br>
+            1. $\text{Market Capitalisation} = 20\text{L shares} \times ₹150 = ₹30,00,00,000$ (₹30 Crore).<br>
+            2. $\text{Enterprise Value} = \text{Market Cap} + \text{Debt} - \text{Cash}$<br>
+            $= ₹30\text{ Cr} + ₹8\text{ Cr} - ₹2\text{ Cr} = <strong>₹36\text{ Crore}</strong>$.
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-card" id="sq7-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 7 · Interpretation</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            If a company's Inventory Days increase from 40 days to 85 days while sales remain constant, what is the immediate effect on its cash balance and working capital?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq7', 0)">
+              <input type="radio" name="sq7" value="0" class="option-radio"> A) Operating cycle lengthens and cash is trapped in unsold stock, reducing available liquidity.
+            </label>
+            <label class="option-item" onclick="selectOption('sq7', 1)">
+              <input type="radio" name="sq7" value="1" class="option-radio"> B) Operating cycle shortens, freeing up cash for short-term investments.
+            </label>
+            <label class="option-item" onclick="selectOption('sq7', 2)">
+              <input type="radio" name="sq7" value="2" class="option-radio"> C) Current ratio immediately drops below 1.0.
+            </label>
+            <label class="option-item" onclick="selectOption('sq7', 3)">
+              <input type="radio" name="sq7" value="3" class="option-radio"> D) Quick ratio increases significantly.
+            </label>
+          </div>
+          <div class="explanation-box" id="sq7-explanation">
+            <strong>Correct Answer: A</strong><br>
+            <em>Explanation:</em> When inventory sits longer before being sold, extra cash is tied up in the warehouse. This directly lengthens the Operating Cycle ($\text{Inventory Days} + \text{Receivable Days} - \text{Payable Days}$) and creates a cash drain.
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question-card" id="sq8-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 8 · Profitability</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            Gamma Ltd has Sales of ₹50,00,000, Cost of Goods Sold of ₹30,00,000, Operating Expenses of ₹10,00,000, and Net Profit after Tax (PAT) of ₹6,00,000. What are its Gross Margin and Operating Margin?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq8', 0)">
+              <input type="radio" name="sq8" value="0" class="option-radio"> A) Gross Margin = 40% | Operating Margin = 20%
+            </label>
+            <label class="option-item" onclick="selectOption('sq8', 1)">
+              <input type="radio" name="sq8" value="1" class="option-radio"> B) Gross Margin = 60% | Operating Margin = 40%
+            </label>
+            <label class="option-item" onclick="selectOption('sq8', 2)">
+              <input type="radio" name="sq8" value="2" class="option-radio"> C) Gross Margin = 40% | Operating Margin = 12%
+            </label>
+            <label class="option-item" onclick="selectOption('sq8', 3)">
+              <input type="radio" name="sq8" value="3" class="option-radio"> D) Gross Margin = 30% | Operating Margin = 15%
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="sq8-explanation">
+            <strong>Correct Answer: A</strong><br>
+            $\text{Gross Profit} = ₹50\text{L} - ₹30\text{L} = ₹20\text{L} \rightarrow \text{Gross Margin} = \frac{₹20\text{L}}{₹50\text{L}} = 40\%$.<br>
+            $\text{Operating Profit (EBIT)} = \text{Gross Profit} - \text{Opex} = ₹20\text{L} - ₹10\text{L} = ₹10\text{L} \rightarrow \text{Operating Margin} = \frac{₹10\text{L}}{₹50\text{L}} = 20\%$.
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question-card" id="sq9-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 9 · Valuation Ratios</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            A firm reports Net Profit (PAT) of ₹40,00,000 with 10,00,000 equity shares outstanding. The current stock price is ₹100, and it declares a Dividend per Share (DPS) of ₹2.00. What are its P/E Ratio and Dividend Payout Ratio?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq9', 0)">
+              <input type="radio" name="sq9" value="0" class="option-radio"> A) P/E = 25.0× | Payout = 50%
+            </label>
+            <label class="option-item" onclick="selectOption('sq9', 1)">
+              <input type="radio" name="sq9" value="1" class="option-radio"> B) P/E = 20.0× | Payout = 40%
+            </label>
+            <label class="option-item" onclick="selectOption('sq9', 2)">
+              <input type="radio" name="sq9" value="2" class="option-radio"> C) P/E = 25.0× | Payout = 20%
+            </label>
+            <label class="option-item" onclick="selectOption('sq9', 3)">
+              <input type="radio" name="sq9" value="3" class="option-radio"> D) P/E = 15.0× | Payout = 60%
+            </label>
+          </div>
+          <div class="scratchpad-container">
+            <small style="color:var(--text-muted);">Scratchpad / Rough Math:</small>
+            <textarea class="scratchpad-area" placeholder="Type your rough math here..."></textarea>
+          </div>
+          <div class="explanation-box" id="sq9-explanation">
+            <strong>Correct Answer: A (P/E = 25× | Payout = 50%)</strong><br>
+            1. $\text{EPS} = \frac{₹40,00,000}{10,00,000\text{ shares}} = ₹4.00$ per share.<br>
+            2. $\text{P/E Ratio} = \frac{\text{Market Price}}{\text{EPS}} = \frac{₹100}{₹4.00} = 25.0\times$.<br>
+            3. $\text{Dividend Payout} = \frac{\text{DPS}}{\text{EPS}} = \frac{₹2.00}{₹4.00} = 50\%$.
+          </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question-card" id="sq10-card">
+          <div class="question-header">
+            <span class="badge badge-primary">Question 10 · Asian Paints Case</span>
+            <span style="font-size:0.85rem; color:#64748b;">1 Mark</span>
+          </div>
+          <div class="question-text">
+            In the Asian Paints standalone case discussed in class, the company has a Debt-to-Equity ratio of 0.06× and an Interest Coverage ratio of 35.1×. What does this reveal about its capital structure?
+          </div>
+          <div class="options-list">
+            <label class="option-item" onclick="selectOption('sq10', 0)">
+              <input type="radio" name="sq10" value="0" class="option-radio"> A) The company is heavily geared and vulnerable to rising interest rates.
+            </label>
+            <label class="option-item" onclick="selectOption('sq10', 1)">
+              <input type="radio" name="sq10" value="1" class="option-radio"> B) The company is lightly geared with virtually zero financial distress risk and huge debt-raising capacity.
+            </label>
+            <label class="option-item" onclick="selectOption('sq10', 2)">
+              <input type="radio" name="sq10" value="2" class="option-radio"> C) The company must be generating low return on equity due to absence of leverage.
+            </label>
+            <label class="option-item" onclick="selectOption('sq10', 3)">
+              <input type="radio" name="sq10" value="3" class="option-radio"> D) The company has negative working capital and is in financial distress.
+            </label>
+          </div>
+          <div class="explanation-box" id="sq10-explanation">
+            <strong>Correct Answer: B</strong><br>
+            <em>Explanation:</em> A D/E of 0.06× indicates that only 6 paise of debt is used per ₹1 of equity, and its operating profit covers its annual interest obligations over 35 times. This represents a balance sheet with negligible financial risk and substantial headroom to issue debt if required.
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin: 2rem 0;">
+          <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2.5rem; font-size: 1.15rem;">
+            Submit Stage 2 Test & Review Answers 🎯
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function selectOption(qName, optIdx) {
+      const card = document.getElementById(qName + '-card');
+      const items = card.querySelectorAll('.option-item');
+      items.forEach(it => it.classList.remove('selected'));
+      items[optIdx].classList.add('selected');
+      items[optIdx].querySelector('input').checked = true;
+    }
+
+    const correctAnswers = {
+      sq1: 0, // A
+      sq2: 1, // B
+      sq3: 0, // A
+      sq4: 0, // A
+      sq5: 2, // C
+      sq6: 0, // A
+      sq7: 0, // A
+      sq8: 0, // A
+      sq9: 0, // A
+      sq10: 1 // B
+    };
+
+    function evaluateStage2Quiz() {
+      let score = 0;
+      let total = 10;
+
+      for (let q in correctAnswers) {
+        const selected = document.querySelector('input[name="' + q + '"]:checked');
+        const card = document.getElementById(q + '-card');
+        const expBox = document.getElementById(q + '-explanation');
+        const options = card.querySelectorAll('.option-item');
+
+        expBox.style.display = 'block';
+
+        if (selected) {
+          const val = parseInt(selected.value);
+          if (val === correctAnswers[q]) {
+            score++;
+            options[val].classList.add('correct');
+          } else {
+            options[val].classList.add('incorrect');
+            options[correctAnswers[q]].classList.add('correct');
+          }
+        } else {
+          options[correctAnswers[q]].classList.add('correct');
+        }
+      }
+
+      const banner = document.getElementById('stage2-result-banner');
+      const scoreDisp = document.getElementById('stage2-score-display');
+      const title = document.getElementById('stage2-verdict-title');
+      const text = document.getElementById('stage2-verdict-text');
+      const nextBtn = document.getElementById('stage2-next-btn');
+
+      banner.style.display = 'block';
+      scoreDisp.innerText = score + ' / ' + total;
+
+      let pct = (score / total) * 100;
+      if (pct >= 80) {
+        title.innerHTML = '🎉 Stage 2 Cleared! Ratio Master!';
+        text.innerText = 'You scored ' + score + '/10 (' + Math.round(pct) + '%). Your grasp of ratio mechanics, DuPont levers, and solvency indicators is spot on!';
+        banner.style.background = 'linear-gradient(135deg, #15803d, #14532d)';
+        nextBtn.style.display = 'inline-flex';
+        localStorage.setItem('fmi_stage_2_cleared', 'true');
+      } else {
+        title.innerHTML = '⚠️ Review Recommended (Target: 8/10)';
+        text.innerText = 'You scored ' + score + '/10 (' + Math.round(pct) + '%). Check the detailed workings above, especially operating cycle days and DuPont components, then retry.';
+        banner.style.background = 'linear-gradient(135deg, #b45309, #78350f)';
+        nextBtn.style.display = 'none';
+      }
+
+      window.scrollTo({ top: banner.offsetTop - 80, behavior: 'smooth' });
+    }
+
+    function resetStage2Quiz() {
+      document.getElementById('stage2-quiz-form').reset();
+      document.querySelectorAll('.option-item').forEach(el => {
+        el.classList.remove('selected', 'correct', 'incorrect');
+      });
+      document.querySelectorAll('.explanation-box').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.getElementById('stage2-result-banner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
