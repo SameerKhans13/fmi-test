@@ -1,0 +1,1844 @@
+SPEED RUN: SESSION 1
+Finance Markets & Instruments (FMI)
+Accounting meaning, Financial Ratios, Cost Structure, CVP, Time Value of Money (TVM), Capital Budgeting
+1
+Welcome. Today compresses eight sessions into 180 minutes. Every block ends with a worked rupee example so concepts stick.
+1
+
+Speed Run: Session 1
+Topics
+Block
+1
+Accounting foundations and the three statements
+2
+Financial Ratios: liquidity, leverage, profitability
+3
+Management accounting and CVP
+4
+Time value of money
+5
+Capital Budgeting
+2
+Block 1 runs longest because it carries the full Session 1 detail. Pause for questions at each block end.
+2
+
+Accounting: Meaning
+Accounting records, classifies and summarises business transactions in money terms. Every transaction keeps this balanced:
+Assets = Liabilities + Equity
+Ravi opens a kirana store
+Cash
+Inventory
+Loan
+Equity
+Invests ₹5L, borrows ₹2L
+7L
+–
+2L
+5L
+Buys stock for ₹3L cash
+4L
+3L
+2L
+5L
+Sells ₹1L stock for ₹1.5L cash
+5.5L
+2L
+2L
+5.5L
+3
+Assets are what you own, liabilities what you owe, equity the owners' residual claim. The last row shows profit of ₹50,000 raising equity. Core concepts: going concern, accrual, matching, prudence.
+3
+
+Assets: What the Business Owns
+An asset is an economic resource the business owns or controls that is expected to give future economic benefit.
+Current assets
+Realised, sold or consumed within the operating cycle or about 12 months: cash, bank balance, receivables, inventory, short-term investments, prepaid expenses.
+Non-current assets
+Benefit over a longer period: buildings, machinery, computers, vehicles, long-term investments, certain intangibles, right-of-use (lease) assets.
+Kirana store: cash ₹50,000, stock ₹3L and customers owing ₹20,000 are current. The ₹1.2L freezer and shop fittings are non-current.
+4
+Order of liquidity: cash first, then receivables, inventory, then long-term items. Receivables are what customers owe; prepaid expenses are services paid for in advance, such as a year of insurance.
+4
+
+Liabilities & Equity: Who funds the assets
+Current liabilities
+Due within the operating cycle or about 12 months: accounts payable, salaries payable, interest payable, taxes payable, short-term borrowings.
+Non-current liabilities
+Due beyond 12 months: long-term bank loans, long-term bonds, certain lease liabilities.
+A liability is an obligation to an outsider. Equity is the owners' residual claim: Equity = Assets − Liabilities, from capital invested and profits retained, reduced by losses and drawings or dividends.
+Store example: supplier bill ₹80,000 and salary due ₹30,000 are current; a ₹5L five-year bank loan is non-current.
+5
+The classification matters for liquidity ratios: only current items count in the current ratio. A long-term loan's instalment due within 12 months moves into current liabilities.
+5
+
+Accounting Equation
+Assets = Liabilities + Equity
+Proprietorship
+Equity = Owner's capital + Profit − Drawings
+Company
+Equity = Share capital + Retained earnings + Other reserves
+Seven elements: assets, liabilities, equity, income, expenses, gains and losses. Income, expenses, gains and losses change equity: income and gains raise it, expenses and losses reduce it, so Equity moves by Income − Expenses + Gains − Losses (before drawings or dividends).
+The equation must balance after every transaction. Every ₹ of assets is funded by outsiders or by owners.
+6
+A gain arises from incidental events such as selling an old asset above its carrying amount; a loss when sold below. Income and expenses come from regular operations.
+6
+
+Users of Accounting Information
+User
+Uses statements to
+Example
+Management
+Plan, control costs, decide
+Retail chain picks best store for expansion
+Employees
+Judge job security, bonuses
+Strong profits raise incentive hopes
+Shareholders and investors
+Measure ROI and growth
+Review quarterly and annual results
+Lenders
+Check repayment ability
+Bank reads audited statements pre-loan
+Suppliers and creditors
+Set credit limits
+Supplier checks position before more credit
+Government
+Verify tax, compliance
+GST and income tax filings
+Internal users run the business; external users invest, lend, supply or regulate it. Types: financial, management, cost, tax, audit, forensic.
+7
+Financial accounting serves external users and statements; management accounting is future-oriented for managers; cost accounting measures product cost; tax accounting follows tax law; auditing is independent verification; forensic investigates fraud.
+7
+
+Core Assumptions
+Concept
+Meaning
+Real-life example
+Business entity
+Business is separate from the owner
+Amazon's books are not Bezos's wealth
+Going concern
+Business will continue operating
+Oven valued at cost less wear, not scrap
+Money measurement
+Record only what is measurable in money
+A skilled team is not an asset line
+Accounting period
+Results measured per period
+Indian year: 1 April 2026 to 31 March 2027
+Historical cost
+Assets recorded at acquisition cost
+Land bought at ₹50L stays at cost
+Next: four concepts that drive profit measurement: accrual, dual aspect, matching and realisation.
+8
+Historical cost applies at initial recognition; later measurement may differ under the framework. Why these matter: consistent, comparable, reliable statements.
+8
+
+Accrual concepts: Record As & When it Happens
+Record income and expense when the economic activity occurs, not when cash moves.
+Event
+Economic month
+Cash month
+Treatment
+ABC Ltd ad campaign ₹1,00,000
+March 2026
+April 2026
+March expense; ₹1L payable at 31 March
+Salary for March, paid 5 April
+March
+April
+March expense; salary payable
+Annual insurance ₹12,000 paid 1 April
+12 months
+April
+₹1,000 a month; rest is prepaid
+Cash-basis view would show no March ad cost and an April cost: profit for both months would be misstated.
+9
+First row is the Session 1 example; the salary and insurance rows are added illustrations. Accrual gives payables and prepaid expenses on the balance sheet.
+9
+
+Dual Aspect: every transaction has two effects
+Transaction
+Effect 1
+Effect 2
+Owner invests ₹5L cash
+Cash +5L (asset)
+Equity +5L
+Buy machine ₹2L cash
+Machine +2L (asset)
+Cash −2L (asset)
+Buy stock ₹1L on credit
+Inventory +1L (asset)
+Payables +1L (liability)
+Pay supplier ₹60,000
+Payables −60,000
+Cash −60,000
+This is the basis of double-entry bookkeeping. After each line, Assets = Liabilities + Equity still holds.
+10
+Examples are added illustrations of the Session 1 principle. Some transactions change only one side's composition, such as swapping one asset for another.
+10
+
+Matching Concept: Pair cost with the revenue it earned
+FashionHub buys 1,000 shirts at ₹1,000 and sells 600 at ₹1,800.
+Item
+Working
+Amount
+Sales
+600 × ₹1,800
+₹10,80,000
+Cost of goods sold
+600 × ₹1,000
+₹6,00,000
+Gross profit
+₹10,80,000 − ₹6,00,000
+₹4,80,000
+Closing inventory (asset)
+400 × ₹1,000
+₹4,00,000
+Using the full ₹10L purchase as an expense would show a loss of ₹(0.8L) and hide ₹4L of unsold stock.
+11
+Depreciation applies the same idea: a machine's cost is spread across the years it helps earn revenue. The loss figure above is 10.8L − 10L = +0.8L if purchases were expensed; correct statement is profit understated by 4L.
+11
+
+Realisation: Revenue when it is earned
+A ₹12,000 Netflix plan paid on 1 April 2025 is not ₹12,000 revenue that day. Service is delivered over 12 months, so ₹1,000 is recognised each month.
+Date
+Revenue recognised so far
+Unearned revenue (liability)
+30 June 2025
+₹3,000
+₹9,000
+30 September 2025
+₹6,000
+₹6,000
+31 March 2026
+₹12,000
+₹0
+Same logic: airline tickets, coaching fees and annual software licences. Recognise revenue when the performance obligation is met, not when cash arrives.
+12
+The Session 1 slide gives the ₹1,000 monthly figure; the unearned-revenue balances are worked from it and shown as a liability until service is delivered.
+12
+
+Four conventions that guide judgment
+Consistency
+Keep the same method period to period. Changing depreciation yearly to shape profit destroys comparability.
+Prudence
+Be cautious under uncertainty: do not overstate assets or income.
+Full disclosure
+Give users the material information needed to understand position and performance.
+Materiality
+Information matters if omitting or misstating it could influence users' decisions.
+13
+A ₹500 stationery misstatement is immaterial for a large company but a ₹5L error in receivables would likely be material.
+13
+
+Transactions and the equation: GreenBite Cafe
+Transaction
+A
+L
+E
+Total assets
+Equity
+1. Ananya invests ₹8L
++
+–
++
+₹8.00L
+₹8.00L
+2. Bank loan ₹4L
++
++
+–
+₹12.00L
+₹8.00L
+3. Catering ₹1.2L on credit, ₹50,000 expenses
++
+–
++
+₹12.70L
+₹8.70L
+4. Sell fridge ₹90,000, carrying ₹70,000 (gain ₹20,000)
++
+–
++
+₹12.90L
+₹8.90L
+5. Rent ₹40,000; sell machine ₹30,000, carrying ₹45,000 (loss ₹15,000)
++
+–
++
+₹12.35L
+₹8.35L
+Loan ₹4L stays constant, so Assets ₹12.35L = Liabilities ₹4L + Equity ₹8.35L. Income, expenses, gains and losses all flow through equity.
+14
+Rows 3 to 5 touch several elements: income and expense in row 3, gain in row 4, expense and loss in row 5. Assume the ₹50,000 expense is paid in cash. Try BrightStart Bakery from the source as practice.
+14
+
+Example: Rahul's Cafe (a proprietorship)
+Step
+Cash (A)
+Liabilities
+Equity
+Starts with ₹5,00,000
+₹5,00,000
+0
+₹5,00,000
+Cash expenses ₹3,00,000
+₹2,00,000
+0
+₹2,00,000
+Cash sales ₹4,00,000
+₹6,00,000
+0
+₹6,00,000
+Drawings ₹50,000
+₹5,50,000
+0
+₹5,50,000
+Cash taken for personal use is drawings: it reduces equity directly, not an expense of the business.
+15
+Equity = capital 5L + profit 1L − drawings 0.5L = 5.5L. Profit = sales 4L − expenses 3L.
+15
+
+Example: Tech Star Ltd (Corporate)
+Step
+Assets
+Liabilities
+Equity
+Issues shares for ₹10L
+Cash 10L
+0
+10L
+Credit sales ₹8L
+Cash 10L + receivables 8L
+0
+18L
+Credit expenses ₹5L
+Cash 10L + receivables 8L
+Payables 5L
+13L
+Dividend ₹1L paid
+Cash 9L + receivables 8L
+Payables 5L
+12L
+Final check: assets ₹17L = liabilities ₹5L + equity ₹12L. Credit transactions move receivables and payables, not cash.
+16
+Equity ₹12L = share capital 10L + retained earnings (8 − 5 − 1 = 2L). Dividends reduce equity, like drawings in a proprietorship.
+16
+
+Three Important Financial Statements
+Income Statement
+Performance over a period. Revenue − expenses = profit.
+Balance Sheet
+Position on one date. Assets = Liabilities + Equity.
+Cash Flow
+Cash in and out: operating, investing, financing.
+How they link: profit flows into equity on the balance sheet. Depreciation lowers profit but is not a cash outflow.
+Depreciation example: machine ₹10L, residual ₹1L, life 5 years → (10 − 1) ÷ 5 = ₹1.8L expense each year (straight line).
+17
+Profit is not cash: a business can be profitable and still run out of cash if receivables pile up. Matching principle spreads asset cost over its useful life.
+17
+
+Depreciation: Spreading an asset's cost over its life
+Depreciation allocates the cost of a non-current asset over the years it helps earn revenue (matching concept). Four terms:
+Cost
+What the machine cost: ₹11,00,000
+Residual value
+Expected disposal value: ₹1,00,000
+Useful life
+Years of use: 5
+Depreciable amount
+Cost − residual = ₹10,00,000
+Two methods follow: straight line (same charge every year) and reducing balance (a fixed percentage of the opening book value). Example for a laptop: cost ₹60,000, residual ₹10,000, 5 years → ₹10,000 a year on straight line.
+18
+Depreciation is a non-cash expense: it lowers profit but no cash leaves in the year. The laptop example is an added illustration.
+18
+
+Straight-Line Method (SLM)
+Annual depreciation = (Cost − Residual value) ÷ Useful life. Machine: ₹10,00,000 cost, ₹1,00,000 residual, 5 years → ₹1,80,000 every year.
+Year
+Opening balance
+Depreciation
+Closing balance
+1
+₹10,00,000
+₹1,80,000
+₹8,20,000
+2
+₹8,20,000
+₹1,80,000
+₹6,40,000
+3
+₹6,40,000
+₹1,80,000
+₹4,60,000
+4
+₹4,60,000
+₹1,80,000
+₹2,80,000
+5
+₹2,80,000
+₹1,80,000
+₹1,00,000
+19
+The book value falls in equal steps and ends at the residual value. Suits assets used evenly, such as office furniture.
+19
+
+Reducing-Balance Method
+Annual depreciation = Opening balance × rate. Truck: ₹20,00,000, 25%, residual nil.
+Year
+Opening balance
+Depreciation at 25%
+Closing balance
+1
+₹20,00,000
+₹5,00,000
+₹15,00,000
+2
+₹15,00,000
+₹3,75,000
+₹11,25,000
+3
+₹11,25,000
+₹2,81,250
+₹8,43,750
+4
+₹8,43,750
+₹2,10,938
+₹6,32,812
+5
+₹6,32,812
+₹1,58,203
+₹4,74,609
+Charge is heaviest early: Year 1 is ₹5L, where straight line on the same truck would be ₹4L every year. Suits assets that lose value fast, such as vehicles.
+20
+Year 5 is added to complete the pattern; the source table shows four years. A fixed percentage never reaches exactly zero, so firms often switch to straight line near the end.
+20
+
+Intangible Assets
+Identifiable non-monetary assets with no physical substance that the business controls and expects to give future benefit.
+Examples
+Patents, copyrights, trademarks, brands, software licences, franchises, customer relationships, technology, qualifying R&D.
+Recognise only if
+Future benefits are probable and cost can be measured reliably. Externally bought: at cost.
+Illustration: patent bought for ₹10 crore, 10-year life
+Amount
+Amortisation each year (straight line)
+₹1 crore
+Carrying amount after 3 years (cost model)
+₹7 crore
+Goodwill is treated separately and arises only in mergers and acquisitions.
+21
+Subsequent measurement: cost model (cost − accumulated amortisation − impairment) or revaluation model (fair value less later amortisation and impairment). Amortisation is to intangibles what depreciation is to physical assets. The 10-year life is an added assumption.
+21
+
+Long-Term Investments
+Company
+Strategic
+Financial
+Tata Motors (FY25, standalone)
+₹29,718 cr in subsidiaries, JVs, associates
+₹1,709 cr other investments
+Volkswagen (Dec 2025)
+€10.0 bn equity-accounted (e.g. SAIC-VW 50%, QuantumScape 16%)
+€11.7 bn other financial assets
+Strategic investments support the business model; financial investments earn dividends, interest or capital gains. Tata Motors' total long-term investments: ₹31,427 crore.
+22
+Tata Motors reported 93 subsidiaries, 10 associates and 4 joint ventures at FY25. VW also holds Gotion (24%) and Sinotruk (25%) for battery and truck strategy.
+22
+
+Income statement: Important Line Items 
+Line
+Meaning
+Formula or example
+Revenue
+Income from selling goods or services, shown first
+Sales ₹500L
+Cost of goods sold
+Direct cost of what was sold: materials, direct labour, production costs
+₹300L
+Gross profit
+Profit after direct costs
+Revenue − COGS = ₹200L
+Operating expenses
+Costs of running the business
+Selling and general ₹80L + depreciation ₹20L
+Operating profit
+Profit from the main business
+Gross profit − operating expenses = ₹100L
+Selling expenses: commission, advertising, distribution. General expenses: management salaries, rent, insurance, audit, legal, utilities. Figures are for an illustrative company, in ₹ lakh.
+23
+The statement covers a period such as a month, quarter or financial year. Objectives: determine profitability, measure operating performance, compare performance.
+23
+
+Income statement: Important Line Items
+Line
+Meaning
+Formula or example
+Other income
+Non-operating income: interest, dividends, profit on asset sales
+Interest income ₹10L
+Finance costs and other expenses
+Interest on loans, finance charges, losses on asset sales
+Interest ₹20L
+Profit before tax
+Operating profit + other income − other expenses
+100 + 10 − 20 = ₹90L
+Income tax
+Tax on taxable income
+25% of ₹90L = ₹22.5L
+Net income (PAT)
+PBT − tax
+₹67.5L
+Earnings per share
+Net profit ÷ shares outstanding
+₹67.5L ÷ 10 lakh shares = ₹6.75
+24
+Depreciation sits in operating expenses; interest sits below operating profit because it reflects how the firm is financed, not how it operates.
+24
+
+Example: Income Statement (₹ lakh)
+Item
+₹ lakh
+Margin
+Revenue
+500.0
+100%
+Cost of goods sold
+(300.0)
+Gross profit
+200.0
+40%
+Selling and general expenses
+(80.0)
+Depreciation
+(20.0)
+Operating profit
+100.0
+20%
+Other income
+10.0
+Interest (finance cost)
+(20.0)
+Profit before tax
+90.0
+Income tax at 25%
+(22.5)
+Net income
+67.5
+13.5%
+EPS (10 lakh shares)
+₹6.75
+25
+Gross, operating and net margins link to the Session 4 profitability ratios. This company is an added illustration, not from the source deck.
+25
+
+Cash flow Statement: Where cash came from and went
+It shows inflows and outflows of cash and cash equivalents in a period. The income statement shows profit; this statement explains the change in cash.
+Operating
+Day-to-day business. In: cash from customers and services. Out: suppliers, salaries, rent and other expenses, taxes.
+Investing
+Long-term assets. Out: buying machinery, buildings, long-term investments. In: selling them.
+Financing
+Capital. In: shares, debentures, bank loans. Out: buybacks, dividends, interest, loan repayment.
+26
+Operating cash flow is the health check: a sustainable business funds itself from operations. Interest on debt is shown here under financing, as in the source.
+26
+
+Why Net Income & Cash Differ
+Event
+Effect on net income
+Effect on cash
+Credit sale not yet collected
+Profit up
+No cash yet
+Depreciation
+Profit down
+No cash out
+Inventory bought, not yet sold
+No effect yet
+Cash out
+Expenses accrued, supplier unpaid
+Profit down
+No cash out yet
+Machine purchase
+Spread as depreciation
+Full cash out now
+Loan repayment or dividend
+Not an expense
+Cash out
+Accrual accounting records activity; the cash statement records money. A profitable business can still run short of cash.
+27
+Dividends reduce retained earnings rather than profit. Loan repayment reduces a liability, not equity.
+27
+
+Reconciling Net Income to Operating Cash flow
+Start: net income
+₹67.5L
+Add: depreciation (non-cash)
++ ₹20.0L
+Less: increase in receivables
+− ₹30.0L
+Less: increase in inventory
+− ₹15.0L
+Add: increase in payables
++ ₹10.0L
+Cash from operating activities
+₹52.5L
+Rules: add back non-cash expenses (depreciation, amortisation, stock-based pay, deferred tax). Increases in receivables or inventory use cash, so subtract. Increases in payables keep cash in, so add. Decreases do the reverse.
+28
+This is the indirect method. Working-capital movements are the second category of adjustment after non-cash items. Figures continue the illustrative company.
+28
+
+Putting the three activities together (₹ lakh)
+Activity
+Item
+₹ lakh
+Operating
+From net income reconciliation
+52.5
+Investing
+Purchase of machinery
+(40.0)
+Financing
+Bank loan 20.0, dividend paid (5.0)
+15.0
+Net change in cash
+52.5 − 40.0 + 15.0
+27.5
+Closing cash
+Opening 10.0 + 27.5
+37.5
+Net income was ₹67.5L, yet cash rose by only ₹27.5L: receivables, inventory and machinery absorbed cash.
+29
+Loan and machinery figures are added assumptions to show the three sections. In an exam, always tie closing cash to the balance sheet.
+29
+
+Financial Ratios: Current Ratio
+Current ratio
+Current assets ÷ current liabilities. Rule of thumb 1.5–2. Example: ₹60L ÷ ₹40L = 1.5.
+Quick ratio
+(Current assets − inventory) ÷ current liabilities. (60 − 20) ÷ 40 = 1.0.
+Cash ratio
+Cash and equivalents ÷ current liabilities. ₹8L ÷ ₹40L = 0.2.
+Debt-to-equity
+Total debt ÷ equity. ₹50L ÷ ₹100L = 0.5. Higher means more risk.
+Interest coverage
+EBIT ÷ interest: ₹24L ÷ ₹6L = 4×. Below 2 is a warning sign.
+Five families: liquidity, efficiency, leverage, profitability, market.
+30
+Ratios only mean something against past years, peers and budget. Inventory is excluded from the quick ratio because it can be slow to turn into cash.
+30
+
+Efficiency Ratios: How fast does money cycle?
+Inventory days
+Days stock sits before sale. COGS ₹140L ÷ stock ₹20L = 7×, so 365 ÷ 7 = 52 days.
+Receivable days
+Days customers take to pay. Sales ₹200L ÷ debtors ₹25L = 8×, so 46 days.
+Payable days
+Days we take to pay suppliers. COGS ₹140L ÷ creditors ₹28L = 5×, so 73 days.
+Operating cycle = Inventory days + Receivable days − Payable days
+Example: 45 + 30 − 35 = 40 days of cash tied up. Shorten it by collecting faster or stretching suppliers within terms. Solvency ratios (D/E, interest cover) cover long-term obligations.
+31
+Turnover ratios: COGS ÷ average inventory; credit sales ÷ average receivables; credit purchases (or COGS) ÷ average payables. Days = 365 ÷ turnover.
+31
+
+Profitability Ratios: How well do we earn?
+Gross margin
+(Sales − COGS) ÷ Sales: (200 − 140) ÷ 200 = 30%
+Operating margin
+EBIT ÷ Sales: 24 ÷ 200 = 12%
+Net margin
+PAT ÷ Sales: 14 ÷ 200 = 7%
+ROCE
+EBIT ÷ capital employed: 24 ÷ 150 = 16%
+ROE
+PAT ÷ equity: 14 ÷ 100 = 14%
+Asset turnover
+Sales ÷ total assets: 200 ÷ 190 = 1.05×
+DuPont: ROE = Net margin × Asset turnover × Equity multiplier. Retail wins on turnover, luxury on margin.
+32
+DuPont shows why two firms with the same ROE can be very different businesses. High ROE from heavy leverage is risky.
+32
+
+Market Ratios: What do investors pay for?
+Measure
+Formula
+Tells you
+EPS
+Profit to ordinary shareholders ÷ shares
+Profit per share
+P/E
+Market price ÷ EPS
+Price paid per ₹1 of earnings
+DPS, payout
+DPS = dividend ÷ shares; payout = dividend ÷ profit
+Cash returned
+Dividend yield
+DPS ÷ market price
+Income return on price
+Market cap
+Price × shares outstanding
+Equity value
+Enterprise value
+Market cap + debt − cash
+Whole-business value (M&A)
+Example: PAT ₹14L, 1L shares → EPS ₹14. Price ₹210 → P/E 15×. DPS ₹4 → payout 29%, yield 1.9%.
+33
+ROA = profit ÷ total assets; ROI is a broader measure with no single universal formula. EV is widely used in valuation and acquisitions.
+33
+
+Example: Asian Paints Ltd (Standalone, FY2025)
+Income statement (₹ crore)
+FY2025
+Balance sheet (₹ crore)
+31 Mar 2025
+Net sales
+29,552.65
+Inventories
+5,848.23
+Cost of sales (proxy)
+17,340.54
+Sundry debtors
+3,197.55
+Other income
+770.31
+Cash and bank
+204.50
+Depreciation
+901.85
+Total current assets
+11,175.61
+Interest
+143.77
+Current liabilities and provisions
+5,973.52
+Profit before tax
+4,901.60
+Debt
+1,198.82
+Net profit
+3,588.07
+Shareholders' funds
+18,987.75
+EPS (₹) / DPS (₹)
+37.41 / 24.80
+Total assets
+20,464.73
+Source: market-data aggregators (CMOTS-based) for the year ended 31 March 2025; check against the annual report. Cost of sales = raw materials + power and fuel + other manufacturing expenses − stock adjustment. EBIT = PBT + interest = ₹5,045.37 cr, which includes ₹770.31 cr other income.
+34
+All ratios in the next slides use these figures. Asian Paints has about 95.92 crore shares of face value ₹1. Market price used later (₹2,400) is an illustrative round figure, so replace it with the live quote before presenting.
+34
+
+Liquidity Ratios: Example
+Ratio
+Formula
+Working (₹ cr)
+Result
+Current ratio
+Current assets ÷ current liabilities
+11,175.61 ÷ 5,973.52
+1.87×
+Quick ratio
+(Current assets − inventory) ÷ current liabilities
+(11,175.61 − 5,848.23) ÷ 5,973.52
+0.89×
+Cash ratio
+Cash and equivalents ÷ current liabilities
+204.50 ÷ 5,973.52
+0.03×
+Reading it: each ₹1 of short-term obligations is backed by ₹1.87 of current assets. Stripping out inventory, cover falls to ₹0.89, and cash alone covers only about 3 paise. The current ratio was 1.92× a year earlier, so liquidity is stable. Low cash is not alarming for a firm that collects from dealers and keeps strong investments elsewhere.
+35
+Liquidity ratios ask whether short-term assets cover short-term liabilities. Quick assets here include loans and advances as reported; a stricter version would remove prepaid items. Investments of about ₹5,296 cr sit outside current assets.
+35
+
+Efficiency Ratio: Example	
+Ratio
+Formula
+Working (₹ cr)
+Result
+Inventory turnover
+Cost of sales ÷ average inventory
+17,340.54 ÷ 5,501.91
+3.15×
+Inventory days
+365 ÷ turnover
+365 ÷ 3.15
+116 days
+Receivables turnover
+Net sales ÷ average debtors
+29,552.65 ÷ 3,448.70
+8.57×
+Collection days
+365 ÷ turnover
+365 ÷ 8.57
+43 days
+Reading it: stock sits for about 116 days before it is sold and customers pay in about 43 days. Fewer inventory days or collection days free cash. Debtors fell from ₹3,699.84 cr to ₹3,197.55 cr while sales dipped, which helped collection days.
+36
+Average balances use opening and closing figures. Credit sales are not disclosed separately, so net sales is the proxy. Aggregator sites quote different day counts because they use closing balances and sales for inventory.
+36
+
+Efficiency Ratio: Example
+Ratio
+Formula
+Working (₹ cr)
+Result
+Payables turnover
+Cost of sales ÷ average creditors
+17,340.54 ÷ 3,387.19
+5.12×
+Payable days
+365 ÷ turnover
+365 ÷ 5.12
+71 days
+Operating cycle
+Inventory days + receivable days − payable days
+116 + 43 − 71
+87 days
+Reading it: the business waits about 87 days between paying suppliers and collecting from customers, funded by working capital. Longer supplier credit or faster stock turns shorten the cycle; a shorter cycle means less cash tied up.
+37
+If credit purchases are unavailable, cost of sales can be used, as the Session 3 slides note. Sundry creditors for FY2025 and FY2024 are taken from the aggregator balance sheet.
+37
+
+Solvency Ratios: Example
+Ratio
+Formula
+Working (₹ cr)
+Result
+Debt-to-equity
+Interest-bearing debt ÷ equity
+1,198.82 ÷ 18,987.75
+0.06×
+Interest coverage
+EBIT ÷ interest expense
+5,045.37 ÷ 143.77
+35.1×
+Reading it: debt is about 6 paise per ₹1 of equity (it was 0.07× a year earlier), and operating profit covers interest about 35 times. This is a lightly geared balance sheet, so financial risk is low. Contrast a company with D/E above 2 and coverage under 2.
+38
+Equity here is share capital plus reserves. If EBIT excluded other income (₹770 cr), coverage would be about 29.7 times, still very comfortable.
+38
+
+Profitability Ratio: Example
+Ratio
+Formula
+Working (₹ cr)
+FY2025
+Gross profit margin
+(Sales − cost of sales) ÷ sales
+(29,552.65 − 17,340.54) ÷ 29,552.65
+41.3%
+Operating profit margin
+EBIT ÷ sales
+5,045.37 ÷ 29,552.65
+17.1%
+Net profit margin
+Net profit ÷ sales
+3,588.07 ÷ 29,552.65
+12.1%
+Reading it: of every ₹100 of sales, about ₹41 remains after direct costs and ₹12 reaches shareholders. Compare FY2024: gross margin 42.4% and net margin 17.0%. Margins fell because costs rose while sales slipped. Operating margin is 17.1% including other income; excluding it, about 14.5%.
+39
+Always compare margins over time and with peers. A margin fall with falling sales signals pricing or cost pressure.
+39
+
+Return Ratios: Example
+Ratio
+Formula
+Working (₹ cr)
+Result
+ROCE
+EBIT ÷ (equity + debt)
+5,045.37 ÷ 20,186.57
+25.0%
+ROA
+Net profit ÷ total assets
+3,588.07 ÷ 20,464.73
+17.5%
+ROE
+Net profit ÷ shareholders' equity
+3,588.07 ÷ 18,987.75
+18.9%
+Reading it: each ₹100 of long-term capital earns about ₹25 before interest and tax, and each ₹100 of shareholders' money earns about ₹19. ROE is close to ROA because there is little debt, so leverage is not inflating returns. ROI is a broader idea: gain ÷ cost, for example ₹1,00,000 growing to ₹1,25,000 is 25%.
+40
+Capital employed is equity plus debt (₹20,186.57 cr) using closing balances; averages would change results slightly. ROE uses closing equity.
+40
+
+Market Ratios: Example
+Ratio
+Formula
+Working
+Result
+EPS
+Net profit ÷ shares
+₹3,588.07 cr ÷ 95.92 cr shares
+₹37.41
+P/E
+Price ÷ EPS
+₹2,400 ÷ ₹37.41
+64.2×
+Dividend per share
+Dividend ÷ shares
+as declared
+₹24.80
+Payout ratio
+DPS ÷ EPS
+24.80 ÷ 37.41
+66%
+Dividend yield
+DPS ÷ price
+24.80 ÷ 2,400
+1.03%
+Reading it: at an assumed price of ₹2,400, investors pay about ₹64 for each ₹1 of earnings, a high multiple that prices in growth. Two-thirds of earnings is paid out, giving a cash yield near 1%.
+41
+The ₹2,400 price is illustrative, not a quote. Dividend per share ₹24.80 is as reported for FY2025.
+41
+
+Market Value: Capitalisation & Enterprise Value
+Measure
+Formula
+Working
+Result
+Market capitalisation
+Price × shares
+₹2,400 × 95.92 cr
+₹230,208 cr
+Enterprise value
+Market cap + debt − cash
+230,208 + 1,198.82 − 204.50
+₹231,202 cr
+Price-to-book
+Price ÷ book value per share
+2,400 ÷ 197.95
+12.1×
+Reading it: the market values the whole business near ₹2.3 lakh crore; EV is only slightly above market cap because debt and cash are small. A price-to-book of 12× shows investors value brand and earning power far above accounting book value.
+42
+EV is used in valuation and M&A because it ignores how the business is financed. Cash here is cash and bank balance only; investments are excluded for simplicity.
+42
+
+Summary: Financial Ratios
+Family
+Key ratio
+Asian Paints FY2025
+Message
+Liquidity
+Current ratio
+1.87×
+Comfortable cover
+Efficiency
+Operating cycle
+87 days
+Stock-heavy, suppliers fund part
+Solvency
+D/E; interest cover
+0.06×; 35×
+Very low financial risk
+Profitability
+Gross; net margin
+41%; 12%
+Strong, but slipped from FY2024
+Returns
+ROCE; ROE
+25%; 19%
+High returns without debt
+Market
+P/E; yield
+64×; 1.0%
+Premium valuation
+Best practice: compare over time, with peers and with budget, and never judge a company on one ratio.
+43
+Close the ratio block with this table. Ask which ratio the class would examine first for a lender and which for an equity investor.
+43
+
+Management Accounting: From Information to Decisions
+Basis
+Financial accounting
+Management accounting
+Users
+Investors, lenders, regulators
+Managers inside the firm
+Rules
+GAAP and accounting standards
+No fixed rules; built for the decision
+Time view
+Past results
+Future-oriented plans and options
+Detail
+Whole company
+Products, departments, projects, customers
+Planning
+Estimate costs, revenues, profit and resources: budgets.
+Control
+Compare actual with budget and study variances. Budget ₹50L, actual ₹54L → ₹4L adverse variance.
+Decisions
+Make or buy, outsource or produce, product choice, and pricing (cost-plus, penetration, skimming, marginal-cost).
+44
+Management accounting is defined as identifying, measuring, analysing and communicating financial and non-financial information to managers. Cost accounting is its key component. The variance example is an added illustration.
+44
+
+Cost Concepts
+Term
+Meaning
+Example
+Cost
+Sacrifice of resources to achieve an objective
+₹10L paid for a machine
+Expense
+Cost charged against revenue in a period
+₹1.8L yearly depreciation
+Actual vs budgeted
+Incurred cost vs estimated cost
+Actual ₹54L vs budget ₹50L
+Cost object
+Anything we measure cost for
+Product, project, customer, department
+Cost unit
+Unit in which cost is expressed
+Per car; per room-night; per kWh; per patient-day
+Unit cost: total production cost ₹50L ÷ 10,000 units = ₹500 a unit. Airlines use cost per passenger-kilometre; transport firms use cost per tonne-kilometre.
+45
+Costing is the process of measuring the cost of cost objects. A single cost can be classified in several ways depending on the purpose, which the next slides show.
+45
+
+Management Accounting: Costs Classification
+Financial accounting reports to outsiders under GAAP. Management accounting serves managers: plan, control, decide (make or buy, pricing, product mix).
+Classify by
+Categories
+Car factory example
+Nature
+Material, labour, other
+Steel, assembly wages, rent
+Behaviour
+Fixed, variable, semi-variable
+Rent vs steel vs electricity bill
+Traceability
+Direct, indirect
+Steel body vs factory lubricant
+Function
+Production, selling, admin
+Plant cost vs showroom cost
+Unit cost: total production cost ₹50L ÷ 10,000 units = ₹500 per unit.
+46
+One cost can sit in several classes: steel is material, production, variable and direct at once. Fixed cost per unit falls as volume rises; total variable cost rises with volume.
+46
+
+Classifying Costs By Nature & Traceability
+Basis
+Category
+Real-life example (car factory)
+Nature
+Direct material
+Steel body of one car
+Nature
+Indirect material
+Lubricants used in the factory
+Nature
+Direct labour
+Assembly-line worker
+Nature
+Indirect labour
+Factory security guard, supervisor
+Traceability
+Direct cost
+Steel or wages traced to a specific car
+Traceability
+Indirect cost (overhead)
+Factory rent, electricity, insurance
+47
+Other expenses are costs other than material or labour. Indirect costs are commonly called overheads and must be shared across products, which leads to overhead absorption.
+47
+
+Classifying Costs: By Function
+Function
+What it covers
+Examples
+Production
+Making the product
+Raw materials, factory wages, factory rent, electricity, depreciation
+Administration
+Running the organisation
+Senior management salary, audit fees, legal fees, head-office rent
+Selling
+Winning sales
+Sales commission, advertising, promotion
+Distribution
+Getting goods to customers
+Warehousing, transport, delivery charges
+Only production costs go into product (inventory) cost under absorption costing; administration, selling and distribution are period costs.
+48
+This is the layout of a functional income statement: production cost gives cost of goods sold; other functions are charged in the period.
+48
+
+Cost Classification: By Behaviour
+Type
+Example
+What happens as volume rises
+Fixed
+Factory rent ₹10L a month
+Total flat; per car ₹1,000 at 1,000 cars, ₹100 at 10,000
+Variable
+Raw material ₹20 per bottle
+Total ₹20,000 at 1,000 bottles, ₹2,00,000 at 10,000; per unit stays ₹20
+Semi-variable
+Power: ₹50,000 fixed + ₹8 per machine-hour
+₹58 per hour at 1,000 hours, ₹13 at 10,000
+Relevance: only future costs that differ between options matter. A ₹2 crore software build already spent is a sunk cost: ignore it, and compare only the cost and revenue of launching versus abandoning.
+49
+Remind students that fixed means fixed only within a relevant range. Direct vs indirect: steel for one car is direct; factory rent and supervisor salary are overheads.
+49
+
+Classifying Costs By Relevance: Only What matters to a decision
+Relevant cost
+Future cost that differs between options.
+Irrelevant cost
+Cost that is the same whichever option is chosen.
+Sunk cost
+Already spent and unrecoverable. ₹2 crore spent building software is ignored when choosing to launch or abandon it.
+Opportunity cost
+Benefit of the best alternative forgone. Choosing an MBA over a ₹16 lakh job costs ₹16 lakh of salary.
+50
+For the software: compare only future launch costs and revenues against abandoning. The student example works the other way too: choosing the job forgoes the MBA's better managerial jobs later.
+50
+
+Absorbing Overheads into Product Cost
+Total production cost = Direct material + Direct labour + Production overheads. Unit cost is needed to value stock, set prices, measure profit, compare products and decide to make or outsource.
+The question
+A motor uses ₹4,000 direct material and ₹2,000 direct labour (₹6,000 direct). Factory rent, power, depreciation, supervisor pay, maintenance and security also exist. How much belongs to each motor?
+Absorption
+Spread overheads over units using an absorption rate: OAR = Total overhead ÷ activity base (units, labour hours or machine hours).
+Source example: overhead ₹1,00,000 ÷ 20,000 units = ₹5 absorbed into every unit.
+51
+The deck's example used dollars; rupees are used here. A base should reflect what drives the overhead: labour hours for labour-intensive work, machine hours for automated plants.
+51
+
+Overhead Absorption: Example
+Step
+Working
+Result
+Overhead absorption rate
+₹10,00,000 overhead ÷ 10,000 motors
+₹100 a motor
+Full product cost
+₹4,000 + ₹2,000 + ₹100
+₹6,100
+Profit at ₹7,500 price
+₹7,500 − ₹6,100
+₹1,400 a motor
+If actual overhead is ₹10,50,000
+₹10,50,000 − ₹10,00,000 absorbed
+₹50,000 under-absorbed
+Under-absorbed overhead (actual above absorbed) reduces profit; over-absorbed overhead increases it. It is adjusted in the income statement.
+52
+This worked example is an added illustration built on the Session 5 motor data. Absorption costing statements show over or under absorbed overhead as a separate line, as in Session 6.
+52
+
+Marginal Cost & Marginal Costing
+Marginal cost is the extra cost of producing one more unit; in practice, the variable cost per unit while fixed costs stay unchanged.
+Illustration
+Working
+Result
+Output rises 10,000 → 10,100
++100 units
++100 units
+Total cost rises ₹50,00,000 → ₹50,60,000
++₹60,000
++₹60,000
+Marginal cost per component
+₹60,000 ÷ 100
+₹600
+Marginal costing charges only variable costs to products; fixed costs are period costs. Its central measure is contribution = Selling price − marginal cost. A ₹900 component earns ₹300 contribution (added illustration).
+53
+Contribution first covers fixed costs; after that it becomes profit. That is why it is the key idea behind break-even analysis.
+53
+
+Absorption vs Marginal Costing:
+Production 10,000, sales 8,000 at ₹500
+Absorption
+Marginal
+Sales
+₹40,00,000
+₹40,00,000
+Cost of goods sold / variable cost (₹300 + ₹100 fixed vs ₹300)
+(₹32,00,000)
+(₹24,00,000)
+Gross profit / contribution
+₹8,00,000
+₹16,00,000
+Fixed production overhead charged in full
+–
+(₹10,00,000)
+Selling and admin overhead
+(₹2,00,000)
+(₹2,00,000)
+Profit
+₹6,00,000
+₹4,00,000
+The ₹2,00,000 gap is ₹100 of fixed overhead on each of the 2,000 unsold units, carried in closing stock under absorption costing.
+54
+Added illustration with ₹10L fixed production overhead and ₹2L fixed selling and admin. When stock is built up, absorption costing shows higher profit; when stock falls, lower.
+54
+
+Contribution: 
+An empty seat normally sells at ₹8,000. Aircraft lease, crew and airport charges are already committed.
+Extra cost of carrying one passenger
+₹
+Meal
+500
+Passenger service
+200
+Processing
+100
+Other variable cost
+200
+Marginal cost
+1,000
+A last-minute buyer pays ₹3,000: contribution = ₹3,000 − ₹1,000 = ₹2,000. With no capacity constraint, sell the seat.
+55
+Any price above marginal cost adds to profit when the seat would otherwise fly empty, provided it does not displace higher-paying customers or hurt regular fares.
+55
+
+Contribution with a capacity constraint
+Flight of 180 seats, 175 sold at ₹8,000, so 5 seats remain. A travel firm wants 10 seats at ₹3,000; individuals would pay ₹7,000.
+Question
+Working
+Answer
+Contribution, travel firm
+₹3,000 − ₹1,000
+₹2,000 a seat; ₹10,000 for 5
+Contribution, individual
+₹7,000 − ₹1,000
+₹6,000 a seat; ₹30,000 for 5
+Opportunity cost of a seat
+Contribution forgone
+₹6,000
+Minimum acceptable price
+₹1,000 + ₹6,000
+₹7,000
+Decision: reject ₹3,000. Accepting loses ₹20,000 of contribution: 5 × (₹6,000 − ₹2,000).
+56
+The Session 5 slide shows the individual contribution as ₹7,000 in one line; it should be ₹7,000 − ₹1,000 = ₹6,000, which is what the ₹20,000 conclusion uses.
+56
+
+Cost Volume Profit (CVP) Analysis
+Questions
+How many units to break even? To earn a target profit? What if volume, price, variable cost or fixed cost changes? How far can sales fall before a loss?
+Key terms
+Selling price (SP), variable cost (VC), contribution = SP − VC, fixed cost (FC), break-even point (BEP).
+At break-even, total revenue = total cost, so profit is zero. Contribution covers fixed costs first, then adds to profit. Assumes costs split cleanly into fixed and variable, and constant price and unit variable cost within the relevant range.
+57
+Break-even can be stated in units or in sales value. The next slides use two businesses: a shoe manufacturer and a cloud kitchen.
+57
+
+CVP Analysis	
+Contribution
+Price − variable cost per unit: ₹500 − ₹300 = ₹200
+P/V ratio
+Contribution ÷ Sales: 200 ÷ 500 = 40%
+Break-even
+Fixed ₹10L ÷ ₹200 = 5,000 units
+Target profit units
+(₹10L + ₹4L target) ÷ ₹200 = 7,000 units
+Margin of safety
+8,000 − 5,000 = 3,000 units, 37.5% of sales
+Marginal costing: Sales − variable cost = contribution; contribution − fixed cost = profit.
+58
+Absorption costing spreads fixed production overhead into unit cost; marginal costing charges it in full to the period. That is why profits differ when stock levels change.
+58
+
+CVP Formula
+Question
+Working
+Answer
+Contribution
+₹500 − ₹300 per unit × 10,000 units
+₹20L
+Break-even in sales value
+Fixed ₹2L ÷ P/V 40%
+₹5L
+Margin of safety (units)
+10,000 − 6,000
+4,000 units
+Margin of safety (value)
+₹10L − ₹6L actual vs break-even
+₹4L, 40% of sales
+Units for ₹8L profit
+(₹12L + ₹8L) ÷ ₹200
+10,000 units
+Chart check: price $50, variable cost $30, fixed $40,000 → break-even 2,000 units ($100,000). At 3,000 units profit is $20,000 and margin of safety 1,000 units.
+59
+Sales revenue = price × units (₹2,000 × 5,000 = ₹1 crore). Variable cost per unit adds material, labour and overhead (₹1,200 + 500 + 300 = ₹2,000).
+59
+
+Margin of Safety: How Far Can Sales Fall
+Measure
+Formula
+Source example
+MoS in units
+Actual units − break-even units
+10,000 − 6,000 = 4,000 units
+MoS in value
+Actual sales − break-even sales
+₹10,00,000 − ₹6,00,000 = ₹4,00,000
+MoS %
+MoS ÷ actual sales
+₹4,00,000 ÷ ₹10,00,000 = 40%
+Shortcut
+Profit ÷ P/V ratio
+Gives MoS in value
+A higher margin of safety means lower risk of falling below break-even. Here sales can fall 40% before the business starts losing money.
+60
+Session 6 defines MoS in units and value, and as a percentage of sales. Target-profit volume: (₹12L + ₹8L) ÷ ₹200 = 10,000 units.
+60
+
+Example: ClassicShoes Pvt Ltd
+Price ₹2,000, variable cost ₹1,200 (material 700, labour 300, overhead 200), fixed cost ₹24,00,000 a year.
+Measure
+Working
+Result
+Contribution per pair
+₹2,000 − ₹1,200
+₹800
+P/V ratio
+₹800 ÷ ₹2,000
+40%
+Break-even (units)
+₹24,00,000 ÷ ₹800
+3,000 pairs
+Break-even (value)
+₹24,00,000 ÷ 40%
+₹60,00,000
+Profit at 4,500 pairs
+4,500 × ₹800 − ₹24,00,000
+₹12,00,000
+Margin of safety
+1,500 pairs; ₹30,00,000
+33.3% of sales
+61
+MoS value = ₹90,00,000 − ₹60,00,000 = ₹30,00,000, also equal to profit ÷ P/V = ₹12,00,000 ÷ 40%. Target profit ₹20,00,000 needs (₹24L + ₹20L) ÷ ₹800 = 5,500 pairs. Figures are an added illustration.
+61
+
+Break-even chart for ClassicShoes
+₹12L
+Profit at 4,500 pairs
+1,500 pairs
+Margin of safety (33%)
+Loss
+below 3,000 pairs
+62
+Revenue rises by ₹2,000 a pair; total cost starts at the ₹24 lakh fixed cost and rises ₹1,200 a pair. The gap widens ₹800 per pair above break-even. At 4,500 pairs revenue ₹90L, total cost ₹78L.
+62
+
+ClassicShoes: What If?
+Scenario
+New contribution
+Break-even pairs
+Base case
+₹800
+3,000
+Price cut to ₹1,800
+₹600
+4,000
+Variable cost up 10% (₹1,320)
+₹680
+3,529
+Fixed cost up ₹3,00,000
+₹800
+3,375
+Sales fall 20% to 3,600 pairs
+₹800
+profit drops to ₹4,80,000
+A price cut hurts most: break-even rises by a third. Ask whether volume gains would offset it.
+63
+Break-even = fixed cost ÷ contribution. Profit at 3,600 pairs = 3,600 × ₹800 − ₹24,00,000 = ₹4,80,000, far below ₹12,00,000: operating leverage.
+63
+
+Example: A cloud kitchen
+Price ₹250 a meal, variable cost ₹160 (ingredients, packaging, delivery commission), fixed cost ₹6,00,000 a month.
+Measure
+Working
+Result
+Contribution
+₹250 − ₹160
+₹90 a meal
+P/V ratio
+₹90 ÷ ₹250
+36%
+Break-even (meals)
+₹6,00,000 ÷ ₹90
+6,667 meals
+Break-even (value)
+₹6,00,000 ÷ 36%
+₹16.67 lakh
+Profit at 9,000 meals
+9,000 × ₹90 − ₹6,00,000
+₹2,10,000
+Margin of safety
+2,333 meals; ₹5.83 lakh
+25.9%
+Meals for ₹4,50,000 profit
+(₹6,00,000 + ₹4,50,000) ÷ ₹90
+11,667 meals
+64
+Actual sales 9,000 × ₹250 = ₹22,50,000. MoS value = ₹22,50,000 − ₹16,66,667 = ₹5,83,333. A thin 36% P/V ratio means a high break-even and a smaller cushion, which is why volume matters in food delivery. Figures are an added illustration.
+64
+
+Finance: Why Money has Time Value
+₹10,000 today or ₹11,000 in a year? At 10% interest, ₹10,000 grows to ₹11,000: indifferent. If the phone you want rises 20% to ₹12,000, taking ₹10,000 today and investing still leaves you short, so inflation matters.
+Year
+Simple interest value
+Compound value
+1
+₹110.00
+₹110.00
+2
+₹120.00
+₹121.00
+3
+₹130.00
+₹133.10
+5
+₹150.00
+₹161.05
+₹100 at 10% earns ₹50 simple but ₹61.05 compound in 5 years. Four drivers: preference for present consumption, investing, inflation, opportunity cost.
+65
+Power of compounding: ₹10 invested 120 years ago at 10% would be about ₹9.3 lakh today (₹10 × 1.1^120 ≈ 92,709 multiple per the deck).
+65
+
+Time Value of Money (TVM)
+Symbol
+Meaning
+PV / FV
+Value today / value at a future date
+CF
+Cash flow at a point in time
+r
+Interest, discount or required rate per period
+n
+Number of periods
+A
+Equal periodic payment (annuity)
+g
+Constant growth rate of cash flows
+Compounding
+PV → FV: FV = PV × (1 + r)ⁿ. Factor (1 + r)ⁿ.
+Discounting
+FV → PV: PV = FV ÷ (1 + r)ⁿ. Factor 1 ÷ (1 + r)ⁿ.
+66
+Why it matters: money received sooner can be invested, so a rupee today is worth more than a rupee later. Project decisions compare cash flows only after moving them to one date.
+66
+
+Compounding & Discounting
+Compounding: PV to FV (forward)
+Discounting: FV to PV (backward)
+Year 0
+₹10,000
+Year 1
+₹11,000
+Year 2
+₹12,100
+Year 3
+₹13,310
+× 1.10
+÷ 1.10
+× 1.10
+÷ 1.10
+× 1.10
+÷ 1.10
+₹10,000 at 10% grows by ₹1,000, ₹1,100 and ₹1,210 in successive years: interest earns interest. Reading right to left, ₹13,310 in year 3 is worth ₹10,000 today.
+67
+₹10,000 at 10% a year grows ₹1,000, ₹1,100 and ₹1,210 in successive years: interest earns interest. Reading right to left, ₹13,310 received in year 3 is worth ₹10,000 today at 10%.
+67
+
+Time Value of Money: A Rupee today is more Valuable than A Rupee Later
+Idea
+Formula
+Use
+Future value
+FV = PV × (1 + r)ⁿ
+Compounding forward
+Present value
+PV = FV ÷ (1 + r)ⁿ
+Discounting back
+Annuity PV
+PMT × [1 − (1 + r)⁻ⁿ] ÷ r
+Loans, EMIs, leases
+Annuity FV
+PMT × [(1 + r)ⁿ − 1] ÷ r
+SIPs, savings
+Perpetuity
+PMT ÷ r
+Preference shares, endowments
+Rule of 72: years to double ≈ 72 ÷ interest rate %. At 8% money doubles in about 9 years.
+68
+Three reasons for TVM: opportunity cost, inflation, risk. Compounding and discounting are the same maths in opposite directions.
+68
+
+Example : Patel Industries’ Replacement Fund
+Patel Industries will need ₹50,00,000 in 5 years to replace a plant. It can earn 8% a year.
+Question
+Working
+Answer
+Compounding: ₹10,00,000 invested today grows to
+₹10,00,000 × 1.08⁵
+₹14,69,328
+Discounting: lump sum needed today for ₹50L
+₹50,00,000 ÷ 1.08⁵
+₹34,02,916
+Or equal yearly deposits (annuity)
+₹50,00,000 × 0.08 ÷ (1.08⁵ − 1)
+₹8,52,282 a year
+Interpretation: the firm can fund the plant with ₹34,02,916 now or about ₹8,52,282 at each year-end. Compounding and discounting are the same relationship read in opposite directions.
+69
+Factors: 1.08^5 = 1.4693; FVIFA(8%, 5) = 5.8666. This is an added illustration.
+69
+
+Example: GreenCart's investor offer
+An investor offers GreenCart ₹8,00,000 today, or ₹10,50,000 in 3 years. GreenCart can earn 12% a year.
+Method
+Working
+Result
+Discount the future offer
+₹10,50,000 ÷ 1.12³
+₹7,47,369 today
+Or compound today's offer
+₹8,00,000 × 1.12³
+₹11,23,942 in 3 years
+Decision: ₹8,00,000 today beats ₹10,50,000 in 3 years, because the later sum is worth only ₹7,47,369 now. Both methods agree. A higher required return would make waiting even less attractive.
+70
+Always compare cash flows at the same point in time, either both today or both in year 3. Added illustration.
+70
+
+Single Cash Flow: Present Value
+Example
+Working
+Present value
+1. ₹50,000 due in 5 years at 8%
+₹50,000 ÷ 1.08⁵
+₹34,029
+2. ₹9,000 due in 5 years at 16.5%
+₹9,000 ÷ 1.165⁵
+₹4,193.85
+Interpretation: ₹34,029 today is equivalent to ₹50,000 in 5 years. The higher the rate, the lower the present value: at 16.5% the ₹9,000 is worth less than half its face value.
+Forward view: ₹10,000 at 10% for 3 years grows to ₹13,310. A credit card at 2% a month turns ₹100 into ₹126.82, an APR of 26.82%.
+71
+Both examples come from the Session 7 deck. The card example shows why the effective annual rate is above 12 × 2% = 24%.
+71
+
+Uneven Cash Flows
+Discount each cash flow by its own year, then add: PV = Σ CFₜ ÷ (1 + r)ᵗ.
+Example 1: machine at 10%
+Cash flow
+PV
+Year 1
+₹5,000
+₹4,545
+Year 2
+₹6,000
+₹4,959
+Year 3
+₹7,000
+₹5,260
+Year 4
+₹8,000
+₹5,464
+Total
+₹20,228
+Example 2: a new cafe outlet at 12% returns ₹3,00,000, ₹4,00,000 and ₹5,00,000 in years 1 to 3: ₹2,67,857 + ₹3,18,878 + ₹3,55,890 = ₹9,42,625. Pay less than that and the outlet adds value.
+72
+Example 1 is from the Session 7 deck; example 2 is an added illustration. Uneven schedules are common in project appraisal and irregular loan repayments.
+72
+
+Annuity: Equal Cash Flows for a Fixed Period
+Example
+Working
+Result
+1. ₹10,000 a year for 5 years at 10% (ordinary): PV
+10,000 × 3.7908
+₹37,908
+1. Same deposits: future value
+10,000 × 6.1051
+₹61,051
+2. Lease ₹2,00,000 a year for 4 years at 9%, paid at year-end: PV
+₹2,00,000 × 3.2397
+₹6,47,944
+2. Same lease paid at the start (annuity due)
+₹6,47,944 × 1.09
+₹7,06,259
+Ordinary annuity: payments at period end (EMIs, bond coupons). Annuity due: at period start (rent, insurance), worth (1 + r) times more. PV = A × [1 − (1 + r)⁻ⁿ] ÷ r; FV = A × [(1 + r)ⁿ − 1] ÷ r.
+73
+Example 1 from the Session 7 deck. In example 2, paying in advance costs about ₹58,000 more in present-value terms. Added illustration.
+73
+
+Perpetuity: Cash flows Forever
+Type
+Example
+Working
+PV
+Level, PV = CF ÷ r
+1. Preference share pays ₹500 a year, r = 10%
+500 ÷ 0.10
+₹5,000
+Level
+2. Endowment pays ₹6,00,000 a year, r = 8%
+6,00,000 ÷ 0.08
+₹75,00,000
+Growing, PV = CF₁ ÷ (r − g)
+1. First payment ₹500, g = 4%, r = 10%
+500 ÷ 0.06
+₹8,333
+Growing
+2. First payment ₹6,00,000, g = 5%, r = 10%
+6,00,000 ÷ 0.05
+₹1,20,00,000
+Growing perpetuity needs r > g. Growth adds a lot of value: the same ₹6,00,000 is worth ₹75 lakh level but ₹1.2 crore growing at 5%.
+74
+Examples 1 are from the Session 7 deck (Gordon model); examples 2 are added illustrations. Used for endowment funds, perpetual maintenance and stock valuation.
+74
+
+Terminal Value (TV): Value beyond the forecast period
+TVₙ = CFₙ × (1 + g) ÷ (r − g), valued at year n. Then discount it: PV = TVₙ ÷ (1 + r)ⁿ.
+Example
+Step 1: terminal value
+Step 2: present value
+1. Year-5 cash flow ₹2,00,000, g = 3%, r = 12%
+2,06,000 ÷ 0.09 = ₹22,88,889
+22,88,889 ÷ 1.12⁵ = ₹12,98,590
+2. Year-5 cash flow ₹50,00,000, g = 4%, r = 11%
+52,00,000 ÷ 0.07 = ₹7,42,85,714
+÷ 1.11⁵ = ₹4,40,84,956
+Interpretation: terminal value is a large share of a project's total value, so small changes in g or r move the answer a lot. Always discount it back from year n.
+75
+Example 1 from the Session 7 deck; example 2 is an added illustration. Terminal value assumes a stable long-term growth rate below the discount rate.
+75
+
+Worked example: four questions at 8%
+₹1,46,933
+₹1L invested for 5 years (FV)
+₹68,058
+Value today of ₹1L due in 5 years (PV)
+₹39,927
+PV of ₹10,000 a year for 5 years
+₹58,666
+FV of a ₹10,000 yearly SIP after 5 years
+Perpetuity: ₹10,000 forever at 8% is worth ₹1,25,000 today. Which would you rather have: ₹1L now or ₹1.2L in 3 years? PV of ₹1.2L is ₹95,260, so take the ₹1L.
+76
+Factors: 1.08^5 = 1.4693; 1.08^-5 = 0.6806; annuity PV factor 3.9927; annuity FV factor 5.8666. Let students try the final question first.
+76
+
+Capital Budgeting: Techniques
+NPV
+Σ CFₜ ÷ (1 + r)ᵗ − investment. Accept if above zero. Bharat: +₹10.1L.
+IRR
+Rate that makes NPV zero. Accept if above cost of capital. Bharat: 17% vs 12%.
+Payback
+Years to recover investment. Bharat: 3.2 years. Ignores time value and later cash flows.
+Profitability index
+PV of inflows ÷ investment: 90.1 ÷ 80 = 1.13. Use under capital rationing.
+Process: identify opportunity → estimate cash flows → appraise → accept or reject → monitor.
+77
+Capital decisions are large, long-term and mostly irreversible, so they shape the firm for years. Examples: Tata Motors EV plant (expansion), Reliance entering retail (diversification).
+77
+
+Net Present Value (NPV): Example
+NPV = Σ CFₜ ÷ (1 + r)ᵗ − initial investment. Positive: accept. Zero: indifferent. Negative: reject. NPVs of independent projects add up.
+Bharat AutoParts robotic line
+Working
+Result
+Annuity factor (12%, 5 years)
+[1 − 1.12⁻⁵] ÷ 0.12
+3.6048
+PV of inflows
+₹25,00,000 × 3.6048
+₹90,11,938
+NPV
+₹90,11,938 − ₹80,00,000
++₹10,11,938
+Interpretation: the ₹80 lakh investment is expected to create about ₹10.12 lakh of extra value beyond the 12% required return: accept.
+78
+NPV measures rupees of value created, the figure shareholders care about, and is the most reliable criterion for ranking mutually exclusive projects.
+78
+
+Internal Rate of Return (IRR)
+IRR is the discount rate at which NPV is zero. Accept if IRR > cost of capital. Found by trial and error, interpolation or the spreadsheet IRR() function.
+Bharat AutoParts: rate
+PV of inflows
+NPV
+12%
+₹90,11,938
++₹10,11,938
+17%
+₹80,02,000
+≈ +₹2,000
+18%
+₹78,17,930
+−₹1,82,070
+Interpolation: 17% + 2,000 ÷ (2,000 + 1,82,070) ≈ 17.01%. IRR of 17% beats the 12% cost of capital: accept, consistent with NPV.
+79
+IRR assumes cash flows are reinvested at the IRR itself, while NPV assumes reinvestment at the cost of capital.
+79
+
+Example 2: When NPV & IRR Disagree
+Mutually exclusive, 10% cost of capital
+Solar plant
+LED retrofit
+Investment
+₹1,00,00,000
+₹10,00,000
+Cash flow
+₹28,00,000 for 6 years
+₹4,50,000 for 4 years
+PV of inflows
+₹28L × 4.3553 = ₹1,21,94,730
+₹4.5L × 3.1699 = ₹14,26,439
+NPV
+₹21,94,730
+₹4,26,439
+IRR
+17.2%
+28.5%
+Decision: choose solar. LED has the higher IRR but a small scale; solar adds about five times more rupee value. For mutually exclusive projects let NPV decide. Causes of conflict: scale, reinvestment assumption, multiple IRRs.
+80
+Both IRRs are above 10%, so each project is acceptable alone; the budget lets the chain fund only one. Unconventional cash flows (end-of-life decommissioning) can create more than one IRR.
+80
+
+Payback & Discounted Payback Period
+Year
+Cash flow
+Cumulative
+Discounted at 12%
+Cumulative discounted
+1
+₹25L
+₹25L
+₹22.32L
+₹22.32L
+3
+₹25L
+₹75L
+₹17.79L
+₹60.05L
+4
+₹25L
+₹100L
+₹15.89L
+₹75.93L
+5
+₹25L
+–
+₹14.19L
+₹90.12L
+3.2 yrs
+Payback: 3 + 5L ÷ 25L
+4.29 yrs
+Discounted: 4 + 4.07L ÷ 14.19L
+Payback is easy to explain but ignores time value and cash flows after recovery.
+81
+Simple payback understates true recovery time. Use payback as a liquidity and risk screen, NPV as the decision rule.
+81
+
+Example: Bharat AutoParts robotic line
+Investment ₹80L. Cash flow ₹25L a year for 5 years. Cost of capital 12%.
+₹90.1L
+PV of inflows: 25 × 3.6048
++₹10.1L
+NPV: accept
+≈17%
+IRR beats 12%
+3.2 yrs
+Payback: 80 ÷ 25
+1.13
+Profitability index: 90.1 ÷ 80
+Accept
+All four tools agree
+Stress test: at a 18% cost of capital, NPV turns negative (PV ≈ ₹78.18L). Ask how sure we are of ₹25L a year.
+82
+IRR solves 25 × annuity factor = 80, so factor 3.2, between 16% (3.274) and 17% (3.199). The 12% cost of capital is from Session 8; PVIFA(12%, 5) = 3.6048.
+82
+
+Summary
+Accounting
+Assets = Liabilities + Equity. Profit is not cash.
+Ratios
+Liquidity, leverage, margins, returns. Compare, never read alone.
+Costs and CVP
+Contribution ÷ fixed cost gives break-even.
+TVM
+Discount future cash. Rule of 72.
+Capital budgeting
+NPV first, IRR and PI to support, payback for speed.
+Capstone discussion (15 min): a company shows rising profit, falling cash and a current ratio sliding from 1.8 to 1.1. Which statements and ratios would you check, and what would you ask management?
+83
+Close with the capstone as a group exercise. Expected answers: receivables and inventory build-up, cash flow from operations, working capital days, debt funding, then an NPV view on any expansion.
+83
+
+Appendix A: DuPont analysis, ROE in three parts
+ROE = Net margin × Asset turnover × Equity multiplier
+Asian Paints FY2025
+Net margin
+Asset turnover
+Equity multiplier
+ROE
+Working
+3,588 ÷ 29,553
+29,553 ÷ 20,465
+20,465 ÷ 18,988
+product
+Result
+12.1%
+1.44×
+1.08×
+18.9%
+Two businesses, same ROE
+Net margin
+Asset turnover
+Equity multiplier
+ROE
+Jewellery retailer (illustration)
+20%
+0.5×
+1.5×
+15%
+Grocery chain (illustration)
+3%
+4.0×
+1.25×
+15%
+Interpretation: Asian Paints earns its ROE from margin and turnover, not leverage (multiplier near 1). The illustrations reach the same ROE by margin or by volume. Check which lever drives returns before comparing firms.
+84
+Net margin = PAT ÷ sales; asset turnover = sales ÷ total assets; equity multiplier = total assets ÷ equity. Multiplying them gives PAT ÷ equity. A high ROE from a high multiplier signals financial risk.
+84
+
+Appendix B: profitability index and capital rationing
+PI = PV of inflows ÷ investment. When the budget is limited, rank projects by PI and fund down the list. Budget ₹1 crore (figures in ₹ lakh):
+Project
+Investment
+PV of inflows
+NPV
+PI
+Rank
+A
+40
+52
+12
+1.30
+1
+B
+50
+60
+10
+1.20
+2
+D
+60
+69
+9
+1.15
+3
+C
+30
+33
+3
+1.10
+4
+Fund A + B: investment ₹90L, NPV ₹22L. A + D would use ₹100L for NPV ₹21L. Bharat AutoParts alone: PI = 90.1 ÷ 80 = 1.13 (above 1 means NPV is positive).
+85
+Added illustration. PI above 1 means positive NPV. Rank by PI when funds are limited, then confirm the chosen set maximises total NPV, since projects cannot be split.
+85

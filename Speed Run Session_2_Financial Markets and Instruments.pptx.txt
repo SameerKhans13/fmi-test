@@ -1,0 +1,1795 @@
+SPEED RUN SESSION 2
+Corporate Finance & Derivatives: Sessions 8 to 16
+Capital budgeting, cost of capital, bond and stock valuation, DCF, derivatives and structured products, in one afternoon.
+All figures illustrative, in ₹ unless stated. Educational, not investment advice.
+Welcome. Frame the arc: invest (NPV) → price the money (cost of capital) → value assets (bonds, stocks, DCF) → manage risk (derivatives) → structured risk (securitisation, CDS).
+1
+
+SPEED RUN SESSION 2
+AGENDA
+Block
+Slides
+What we cover
+Session 8: Capital budgeting
+3–15
+NPV, IRR, conflicts, payback, rationing
+Session 9: CAPM, beta and alpha
+16–22
+SML chart, cost of equity, alpha
+Session 10: Bonds, stock valuation, WACC
+23–36
+Coupon, YTM, DDM, WACC, market vs book weights
+Sessions 13–14: Derivatives and Black-Scholes
+37–54
+Forwards, futures, options, swaps, OTC, Greeks
+Session 15: FCF and DCF
+55–60
+FCFF and FCFE: variables, examples, valuation
+Session 16: Special products and wrap-up
+61–68
+Securitisation, MBS, CDS, notes, quiz
+2
+Keep strictly to time. The derivatives block is the longest at 40 minutes; if you run late, skip the extra worked examples first. Slides 1 and 2 are the cover and this agenda.
+2
+
+SESSION 8 · CAPITAL BUDGETING
+NPV and IRR: value created versus break-even rate
+NPV = Σ CFt/(1+r)^t − I
+Bharat AutoParts: invest ₹80L, inflow ₹25L × 5 years at 12%. PVIFA 3.6048 → PV ₹90.12L. NPV = +₹10.12L → accept.
+IRR: rate where NPV = 0
+Trial and error: at 17% NPV ≈ 0. IRR 17% > 12% → accept. Excel: =IRR().
+Extra example (try it)
+Invest ₹50L, ₹18L a year for 4 years at 10%. PVIFA 3.1699 → PV ₹57.06L. NPV = +₹7.06L, accept.
+When they conflict
+Solar: NPV ₹21.9L, IRR 17.2%. LED: NPV ₹4.3L, IRR 28.5%. IRR ignores scale, so NPV wins for mutually exclusive projects.
+3
+Stress: NPV is in rupees of value; IRR is scale-blind and assumes reinvestment at IRR. Multiple IRRs arise with unconventional cash flows.
+3
+
+SESSION 8 · NPV EXPLAINED
+NPV: what it measures and how to run it
+Why discount?
+₹1 today can be invested to earn r, so ₹1 received in year t is worth 1/(1+r)^t today. The discount rate is the return on equally risky alternatives.
+The 4 steps
+1. Forecast incremental after-tax cash flows.
+2. Pick r (project risk, usually WACC).
+3. Discount each flow.
+4. Add up and subtract the outlay.
+NPV
+Meaning
+Decision
+> 0
+Earns more than r; adds value
+Accept
+= 0
+Earns exactly r
+Indifferent
+< 0
+Earns less than r
+Reject
+Common pitfalls
+Use incremental cash flows only (ignore sunk costs); include working capital and tax; use cash, not accounting profit; match r to project risk.
+4
+NPV measures rupees of value and is additive across independent projects.
+4
+
+SESSION 8 · NPV WORKED EXAMPLE
+Uneven cash flows: a ₹60 lakh expansion at 12%
+Year
+Cash flow (₹L)
+Factor @12%
+PV (₹L)
+0
+−60
+1.0000
+−60.00
+1
+15
+0.8929
+13.39
+2
+20
+0.7972
+15.94
+3
+25
+0.7118
+17.79
+4
+30
+0.6355
+19.07
+Result
+Sum of PVs = ₹66.20L. NPV = +₹6.20L → accept.
+Sensitivity
+At 16% NPV ≈ +₹0.38L; at 17% it is −₹0.95L.
+Takeaway
+Back-loaded flows suffer most when r rises.
+5
+Have students compute the year 3 factor: 1/1.12^3 = 0.7118.
+5
+
+SESSION 8 · IRR EXPLAINED
+IRR: the break-even rate, found by interpolation
+Definition
+IRR is the r that makes NPV = 0. Accept if IRR > cost of capital.
+Interpolation
+IRR ≈ r_low + NPV_low / (NPV_low − NPV_high) × (r_high − r_low)
+Rate
+NPV of the ₹60L project (₹L)
+12%
++6.20
+16%
++0.38
+17%
+−0.95
+Answer
+IRR ≈ 16 + 0.38/(0.38+0.95) = 16.3% versus a 12% hurdle: accept.
+Watch out
+Rank mutually exclusive projects by NPV. Alternating-sign flows can give several IRRs.
+6
+Excel: =IRR(range), XIRR for dated flows.
+6
+
+NPV AND IRR · REAL-LIFE EXAMPLE 1
+Rooftop solar for a textile factory (illustrative figures)
+Facts
+Capex ₹1.20 cr. Saves ₹30L a year in power bills for 8 years. Company cost of capital 10%.
+NPV
+PVIFA(10%, 8) = 5.3349. PV = 30 × 5.3349 = ₹160.05L. NPV = +₹40.05L.
+IRR
+Need PVIFA = 120/30 = 4.00. At 18% it is 4.078, at 19% 3.954. IRR ≈ 18.6%.
+Metric
+Result
+Verdict
+NPV @10%
++₹40.05L
+Accept
+IRR
+18.6% vs 10%
+Accept, wide margin
+Payback
+120/30 = 4.0 years
+Half of project life
+Reality check
+If power tariffs fall or panel output degrades 1% a year, savings shrink. Re-run NPV with lower flows before signing.
+7
+A level annuity makes IRR a one-line lookup in the PVIFA table.
+7
+
+NPV AND IRR · REAL-LIFE EXAMPLE 2
+Delivery vans for a logistics start-up (illustrative figures)
+Facts
+Buy vans for ₹50L. Net cash ₹12L, 14L, 16L, 18L, 20L over 5 years, plus ₹10L resale in year 5. Cost of capital 12%.
+NPV
+PVs: 10.71 + 11.16 + 11.39 + 11.44 + 17.02 = ₹61.73L. NPV = +₹11.73L.
+Rate
+19%
+20%
+NPV (₹L)
++1.01
+−0.28
+IRR
+19 + 1.01/(1.01 + 0.28) = 19.8%, well above 12%. Accept.
+Decision lens
+The IRR margin is 7.8 points. Resale value is only 14% of PV, so the answer is robust.
+8
+Year 5 flow in the table is 20 + 10 = 30.
+8
+
+NPV AND IRR · DECISION-MAKING EXAMPLES
+Three retail expansion options at a 12% hurdle (₹ lakh, illustrative)
+Project
+Outlay
+Cash flows yr 1–4
+NPV @12%
+IRR
+Decision @12%
+NPV @15%
+A: warehouse automation
+100
+40, 40, 40, 40
++21.5
+21.9%
+Accept
++14.2
+B: flagship mall store
+100
+20, 25, 30, 35
+−18.6
+3.6%
+Reject
+−24.0
+C: borderline suburban store
+100
+30, 30, 30, 45
++0.7
+12.2%
+Marginal accept
+−5.8
+What changes the decision
+A clears the hurdle by 10 points, so it survives a rate rise. C flips from accept to reject when capital costs rise from 12% to 15%.
+Practical use
+Use IRR spread (IRR − r) as a safety margin and NPV to size the prize. Ask which project depends on optimistic forecasts.
+9
+B NPV@15%: 17.39+18.90+19.73+20.01 = 76.03 → −23.97; C @15% −5.78.
+9
+
+NPV VERSUS IRR · COMPARISON
+Same cash flows, different questions
+NPV
+IRR
+Output
+₹ value created today
+% return per year
+Discount rate
+Needs r, uses it explicitly
+Solved internally; compared with r later
+Reinvestment assumption
+Interim cash earns r (WACC), realistic
+Interim cash earns IRR, can be unrealistic
+Scale
+Captures size of project
+Ignores size
+Timing
+Handles any pattern
+Can give multiple or no IRR if signs flip
+Additivity
+NPVs of projects add up
+IRRs cannot be added
+Mutually exclusive projects
+Reliable ranking
+Can mislead
+When they agree
+One independent project with conventional flows (outlay then inflows): both give the same accept/reject. Conflicts arise only when ranking mutually exclusive projects.
+10
+Teach: agreement is the rule for accept/reject, conflict is a ranking problem.
+10
+
+CONFLICT 1 · SAME INVESTMENT, DIFFERENT TIMING
+Fast-cash warehouse robotics versus a slow-ramp solar park (₹100L each, r = 10%)
+Year
+A: warehouse robotics
+B: solar park
+1
+70
+10
+2
+50
+30
+3
+20
+50
+4
+10
+100
+NPV @10%
++26.8
++39.8
+IRR
+26.8%
+22.5%
+The contradiction
+IRR ranks A first (26.8% vs 22.5%). NPV ranks B first (+39.8 vs +26.8). Only one can be built.
+Why
+A returns cash early and is rewarded by IRR's high reinvestment rate. B earns more rupees overall, and NPV assumes cash is reinvested at 10%, not 26.8%.
+11
+NPV A: 63.64 + 41.32 + 15.03 + 6.83 − 100 = 26.82. NPV B: 9.09 + 24.79 + 37.57 + 68.30 − 100 = 39.75.
+11
+
+CONFLICT 1 · NPV PROFILES AND THE CROSSOVER RATE
+Which project wins depends on the discount rate
+Reading the graph
+Below the crossover (≈ 18%), B has higher NPV. Above it, A wins.
+
+At r = 10%: B +39.8, A +26.8.
+At r = 20%: A +9.5, B +6.3
+
+The crossover is the rate where both NPVs are equal; the firm's WACC tells which side applies.
+12
+IRR is where each line cuts the x-axis; the lines cross at the crossover rate.
+12
+
+CONFLICT 2 · DIFFERENT INVESTMENT SIZE
+Pop-up kiosks versus a regional warehouse (r = 12%, ₹ lakh)
+Small: 20 kiosks
+Large: regional warehouse
+Large − Small (incremental)
+Outlay
+10
+100
+90
+Inflows yr 1–3
+7, 7, 7
+50, 50, 50
+43, 43, 43
+NPV @12%
++6.8
++20.1
++13.3
+IRR
+48.7%
+23.4%
+20.4%
+Profitability index
+1.68
+1.20
+1.15
+The contradiction
+IRR and PI favour the small project; NPV favours the large one by ₹13.3L.
+Resolution
+The extra ₹90L earns an incremental IRR of 20.4%, above the 12% hurdle, so the warehouse's extra investment is worth making. If capital is scarce, the answer changes (see the capital rationing slide).
+13
+Incremental analysis: treat the bigger project as the small project plus an add-on.
+13
+
+HOW TO CHOOSE BETWEEN CONFLICTING PROJECTS
+A decision process
+Step
+Action
+Result in our examples
+1. Classify
+Independent or mutually exclusive?
+Both conflicts are mutually exclusive
+2. Unconstrained funds
+Pick the highest NPV
+B (solar park) and Large (warehouse)
+3. Check with incremental IRR
+Cash flows of the larger-minus-smaller project: accept extra if IRR > r
+Warehouse add-on 20.4% > 12%
+4. Use crossover rate
+Compare WACC with the crossover rate
+WACC 10% < 18%: B wins
+5. Capital rationing
+Choose the bundle with the highest total NPV
+Compare combinations, not single IRRs
+6. Fix IRR if needed
+MIRR reinvests at WACC
+MIRR A 16.7%, B 19.6%: agrees with NPV
+Rule of thumb
+When rankings conflict, trust NPV: it measures wealth added, and its reinvestment assumption (at the cost of capital) is more realistic.
+14
+MIRR A: FV = 70×1.331 + 50×1.21 + 20×1.1 + 10 = 185.7; (1.857)^(1/4) − 1 = 16.7%. B: FV 204.6 → 19.6%.
+14
+
+SESSION 8 · CAPITAL BUDGETING
+Payback, discounted payback and capital rationing
+Method
+Time value?
+Bharat AutoParts result
+Payback
+No
+3 + 5/25 = 3.2 years
+Discounted payback @12%
+Yes
+Cumulative ₹75.9L after year 4, so just over 4 years
+Profitability Index = PV ÷ I
+Yes
+90.12 / 80 = 1.13 (>1 accept)
+Rationing ₹1 crore
+PI: LED 1.43, Solar 1.22, Warehouse 1.14. Fund LED (₹10L) + Warehouse (₹40L) = NPV ₹9.8L, or Solar alone = ₹21.9L. Compare total NPV of feasible bundles.
+Memory hook
+NPV = how much. IRR = how efficient. Payback = how fast. PI = how much per rupee when cash is scarce.
+15
+Soft rationing is self-imposed; hard rationing is external. PI ranking is a shortcut; check bundle NPV.
+15
+
+SESSION 9 · CAPM IN DETAIL
+The model, its logic and its assumptions
+Formula
+E(Ri) = Rf + βi × [E(Rm) − Rf]
+Rf: reward for time. (Rm − Rf): market risk premium. β: how much market risk the stock carries.
+Logic
+Firm-specific risk (strike, recall, fraud) diversifies away for free, so it earns no premium. Market risk (rates, inflation, 2008, COVID-19) cannot, so CAPM pays for it.
+Assumption
+Reality check
+Investors are rational, hold diversified portfolios
+Behavioural biases exist
+One-period horizon, same expectations
+Views differ
+Borrow and lend at Rf, no taxes or costs
+Borrowing costs more than Rf
+Market portfolio is efficient
+Proxy (Nifty) is imperfect
+Why still use it
+Simple, intuitive, and inputs are observable. Treat the answer as a disciplined estimate, not a precise number.
+16
+Mention Fama-French as an extension.
+16
+
+SESSION 9 · CAPM COMPONENTS
+Risk-free rate and beta
+Risk-free rate
+Return with no default risk and no reinvestment risk. In India, use the yield on the 10-year Government of India security, matched to the cash-flow horizon and currency.
+Market premium
+Rm − Rf is the extra return investors demand for equities. Estimated from long-run history or surveys; 5 to 7% is common for India.
+Beta
+β = Cov(Ri, Rm) / Var(Rm), the slope when stock returns are regressed on market returns. Portfolio beta = weighted average of stock betas.
+β
+Meaning
+Sector examples
+< 0.8
+Defensive, moves less than market
+FMCG, utilities
+0.8–1.2
+Market-like
+Large diversified firms
+> 1.2
+Aggressive, amplified moves
+Autos, metals, real estate
+Beta rises with operating leverage and financial leverage; estimates depend on index, period and frequency.
+17
+Levered beta = unlevered beta × [1 + (1−t)D/E].
+17
+
+SESSION 9 · CAPM IN PICTURES
+The Security Market Line: required return rises with beta
+Reading the chart
+Assumes Rf 7%, Rm 13%. Every fairly priced security sits on the line.
+
+Stock A: β 0.6 → 10.6%.
+Stock B: β 1.4 → 15.4%.
+
+Above the line: earns more than required (positive alpha). Below: earns less (negative alpha).
+18
+Teaching point: the slope is the market premium (6%); the intercept is Rf.
+18
+
+SESSION 9 · CAPM EXAMPLES
+Two real-life costs of equity (inputs are illustrative)
+Hindustan Unilever (FMCG)
+Tata Motors (autos)
+Risk-free rate (10-yr G-Sec)
+7.0%
+7.0%
+Market premium
+6.0%
+6.0%
+Beta
+0.55
+1.35
+Cost of equity
+7 + 0.55 × 6 = 10.3%
+7 + 1.35 × 6 = 15.1%
+Why they differ
+Car demand swings with the economy; soap does not. Higher beta means a higher required return, so investors price Tata Motors' cash flows more steeply.
+Use
+These are the Ke inputs for WACC, DCF and the dividend model. A 1 point move in Ke changes a Gordon price a lot.
+Betas change over time; refresh them from a current data source before using them.
+19
+Ask: what happens to Ke if the 10-year yield rises to 8%? Both rise by 1 point.
+19
+
+SESSION 9 · COST OF EQUITY STEP BY STEP
+From stock returns to beta to required return
+Month
+Stock Ri %
+Sensex Rm %
+Ri × Rm
+Rm²
+1
+2.5
+1.8
+4.50
+3.24
+2
+−1.2
+−0.9
+1.08
+0.81
+3
+3.0
+2.2
+6.60
+4.84
+4
+−0.5
+−0.3
+0.15
+0.09
+5
+1.8
+1.5
+2.70
+2.25
+Sum
+5.6
+4.3
+15.03
+11.23
+Beta
+β = (nΣRiRm − ΣRiΣRm)/(nΣRm² − (ΣRm)²) = 51.07 / 37.66 = 1.36.
+CAPM
+Rf 7%, Rm 13%: Ke = 7 + 1.36 × 6 = 15.1%. Use 3 to 5 years of data in practice.
+20
+Beta is the regression slope of stock returns on market returns.
+20
+
+SESSION 9 · STOCK ALPHA
+Alpha: return earned beyond what risk explains
+Jensen's alpha
+α = Rp − [Rf + β(Rm − Rf)]
+Actual return minus the CAPM expected return. Regression form: Rp − Rf = α + β(Rm − Rf) + ε.
+Interpreting
+α > 0: beat its risk-adjusted benchmark (above the SML).
+α = 0: fair return.
+α < 0: lagged what its risk required.
+Applications
+How alpha is used
+Fund selection
+Rank managers by alpha, not raw return
+Stock picking
+Positive alpha: candidate to buy; negative: sell
+Performance fees
+Pay for skill, not for taking more beta
+Cautions
+Alpha depends on the chosen benchmark and period, can be luck (check t-statistic), and should be measured after fees.
+21
+A fund beating the index may just have a high beta.
+21
+
+SESSION 9 · ALPHA WORKED EXAMPLES
+Three funds and one manager review (Rf 7%, Rm 13%)
+Fund
+β
+Actual return
+Expected (CAPM)
+Alpha
+A (large-cap)
+0.9
+14.0%
+7 + 0.9 × 6 = 12.4%
++1.6%
+B (aggressive)
+1.3
+15.0%
+7 + 1.3 × 6 = 14.8%
++0.2%
+C (defensive)
+0.7
+9.0%
+7 + 0.7 × 6 = 11.2%
+−2.2%
+Reading it
+B has the highest return but little skill: it mostly took more risk. A delivered the best alpha. C trailed even after adjusting for low risk.
+Manager review
+3-year average return 16%, β 1.1: expected 13.6%, α = +2.4%. Raw outperformance of 3% over the index overstates skill. After 1.5% fees, net alpha is +0.9%.
+22
+Link back to the chart: Fund C is the point below the line.
+22
+
+SESSION 10 · BOND FEATURES
+What a bond is and what every term means
+Feature
+Meaning
+Why it matters
+Face (par) value
+Amount repaid at maturity, e.g. ₹1,000
+Base for coupon and redemption
+Coupon rate and frequency
+Fixed % of face paid each period
+The cash flow stream
+Maturity
+Date principal is repaid
+Longer = more price risk
+Issuer and rating
+Government, PSU, corporate; AAA to D
+Credit spread, default risk
+Seniority / security
+Secured, senior, subordinated, AT1
+Recovery if issuer fails
+Embedded options
+Callable, puttable, convertible
+Changes price and yield
+Examples
+G-Sec (no default risk), T-bill (zero coupon, under 1 year), corporate NCD (credit spread over G-Sec), AT1 bond (perpetual, can be written down).
+23
+Debt holders have a contractual claim; equity holders are residual claimants.
+23
+
+SESSION 10 · COUPON AND YIELD TO MATURITY
+Three different 'rates' on one bond
+Coupon rate
+Coupon ÷ face value. Fixed when issued. ₹80 on ₹1,000 = 8%.
+Current yield
+Annual coupon ÷ market price. ₹80 ÷ ₹974.56 = 8.21%. Ignores the pull to par.
+Yield to maturity
+The IRR of all promised cash flows: P = Σ C/(1+y)^t + F/(1+y)^n.
+Step
+Bond: 8% coupon, 3 years, price ₹974.56
+Try 8%
+PV = ₹1,000 (too high)
+Try 9%
+80/1.09 + 80/1.188 + 1,080/1.295 = ₹974.56 ✓
+YTM
+9.0%: coupon 80 + gain 25.44 held to par
+Conventions
+Semi-annual bond with 3.5% per half-year: YTM (bond-equivalent) = 7.00%; effective annual yield = 1.035² − 1 = 7.12%. YTM assumes no default and coupons reinvested at YTM.
+24
+Yield to call applies to callable bonds.
+24
+
+SESSION 10 · HOW DIFFERENT BONDS ARE PRICED
+Same idea: discount promised cash flows at the market yield
+Type
+Formula
+Worked example
+Coupon bond
+C × PVIFA(y,n) + F/(1+y)^n
+7.10% 5-year G-Sec, YTM 6.5%: 29.50 + 72.99 = ₹102.49 per ₹100
+Zero coupon / T-bill
+F/(1+y × days/365)
+91-day bill, yield 6.5%: 100/1.0162 = ₹98.40
+Perpetual (AT1)
+C/y
+₹8.50 coupon, yield 9%: ₹94.44
+Floating rate
+Coupon resets to benchmark + spread
+Price ≈ par at each reset date
+Callable
+Price = straight bond − call option value
+Lower price than an equal non-callable bond
+Rule of thumb
+Coupon > yield: premium. Coupon = yield: par. Coupon < yield: discount. All bonds converge to par at maturity.
+25
+G-Secs pay semi-annually in practice; annual used here for clarity.
+25
+
+SESSION 10 · BOND PRICES AND YIELDS
+Price and yield move in opposite directions
+Market yield
+Price of 8% coupon, 3-year ₹1,000 bond
+Status
+7%
+₹1,026.24
+Premium
+8%
+₹1,000.00
+Par
+9%
+₹974.56
+Discount
+10%
+₹950.26
+Discount
+Three yields
+Coupon rate 8%. Current yield = 80/974.56 = 8.21%. YTM = IRR of the flows = 9%.
+Quick YTM
+Coupon 90, P 980, F 1,000, 2 years: (90 + 10)/990 = 10.10%.
+Why it matters
+Rate cuts raise bond prices; hikes lower them, and long bonds move more.
+26
+Price at 7%: 74.77 + 69.88 + 881.58.
+26
+
+BONDS AND INTEREST RATES · GRAPH
+The price-yield curve: down-sloping and convex
+Reading the curve
+A 10-year 7% coupon bond.
+
+Yield 7% → price 100 (par).
+Yield 8% → 93.29 (−6.7%).
+Yield 6% → 107.36 (+7.4%).
+
+Convex: gains from falling yields exceed losses from rising yields of equal size.
+27
+Longer maturity and lower coupon make the curve steeper (higher duration).
+27
+
+BONDS AND INTEREST RATES · REAL-LIFE EXAMPLES
+Hikes hurt prices; cuts lift them
+RBI hiking cycle, 2022–23
+Repo rate rose from 4.00% to 6.50% (May 2022 to Feb 2023), pushing yields up. A ₹10 lakh face holding of a 10-year 7% bond bought at par falls to ≈ ₹9.33L if the yield rises 1 point: a ₹67,000 mark-to-market loss, partly offset by ₹70,000 yearly coupons.
+RBI easing, 2020
+Repo cut from 5.15% to 4.00% (Feb to May 2020) as COVID hit. The same bond rises to ≈ ₹10.74L when yield drops 1 point: a ₹74,000 gain, but coupons must now be reinvested at lower rates.
+Lesson
+Detail
+Rates up
+Prices down, new bonds pay more
+Rates down
+Prices up, reinvestment gets cheaper to regret
+Long vs short
+Long bonds move more; match maturity to your horizon
+Why it matters
+Banks and funds holding long bonds face losses when rates jump (e.g. Silicon Valley Bank, 2023).
+28
+Hold to maturity and the price loss disappears, but the opportunity cost remains.
+28
+
+SESSION 10 · EQUITY VALUATION
+Dividend discount models
+Model
+Formula
+Worked example
+Zero growth
+P = D1/r
+Coal India: 18/0.12 = ₹150
+Gordon growth
+P = D1/(r−g), needs r>g
+HDFC Bank: 19×1.10 = 20.90; 20.90/0.04 = ₹522.50
+Two-stage
+PV(high growth) + PV(Pn)
+D0 20, 15% × 3y then 6%, r 13%: PV divs 62.15 + P3 460.61 discounted → ≈ ₹381
+Extra example
+D0 ₹10, g 5%, r 11% → D1 10.50, P = 10.50/0.06 = ₹175. If r falls to 10%, P = ₹210: tiny rate changes, big price changes.
+29
+Two-stage: PV(P3)=460.61/1.13³=319.2; total ≈ 62.15+319.2 = 381.4. PV(P3) = 460.61 / 1.13³ ≈ 319.
+29
+
+SESSION 10 · WACC
+Weighted average cost of capital
+WACC = E/V·rE + D/V·rD(1−T)
+Use market-value weights (target structure). Cost of debt = YTM; cost of equity = CAPM.
+Reliance (market)
+rE 13.3%, rD after tax 5.6%, weights 85.3 / 14.7 → WACC 12.2%. Book weights give 11.1%.
+Infosys
+β 0.75 → rE 11.5%; debt 1.3% → WACC 11.4% (book 11.0%). Almost debt-free, so weights barely matter.
+Extra example
+E 60, D 40, rE 14%, rD 9%, tax 25%: 8.4% + 2.7% = 11.1%. Cheaper debt lowers WACC, but raises equity risk.
+30
+Book equity understates asset-light firms; that is why market weights are preferred.
+30
+
+SESSION 10 · WACC: ESTIMATING COST OF DEBT
+Cost of debt: what lenders require today, not what the firm paid in the past
+Situation
+Method
+Example
+Bonds actively traded
+YTM on the firm's long-term bond
+Tata Steel 8.5% bond, 5y, price ₹97.29 → YTM 9.2%
+Rated but not traded
+Risk-free rate + default spread for the rating
+G-Sec 7.0% + AAA spread 0.8% = 7.8%
+Bank loans only
+Current lending rate quoted to the firm (MCLR + spread)
+MCLR 8.9% + 0.6% = 9.5%
+Last resort
+Interest expense ÷ average debt
+Understates cost if debt is old
+After-tax cost
+rD(1 − T): interest is tax deductible. 9.2% × (1 − 0.25) = 6.9%.
+Rules
+Use long-term, current, marginal rates; match currency and maturity to the cash flows; ignore the coupon, which is history.
+31
+Check the YTM: price at 9.2% = 8.5 × 3.8696 + 100/1.092^5 = 32.89 + 64.40 = 97.29.
+31
+
+SESSION 10 · WACC: ESTIMATING COST OF EQUITY
+Cost of equity: unobservable, so estimate it three ways
+Method
+Formula
+When to use
+Result for Tata Steel
+CAPM
+Rf + β × (Rm − Rf)
+Any listed firm
+7 + 1.5 × 6 = 16.0%
+Dividend growth
+D1/P0 + g
+Stable dividend payers
+D1 ₹3.6 / P ₹135 + 9% = 11.7%
+Bond yield + premium
+Own bond YTM + 3 to 5%
+Cross-check for risky firms
+9.2% + 5.0% = 14.2%
+Choosing
+CAPM is the default. For cyclical, low-dividend firms the dividend model is unreliable (growth is hard to estimate). Use the others as a sanity check: Ke must exceed rD.
+Beta tips
+Regress 3 to 5 years of returns on the Nifty. For unlisted firms, use peer unlevered beta and relever at the firm's own D/E.
+32
+The 11.7% dividend-model result is lower because sustaining 9% growth is generous; this is why CAPM leads.
+32
+
+SESSION 10 · WACC EXAMPLE 1 · FMCG, NEARLY DEBT-FREE
+Hindustan Unilever: WACC ≈ 10.3% (illustrative inputs)
+Step
+Input and source
+Result
+Cost of equity
+Rf 7%, β 0.55 (low), premium 6%
+10.3%
+Cost of debt
+No traded bonds: AAA spread 0.8% over G-Sec 7%
+7.8% pre-tax
+After-tax rD
+7.8% × (1 − 0.25)
+5.85%
+Market equity E
+₹5,50,000 cr
+99.78%
+Debt D (lease and borrowings)
+₹1,200 cr
+0.22%
+WACC
+0.9978 × 10.3% + 0.0022 × 5.85%
+10.29%
+Insight
+WACC ≈ cost of equity because the firm is nearly all equity. Stable brands and low beta give a lower hurdle rate than cyclical firms.
+33
+Cost-of-debt choice barely matters when weight is 0.2%.
+33
+
+SESSION 10 · WACC EXAMPLE 2 · CYCLICAL, LEVERAGED
+Tata Steel: WACC ≈ 13.2% (illustrative inputs)
+Step
+Input and source
+Result
+Cost of equity
+Rf 7%, β 1.5 (cyclical), premium 6%
+16.0%
+Cost of debt
+YTM of traded 8.5% bond at ₹97.29
+9.2% pre-tax
+After-tax rD
+9.2% × (1 − 0.25)
+6.9%
+Market equity E
+₹1,80,000 cr (price × shares)
+69.2%
+Market debt D
+₹80,000 cr (PV at current YTM)
+30.8%
+WACC
+0.692 × 16.0% + 0.308 × 6.9%
+13.20%
+Insight
+Higher beta and more debt push the hurdle rate 2.9 points above HUL's. Projects that earn 11% create value at HUL but destroy it at Tata Steel.
+34
+Contrast with HUL: same method, very different risk.
+34
+
+WACC · MARKET VERSUS BOOK VALUES
+Why weights must use market values
+Book value
+Market value
+What it records
+Historic cost less depreciation and retained profit
+Today's price of the claim
+Equity
+Excludes brand, growth, intangibles
+Price × shares outstanding
+Debt
+Face value at issue
+PV of payments at current YTM
+Reflects
+Accounting history
+Investors' current required return
+Use in WACC
+Distorts weights
+Correct, weights match the rates used
+Consistency
+Cost of equity and debt are today's market-required returns, so the weights must be today's market values of those claims.
+Debt example
+Bond face ₹1,000, 8.5% coupon, 5 years, YTM 9.2%: market value ₹972.9 versus book ₹1,000.
+Where debt is floating-rate or recently issued, book ≈ market and can be a proxy. Use target (long-run) weights for the capital structure you expect.
+35
+Equity book value often understates value for asset-light firms (IT, FMCG).
+35
+
+WACC · BOOK VERSUS MARKET: TATA STEEL
+The same firm gets a 2.5 point lower WACC with book weights
+Weights
+Equity
+Debt
+WACC
+Value of FCFF ₹15,600 cr (g 4%)
+Market (₹1,80,000 / ₹80,000 cr)
+69.2%
+30.8%
+13.20%
+EV = 15,600 / 0.092 = ₹1,69,565 cr
+Book (₹60,000 / ₹82,000 cr)
+42.3%
+57.7%
+10.75%
+EV = 15,600 / 0.0675 = ₹2,31,111 cr
+The damage
+Book weights overweight cheap debt, so WACC falls and enterprise value jumps 36%. A project accepted at 11% looks fine, but is below the true 13.2% hurdle.
+Check on HUL
+Book equity ₹14,000 cr versus market ₹5,50,000 cr: book weights give WACC 9.95% against 10.29%, a smaller error because debt is tiny.
+Takeaway
+Use market values for both, and recheck them when the share price or yields move.
+36
+A falling share price raises the debt weight, which can push WACC down; this is the circularity warning.
+36
+
+SESSIONS 13–14 · FINANCIAL DERIVATIVES IN DETAIL
+A contract whose value is derived from something else
+Definition
+A financial contract between two parties whose payoff depends on the price of an underlying asset, rate or index. No need to own the underlying; value = f(S, time, volatility, rates).
+Key features
+Leverage (small outlay, large exposure). Fixed expiry. Zero-sum between counterparties. Can be settled in cash or by delivery. Can take long or short views.
+Asset class
+Underlying
+Typical derivative
+Who uses it
+Commodities
+Gold, crude oil, wheat
+Futures, swaps
+Jewellers, airlines, farmers
+Equities
+Stocks, Nifty, S&P 500
+Options, futures
+Funds, traders, investors
+Currencies
+USD/INR, EUR/USD
+Forwards, futures, swaps
+Importers, exporters
+Interest rates
+G-Sec yield, MIBOR, SOFR
+Swaps, FRAs, futures
+Banks, corporates
+Credit
+Bond issuer default risk
+Credit default swaps
+Lenders, bond funds
+Three participants
+Hedgers reduce risk. Speculators take risk for profit. Arbitrageurs lock price gaps, which keeps derivatives fairly priced.
+37
+Derivatives transfer risk; they do not create or destroy it.
+37
+
+DERIVATIVE TYPES · SIDE BY SIDE
+Forwards, futures, options and swaps compared
+Forward
+Futures
+Option
+Swap
+Nature
+Obligation to trade at fixed price
+Same, standardised
+Right, not duty (buyer)
+Exchange of cash flows
+Market
+OTC
+Exchange
+Both
+OTC mostly
+Upfront cost
+None
+Margin
+Premium
+None
+Settlement
+At maturity
+Daily MTM
+At expiry or exercise
+Periodic, net
+Counterparty risk
+High
+Low (clearing house)
+Low if listed; high if OTC
+High
+Payoff
+Linear
+Linear
+Non-linear
+Linear in rates
+Customisable
+Fully
+No
+Listed: no; OTC: yes
+Fully
+Linear payoffs lock a price; options buy protection while keeping the upside.
+38
+Anchor the later slides to this table.
+38
+
+FORWARDS AND FUTURES · REAL-LIFE EXAMPLES
+Locking a price across commodities, currencies and stocks
+Asset class
+Contract
+How it works
+Commodity
+Gold forward / MCX gold future
+Jeweller buys 1 kg at ₹1,50,000 per 10g; if spot rises to ₹1,60,000 the hedge gains ₹10 lakh per kg
+Currency
+USD/INR 3-month forward
+Importer owes USD 500k; forward 89.00 fixes the cost at ₹4.45 cr even if spot goes to 91
+Stock
+Single-stock future, e.g. Reliance, lot 250, illustrative
+Buy at ₹1,400 → exposure ₹3.5L; a ₹50 fall costs ₹12,500 daily MTM
+Index
+Nifty future, lot 75
+Fund shorts futures to hedge a portfolio without selling shares
+Forward
+Bespoke, OTC, settled once at maturity. Credit risk sits with the other party.
+Future
+Standard size and date, exchange cleared, margin posted, settled daily. Easy to exit.
+Pricing for both: F = S(1 + cost of carry); arbitrage keeps futures near this value.
+39
+Use gold carry: storage plus financing minus convenience yield.
+39
+
+OPTIONS AND SWAPS · REAL-LIFE EXAMPLES
+Insurance and exchange of cash flows
+Equity option
+Investor owning 1,000 Infosys shares buys a put (K ₹1,500) as portfolio insurance: loss floor, upside kept.
+Currency option
+Exporter buys a USD put/INR call at 88; guaranteed floor on rupees received, can still sell higher if USD rises.
+Commodity option
+Airline buys a call on crude at $80; if crude hits $95 the option pays $15 per barrel.
+Swap
+Example
+Result
+Interest rate
+₹100 cr loan at MIBOR + 2%. Swap: pay 7% fixed, receive MIBOR
+Cost fixed at 9%; if MIBOR is 6.5% the firm pays net ₹0.5 cr a year on the swap
+Currency
+Indian firm borrows USD, swaps into INR flows
+Removes exchange-rate risk on interest and principal
+Commodity
+Airline pays fixed $85/bbl, receives market price
+Fuel cost fixed on agreed volume
+A swap is a strip of forwards: each period's exchange is a forward on a rate or price.
+40
+Illustrative figures; swaps are mostly OTC.
+40
+
+OTC DERIVATIVES · FEATURES
+Privately negotiated, flexible and riskier
+Features
+Customised notional, maturity, strike and settlement. Bilateral negotiation between two parties, usually banks and corporates. Documented under an ISDA master agreement.
+Risks
+Counterparty default (Lehman 2008), low transparency, limited liquidity to exit, and collateral and valuation disputes.
+OTC
+Exchange-traded
+Terms
+Tailor-made
+Standardised
+Counterparty
+Each other
+Clearing house
+Margin
+Negotiated collateral
+Mandatory daily margin
+Transparency
+Low, private pricing
+Public prices
+Liquidity
+Exit needs counterparty
+High, easy to close
+Typical products
+Forwards, swaps, exotics
+Futures, listed options
+After 2008
+Standard OTC swaps moved to central clearing and trade reporting to cut systemic risk.
+41
+Examples: USD/INR forwards from banks, interest rate swaps, structured notes.
+41
+
+DERIVATIVES · FORWARDS
+Forwards: customised, OTC, settled at maturity
+Exporter
+Sells USD 2M forward at ₹88.50, locking ₹17.70 cr whatever spot does.
+Fair price
+F = S(1 + r_INR T)/(1 + r_USD T) = 88 × 1.0175/1.01 = ₹88.76 (3 months, INR 7%, USD 4%).
+Spot at maturity
+Unhedged
+Forward
+₹86
+₹17.20 cr
+₹17.70 cr
+₹88.50
+₹17.70 cr
+₹17.70 cr
+₹91
+₹18.20 cr
+₹17.70 cr
+Risks
+Counterparty default, hard to exit early, and regret when the market moves your way.
+42
+Forwards give certainty, not profit.
+42
+
+DERIVATIVES · FUTURES
+Futures: standardised, exchange-traded, marked to market daily
+Nifty future (illustrative)
+Value
+Entry 24,000, lot 75
+Exposure ₹18 lakh
+Initial margin 12%
+₹2.16 lakh
+Nifty +1% (240 points)
++₹18,000 = +8.3% of margin
+Nifty −1% (240 points)
+−₹18,000 = −8.3% of margin
+Beta-adjusted hedge
+₹10 cr portfolio, β 1.2: 1.2 × 10 cr / 18 lakh ≈ 67 short lots.
+Basis
+Future − spot. It narrows to zero at expiry, so hedges can leave basis risk.
+Daily MTM
+Losses are paid daily; below maintenance margin you get a margin call or are closed out.
+Cost of carry: F = S(1 + rT). S ₹1,400, r 6.5%, 1 month → F = ₹1,407.58. If the future trades at ₹1,415, borrow, buy spot and sell the future to lock in ≈ ₹7.4 per share.
+43
+Leverage cuts both ways.
+43
+
+SESSIONS 13–14 · OPTIONS
+Calls, puts and payoffs: rights with bent payoffs
+Position
+Max loss
+Max profit
+Break-even
+View
+Long call (K100, ₹5)
+₹5
+Unlimited
+105
+Bullish
+Short call
+Unlimited
+₹5
+105
+Mildly bearish
+Long put
+₹5
+₹95
+95
+Bearish / insurance
+Short put
+₹95
+₹5
+95
+Mildly bullish
+Extra example
+Buy Nifty 24,000 call at ₹150, lot 75. Expiry 24,400 → (400−150)×75 = ₹18,750. Expiry 23,900 → −₹11,250.
+Leverage
+Stock ₹100 → 120 is +20%; ₹5 call is +300%, but −100% at 100.
+44
+ESOPs are calls; car insurance is a put. Writers: capped gain, large loss.
+44
+
+OPTIONS · FEATURES
+Strike, premium, expiry, style and moneyness
+Feature
+Meaning
+Strike price (K)
+Price at which the holder may buy (call) or sell (put)
+Premium
+Price paid by buyer; = intrinsic value + time value
+Expiry
+Last date the option exists; time value decays to zero
+American
+Exercisable any time to expiry (US single-stock options)
+European
+Exercisable only at expiry (SPX index options; Nifty options)
+Contract size
+US stock options: 100 shares per contract
+Moneyness
+Call
+Put
+In the money (ITM)
+S > K: intrinsic = S − K
+S < K: intrinsic = K − S
+At the money (ATM)
+S ≈ K
+S ≈ K
+Out of the money (OTM)
+S < K: no intrinsic value
+S > K: no intrinsic value
+45
+American options are worth at least as much as European; early exercise matters mainly for dividends.
+45
+
+OPTIONS · CBOE-LISTED STOCK CONTRACTS
+Moneyness in practice (tickers real, quotes illustrative; check the live CBOE chain)
+Contract (100 shares)
+Spot
+Premium
+Intrinsic
+Time value
+Break-even
+Max loss
+AAPL 30-day call K 220: ITM
+230
+13.85
+10.00
+3.85
+233.85
+$1,385
+AAPL 30-day call K 250: OTM
+230
+1.62
+0.00
+1.62
+251.62
+$162
+MSFT 45-day put K 520: ITM
+480
+41.94
+40.00
+1.94
+478.06
+$4,194
+MSFT 45-day put K 450: OTM
+480
+4.90
+0.00
+4.90
+445.10
+$490
+Calls
+ITM call behaves like owning the stock (high delta, high cost). OTM call is cheap, but needs a big move to pay off.
+Puts
+ITM put acts as strong insurance but costs more; OTM put is cheap crash protection that rarely pays.
+If AAPL expires at $260: the 220 call earns 100 × 40 − 1,385 = $2,615; the 250 call earns 100 × 10 − 162 = $838.
+46
+Quotes are teaching numbers, not live prices.
+46
+
+DERIVATIVES · OPTION PRICING
+Where the premium comes from: replication in one step
+One-step tree
+S = 100 → 120 or 80. K = 100, r = 5%. Call pays 20 or 0.
+Replicate
+Δ = 20/40 = 0.5 share; borrow 0.5 × 80/1.05 = 38.10. Call = 50 − 38.10 = ₹11.90.
+State at expiry
+Call pays
+Replica: 0.5 share minus loan repaid (₹40)
+Up: S = 120
+20
+0.5 × 120 − 40 = 20
+Down: S = 80
+0
+0.5 × 80 − 40 = 0
+Same payoffs, so same price
+Call = ₹11.90
+50 − 38.10 = 11.90
+Link
+Continuous rebalancing of this idea gives Black-Scholes; delta is the hedge ratio.
+47
+If the option costs more than its copy, sell it and buy the copy.
+47
+
+BLACK-SCHOLES MODEL · OVERVIEW
+What it is, what it assumes, why it matters
+What it does
+Gives the fair value of a European option from five observable inputs. Rests on a replicating portfolio of stock and cash that removes risk (no-arbitrage).
+Assumptions
+Stock follows lognormal geometric Brownian motion. Constant volatility and rate. No dividends (or a known yield). European exercise. Frictionless, continuous trading and borrowing at the risk-free rate.
+Why it is widely used
+Detail
+Closed form
+Instant answer; no simulation needed
+Few inputs
+Only volatility is unobserved
+Implied volatility
+Market quotes options in σ terms
+Hedging
+Delta and other Greeks come built in
+Common language
+Benchmark for traders, regulators, accountants (ESOPs)
+48
+Nobel Prize 1997 (Scholes and Merton; Black had died).
+48
+
+BLACK-SCHOLES MODEL · THE FORMULA
+Reading the formula piece by piece
+Call and put
+C = S·N(d1) − K·e^(−rT)·N(d2)
+P = K·e^(−rT)·N(−d2) − S·N(−d1)
+d1 = [ln(S/K) + (r + σ²/2)T] / (σ√T), d2 = d1 − σ√T
+Meaning
+S·N(d1): value of stock you expect to receive. K·e^(−rT)·N(d2): PV of strike you expect to pay. N(d2) ≈ risk-neutral chance of finishing ITM.
+Worked example: AAPL call S 230, K 230, 30 days, r 4.5%, σ 28%
+Value
+d1
+0.0862
+d2
+0.0059
+N(d1), N(d2)
+0.5344, 0.5024
+Call price
+$7.78 per share, $778 per contract
+Put price (same K)
+$6.93
+Put-call parity check: C − P = S − K·e^(−rT).
+49
+Walk through S, K, T, r, sigma once with a calculator.
+49
+
+BLACK-SCHOLES MODEL · THE FIVE FACTORS
+Each input and how it moves the option price
+Factor
+Why it matters
+Call
+Put
+Spot price (S)
+Higher spot makes the call more likely to finish ITM
+↑
+↓
+Strike (K)
+Higher strike makes calls harder to reach, puts easier
+↓
+↑
+Time (T)
+More time means more chance of a big move; time value decays
+↑
+↑ (mostly)
+Volatility (σ)
+Bigger swings raise the payoff upside, losses capped at premium
+↑
+↑
+Risk-free rate (r)
+Higher r reduces PV of strike paid
+↑
+↓
+Volatility is the key
+It is the only input not observable. Historical σ is backward-looking; implied σ is the number that makes the model price equal the market price.
+Example
+AAPL 230 call at σ 28% = $7.78. At σ 35% the price rises to $9.62 per share.
+50
+Dividends reduce call value and raise put value.
+50
+
+BLACK-SCHOLES MODEL · THE GREEKS
+Sensitivities of the option price
+Greek
+Measures
+Formula (call)
+Intuition
+Delta Δ
+Price change for ₹1 move in S
+N(d1)
+Hedge ratio; rough chance of ITM
+Gamma Γ
+Change in delta per ₹1 move
+n(d1)/(S·σ√T)
+Highest ATM near expiry
+Theta Θ
+Change per day
+−S·n(d1)σ/(2√T) − rKe^(−rT)N(d2)
+Time decay, hurts buyers
+Vega ν
+Change per 1% σ
+S·n(d1)√T
+Largest ATM and long-dated
+Rho ρ
+Change per 1% r
+K·T·e^(−rT)·N(d2)
+Larger for long calls
+Uses
+Delta-hedge: sell 100 × Δ shares per contract to be neutral. Watch gamma to see how often to rebalance.
+Rules
+Long options: +gamma, +vega, −theta. Short options: the reverse.
+51
+n(x) is the standard normal density.
+51
+
+BLACK-SCHOLES MODEL · GREEKS ON 3 CONTRACTS
+Real tickers, illustrative inputs: r 4.5%
+Contract
+Price
+Delta
+Gamma
+Theta/day
+Vega
+Rho
+AAPL call K 230, S 230, 30d, σ 28%
+7.78
+0.534
+0.0215
+-0.136
+0.262
+0.095
+MSFT put K 450, S 480, 45d, σ 25%
+4.90
+-0.200
+0.0066
+-0.119
+0.472
+-0.124
+TSLA call K 300, S 280, 60d, σ 55%
+17.72
+0.435
+0.0063
+-0.218
+0.447
+0.171
+AAPL ATM call
+Delta ≈ 0.53, highest gamma. Loses about $0.14 a share (≈ $14 a contract) each day.
+MSFT OTM put
+Delta -0.20: gains about $20 per contract if MSFT falls $1.
+TSLA OTM call
+High σ makes it pricey and vega-heavy: +1% σ adds $0.45 per share.
+52
+Delta for a put is N(d1) − 1, so it is negative.
+52
+
+BLACK-SCHOLES MODEL · WHY IT SURVIVES
+Reasons it remains the industry benchmark
+Practical
+Fast, transparent, easy to audit. Traders quote and compare options by implied volatility, not by price.
+Analytical
+Delta, gamma, vega fall out directly. The idea of replication underlies hedging, ESOP valuation and credit models.
+Limitation
+Fix used in practice
+Volatility smile and skew
+Local or stochastic volatility models
+Jumps and fat tails
+Jump-diffusion models
+American early exercise
+Binomial trees
+Discrete dividends
+Dividend-adjusted forms
+Bottom line
+Black-Scholes is rarely 'right', but it is the common yardstick; professionals adjust inputs (especially volatility) rather than abandon it.
+53
+Close the derivatives block here, then move to DCF.
+53
+
+SESSIONS 13–14 · HEDGING AND STRATEGIES
+Hedge with the right tool and know the trade-off
+Case
+Forward
+Put option
+IT exporter, USD 1M, forward 88.90, put K 88.50 premium 0.60
+₹8.89 cr certain
+Floor ₹8.79 cr, upside kept
+Portfolio ₹18L, put 23,500 @150
+Max loss ₹48,750
+Covered call
+500 shares at ₹1,400, sell ₹1,460 call at ₹25: premium ₹12,500, max profit ₹85/share, break-even ₹1,375.
+Covered put
+Short at 1,400, sell 1,340 put for 20: max profit ₹80, break-even 1,420, unlimited loss on rallies.
+Checklist
+Define max loss first, size for survival, know the break-even, check margin, set the exit rule. Naked option selling for small premiums is the classic mistake.
+54
+Hedging reduces uncertainty; it does not maximise profit. Watch basis risk and over-hedging.
+54
+
+SESSION 15 · FCF AND DCF
+Free cash flow, DCF and the FCFF versus FCFE choice
+FCFF = EBIT(1−t) + D&A − Capex − ΔWC
+Discount at WACC → enterprise value; subtract net debt → equity. Reliance: FCFF ₹42,500 cr, WACC 11.7% → ₹1,019 per share.
+FCFE = NI + D&A − Capex − ΔWC + net borrowing
+Discount at cost of equity → equity value. HDFC Bank: ₹52,000 cr, Ke 12.4% → ₹2,029 per share.
+DCF = Σ FCFt/(1+r)^t + TV/(1+r)^n
+Reliable for steady businesses (Coca-Cola, WACC 7–8%, g 2–3%); fragile when value rests on far growth. Extra: FCF ₹100, g 3%, r 10% → TV = 103/0.07 ≈ ₹1,471 at year n, then discount it.
+Use FCFF when leverage changes; FCFE when debt is the business (banks, NBFCs). Consistent inputs give the same equity value.
+55
+Terminal value often drives most of the value; sensitivity-test r and g.
+55
+
+SESSION 15 · FCF VARIABLES
+Free cash flow: the variables behind FCFF and FCFE
+FCFF: cash for all capital providers
+FCFF = EBIT(1 − t) + D&A − Capex − ΔNWC
+Cash left for lenders and shareholders together. Discount at WACC for enterprise value, then subtract net debt.
+FCFE: cash for shareholders only
+FCFE = NI + D&A − Capex − ΔNWC + Net borrowing
+Equals FCFF − Interest(1 − t) + Net borrowing. Discount at Ke for equity value directly.
+Variable
+Meaning
+Variable
+Meaning
+EBIT
+Operating profit before interest and tax
+Interest(1 − t)
+After-tax interest paid to lenders
+t
+Corporate tax rate
+Net borrowing
+New debt raised minus debt repaid
+EBIT(1 − t)
+NOPAT: operating profit after tax
+WACC
+Blended cost of capital; discounts FCFF
+D&A
+Non-cash charges, so added back
+Ke
+Cost of equity (CAPM); discounts FCFE
+Capex
+Cash spent on fixed assets
+g
+Long-run growth of the cash flow
+ΔNWC
+Rise in receivables + inventory − payables
+TV
+Value of cash flows after the forecast
+NI
+Net income: profit after interest and tax
+Net debt
+Debt minus cash; bridges EV to equity
+56
+Define each variable before using it. FCFF is before financing, so interest is not deducted; FCFE is after lenders are paid. Same equity value if assumptions are consistent.
+56
+
+SESSION 15 · FCFF WORKED EXAMPLE
+FCFF at WACC 10%, then a bridge to equity
+Base year
+EBIT 1,000; NOPAT 750. + D&A 200 − Capex 300 − ΔWC 50 = FCFF 600 (₹ cr).
+Forecast
+8% growth for 3 years: 648, 699.8, 755.8. Then g 4% forever.
+Item
+₹ cr
+PV of FCFF years 1–3 @10%
+1,735
+Terminal value yr 3 = 755.8 × 1.04 / 0.06
+13,101
+PV of terminal value (÷1.331)
+9,843
+Enterprise value
+11,578
+Less net debt
+(2,000)
+Equity value, ÷ 100 shares
+9,578 → ₹95.8
+Terminal value is 85% of EV: always test WACC and g.
+57
+Sensitivity: g 3% lowers EV to about 10,125.
+57
+
+FCFF · REAL-LIFE EXAMPLES
+FCFF valuation: a stable FMCG firm versus a leveraged steelmaker
+₹ crore
+HUL-type FMCG (net cash)
+Tata Steel-type steel (leveraged)
+EBIT
+14,000
+20,000
+NOPAT = EBIT × (1 − 25%)
+10,500
+15,000
++ D&A
+800
+6,000
+− Capex
+1,000
+9,000
+− ΔNWC
+200
+1,000
+FCFF
+10,100
+11,000
+WACC and g
+10.3%, 5%
+13.2%, 4%
+Enterprise value = FCFF × (1 + g) ÷ (WACC − g)
+2,00,094
+1,24,348
+Net cash / (net debt)
++8,000
+(60,000)
+Equity value
+2,08,094
+64,348
+Shares (cr) and value per share
+235 → ₹885
+1,200 → ₹53.6
+What the two examples show
+Low-debt FMCG: low beta gives a low WACC, so steady cash flow earns a high value. Leveraged steel: higher WACC and heavy net debt leave a thin equity slice; at WACC 12.2% its equity value rises 24% to ₹79,512 cr. Inputs are illustrative.
+58
+Check: 10,500 + 800 - 1,000 - 200 = 10,100; EV = 10,100 x 1.05 / 0.053 = 200,094. Steel: 15,000 + 6,000 - 9,000 - 1,000 = 11,000; EV = 11,000 x 1.04 / 0.092 = 124,348; at 12.2% EV = 139,512. Inputs are illustrative.
+58
+
+SESSION 15 · FCFE WORKED EXAMPLE
+Same firm from the equity side: Ke 12%
+FCFE build
+Net income 500 + D&A 100 − Capex 160 − ΔWC 40 + net borrowing 50 = FCFE 450 (₹ cr).
+Link to FCFF
+FCFE = FCFF − Interest × (1 − t) + Net borrowing.
+Step
+Calculation
+Result
+Growth
+5% forever
+FCFE1 = 472.5
+Equity value
+472.5 / (0.12 − 0.05)
+₹6,750 cr
+Per share
+÷ 100 shares
+₹67.5
+59
+The methods agree only if assumptions are consistent.
+59
+
+FCFE · REAL-LIFE EXAMPLES
+FCFE valuation: a bank versus a debt-funded utility
+₹ crore
+Bank (HDFC Bank-type)
+Utility (Power Grid-type)
+Net income
+60,000
+15,000
+Net reinvestment
+18,000 equity kept for loan growth
+3,500 = capex 9,000 − D&A 6,000 + ΔNWC 500
+Net borrowing
+Part of the bank's funding model
++1,400 (40% of reinvestment)
+FCFE
+42,000
+12,900
+Ke and g
+12.4%, 4.5% (ROE 15% × retention 30%)
+11%, 4%
+Equity value = FCFE × (1 + g) ÷ (Ke − g)
+5,55,570
+1,91,657
+Shares (cr) and value per share
+765 → ₹726
+930 → ₹206
+Why FCFE fits both
+Bank: debt is its raw material, so FCFF and WACC make little sense; value the equity cash flow directly. Utility: a stable debt ratio makes net borrowing predictable, so equity cash flow can be forecast directly. A perpetual-growth formula is a simplification: test g and Ke.
+60
+Bank: FCFE = 60,000 - 18,000 = 42,000; value = 42,000 x 1.045 / 0.079. Utility: FCFE = 15,000 - 3,500 + 1,400 = 12,900; value = 12,900 x 1.04 / 0.07. Illustrative inputs.
+60
+
+SESSION 16 · SECURITISATION
+Securitisation: turning loans into tradable securities
+1 Originate
+A bank or NBFC lends to thousands of borrowers: vehicle, home, card or business loans.
+2 Sell to an SPV
+The pool is sold to a bankruptcy-remote special purpose vehicle (SPV). A true sale takes assets and risk off the lender.
+3 Tranche and rate
+The SPV issues senior, mezzanine and equity (first-loss) securities. Agencies rate each one.
+4 Collect and pay
+A servicer collects EMIs. Cash flows down a waterfall: senior first, equity last.
+Pool ₹500 cr at 12%
+Size (₹ cr)
+Coupon
+Pool loss 5% (₹25 cr)
+Pool loss 10% (₹50 cr)
+Pool loss 30% (₹150 cr)
+Senior (AAA)
+400
+8.5%
+0
+0
+−50
+Mezzanine
+70
+11%
+0
+−20
+−70
+Equity (first loss)
+30
+Residual
+−25
+−30
+−30
+Why it matters
+Originator: frees capital and funds new loans now instead of waiting years for EMIs. Investor: buys a rated, diversified slice of loan cash flows. If no loans default, equity earns ≈ ₹15.8 cr a year on ₹30 cr after servicing (≈ 53%).
+Risk: the lender may lend carelessly if it sells the loans on. Regulators answer with risk-retention (skin in the game) rules.
+61
+Walk the four steps left to right. Then use the table: a 5% pool loss only hurts equity; at 20% the equity and mezzanine are gone and the senior notes are next; at 30% the senior notes lose Rs 50 cr. Ask: who has the incentive to check loan quality once the loans are sold?
+61
+
+SECURITISATION · REAL-LIFE EXAMPLES
+Two businesses that fund themselves by selling loan pools
+Example 1 · Ford Credit (US auto loans)
+What it does: Ford Credit lends to car buyers, pools the retail instalment contracts and sells them to a trust that issues auto asset-backed securities (ABS).
+Why: raises cash for new loans without waiting five years for repayment, and widens its funding beyond bank lines and bonds.
+Illustrative deal: $1,000m pool, 7% average rate. About 92% senior notes rated AAA. Protection comes from subordinated notes, overcollateralisation and a reserve account.
+Result: car loans are short and granular, so losses are predictable. Auto ABS held up far better than subprime mortgage deals in 2008–09.
+Example 2 · Indian NBFC (e.g. Shriram Finance)
+What it does: an NBFC lending against trucks sells pools of loans to banks and trusts as pass-through certificates (PTCs) or by direct assignment.
+Why: converts a 3-year loan book into cash today and eases the gap between short borrowing and long lending.
+Illustrative deal: ₹1,000 cr pool at 13%. Senior PTC ₹900 cr rated AAA(SO). First-loss cover of 10% from cash collateral and excess spread.
+Rule: RBI's 2021 securitisation directions make the originator keep a minimum stake and hold loans for a minimum period before sale.
+Compare
+Same engine: pool, SPV, rated tranches, investors. What differs is asset quality (car and truck loans versus subprime mortgages) and who keeps the first loss. Deal sizes are illustrative.
+62
+Two real businesses, same engine. Deal sizes are illustrative, not actual transaction data. Ford Credit is a regular auto ABS issuer; the Indian example reflects how vehicle-loan NBFCs use PTCs and direct assignment under RBI's 2021 directions.
+62
+
+SESSION 16 · MORTGAGE-BACKED SECURITIES
+MBS: pooling home loans into bonds
+How a pass-through MBS pays
+Borrowers pay EMI each month. A servicer collects, keeps a fee and passes the rest to MBS holders in proportion.
+Illustrative: $100m pool, 30 years, 6% mortgages, 5.5% pass-through. Level payment $599,550 a month.
+Month 1: interest $500,000 + principal $99,550. Investors get $458,333 interest + principal. Servicer and guarantee fee: $41,667.
+Prepayment risk
+Rates fall: homeowners refinance, principal returns early at par, and the investor reinvests at lower yields (contraction).
+Rates rise: prepayments slow, the MBS lengthens and its price falls more (extension).
+Negative convexity: price gains are capped when yields fall; losses are not when they rise.
+Type
+Who stands behind it
+Risk to investor
+Examples
+Agency MBS
+Ginnie Mae (US govt); Fannie, Freddie guarantee payments
+Prepayment and rate risk; credit risk low
+30-year fixed pools
+Private-label MBS
+No guarantee; tranching and subordination
+Borrower default plus model risk
+Prime, Alt-A, subprime
+CMO
+Re-tranches a pool by prepayment timing
+Depends on tranche
+Sequential, PAC
+India RMBS
+Pools of housing loans sold via SPV
+Credit and prepayment
+Small market
+63
+Check the arithmetic: payment = 100m x 0.005 / (1 - 1.005^-360) = 599,550. Month 1 interest is 6%/12 x 100m = 500,000, so principal is 99,550. Investors receive 5.5%/12 x 100m = 458,333 interest plus principal. Stress prepayment: the MBS holder is short a call option on rates.
+63
+
+MBS · REAL-LIFE EXAMPLES
+One safe, one broken: agency MBS versus subprime MBS
+Example 1 · Agency MBS (Fannie Mae)
+What it does: lenders sell mortgages to Fannie Mae, which pools them, guarantees principal and interest, and sells MBS. Lenders get cash to make new loans. This is why the 30-year fixed US mortgage exists.
+Scale: the agency MBS market is worth several trillion dollars, among the largest bond markets.
+2022–23: US 30-year mortgage rates rose from about 3% to above 7%. Prepayments slowed, MBS lengthened and prices fell. Banks holding them, such as Silicon Valley Bank, booked large unrealised losses.
+Example 2 · Subprime private-label MBS (2006–08)
+What happened: lenders such as Countrywide made subprime and low-documentation loans. Banks such as Lehman Brothers and Bear Stearns pooled them into MBS and CDOs, and agencies rated senior tranches AAA.
+The break: US house prices fell about 27% from the 2006 peak to 2012. Defaults wiped out mezzanine tranches and hit AAA ones too.
+Fallout: two Bear Stearns MBS-heavy hedge funds failed in 2007. Lehman filed for bankruptcy on 15 Sep 2008.
+Compare
+Agency MBS carry interest-rate and prepayment risk. Private-label MBS add credit and model risk: the models assumed house prices would not fall nationwide.
+64
+Agency MBS: the guarantee removes credit risk but not rate risk. Subprime MBS: credit risk was hidden by tranching and ratings. House price fall of about 27% is the Case-Shiller national index, 2006 peak to 2012 trough, rounded. Figures are approximate.
+64
+
+SESSION 16 · CREDIT DEFAULT SWAPS
+CDS: insurance-like protection against a borrower's default
+How a CDS works
+The protection buyer pays a fixed annual spread on a notional. The protection seller pays the loss if a credit event occurs: bankruptcy, failure to pay or restructuring.
+Loss paid = notional × (1 − recovery). Documented under ISDA. The buyer need not own the bond.
+Numbers (₹ 100 cr notional)
+Premium: 200 bp a year = ₹2 cr.
+Default, 40% recovery: seller pays ₹60 cr.
+Spread widens to 600 bp: new cover costs ₹6 cr a year, so the old contract gains value.
+Implied default: spread ÷ (1 − recovery). 400 bp ÷ 50% = 8%.
+User
+Why use a CDS
+Example
+Bank or lender
+Hedge a loan or bond and free up capital
+Buys cover on ₹100 cr corporate exposure
+Bond investor
+Insure holdings, or short a credit
+Fund buys cover on a bond it holds
+Hedge fund
+Bet on spreads without owning bonds
+Buys cover on a weak issuer
+Insurer or seller
+Earn premium, take credit risk
+AIG Financial Products, pre-2008
+Risks: the seller may fail (AIG), the market is thin, and settlement can be disputed. After 2008, index CDS moved to central clearing with standard coupons.
+65
+Treat CDS as insurance with two differences: the buyer need not own the bond, and the seller is not a regulated insurer. Link back to the credit spread slide: spread / (1 - recovery) = implied default probability.
+65
+
+CDS · REAL-LIFE EXAMPLES
+Two businesses where CDS mattered: AIG and Credit Suisse
+Example 1 · AIG (protection seller, 2008)
+What it did: AIG Financial Products sold CDS protection on multi-sector CDOs backed by subprime mortgages, about $78bn of exposure. It collected small premiums and held little capital against the risk.
+The break: when ratings fell, counterparties demanded collateral. After AIG was downgraded in Sep 2008 it could not pay.
+Result: the US Federal Reserve lent $85bn on 16 Sep 2008. Total US support later reached about $182bn.
+Lesson: a CDS is only as good as the seller, and risks that fail together cannot be insured by one firm.
+Example 2 · Credit Suisse (CDS buyers, 2023)
+What happened: after Silicon Valley Bank failed, Credit Suisse's five-year CDS rose from under 400 bp in early March 2023 to about 1,000 bp by mid-March.
+Cost: $100m of cover went from about $4m to about $10m a year. With 40% recovery, 1,000 bp implies roughly 16.7% default odds.
+Outcome: UBS agreed to buy the bank on 19 Mar 2023. Senior creditors were paid in full, but about CHF 16bn of AT1 bonds were written to zero.
+Lesson: the CDS spread flagged stress before any default.
+Compare
+AIG shows the seller's risk: collateral calls and concentration. Credit Suisse shows the buyer's signal: the price of protection as a stress gauge. Figures are rounded.
+66
+AIG: about 78bn dollars of CDS on multi-sector CDOs; Fed credit line of 85bn on 16 Sep 2008; total support about 182bn. Credit Suisse: five-year CDS moved from under 400 bp to roughly 1,000 bp in March 2023; about CHF 16bn of AT1 bonds were written down on the UBS takeover. Figures are rounded and approximate.
+66
+
+SESSION 16 · SPECIAL PRODUCTS
+Credit spreads and market-linked notes
+Idea
+How it works
+Numbers
+Credit spread
+Yield − G-Sec ≈ default chance × loss
+6% ÷ 60% = 10% implied default
+Market-linked note
+Zero-coupon bond + option
+₹10L: ₹7.13L bond + ₹2.87L options; 70% participation
+Link to CDS
+A CDS premium is a traded credit spread, so the same formula gives the default odds the market is pricing in. Complexity hides risk: if you cannot draw the payoff and the failure modes, do not buy it.
+67
+Complexity hides risk: if you cannot draw the payoff and failure modes, do not buy it.
+67
