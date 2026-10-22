@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMI Master Class · Complete 100-Slide Animated Keynote</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-card-subtle: #f1f5f9;
+            --border: #e2e8f0;
+            --border-hover: #cbd5e1;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --text-dim: #94a3b8;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --primary-border: #93c5fd;
+            --primary-dark: #1e40af;
+            --secondary: #0f172a;
+            --success: #059669;
+            --success-light: #ecfdf5;
+            --success-border: #6ee7b7;
+            --warning: #d97706;
+            --warning-light: #fffbeb;
+            --warning-border: #fde68a;
+            --danger: #dc2626;
+            --danger-light: #fef2f2;
+            --danger-border: #fca5a5;
+            --purple: #7c3aed;
+            --purple-light: #faf5ff;
+            --purple-border: #d8b4fe;
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* TOP PROGRESS BAR */
+        .progress-bar-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #e2e8f0;
+            z-index: 1000;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2563eb, #3b82f6, #10b981);
+            width: 1%;
+            transition: width 0.3s ease;
+        }
+
+        /* HEADER NAV */
+        .app-header {
+            position: fixed;
+            top: 4px;
+            left: 0;
+            width: 100%;
+            height: 56px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.25rem;
+            z-index: 999;
+        }
+
+        .brand-zone {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-zone a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .brand-badge {
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+        }
+
+        .header-module-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-card-subtle);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            max-width: 320px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-icon {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-md);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-icon:hover {
+            background: var(--bg-card-subtle);
+            border-color: var(--border-hover);
+        }
+
+        .btn-header {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 0.35rem 0.75rem;
+            border-radius: var(--radius-md);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .btn-header:hover {
+            background: var(--bg-card-subtle);
+            border-color: var(--border-hover);
+        }
+
+        .btn-header.active {
+            background: #eff6ff;
+            color: #2563eb;
+            border-color: #93c5fd;
+        }
+
+        /* PRESENTATION STAGE */
+        .stage-container {
+            flex: 1;
+            margin-top: 60px;
+            margin-bottom: 74px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.25rem;
+        }
+
+        .slide-card {
+            width: 100%;
+            max-width: 1260px;
+            min-height: 580px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide-card.fade-out {
+            opacity: 0;
+            transform: translateY(6px);
+        }
+
+        .slide-card.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-header {
+            padding: 1.25rem 2rem 0.75rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: linear-gradient(to right, #ffffff, #fafafa);
+        }
+
+        .slide-header-left {
+            flex: 1;
+        }
+
+        .slide-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.2rem 0.55rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .badge-primary { background: var(--primary-light); color: var(--primary-dark); border: 1px solid var(--primary-border); }
+        .badge-success { background: var(--success-light); color: var(--success); border: 1px solid var(--success-border); }
+        .badge-warning { background: var(--warning-light); color: var(--warning); border: 1px solid var(--warning-border); }
+        .badge-danger { background: var(--danger-light); color: var(--danger); border: 1px solid var(--danger-border); }
+        .badge-info { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+        .badge-dark { background: #1e293b; color: #ffffff; border: 1px solid #0f172a; }
+
+        .slide-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--secondary);
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+
+        .slide-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+            font-weight: 500;
+        }
+
+        .slide-header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.25rem;
+        }
+
+        .slide-counter-badge {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #1e40af;
+            background: #dbeafe;
+            padding: 0.3rem 0.7rem;
+            border-radius: var(--radius-full);
+            white-space: nowrap;
+        }
+
+        .slide-body {
+            flex: 1;
+            padding: 1.5rem 2rem 2rem 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 0.95fr;
+            gap: 2rem;
+            overflow-y: auto;
+        }
+
+        /* SLIDE CONTENT TYPOGRAPHY */
+        .content-pane h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .content-pane h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #334155;
+            margin-top: 0.85rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .content-pane p {
+            font-size: 0.92rem;
+            color: #334155;
+            line-height: 1.65;
+            margin-bottom: 0.75rem;
+        }
+
+        .content-pane ul, .content-pane ol {
+            margin-bottom: 0.75rem;
+        }
+
+        .content-pane li {
+            font-size: 0.88rem;
+            color: #334155;
+            margin-bottom: 0.4rem;
+        }
+
+        /* FORMULA BOX */
+        .formula-box {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 0.65rem 0.9rem;
+            margin: 0.65rem 0;
+        }
+
+        .formula-name {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.2rem;
+        }
+
+        .formula-code {
+            font-family: var(--font-mono);
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            line-height: 1.4;
+        }
+
+        /* CALLOUTS */
+        .callout {
+            border-radius: var(--radius-sm);
+            padding: 0.65rem 0.9rem;
+            font-size: 0.85rem;
+            line-height: 1.55;
+            margin: 0.65rem 0;
+        }
+
+        .callout-info {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            color: #1e3a8a;
+        }
+
+        .callout-warning {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            color: #92400e;
+        }
+
+        .callout-danger {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            color: #991b1b;
+        }
+
+        .callout-success {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            color: #065f46;
+        }
+
+        /* DATA TABLES */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 0.5rem 0;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .data-table th {
+            background: #f1f5f9;
+            color: #334155;
+            font-weight: 700;
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table td {
+            padding: 0.45rem 0.75rem;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:hover td {
+            background: #f8fafc;
+        }
+
+        /* VISUAL PANE */
+        .visual-pane {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .visual-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* MATH RENDERING */
+        .math-expr {
+            font-family: var(--font-mono);
+            font-weight: 600;
+            color: #1e40af;
+            background: #eff6ff;
+            padding: 0.1rem 0.35rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .math-block {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-sm);
+            padding: 0.6rem;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            color: #1e3a8a;
+            margin: 0.5rem 0;
+        }
+
+        .fraction {
+            display: inline-flex;
+            flex-direction: column;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 0.2rem;
+            font-size: 0.88em;
+        }
+
+        .fraction .num {
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 1px;
+        }
+
+        .fraction .denom {
+            padding-top: 1px;
+        }
+
+        /* BOTTOM FLOATING DOCK */
+        .bottom-dock {
+            position: fixed;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-lg);
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            z-index: 999;
+            width: auto;
+            max-width: 90vw;
+        }
+
+        .nav-btn {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: var(--bg-card-subtle);
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+
+        .nav-btn.primary-nav {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .nav-btn.primary-nav:hover:not(:disabled) {
+            background: var(--primary-dark);
+            color: #ffffff;
+        }
+
+        .scrubber-zone {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .slider-scrubber {
+            -webkit-appearance: none;
+            width: 180px;
+            height: 6px;
+            border-radius: 3px;
+            background: #e2e8f0;
+            outline: none;
+            transition: background 0.2s;
+        }
+
+        .slider-scrubber::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            transition: transform 0.15s;
+        }
+
+        .slider-scrubber::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .dock-divider {
+            width: 1px;
+            height: 24px;
+            background: var(--border);
+        }
+
+        .speedrun-widget {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-speedrun {
+            background: #f1f5f9;
+            border: 1px solid var(--border);
+            color: #334155;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .btn-speedrun.running {
+            background: #fee2e2;
+            color: #dc2626;
+            border-color: #fca5a5;
+        }
+
+        .timer-badge {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        /* MODALS */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-container {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 900px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            animation: modalPop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes modalPop {
+            0% { opacity: 0; transform: scale(0.96); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .modal-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-card-subtle);
+            color: var(--text-main);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        /* GRID / TOC MODAL */
+        .search-box {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            font-family: inherit;
+            margin-bottom: 1rem;
+            outline: none;
+        }
+
+        .search-box:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .slide-tile {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: left;
+        }
+
+        .slide-tile:hover {
+            border-color: var(--primary);
+            background: #f8fafc;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .slide-tile.active {
+            border-color: var(--primary);
+            background: #eff6ff;
+        }
+
+        .slide-tile-id {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .slide-tile-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 0.2rem 0;
+            line-height: 1.3;
+        }
+
+        .slide-tile-module {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* FORMULA MODAL TABS */
+        .formula-tabs {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-family: inherit;
+        }
+
+        .tab-btn.active {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            .slide-body {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .slide-header {
+                padding: 1rem 1.25rem;
+            }
+            .slider-scrubber {
+                width: 90px;
+            }
+            .header-module-badge {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .slide-title {
+                font-size: 1.25rem;
+            }
+            .bottom-dock {
+                padding: 0.4rem 0.6rem;
+                gap: 0.4rem;
+            }
+            .slider-scrubber {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP PROGRESS BAR -->
+    <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <!-- APP HEADER -->
+    <header class="app-header">
+        <div class="brand-zone">
+            <a href="index.html" title="Back to Main Course Portal">
+                <span>📚</span>
+                <span>FMI Masterclass</span>
+            </a>
+            <span class="brand-badge">Sessions 1–16</span>
+            <span class="header-module-badge" id="headerModule">Module 0 · Exam Blueprint</span>
+        </div>
+
+        <div class="header-actions">
+            <button class="btn-header" id="btnTOC" title="Open Slide Grid (Key: G / T)">
+                <span>🗂️</span>
+                <span>Slide Grid</span>
+            </button>
+            <button class="btn-header" id="btnCheatSheet" title="View Formulas & Exam Traps (Key: F / M)">
+                <span>📑</span>
+                <span>Formula Sheet</span>
+            </button>
+            <button class="btn-icon" id="btnSound" title="Toggle Slide Sound Effects">
+                <span id="soundIcon">🔊</span>
+            </button>
+            <button class="btn-icon" id="btnFullscreen" title="Toggle Fullscreen (Key: F)">
+                <span>⛶</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- STAGE CONTAINER -->
+    <main class="stage-container">
+        <div class="slide-card fade-in" id="slideCard">
+            <div class="slide-header">
+                <div class="slide-header-left">
+                    <div class="slide-meta">
+                        <span class="badge badge-primary" id="slideBadge">COURSE OVERVIEW</span>
+                        <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;" id="slideModule">Module 0 · Exam Blueprint</span>
+                    </div>
+                    <h1 class="slide-title" id="slideTitle">Finance Markets & Instruments (FMI)</h1>
+                    <div class="slide-subtitle" id="slideSubtitle">Complete Syllabus Masterclass · Keynote Edition</div>
+                </div>
+                <div class="slide-header-right">
+                    <div class="slide-counter-badge" id="slideCounter">Slide 1 / 102</div>
+                    <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);" id="percentProgress">1.0% Complete</div>
+                </div>
+            </div>
+
+            <div class="slide-body">
+                <div class="content-pane" id="contentPane">
+                    <!-- Dynamic Slide HTML Content -->
+                </div>
+                <div class="visual-pane" id="visualPane">
+                    <!-- Dynamic Visual Diagram / Chart -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- BOTTOM FLOATING DOCK -->
+    <footer class="bottom-dock">
+        <button class="nav-btn" id="btnPrev" title="Previous Slide (Left Arrow / K)">
+            <span>◀</span>
+        </button>
+
+        <div class="scrubber-zone">
+            <input type="range" min="1" max="102" value="1" class="slider-scrubber" id="slideScrubber" title="Slide Scrubber">
+            <span style="font-family:var(--font-mono); font-size:0.8rem; font-weight:700; color:#334155; min-width:65px; text-align:center;" id="dockCounter">1 / 102</span>
+        </div>
+
+        <button class="nav-btn primary-nav" id="btnNext" title="Next Slide (Right Arrow / Space / J)">
+            <span>▶</span>
+        </button>
+
+        <div class="dock-divider"></div>
+
+        <div class="speedrun-widget">
+            <button class="btn-speedrun" id="btnSpeedrun" title="Start Animated Autoplay Speedrun">
+                <span id="speedrunIcon">⚡</span>
+                <span id="speedrunText">Speedrun</span>
+            </button>
+            <span class="timer-badge" id="timerBadge"></span>
+        </div>
+    </footer>
+
+    <!-- SLIDE GRID / SEARCHABLE TOC MODAL -->
+    <div class="modal-overlay" id="modalTOC">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <span>🗂️</span>
+                    <span>All 102 Masterclass Slides</span>
+                </div>
+                <button class="modal-close" id="btnCloseTOC">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="search-box" id="tocSearch" placeholder="Type to search slides (e.g. Asian Paints, DuPont, Break-Even, CAPM, Depreciation)...">
+                <div class="slides-grid" id="tocGrid">
+                    <!-- Dynamic Tiles -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORMULA CHEAT SHEET MODAL -->
+    <div class="modal-overlay" id="modalFormula">
+        <div class="modal-container" style="max-width:850px;">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <span>📑</span>
+                    <span>Exam Formula Sheet & Trap Reference</span>
+                </div>
+                <button class="modal-close" id="btnCloseFormula">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="formula-tabs">
+                    <button class="tab-btn active" data-tab="tabGiven">GIVEN on Exam Sheet</button>
+                    <button class="tab-btn" data-tab="tabNotGiven">MUST MEMORIZE (Not Given)</button>
+                    <button class="tab-btn" data-tab="tabTraps">Top 10 MCQ Exam Traps</button>
+                </div>
+
+                <div class="tab-content active" id="tabGiven">
+                    <h4 style="color:#2563eb; margin-bottom:0.5rem;">Formulas Provided in Question Paper:</h4>
+                    <div class="table-responsive">
+                        <table class="data-table" style="font-size:0.85rem;">
+                            <tr><th>Ratio / Metric</th><th>Official Formula Expression</th></tr>
+                            <tr><td><strong>Current Ratio</strong></td><td>Current Assets ÷ Current Liabilities</td></tr>
+                            <tr><td><strong>Quick Ratio</strong></td><td>(Current Assets − Inventory) ÷ Current Liabilities</td></tr>
+                            <tr><td><strong>Cash Ratio</strong></td><td>Cash & Equivalents ÷ Current Liabilities</td></tr>
+                            <tr><td><strong>Inventory Turnover & Days</strong></td><td>COGS ÷ Avg Inventory &nbsp;|&nbsp; (Avg Inventory × 365) ÷ COGS</td></tr>
+                            <tr><td><strong>Receivable Days (DSO)</strong></td><td>(Avg Receivables × 365) ÷ Total Sales</td></tr>
+                            <tr><td><strong>Payable Days (DPO)</strong></td><td>(Avg Payables × 365) ÷ COGS</td></tr>
+                            <tr><td><strong>Debt-to-Equity</strong></td><td>Total Debt ÷ Total Shareholders' Equity</td></tr>
+                            <tr><td><strong>Interest Coverage</strong></td><td>EBIT ÷ Interest Expense</td></tr>
+                            <tr><td><strong>ROCE</strong></td><td>EBIT ÷ Capital Employed (Equity + Debt)</td></tr>
+                            <tr><td><strong>DuPont ROE (3-Step)</strong></td><td>(PAT ÷ Sales) × (Sales ÷ Assets) × (Assets ÷ Equity)</td></tr>
+                            <tr><td><strong>P/E Ratio</strong></td><td>Market Price per Share ÷ EPS</td></tr>
+                            <tr><td><strong>Enterprise Value (EV)</strong></td><td>Market Cap + Total Debt − Cash</td></tr>
+                            <tr><td><strong>Future Value (FV)</strong></td><td>PV × (1 + r)^n</td></tr>
+                            <tr><td><strong>Present Value (PV)</strong></td><td>FV ÷ (1 + r)^n = FV × PVIF(r, n)</td></tr>
+                            <tr><td><strong>Rule of 72</strong></td><td>Years to double ≈ 72 ÷ r%</td></tr>
+                            <tr><td><strong>Ordinary Annuity PV</strong></td><td>PMT × PVIFA(r, n)</td></tr>
+                            <tr><td><strong>Level Perpetuity</strong></td><td>Cash Flow (C) ÷ r</td></tr>
+                            <tr><td><strong>Growing Perpetuity</strong></td><td>CF₁ ÷ (r − g) &nbsp;[where r &gt; g]</td></tr>
+                            <tr><td><strong>Profitability Index (PI)</strong></td><td>PV of Cash Inflows ÷ Initial Outlay</td></tr>
+                            <tr><td><strong>CAPM Cost of Equity</strong></td><td>Rf + β × (Rm − Rf)</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tabNotGiven">
+                    <h4 style="color:#dc2626; margin-bottom:0.5rem;">⚠️ Formulas NOT Provided (Must Memorize):</h4>
+                    <div class="table-responsive">
+                        <table class="data-table" style="font-size:0.85rem;">
+                            <tr><th>Formula Name</th><th>Exact Expression to Memorize</th></tr>
+                            <tr><td><strong>Unit Contribution</strong></td><td><code>Selling Price (SP) − Variable Cost (VC)</code></td></tr>
+                            <tr><td><strong>P/V Ratio (Profit-Volume)</strong></td><td><code>Contribution ÷ Sales = (SP − VC) ÷ SP</code></td></tr>
+                            <tr><td><strong>Two-Period P/V Shortcut</strong></td><td><code>Change in Profit ÷ Change in Sales</code></td></tr>
+                            <tr><td><strong>Break-Even (Units)</strong></td><td><code>Fixed Cost ÷ Unit Contribution = FC ÷ (SP − VC)</code></td></tr>
+                            <tr><td><strong>Break-Even (Value ₹)</strong></td><td><code>Fixed Cost ÷ P/V Ratio = BEP Units × SP</code></td></tr>
+                            <tr><td><strong>Target Profit (Units)</strong></td><td><code>(Fixed Cost + Target Profit) ÷ Unit Contribution</code></td></tr>
+                            <tr><td><strong>Target Profit (Value ₹)</strong></td><td><code>(Fixed Cost + Target Profit) ÷ P/V Ratio</code></td></tr>
+                            <tr><td><strong>Margin of Safety (MoS ₹)</strong></td><td><code>Actual Sales − Break-Even Sales = Profit ÷ P/V Ratio</code></td></tr>
+                            <tr><td><strong>Margin of Safety (% MoS)</strong></td><td><code>(MoS Sales ÷ Actual Sales) × 100 = Profit ÷ Total Contribution</code></td></tr>
+                            <tr><td><strong>Operating Cycle</strong></td><td><code>Inventory Days + Receivable Days</code></td></tr>
+                            <tr><td><strong>Cash Conversion Cycle (CCC)</strong></td><td><code>Inventory Days + Receivable Days − Payable Days</code></td></tr>
+                            <tr><td><strong>Net Present Value (NPV)</strong></td><td><code>PV of Inflows − Initial Outlay</code></td></tr>
+                            <tr><td><strong>Annuity Due PV</strong></td><td><code>Ordinary Annuity PV × (1 + r)</code></td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tabTraps">
+                    <h4 style="color:#d97706; margin-bottom:0.5rem;">🚨 The Top 10 Exam MCQ Traps:</h4>
+                    <ul style="line-height:1.8; font-size:0.88rem; margin-left:1.5rem; color:#334155;">
+                        <li><strong>1. Drawings & Dividends:</strong> Direct reduction of Equity; NEVER an expense on the Income Statement!</li>
+                        <li><strong>2. Sunk Costs:</strong> Past spent money (R&D, market surveys) is ALWAYS 100% irrelevant to decisions.</li>
+                        <li><strong>3. Opportunity Costs:</strong> Foregone alternative income MUST ALWAYS be included in project appraisals.</li>
+                        <li><strong>4. NPV vs IRR Conflict:</strong> When mutually exclusive, ALWAYS choose highest NPV (IRR ignores scale).</li>
+                        <li><strong>5. Quick Ratio &lt; 1.0x:</strong> Normal in paint or FMCG due to necessary heavy inventory holding (Asian Paints = 0.89x).</li>
+                        <li><strong>6. Fixed Cost per Unit:</strong> Fixed cost in total is fixed; fixed cost per unit FALLS as volume rises.</li>
+                        <li><strong>7. Price Cut Shock:</strong> A 10% price cut spikes break-even volume by +33.3% because variable costs are sticky!</li>
+                        <li><strong>8. Inventory Turnover Denominator:</strong> Always use COGS, NOT Sales revenue!</li>
+                        <li><strong>9. Forwards vs Futures:</strong> Forwards = OTC + high default risk; Futures = Exchange + Clearinghouse zero default.</li>
+                        <li><strong>10. Depreciation:</strong> Non-cash expense; added back to Net Income to compute Operating Cash Flow.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOUND SYNTHESIZER (WEB AUDIO API) -->
+    <script>
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let soundEnabled = true;
+
+        function playClickSound() {
+            if (!soundEnabled) return;
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.04);
+                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.04);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.04);
+            } catch(e) {}
+        }
+
+        document.getElementById('btnSound').addEventListener('click', () => {
+            soundEnabled = !soundEnabled;
+            document.getElementById('soundIcon').textContent = soundEnabled ? '🔊' : '🔇';
+        });
+    </script>
+
+    <!-- MAIN PRESENTATION ENGINE -->
+    <script>
+        const slides = __SLIDES_DATA__;
+        let currentSlideIdx = 0;
+        let speedrunInterval = null;
+        let speedrunSecondsLeft = 8;
+        const SPEEDRUN_DURATION = 8; // 8 seconds per slide for smooth 100-slide run
+
+        // DOM Elements
+        const slideCard = document.getElementById('slideCard');
+        const slideBadge = document.getElementById('slideBadge');
+        const slideModule = document.getElementById('slideModule');
+        const slideTitle = document.getElementById('slideTitle');
+        const slideSubtitle = document.getElementById('slideSubtitle');
+        const slideCounter = document.getElementById('slideCounter');
+        const percentProgress = document.getElementById('percentProgress');
+        const contentPane = document.getElementById('contentPane');
+        const visualPane = document.getElementById('visualPane');
+        const progressBar = document.getElementById('progressBar');
+        const headerModule = document.getElementById('headerModule');
+        const slideScrubber = document.getElementById('slideScrubber');
+        const dockCounter = document.getElementById('dockCounter');
+        const btnPrev = document.getElementById('btnPrev');
+        const btnNext = document.getElementById('btnNext');
+        const btnSpeedrun = document.getElementById('btnSpeedrun');
+        const timerBadge = document.getElementById('timerBadge');
+
+        function renderSlide(idx, animate = true) {
+            if (idx < 0) idx = 0;
+            if (idx >= slides.length) idx = slides.length - 1;
+            currentSlideIdx = idx;
+
+            const slide = slides[currentSlideIdx];
+
+            if (animate) {
+                slideCard.classList.remove('fade-in');
+                slideCard.classList.add('fade-out');
+                setTimeout(() => {
+                    applySlideData(slide);
+                    slideCard.classList.remove('fade-out');
+                    slideCard.classList.add('fade-in');
+                }, 120);
+            } else {
+                applySlideData(slide);
+            }
+
+            playClickSound();
+        }
+
+        function applySlideData(slide) {
+            slideBadge.textContent = slide.badge || 'CONCEPT';
+            slideBadge.className = `badge badge-${slide.badge_type || 'primary'}`;
+            slideModule.textContent = slide.module;
+            headerModule.textContent = slide.module;
+            slideTitle.textContent = slide.title;
+            slideSubtitle.textContent = slide.subtitle || '';
+            slideCounter.textContent = `Slide ${slide.id} / ${slides.length}`;
+
+            const percent = ((slide.id / slides.length) * 100).toFixed(1);
+            percentProgress.textContent = `${percent}% Complete`;
+            progressBar.style.width = `${percent}%`;
+
+            slideScrubber.value = slide.id;
+            dockCounter.textContent = `${slide.id} / ${slides.length}`;
+
+            btnPrev.disabled = currentSlideIdx === 0;
+            btnNext.disabled = currentSlideIdx === slides.length - 1;
+
+            contentPane.innerHTML = slide.content_html;
+            visualPane.innerHTML = slide.visual_html;
+
+            // Highlight in TOC if open
+            updateActiveTOCTile(slide.id);
+        }
+
+        function nextSlide() {
+            if (currentSlideIdx < slides.length - 1) {
+                renderSlide(currentSlideIdx + 1);
+            } else if (speedrunInterval) {
+                stopSpeedrun();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlideIdx > 0) {
+                renderSlide(currentSlideIdx - 1);
+            }
+        }
+
+        // Speedrun Autoplay Engine
+        function startSpeedrun() {
+            btnSpeedrun.classList.add('running');
+            document.getElementById('speedrunIcon').textContent = '⏸️';
+            document.getElementById('speedrunText').textContent = 'Pause';
+            speedrunSecondsLeft = SPEEDRUN_DURATION;
+            timerBadge.textContent = `(${speedrunSecondsLeft}s)`;
+
+            speedrunInterval = setInterval(() => {
+                speedrunSecondsLeft--;
+                if (speedrunSecondsLeft <= 0) {
+                    speedrunSecondsLeft = SPEEDRUN_DURATION;
+                    nextSlide();
+                }
+                timerBadge.textContent = `(${speedrunSecondsLeft}s)`;
+            }, 1000);
+        }
+
+        function stopSpeedrun() {
+            clearInterval(speedrunInterval);
+            speedrunInterval = null;
+            btnSpeedrun.classList.remove('running');
+            document.getElementById('speedrunIcon').textContent = '⚡';
+            document.getElementById('speedrunText').textContent = 'Speedrun';
+            timerBadge.textContent = '';
+        }
+
+        btnSpeedrun.addEventListener('click', () => {
+            if (speedrunInterval) {
+                stopSpeedrun();
+            } else {
+                startSpeedrun();
+            }
+        });
+
+        // Controls Event Listeners
+        btnPrev.addEventListener('click', () => {
+            stopSpeedrun();
+            prevSlide();
+        });
+
+        btnNext.addEventListener('click', () => {
+            stopSpeedrun();
+            nextSlide();
+        });
+
+        slideScrubber.addEventListener('input', (e) => {
+            stopSpeedrun();
+            renderSlide(parseInt(e.target.value) - 1, false);
+        });
+
+        // Fullscreen Toggle
+        const btnFullscreen = document.getElementById('btnFullscreen');
+        btnFullscreen.addEventListener('click', toggleFullscreen);
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(() => {});
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Keyboard Navigation
+        window.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown' || e.key === 'j') {
+                e.preventDefault();
+                stopSpeedrun();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft' || e.key === 'Backspace' || e.key === 'PageUp' || e.key === 'k') {
+                e.preventDefault();
+                stopSpeedrun();
+                prevSlide();
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                stopSpeedrun();
+                renderSlide(0);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                stopSpeedrun();
+                renderSlide(slides.length - 1);
+            } else if (e.key === 'f' || e.key === 'F') {
+                e.preventDefault();
+                toggleFullscreen();
+            } else if (e.key === 'g' || e.key === 'G' || e.key === 't' || e.key === 'T') {
+                e.preventDefault();
+                toggleTOCModal();
+            } else if (e.key === 'm' || e.key === 'M' || e.key === 'c' || e.key === 'C') {
+                e.preventDefault();
+                toggleFormulaModal();
+            } else if (e.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+
+        // Touch Swipe Navigation for Tablets & Mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        slideCard.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        slideCard.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                stopSpeedrun();
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                stopSpeedrun();
+                prevSlide();
+            }
+        }
+
+        // TOC / Slide Grid Modal Engine
+        const modalTOC = document.getElementById('modalTOC');
+        const btnTOC = document.getElementById('btnTOC');
+        const btnCloseTOC = document.getElementById('btnCloseTOC');
+        const tocGrid = document.getElementById('tocGrid');
+        const tocSearch = document.getElementById('tocSearch');
+
+        function buildTOCGrid(filterText = '') {
+            tocGrid.innerHTML = '';
+            const search = filterText.toLowerCase();
+
+            slides.forEach((s, idx) => {
+                const match = s.title.toLowerCase().includes(search) || 
+                              s.module.toLowerCase().includes(search) ||
+                              s.badge.toLowerCase().includes(search) ||
+                              (s.subtitle && s.subtitle.toLowerCase().includes(search));
+                if (!match) return;
+
+                const tile = document.createElement('div');
+                tile.className = `slide-tile ${idx === currentSlideIdx ? 'active' : ''}`;
+                tile.id = `tocTile_${s.id}`;
+                tile.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="slide-tile-id">#${s.id}</span>
+                        <span class="badge badge-${s.badge_type || 'primary'}" style="font-size:0.65rem; padding:0.1rem 0.4rem;">${s.badge}</span>
+                    </div>
+                    <div class="slide-tile-title">${s.title}</div>
+                    <div class="slide-tile-module">${s.module}</div>
+                `;
+                tile.addEventListener('click', () => {
+                    stopSpeedrun();
+                    renderSlide(idx);
+                    modalTOC.classList.remove('open');
+                });
+                tocGrid.appendChild(tile);
+            });
+        }
+
+        function updateActiveTOCTile(id) {
+            document.querySelectorAll('.slide-tile').forEach(t => t.classList.remove('active'));
+            const activeTile = document.getElementById(`tocTile_${id}`);
+            if (activeTile) activeTile.classList.add('active');
+        }
+
+        function toggleTOCModal() {
+            if (modalTOC.classList.contains('open')) {
+                modalTOC.classList.remove('open');
+            } else {
+                closeAllModals();
+                buildTOCGrid();
+                modalTOC.classList.add('open');
+                setTimeout(() => tocSearch.focus(), 100);
+            }
+        }
+
+        btnTOC.addEventListener('click', toggleTOCModal);
+        btnCloseTOC.addEventListener('click', () => modalTOC.classList.remove('open'));
+        tocSearch.addEventListener('input', (e) => buildTOCGrid(e.target.value));
+
+        // Formula Modal Engine
+        const modalFormula = document.getElementById('modalFormula');
+        const btnCheatSheet = document.getElementById('btnCheatSheet');
+        const btnCloseFormula = document.getElementById('btnCloseFormula');
+
+        function toggleFormulaModal() {
+            if (modalFormula.classList.contains('open')) {
+                modalFormula.classList.remove('open');
+            } else {
+                closeAllModals();
+                modalFormula.classList.add('open');
+            }
+        }
+
+        btnCheatSheet.addEventListener('click', toggleFormulaModal);
+        btnCloseFormula.addEventListener('click', () => modalFormula.classList.remove('open'));
+
+        // Modal Tab Switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+
+        function closeAllModals() {
+            modalTOC.classList.remove('open');
+            modalFormula.classList.remove('open');
+        }
+
+        modalTOC.addEventListener('click', (e) => {
+            if (e.target === modalTOC) closeAllModals();
+        });
+
+        modalFormula.addEventListener('click', (e) => {
+            if (e.target === modalFormula) closeAllModals();
+        });
+
+        // Initialize First Slide
+        renderSlide(0, false);
+        buildTOCGrid();
+    </script>
+</body>
+</html>
